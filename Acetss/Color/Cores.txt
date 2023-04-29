@@ -1,9 +1,0 @@
-Mode Light
-#121212 - Background
-#4B0072 - Detalhe
-#CB8E00 - Detalhe
-
-Dark Mode
-#121212 - Background
-#1b1b1b - Detalhe
-#363636 - Detalhe
