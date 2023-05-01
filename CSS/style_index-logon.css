@@ -1,8 +1,0 @@
-@import '../Acetss/Color/Cores.scss';
-@import '../Acetss/Fonts/martina_3/Martina.otf';
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
