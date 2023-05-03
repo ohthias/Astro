@@ -6,51 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astro</title>
     <link rel="stylesheet" href="../../../CSS/fixed_menu.css">
+    <link rel="stylesheet" href="../../../CSS/search.css">
 </head>
 <body>
     <header>
         <nav>
             <a href="#" class="Logo">Astro</a>
             <i class="fi fi-sr-user"></i>
-            <i class="fi fi-ss-settings"></i>
+            <i class="fi fi-ss-settings">3243</i>
         </nav>
     </header>
     <aside class="bar_side">
         <div class="content">
             <div class="side_logo">
-                <a href="#" class="Logo side">
+                <a href="#" id="logo">
                     Astro
                 </a>
             </div>
             <div class="main_contents info_principais">
                 <div class="main_contents info">
                     <i class="fi fi-sr-menu-burger"></i>
-                    <a href="#">Início</a>
+                    <a href="#" class="text">Início</a>
                 </div>
                 <div class="main_contents info">
                     <i class="fi fi-rs-search"></i>
-                    <a href="#">Buscar</a>
+                    <a href="#" class="text">Buscar</a>
                 </div>
                 <div class="main_contents info">
                     <i class="fi fi-tr-album"></i>
-                    <a href="#">Suas Playlist</a>
+                    <a href="#" class="text">Suas Playlist</a>
                 </div>
                 <div class="main_contents info">
                     <i class="fi fi-rr-heart"></i>
-                    <a href="#">Músicas Curtidas</a>
+                    <a href="#" class="text">Músicas Curtidas</a>
                 </div>
             </div>
             <hr>
             <div class="main_contents playlist">
                 <div class="main_contents playlist_info">
                     <i class="fi fi-br-plus"></i>
-                    <a href="#">Criar uma playlist</a>
+                    <a href="#" class="playlist_text">Criar uma playlist</a>
                 </div>
                 <div class="main_contents playlist_info">
-                    <a href="#">Playlist 1</a>
+                    <a href="#" class="playlist_text">Playlist 1</a>
                 </div>
                 <div class="main_contents playlist_info">
-                    <a href="#">Playlist 2</a>
+                    <a href="#" class="playlist_text">Playlist 2</a>
                 </div>
             </div>
             <hr>
@@ -60,6 +61,85 @@
         </div>
     </aside>
     <main>
+        <section class="search_container">
+            <div class="search_container text">
+                <form action="">
+                    <div class="search">
+                        <label>Buscar</label>
+                        <input type="search" name="search" id="search" placeholder="Pesquise pelo nome, gênero, artista.">
+                        <input type="submit">
+                        <i></i>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="categories_containner">
+            <div class="categories_containner_info">
+                <h2>Gêneros</h2>
+                <div class="categories">
+                    <figure class="categories object">
+                        <a href="#">
+                            <img src="../../../Media/Images/Capas_astro/Art_M.5.png">
+                        </a>
+                    </figure>
+                    <figure class="categories object">
+                        <a href="#">
+                            <img src="../../../Media/Images/Capas_astro/Art_M.5.png">
+                        </a>
+                    </figure>
+                    <figure class="categories object">
+                        <a href="#">
+                            <img src="../../../Media/Images/Capas_astro/Art_M.5.png">
+                        </a>
+                    </figure>
+                    <figure class="categories object">
+                        <a href="#">
+                            <img src="../../../Media/Images/Capas_astro/Art_M.5.png">
+                        </a>
+                    </figure>
+                    <figure class="categories object">
+                        <a href="#">
+                            <img src="../../../Media/Images/Capas_astro/Art_M.5.png">
+                        </a>
+                    </figure>
+                    <figure class="categories object">
+                        <a href="#">
+                            <img src="../../../Media/Images/Capas_astro/Art_M.5.png">
+                        </a>
+                    </figure>
+                    <figure class="categories object">
+                        <a href="#">
+                            <img src="../../../Media/Images/Capas_astro/Art_M.5.png">
+                        </a>
+                    </figure>
+                    <figure class="categories object">
+                        <a href="#">
+                            <img src="../../../Media/Images/Capas_astro/Art_M.5.png">
+                        </a>
+                    </figure>
+                    <figure class="categories object">
+                        <a href="#">
+                            <img src="../../../Media/Images/Capas_astro/Art_M.5.png">
+                        </a>
+                    </figure>
+                    <figure class="categories object">
+                        <a href="#">
+                            <img src="../../../Media/Images/Capas_astro/Art_M.5.png">
+                        </a>
+                    </figure>
+                    <figure class="categories object">
+                        <a href="#">
+                            <img src="../../../Media/Images/Capas_astro/Art_M.5.png">
+                        </a>
+                    </figure>
+                    <figure class="categories object">
+                        <a href="#">
+                            <img src="../../../Media/Images/Capas_astro/Art_M.5.png">
+                        </a>
+                    </figure>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>
