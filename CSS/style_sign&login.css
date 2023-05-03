@@ -48,7 +48,7 @@ header a{
 }
 
 .containner_information{
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.5);
     position: relative;
     transform: translate(-50%);
     left: 50%;
@@ -64,4 +64,110 @@ header a{
     font-family: "Martina";
     font-size: 5em;
     font-weight: 100;
+}
+
+.form{
+  position: relative;
+  margin: 15px 0;
+  align-items: center;
+
+  font-family: "MS PGothic";
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 16px;
+  text-transform: capitalize;
+  text-align: left;
+  color: #ffffff;
+}
+
+.form #user, form #password, form #email{
+  position: relative;
+  width: 100%;
+  height: max-content;
+  margin-top: 15px;
+
+  background: transparent;
+  outline: 0;
+  border: 0;
+  border-bottom: 2px solid #d9d9d970;
+  transition: 0.5s ease;
+  
+  font-size: 16px;
+}
+
+.pass{
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+input::placeholder{
+  margin: 10px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #d9d9d970;
+}
+
+input{
+  color: #d9d9d970;
+}
+
+input:focus{
+  color: #ffffff;
+  transition: 0.5;
+}
+
+.containner_term{
+  position: relative;
+  margin: 35px 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 50%;
+  height: fit-content;
+
+  font-family: "MS PGothic";
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 16px;
+  text-transform: capitalize;
+
+  transition: 0.5s;
+}
+
+.containner_term a{
+  color: #cb8e00;
+}
+
+.containner_term:hover{
+  text-shadow: 2px 0 2px rgba(0, 0, 0, 0.46);
+  transition: 0.5s;
+}
+
+#button{
+  position: relative;
+  margin: 0 -50%;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 50px;
+
+  font-family: "MS PGothic";
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  color: #ffffff;
+
+  background: #cb8e00;
+  box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.25);
+
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#button:hover{
+  background: transparent;
+  border: 1px solid #cb8e00;
+  transform: translateY(-5px);
+  transition: 0.5s;
 }

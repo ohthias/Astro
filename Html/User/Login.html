@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Astro</title>
         <link rel="stylesheet" href="../../CSS/style_sign&login.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     </head>
     <body>
         <header>
@@ -17,25 +18,28 @@
                     <h1>Entrar</h1>
                     <div class="containner_form">
                         <form action="../Base/home_page.html">
-                            <div class="form_username">
+                            <div class="form username">
                                 <h3>Nome de Usuário / Email</h3>
                                 <input type="text" name="user" id="user" required placeholder="Digite seu usuário">
                             </div>
-                            <div class="form_password">
+                            <div class="form password">
                                 <h3>Senha</h3>
-                                <input type="password" name="password" id="password" required placeholder="Digite sua senha">
+                                <p class="pass">
+                                    <input type="password" name="password" id="password" required placeholder="Digite sua senha"/>
+                                    <i class="bi bi-eye-slash" id="togglePassword"></i>
+                                </p>
                             </div>
                             <div class="containner_term">
                                 <a href="#">
                                     Concordo com os termos da plataforma
                                 </a>
                             </div>
-                            <input type="submit" value="Entrar">
+                            <input id="button" type="submit" value="Entrar">
                         </form>
                     </div>
                 </div>
             </div>
         </main>
+        <script src="../../JS/togglePassword.js"></script>
     </body>
-    <script src="../../JS/login.JS"></script>
 </html>
