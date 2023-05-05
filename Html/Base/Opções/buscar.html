@@ -6,61 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astro</title>
     <link rel="stylesheet" href="../../../CSS/fixed_menu.css">
+    <link rel="stylesheet" href="../../../CSS/navbar.css">
     <link rel="stylesheet" href="../../../CSS/search.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
 </head>
 <body>
     <header>
+        <aside class="bar_side">
+            <div class="content">
+                <div class="side_logo">
+                    <a href="../home_page.html" id="logo">
+                        Astro
+                    </a>
+                </div>
+                <div class="main_contents info_principais">
+                    <div class="main_contents info">
+                        <i class="fi fi-sr-menu-burger"></i>
+                        <a href="../home_page.html" class="text">Início</a>
+                    </div>
+                    <div class="main_contents info">
+                        <i class="fi fi-rs-search"></i>
+                        <a href="./buscar.html" class="text">Buscar</a>
+                    </div>
+                    <div class="main_contents info">
+                        <i class="fi fi-tr-album"></i>
+                        <a href="./biblioteca.html" class="text">Suas Playlist</a>
+                    </div>
+                    <div class="main_contents info">
+                        <i class="fi fi-rr-heart"></i>
+                        <a href="./musicaCurtidas.html" class="text">Músicas Curtidas</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="main_contents playlist">
+                    <div class="main_contents playlist_info">
+                        <i class="fi fi-br-plus"></i>
+                        <a href="#" class="playlist_text">Criar uma playlist</a>
+                    </div>
+                    <div class="main_contents playlist_info">
+                        <a href="#" class="playlist_text">Playlist 1</a>
+                    </div>
+                    <div class="main_contents playlist_info">
+                        <a href="#" class="playlist_text">Playlist 2</a>
+                    </div>
+                </div>
+                <hr>
+                <p id="copy">
+                    &copy Astro 2023
+                </p>
+            </div>
+        </aside>
+    </header>
+    <main>
         <nav>
             <a href="#" class="Logo">Astro</a>
-            <i class="fi fi-sr-user"></i>
-            <i class="fi fi-ss-settings">3243</i>
+            <ul id="navbar">
+                <i class="fi fi-sr-user"></i>
+                <i class="fi fi-ss-settings"></i>
+            </ul>
         </nav>
-    </header>
-    <aside class="bar_side">
-        <div class="content">
-            <div class="side_logo">
-                <a href="#" id="logo">
-                    Astro
-                </a>
-            </div>
-            <div class="main_contents info_principais">
-                <div class="main_contents info">
-                    <i class="fi fi-sr-menu-burger"></i>
-                    <a href="#" class="text">Início</a>
-                </div>
-                <div class="main_contents info">
-                    <i class="fi fi-rs-search"></i>
-                    <a href="#" class="text">Buscar</a>
-                </div>
-                <div class="main_contents info">
-                    <i class="fi fi-tr-album"></i>
-                    <a href="#" class="text">Suas Playlist</a>
-                </div>
-                <div class="main_contents info">
-                    <i class="fi fi-rr-heart"></i>
-                    <a href="#" class="text">Músicas Curtidas</a>
-                </div>
-            </div>
-            <hr>
-            <div class="main_contents playlist">
-                <div class="main_contents playlist_info">
-                    <i class="fi fi-br-plus"></i>
-                    <a href="#" class="playlist_text">Criar uma playlist</a>
-                </div>
-                <div class="main_contents playlist_info">
-                    <a href="#" class="playlist_text">Playlist 1</a>
-                </div>
-                <div class="main_contents playlist_info">
-                    <a href="#" class="playlist_text">Playlist 2</a>
-                </div>
-            </div>
-            <hr>
-            <p id="copy">
-                &copy Astro 2023
-            </p>
-        </div>
-    </aside>
-    <main>
         <section class="search_container">
             <div class="search_container text">
                 <form action="">

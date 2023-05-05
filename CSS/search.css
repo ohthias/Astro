@@ -13,23 +13,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    position: sticky;
-}
-
-header{
-  position: absolute;
-  left: 80%;
-  display: inline;
-  justify-content: end;
-  align-items: end;
+  }
+  
+body{
+  background: #121212;
+    
 }
 
 main{
-  margin-left: 20%;
+  margin-left: 15%;
 }
 
 .categories{
-  transform: translateX(20%);
+  transform: translateX(15%);
   display: grid;
   grid: repeat(4, 170px) / auto-flow 170px;
 }

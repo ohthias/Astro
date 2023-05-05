@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "Martina";
+    src: url(../Acetss/Fonts/Martina\ Regular.ttf);
+  }
+
+nav{
+    display: flex;
+    justify-content:start;
+    align-items: center;
+    align-self: center;
+}
+
+.Logo{
+    margin: 0 20px;
+    font-family: "Martina";
+    font-size: 1em;
+    font-weight: 200;
+    color: #ffffff;
+}
+
+#navbar{
+    display: inline;
+    color: #ffffff;
+}
+
+.fi{
+    margin: 10px 15px;
+}
