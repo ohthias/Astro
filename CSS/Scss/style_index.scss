@@ -47,12 +47,13 @@ h1{
     line-height: 2em;
     letter-spacing: 0.5px;
     color: rgba(255, 255, 255, 0.75);
+    
+    a{
+        text-decoration: none;
+        color: #ffffff;
+    }
 }
 
-a{
-    text-decoration: none;
-    color: #ffffff;
-}
 
 button{
     padding: 20px 30px;

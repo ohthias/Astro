@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Martina";
+  src: url(../Acetss/Fonts/Martina\ Regular.ttf);
+}
+
+@font-face {
+  font-family: "MS PGothic";
+  src: url(../Acetss/Fonts/ms-pgothic_bigfontsite.com.ttf);
+}
+
+* { /*Não se esqueçam disso*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#logo{
+  font-family: "Martina";
+  font-size: 2em;
+  font-weight: 100;
+}
+
+.bar_side{
+  position: fixed;
+  width: 15%; 
+  height: 100vh;
+  background: #7a5808cb;
+}
+
+hr{
+  margin: 10px 0;
+  border: 1px solid #ffffff6c;
+}
+
+a,p{
+  font-family: 'MS PGothic';
+  font-size: 1em;
+  line-height: 2em;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #ffffff;
+
+  transition: 0.3s;
+}
+
+.text:hover{
+  padding: 10px 10px;
+  border: 0;
+  border-radius: 50px;
+  background: #7a5808ee;
+  transition: 0.3s;
+}
+
+.playlist_text:hover{
+  text-shadow: 1px 2px 2px rgba(0,0,0,0.5);
+}
+
+.content{
+  padding: 20px 20px;
+}
+
+.info_principais{
+  margin-top: 20px;
+}
+
+#copy, .playlist{
+  margin: 20px 0;
+  text-align: center;
+}
