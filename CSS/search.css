@@ -1,0 +1,39 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Martina";
+  src: url(../Acetss/Fonts/Martina\ Regular.ttf);
+}
+
+@font-face {
+  font-family: "MS PGothic";
+  src: url(../Acetss/Fonts/ms-pgothic_bigfontsite.com.ttf);
+}
+
+* { /*Não se esqueçam disso*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body{
+  background: #121212;
+    
+}
+
+main{
+  margin-left: 15%;
+}
+
+.categories{
+  transform: translateX(15%);
+  display: grid;
+  grid: repeat(4, 170px) / auto-flow 170px;
+}
+
+figure img{
+  width: 150px;
+  height: 150px;
+  border: 0;
+  border-radius: 10px;
+}
+
