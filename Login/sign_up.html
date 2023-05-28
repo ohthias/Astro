@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASTRO</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="CSS/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <header class="logo">
+      <h3 id="logo">Astro</h3>
+    </header>
+    <figure>
+      <img src="./Img/Astro1.png" alt="Astronaut" />
+    </figure>
+    <main>
+      <div class="containner">
+        <div class="containner_info">
+          <h1>Entrar</h1>
+          <a href="./sign_in.html" id="page"> Cadastrar </a>
+          <form action="../Erro/404.html" method="post">
+            <div class="containner_user">
+              <h2 id="user">Nome de usuário/Email</h2>
+              <input
+                type="text"
+                placeholder="Digite o nome de usuário ou email"
+                required
+              />
+            </div>
+            <div class="containner_pass">
+              <h2 id="pass">Senha</h2>
+              <p id="label_pass">
+                <input
+                  type="password"
+                  placeholder="Digite sua senha"
+                  id="password"
+                  required
+                />
+                <i class="bi bi-eye-slash" id="togglePassword"></i>
+              </p>
+            </div>
+            <div class="containner_term">
+              <a href="#"> Concordo com os <p>termos da plataforma</p></a>
+            </div>
+            <input type="submit" value="Entrar" id="btn"/>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="./JS/togglePassword.js"></script>
+  </body>
+</html>
