@@ -1,5 +1,6 @@
-# Pojeto-Astro
-
-Projeto Astro utilizando os conhecimentos de Html, CSS e Javascript
-
-[EM DESENVOLVIMENTO]
+<h1 align="center">
+  ASTRO
+</h1>
+<p align="center">
+  <strong>Em desenvolvimento</strong>
+</p>
