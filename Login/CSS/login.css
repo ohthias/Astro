@@ -7,6 +7,8 @@
 
 body,
 html {
+  overflow-y: hidden;
+  overflow-x: hidden;
   background: linear-gradient(90deg, rgba(41, 242, 71, 0.05) 44.32%, rgba(41, 242, 71, 0.2) 82.83%), #05061e;
   font-family: "Bebas Neue", sans-serif;
   color: #ffffff;
