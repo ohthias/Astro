@@ -1,0 +1,213 @@
+body {
+    background-color: var(--back-background-main);
+}
+
+/* Header navbar & Logo*/
+
+header {
+    width: 100%;
+    height: 60px;
+    z-index: 10;
+}
+
+.containner_header {
+    display: flex;
+    align-items: end;
+    justify-content: right;
+}
+
+#logo {
+    margin-top: 15px;
+    margin-right: 67%;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 34px;
+    color: var(--font);
+    transition: 0.8s;
+    cursor: pointer;
+
+    background:
+        linear-gradient(to right, rgba(255, 255, 255, 0), rgba(100, 200, 200, 0)),
+        linear-gradient(to right, var(--de-detail-green), var(--de-detail-green));
+    background-size: 100% 0.1em, 0 0.1em;
+    background-position: 100% 70%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+
+    text-shadow: 2px 0 2px var(--sha-shadow-white);
+    transition: 0.5s;
+}
+
+#logo:hover,
+#logo:focus {
+    color: var(--de-detail-green);
+    background-size: 0 0.1em, 100% 0.1em;
+    transition: 0.3s;
+}
+
+.menu a {
+    margin-right: 25px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.fi-ss-user,
+.fi-ss-settings {
+    margin-left: 16px;
+    color: var(--font);
+    filter: drop-shadow(0 0 10px var(--sha-shadow-white));
+    transition: 0.8s;
+}
+
+.fi-ss-user:hover,
+.fi-ss-settings:hover {
+    color: var(--de-detail-green);
+    text-shadow: 0 0 10px var(--sha-shadow-white), 0 0 50px var(--de-detail-green);
+    transition: 0.5s;
+}
+
+/* Background Parallax Image*/
+
+.back-image {
+    margin: 0 auto;
+    display: block;
+}
+
+section.module.parallax {
+    display: flex;
+    flex-direction: column;
+    justify-content: inherit;
+    height: 100vh !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section.module.parallax::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 8;
+    background: linear-gradient(to top, var(--back-background-main), rgba(255,255,255,0) 75%);
+}
+
+section.module.parallax-1 {
+    background: url(https://images.unsplash.com/photo-1521337706264-a414f153a5ed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=821&q=80);
+}
+
+
+/* Main iformations 'main content' */
+
+main.containner_content{
+    z-index: 11;
+}
+
+.containner_text{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-30%, -30%);
+
+}
+
+.containner_text h1{
+    margin: 25px 0;
+    font-size: 5em;
+    letter-spacing: 5px;
+    line-height: 60px;
+    text-shadow: 0 2px 2px var(--sha-shadow-black);
+}
+
+.containner_text button {
+    padding: 15px 10px;
+    border: 2px solid var(--de-detail-green);
+    border-radius: 100px;
+
+    font-size: 1.25em;
+    background: none;
+    cursor: pointer;
+    color: var(--de-detail-green);
+    box-shadow: 0 2px 2px var(--sha-shadow-black) ;
+    transition: 0.8s;
+}
+
+.containner_text button:hover {
+    color: var(--font);
+    background: var(--de-detail-green);
+    box-shadow: 0 0 2px var(--de-detail-green), 0 0 40px var(--de-detail-green);
+    transition: 0.4s ease;
+}
+
+/*.containner_text button:active, .containner_text button:focus {
+    border: 0;
+    color: var(--font);
+    cursor: progress;
+    background: linear-gradient(0deg, rgba(41,242,71,1) 0%, rgba(57,138,20,1) 100%);
+}*/
+
+/* Músicas || Artistas anteriores */
+
+.containner_anteriores {
+    position: relative;
+    top: 78%;
+    max-width: 650px;
+    float: right;
+}
+
+.containner_anteriores h2{
+    letter-spacing: 2px;
+    text-shadow: 0 2px 2px var(--sha-shadow-black);
+
+    background:
+        linear-gradient(to right, var(--font), var(--font));
+    background-size: 40% 0.1em, 0 0.1em;
+    background-position: 0 100%, 0 100%;
+    background-repeat: no-repeat;
+    
+}
+
+.child_anter {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+}
+
+.child_anter img {
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 10px 2px 10px var(--sha-shadow-black);
+    transition: 0.3s;
+}
+
+.child_anter img:hover {
+    position: relative;
+    transform: translateY(-10px);
+    box-shadow: 0 -1px 2px rgba(41,242,71,1), 0 -5px 20px rgba(57,138,20,1);
+    transition: 0.5s ease;
+}
+
+/* Menu lateral */
+
+aside {
+    position:fixed;
+    width: 18%;
+    height: 95vh !important;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 20px;
+    z-index: 15;
+    background: var(--back-background-menu);
+}
+
+/* Player */
+
+
+/* Animations das playlists */
+/* Animations da main */
