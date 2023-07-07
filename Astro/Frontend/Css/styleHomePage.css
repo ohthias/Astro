@@ -1,5 +1,12 @@
+/*
+ * Page: Home Page
+ * UTA - Matheus 05/07
+ * código documentado conforme html
+ */
+
 body {
     background-color: var(--back-background-main);
+    overflow-x: hidden;
 }
 
 /* Header navbar & Logo*/
@@ -35,7 +42,10 @@ header {
     background-repeat: no-repeat;
     transition: background-size 400ms;
 
+    /* @param background - linha abaixo da logo para :hover para clique*/ 
+
     text-shadow: 2px 0 2px var(--sha-shadow-white);
+    animation: fadeIn 1s ease;
     transition: 0.5s;
 }
 
@@ -52,15 +62,16 @@ header {
     text-decoration: none;
 }
 
-.fi-ss-user,
+menu.fi-ss-user,
 .fi-ss-settings {
     margin-left: 16px;
     color: var(--font);
     filter: drop-shadow(0 0 10px var(--sha-shadow-white));
+    animation: fadeIn 1s ease;
     transition: 0.8s;
 }
 
-.fi-ss-user:hover,
+menu.fi-ss-user:hover,
 .fi-ss-settings:hover {
     color: var(--de-detail-green);
     text-shadow: 0 0 10px var(--sha-shadow-white), 0 0 50px var(--de-detail-green);
@@ -68,6 +79,7 @@ header {
 }
 
 /* Background Parallax Image*/
+/* TODO - Ajustar o tamanho da imagem para fullscreen */
 
 .back-image {
     margin: 0 auto;
@@ -82,10 +94,12 @@ section.module.parallax {
     width: 100%;
     position: relative;
     overflow: hidden;
+
     background-position: 50% 50%;
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    animation: fadeIn 800ms ease;
 }
 
 section.module.parallax::after {
@@ -99,10 +113,12 @@ section.module.parallax::after {
 
 section.module.parallax-1 {
     background: url(https://images.unsplash.com/photo-1521337706264-a414f153a5ed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=821&q=80);
+    /* TODO - Fazer um sorteador de imagens */
 }
 
 
 /* Main iformations 'main content' */
+/* ! camadas a partir da '11' */
 
 main.containner_content{
     z-index: 11;
@@ -113,7 +129,6 @@ main.containner_content{
     top: 30%;
     left: 30%;
     transform: translate(-30%, -30%);
-
 }
 
 .containner_text h1{
@@ -122,6 +137,8 @@ main.containner_content{
     letter-spacing: 5px;
     line-height: 60px;
     text-shadow: 0 2px 2px var(--sha-shadow-black);
+    animation: giveMeDown 750ms linear;
+    animation-delay: calc(.1s * var(--i));
 }
 
 .containner_text button {
@@ -134,6 +151,7 @@ main.containner_content{
     cursor: pointer;
     color: var(--de-detail-green);
     box-shadow: 0 2px 2px var(--sha-shadow-black) ;
+    animation: downDown 500ms ease;
     transition: 0.8s;
 }
 
@@ -144,6 +162,7 @@ main.containner_content{
     transition: 0.4s ease;
 }
 
+/* Todo - ajustar active do botão */
 /*.containner_text button:active, .containner_text button:focus {
     border: 0;
     color: var(--font);
@@ -169,7 +188,9 @@ main.containner_content{
     background-size: 40% 0.1em, 0 0.1em;
     background-position: 0 100%, 0 100%;
     background-repeat: no-repeat;
-    
+    /* detalhe com o mesmo efeito de 'hr' */
+
+    animation: downDown 500ms ease;
 }
 
 .child_anter {
@@ -177,6 +198,7 @@ main.containner_content{
     display: grid;
     grid-template-columns: repeat(4, auto);
     gap: 10px;
+    animation: rightToLeft 750ms linear;
 }
 
 .child_anter img {
@@ -206,8 +228,156 @@ aside {
     background: var(--back-background-menu);
 }
 
+.containner_opc {
+    height: 20vh;
+    margin: 0 5px;
+    margin-bottom: 25px;
+    padding: 15px 10px;
+    border: 0;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(1fr, 1fr);
+    justify-content: start;
+    align-items: center;
+    background: var(--back-background-menu);
+}
+
+.containner_opc a{
+    width: 190px;
+    padding: 5px 10px;
+    margin: 8px auto;
+    border-radius: 20px;
+    font-size:1.5em;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.containner_opc a:hover{
+    background: var(--sha-shadow-black);
+    transition: 0.3s
+
+}
+
+.containner_opc a i.fi-ss-home::after{
+    content: 'home';
+    margin:auto 5px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+.containner_opc a i.fi-ss-user{
+    margin: 0;
+    filter: drop-shadow(0 0 0 var(--sha-shadow-white));
+    transition: 0;
+}
+
+.containner_opc a i.fi-ss-user::after{
+    content: 'user';
+    margin: auto 5px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+.containner_playlist{
+    height: max-content;
+    padding: 15px 10px;
+    margin: 0 5px;
+    border: 0;
+    border-radius: 20px;
+    background: var(--back-background-menu);
+}
+
+.containner_playlist .child_play{
+    color: aqua;
+}
+
 /* Player */
 
 
 /* Animations das playlists */
-/* Animations da main */
+
+
+/* Animations da main 
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
+@keyframes giveMeDown {
+    0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
+@keyframes downDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rightToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+        filter: blur(4px);
+    }
+    100% {
+        opacity: 100;
+        transform: translateX(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes bluBlur {
+    100% {
+        opacity: 1;
+        filter: blur(0);
+  }
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    background: var(--back-background-menu);
+}
+
+footer::after {
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: linear-gradient(to top, var(--sha-shadow-black), rgba(255, 255, 255, 0));
+}
+
+footer p {
+    z-index: 8;
+    color: var(--font);
+}
