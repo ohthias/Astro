@@ -13,12 +13,14 @@
 :root{
     /* Colors */
     --back-background-main: #05061E;
-    --back-background-menu: #0a13bf6d;
+    --back-background-menu: #05061e8d;
     --font: #ffffff;
     --de-detail-orange: #ff3d20;
     --de-detail-green: #29f247;
     --de-detail-purple: #4b0072;
+    --de-detail-purple-sha-shadow: #4a007276;
     --sha-shadow-black: rgba(0, 0, 0, 0.5);
+    --sha-shadow-black-menu: rgba(0, 0, 0, 0.25);
     --sha-shadow-white: rgba(255, 255, 255, 0.5);
     
     /* Sizes */
