@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body,
+html {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top, rgba(41, 242, 71, 0.255) 10%, rgba(75, 0, 114, 0.25) 40%, #05061e 100%), #05061e;
+    color: var(--font);
+    font-family: 'Montserrat', sans-serif;
+}
+
+main{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -40%);
+}
+
+.containner{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    animation: fadeIn 800ms infinite;
+}
+
+.conteinner_logo h1{
+    font-size: 5em;
+    letter-spacing: 4px;
+    text-shadow: 0 2px 2px var(--sha-shadow-black);
+    color: var(--de-detail-green);
+}
+
+.containner_info{
+    margin: 15px 0;
+    max-width: 350px;
+}
+
+.containner_info h2, .containner_info span{
+    margin: 10px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px var(--sha-shadow-black);
+}
+
+span{
+    z-index: 10;
+    color: var(--de-detail-orange);
+}
+
+.fa{
+    color: var(--de-detail-purple-sha-shadow);
+}
+
+.star1{
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    animation: upDown 5s infinite;
+}
+
+.star2{
+    z-index: 1;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    animation: downUp 5s infinite;
+}
+
+.star3{
+    z-index: 1;
+    position: absolute;
+    top: 70%;
+    left: 85%;
+    animation: upDown 5s infinite;
+}
+
+.star4{
+    z-index: 1;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    animation: downUp 5s infinite;
+}
+
+.star5{
+    z-index: 1;
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    animation: upDown 5s infinite;
+}
+
+.star6{
+    z-index: 1;
+    position: absolute;
+    top: 10%;
+    left: 55%;
+    animation: downUp 5s infinite;
+}
+
+.star7{
+    z-index: 1;
+    position: absolute;
+    top: 90%;
+    left: 5%;
+    animation: upDown 5s infinite;
+}
+
+img{
+    height: 150px;
+    rotate: 42deg;
+    animation: astronaut 10s infinite;
+}
+
+@keyframes upDown{
+    0%{
+        transform: translate(0,0);
+    }
+    
+    50%{
+        transform: translate(-10px,-20px);
+    }
+
+    100%{
+        transform: translate(0,0);
+    }
+}
+
+@keyframes downUp{
+    0%{
+        transform: translate(0,0);
+    }
+
+    50%{
+        transform: translate(10px,20px);
+    }
+
+    100%{
+        transform: translate(0,0);
+    }
+}
+
+@keyframes astronaut{
+    0%{
+        transform: translate(250%, 350%);
+    }
+    
+    50%{
+        transform: translate(50px, 25px);
+    }
+
+    100%{
+        transform: translate(-500%, -550%);
+    }
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sing{
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 100px;
+    width: 150px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+#entrar{
+    background: transparent;
+    border: 2px solid var(--de-detail-green);
+    color: var(--de-detail-green);
+    transition: 800ms;
+}
+
+#entrar:hover{
+    transform: translateY(-5px);
+    background: var(--de-detail-green);
+    color: var(--font);
+    transition: 250ms;
+}
+
+#cadastrar{
+    background:linear-gradient(to bottom, #ff3d20,#4b0072);
+    border: 0;
+    color: var(--font);
+    transition: 800ms;
+}
+
+#cadastrar:hover{
+    transform: translateY(-5px);
+    transition: 250ms;
+}
+
+@media screen and (max-width:450px) {
+    main{
+        left: 50%;
+
+    }
+
+    .buttons{
+        flex-direction: column;
+    }
+}
