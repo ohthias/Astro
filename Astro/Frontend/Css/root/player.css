@@ -1,0 +1,136 @@
+/* Player */
+
+.containner_player {
+    width: 98%;
+    max-height: 100px;
+    height: 100%;
+    margin: 10px;
+    position: fixed;
+    z-index: 12;
+    bottom: 0;
+    background: var(--de-detail-purple-sha-shadow);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    padding: 10px;
+}
+
+.logo img{
+    border-radius: 10px;
+}
+
+.info {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+#musicName{
+    font-size: 24px;
+    letter-spacing: 1px;
+    animation: upInDownMusic 20s infinite;
+}
+
+#artistName{
+    font-family: sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+/* Controls */
+
+.controls{
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--sha-shadow-black-menu);
+}
+
+.controls button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.controls i {
+    margin: 0 5px;
+    font-size: 28px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: all .2s;
+}
+
+.controls i:hover {
+    color: var(--de-detail-green);
+    background: var(--sha-shadow-black);
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.time span {
+    margin: 10px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: var(--font);
+    text-shadow: 0 0 10px var(--sha-shadow-white);
+}
+
+.footer {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.progress-bar {
+    height: 8px;
+    background: var(--de-detail-purple);
+    cursor: pointer;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: 150ms;
+}
+
+.progress-bar:hover {
+    background: var(--sha-shadow-black-menu);
+}
+
+.progress {
+    height: 8px;
+    background: var(--de-detail-green);
+    border-radius: 5px;
+    transition: 150ms;
+}
+
+.progress:hover{
+    background: var(--de-detail-orange);
+}
+
+@keyframes upInDownMusic{
+    0%{
+        transform: translateY(0);
+    }
+    25%{
+        transform: translateY(-3px);
+        text-shadow: 0 0 10px var(--sha-shadow-white);
+    }
+    75%{
+        transform: translateY(3px);
+        text-shadow: 0 0 10px var(--sha-shadow-white), 0 0 25px var(--sha-shadow-white);
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
+}
