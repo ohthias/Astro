@@ -9,49 +9,50 @@ html {
     font-family: 'Montserrat', sans-serif;
 }
 
-main{
+main {
     position: absolute;
     top: 50%;
     left: 40%;
     transform: translate(-50%, -40%);
 }
 
-.containner{
+.containner {
     display: flex;
     justify-content: start;
     flex-direction: column;
     animation: fadeIn 800ms infinite;
 }
 
-.conteinner_logo h1{
+.conteinner_logo h1 {
     font-size: 5em;
     letter-spacing: 4px;
     text-shadow: 0 2px 2px var(--sha-shadow-black);
     color: var(--de-detail-green);
 }
 
-.containner_info{
+.containner_info {
     margin: 15px 0;
     max-width: 350px;
 }
 
-.containner_info h2, .containner_info span{
+.containner_info h2,
+.containner_info span {
     margin: 10px 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-shadow: 2px 2px 5px var(--sha-shadow-black);
 }
 
-span{
+span {
     z-index: 10;
     color: var(--de-detail-orange);
 }
 
-.fa{
+.fa {
     color: var(--de-detail-purple-sha-shadow);
 }
 
-.star1{
+.star1 {
     z-index: 1;
     position: absolute;
     top: 50%;
@@ -59,7 +60,7 @@ span{
     animation: upDown 5s infinite;
 }
 
-.star2{
+.star2 {
     z-index: 1;
     position: absolute;
     top: 10%;
@@ -67,7 +68,7 @@ span{
     animation: downUp 5s infinite;
 }
 
-.star3{
+.star3 {
     z-index: 1;
     position: absolute;
     top: 70%;
@@ -75,7 +76,7 @@ span{
     animation: upDown 5s infinite;
 }
 
-.star4{
+.star4 {
     z-index: 1;
     position: absolute;
     top: 90%;
@@ -83,7 +84,7 @@ span{
     animation: downUp 5s infinite;
 }
 
-.star5{
+.star5 {
     z-index: 1;
     position: absolute;
     top: 20%;
@@ -91,7 +92,7 @@ span{
     animation: upDown 5s infinite;
 }
 
-.star6{
+.star6 {
     z-index: 1;
     position: absolute;
     top: 10%;
@@ -99,7 +100,7 @@ span{
     animation: downUp 5s infinite;
 }
 
-.star7{
+.star7 {
     z-index: 1;
     position: absolute;
     top: 90%;
@@ -107,61 +108,61 @@ span{
     animation: upDown 5s infinite;
 }
 
-img{
+img {
     height: 150px;
     rotate: 42deg;
     animation: astronaut 10s infinite;
 }
 
-@keyframes upDown{
-    0%{
-        transform: translate(0,0);
-    }
-    
-    50%{
-        transform: translate(-10px,-20px);
+@keyframes upDown {
+    0% {
+        transform: translate(0, 0);
     }
 
-    100%{
-        transform: translate(0,0);
+    50% {
+        transform: translate(-10px, -20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
     }
 }
 
-@keyframes downUp{
-    0%{
-        transform: translate(0,0);
+@keyframes downUp {
+    0% {
+        transform: translate(0, 0);
     }
 
-    50%{
-        transform: translate(10px,20px);
+    50% {
+        transform: translate(10px, 20px);
     }
 
-    100%{
-        transform: translate(0,0);
+    100% {
+        transform: translate(0, 0);
     }
 }
 
-@keyframes astronaut{
-    0%{
+@keyframes astronaut {
+    0% {
         transform: translate(250%, 350%);
     }
-    
-    50%{
+
+    50% {
         transform: translate(50px, 25px);
     }
 
-    100%{
+    100% {
         transform: translate(-500%, -550%);
     }
 }
 
-.buttons{
+.buttons {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.sing{
+.sing {
     padding: 10px;
     margin-right: 10px;
     border-radius: 100px;
@@ -173,39 +174,39 @@ img{
     cursor: pointer;
 }
 
-#entrar{
+#entrar {
     background: transparent;
     border: 2px solid var(--de-detail-green);
     color: var(--de-detail-green);
     transition: 800ms;
 }
 
-#entrar:hover{
+#entrar:hover {
     transform: translateY(-5px);
     background: var(--de-detail-green);
     color: var(--font);
     transition: 250ms;
 }
 
-#cadastrar{
-    background:linear-gradient(to bottom, #ff3d20,#4b0072);
+#cadastrar {
+    background: linear-gradient(to bottom, #ff3d20, #4b0072);
     border: 0;
     color: var(--font);
     transition: 800ms;
 }
 
-#cadastrar:hover{
+#cadastrar:hover {
     transform: translateY(-5px);
     transition: 250ms;
 }
 
 @media screen and (max-width:450px) {
-    main{
+    main {
         left: 50%;
 
     }
 
-    .buttons{
+    .buttons {
         flex-direction: column;
     }
 }

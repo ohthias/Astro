@@ -303,30 +303,6 @@ aside {
     margin: 0 5px;
 }
 
-/* Player */
-
-.containner-player{
-    width: 98%;
-    height: 100px;
-    position: fixed;
-    z-index: 12;
-    bottom: 0;
-    background: var(--de-detail-purple-sha-shadow) ;
-    backdrop-filter: blur(8px);
-    margin: 15px;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.player{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.player img{
-    width: 40px;
-}
-
 /* Main */
 
 .containner-main{

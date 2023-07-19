@@ -6,6 +6,11 @@ body {
   color: #ffffff;
 }
 
+.backErro{
+  background: linear-gradient(180deg, #8226BF 10%, #8226BF3f 40.5%, #07122083 75%), #071220;
+  color: #ffffff;
+}
+
 #logo {
   margin: 15px;
   padding: 10px;
