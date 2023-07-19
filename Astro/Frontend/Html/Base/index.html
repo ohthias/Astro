@@ -3,24 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Astro</title>
-    <link rel="shortcut icon" href="/Assets/Images/Icons/iconAstro.png" type="image/x-icon">
+    <title>ASTRO</title>
+    <link
+      rel="shortcut icon"
+      href="/Assets/Images/Icons/iconAstro.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="/Astro/Frontend/Css/root/root.css" />
     <link rel="stylesheet" href="/Astro/Frontend/Css/Others/index.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
 
   <body>
-    <img src="/Assets/Images/Astronaut/Astro1.png" alt="astro">
+    <audio autoplay loop="true" id="myaudio">
+      <source src="/Assets/Music/Beyond.mp3" type="audio/mpeg">
+    </audio>
+
+    <img src="/Assets/Images/Astronaut/Astro1.png" alt="astro" />
     <div class="backgroundStars">
-        <span class="fa fa-star star1"></span>
-        <span class="fa fa-star star2"></span>
-        <span class="fa fa-star star3"></span>
-        <span class="fa fa-star star4"></span>
-        <span class="fa fa-star star5"></span>
-        <span class="fa fa-star star6"></span>
-        <span class="fa fa-star star7"></span>
+      <span class="fa fa-star star1"></span>
+      <span class="fa fa-star star2"></span>
+      <span class="fa fa-star star3"></span>
+      <span class="fa fa-star star4"></span>
+      <span class="fa fa-star star5"></span>
+      <span class="fa fa-star star6"></span>
+      <span class="fa fa-star star7"></span>
     </div>
     <main>
       <div class="containner">
@@ -37,16 +47,16 @@
           </div>
         </div>
         <div class="buttons">
-          <button class="sing" id="entrar">
-           Entrar
-          </button>
-          <button class="sing" id="cadastrar">
-              Cadastrar
-          </button>
+          <button class="sing" id="entrar">Entrar</button>
+          <button class="sing" id="cadastrar">Cadastrar</button>
         </div>
       </div>
     </main>
     <script src="/Astro/Frontend/JS/palavraIndex.js"></script>
     <script src="/Astro/Frontend/JS/redirect.js"></script>
+    <script>
+      var audio = document.getElementById("myaudio");
+      audio.volume = 0.2;
+    </script>
   </body>
 </html>

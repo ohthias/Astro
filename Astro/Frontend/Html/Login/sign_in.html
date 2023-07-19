@@ -17,6 +17,10 @@
 </head>
 
 <body>
+  <audio autoplay loop="true" id="myaudio">
+    <source src="/Assets/Music/Beyond.mp3" type="audio/mpeg">
+  </audio>
+
   <h3 id="logo">Astro</h3>
   <img src="/Assets/Images/Astronaut/Astro2.png" alt="Astronaut" id="image" />
   <main>
@@ -24,7 +28,7 @@
       <div class="containner_info">
         <h1>Cadastrar</h1>
         <a href="./sign_up.html" id="page"> Entrar </a>
-        <form>
+        <form action="/Astro/Frontend/Html/Base/home.html">
           <div class="containner_user">
             <h2 id="user">Email</h2>
             <input type="text" placeholder="Digite um email" id="email" required />
@@ -52,7 +56,10 @@
     </div>
   </main>
   <script src="./JS/togglePassword.js"></script>
-  <script src="/Astro/Frontend/JS/redirect.js"></script>
+  <script>
+    var audio = document.getElementById("myaudio");
+    audio.volume = 0.2;
+  </script>
 </body>
 
 </html>

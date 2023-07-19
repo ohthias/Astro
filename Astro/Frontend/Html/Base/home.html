@@ -11,6 +11,7 @@
     />
     <link rel="stylesheet" href="/Astro/Frontend/Css/styleHomePage.css" />
     <link rel="stylesheet" href="/Astro/Frontend/Css/root/root.css"/>
+    <link rel="stylesheet" href="/Astro/Frontend/Css/root/player.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,29 +22,35 @@
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css"
     />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
   </head>
 
   <body>
     <!-- Player -->
-    <div class="containner-player">
+    <div class="containner_player">
       <div class="player">
-        <div class="player-info">
-          <figure class="player-image">
-            <span class="player-current-track"></span>
-            <span class="player-current-artist"></span>
-            <img src="/Assets/Images/Capas_astro/8.png" alt="" />
-          </figure>
+        <div class="logo">
+          <img src="https://source.unsplash.com/featured/60x60" id="imgSong">
         </div>
-        <div class="player-track"></div>
-        <div class="player-timeline">
-          <div class="player-timeline-control"></div>
+        <div class="info">
+          <span id="musicName"></span>
+          <span id="artistName"></span>
         </div>
-        <div class="player-controls">
-          <span class="player-prev">Prev</span>
-          <span class="player-play">Play</span>
-          <span class="player-pause">Pause</span>
-          <span class="player-stop">Stop</span>
-          <span class="player-next">Next</span>
+        <audio id="player" src=""></audio>
+        <div class="controls">
+          <button id="prevButton"><i class='bx bx-skip-previous'></i></button>
+          <button id="playPauseButton"><i class='bx bx-caret-right'></i></button>
+          <button id="nextButton"><i class='bx bx-skip-next'></i></button>
+        </div>
+        <div class="footer">
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
+          <div class="time">
+            <span id="currentTime">0:00</span>
+            <span id="duration">0:00</span>
+          </div>
         </div>
       </div>
     </div>
@@ -78,8 +85,8 @@
           <div class="containner_header">
             <label id="logo">Astro</label>
             <div class="menu">
-              <a href="#"><i class="fi fi-ss-user"></i></a>
-              <a href="#"><i class="fi fi-ss-settings"></i></a>
+              <a href="/Astro/Frontend/Html/Erro/404.html"><i class="fi fi-ss-user"></i></a>
+              <a href="/Astro/Frontend/Html/Base/index.html"><i class="fi fi-ss-settings"></i></a>
             </div>
           </div>
         </header>
@@ -87,7 +94,7 @@
         <main class="containner_content">
           <div class="containner_text">
             <h1>Secret Florest</h1>
-            <button>Escute outras músicas</button>
+            <button id="othersSongs">Escute outras músicas</button>
           </div>
           <div class="containner_anteriores">
             <h2>Continue Escutando</h2>
@@ -213,6 +220,6 @@
         </div>
       </div>
     </main>
-    <script src="/Astro/Frontend/JS/music.js"></script>
+    <script type="module" src="/Astro/Frontend/JS/musicPlayer.js"></script>
   </body>
 </html>
