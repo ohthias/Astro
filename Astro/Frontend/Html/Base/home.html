@@ -37,6 +37,7 @@
           <span id="musicName"></span>
           <span id="artistName"></span>
         </div>
+        <i class="fi fi-rr-heart"></i>
         <audio id="player" src=""></audio>
         <div class="controls">
           <button id="prevButton"><i class='bx bx-skip-previous'></i></button>
@@ -51,6 +52,11 @@
             <span id="currentTime">0:00</span>
             <span id="duration">0:00</span>
           </div>
+        </div>
+        <div class="containner_more">
+          <i class="fi fi-ss-volume"></i>
+          <i class="fi fi-ss-speakers"></i>
+          <i class="fi fi-rr-align-justify"></i>
         </div>
       </div>
     </div>
@@ -93,7 +99,7 @@
 
         <main class="containner_content">
           <div class="containner_text">
-            <h1>Secret Florest</h1>
+            <h1 id="nameArtist">Allan Walker</h1>
             <button id="othersSongs">Escute outras músicas</button>
           </div>
           <div class="containner_anteriores">
@@ -101,7 +107,7 @@
             <div class="child_anter">
               <figure>
                 <a href="">
-                  <img src="https://source.unsplash.com/featured/180x270" alt="#" />
+                  <img src="https://br.web.img2.acsta.net/pictures/18/09/12/19/42/5521101.jpg" alt="#" />
                 </a>
               </figure>
               <figure>
@@ -221,5 +227,6 @@
       </div>
     </main>
     <script type="module" src="/Astro/Frontend/JS/musicPlayer.js"></script>
+    <script type="module" src="/Astro/Backend/JS/backgroundAndName.js"></script>
   </body>
 </html>

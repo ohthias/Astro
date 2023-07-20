@@ -10,6 +10,7 @@ const duration = document.querySelector("#duration");
 const progressBar = document.querySelector(".progress-bar");
 const progress = document.querySelector(".progress");
 
+const musicButton1 = document.querySelector("#music");
 import songs from "/Astro/Backend/JS/songs.js";
 
 const textButtonPlay = "<i class='bx bx-caret-right'></i>";
