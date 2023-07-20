@@ -11,11 +11,11 @@
 <div class="content" align="center">
   <hr width="50%"><br>
   <div align="left">
-    <h2 align="left">Versão - AA0000 </h2>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
+    <h2 align="left">Versão - AA0101 </h2>
+    <li>Player de Música com funções de avançar ou retroceder a faixa, além do timecode</li>
+    <li>Cadastro de Usuários</li>
+    <li>Listas de música</li>
+    <li>Mini banco de músicas com 20 faixas, com nome e artista da música</li>
   </div>
 </div>
 
@@ -23,10 +23,9 @@
   <hr width="50%"><br>
   <div align="left">
     <h2 align="left">Funcionalidades </h2>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>Escute as músicas através do player interativo</li>
+    <li>"Botões" que reproduzem música</li>
+    <li>cadastro de usuários</li>
   </div>
 </div>
 
