@@ -50,6 +50,9 @@
     text-transform: capitalize;
 }
 
+#volumeButton{
+    background: transparent;
+}
 /* Controls */
 
 .controls{

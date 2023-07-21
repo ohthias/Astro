@@ -1,3 +1,5 @@
+import songs from "/Astro/Backend/JS/songs.js";
+
 const player = document.querySelector("#player");
 const musicName = document.querySelector("#musicName");
 const artistName = document.querySelector("#artistName");
@@ -9,20 +11,27 @@ const currentTime = document.querySelector("#currentTime");
 const duration = document.querySelector("#duration");
 const progressBar = document.querySelector(".progress-bar");
 const progress = document.querySelector(".progress");
-const imageSong = document.querySelector("#imgSong");
+const voulmeSom = document.querySelector("#voulmeSom");
+const volumeButton = document.querySelector("#volumeButton");
 
-const musicButton1 = document.querySelector("#music");
-import songs from "/Astro/Backend/JS/songs.js";
-
+// Icones para botão
 const textButtonPlay = "<i class='bx bx-caret-right'></i>";
 const textButtonPause = "<i class='bx bx-pause'></i>";
+const textMutedAudio = "<i class='fi fi-ss-volume-mute'></i>";
+const textNormalAudio = "<i class='fi fi-ss-volume'></i>";
 
+// Variaveis globais
 let index = 0;
+let isMuted = false;
 
+//Eventos
+document.addEventListener("keydown", pressPrevNext);
 prevButton.onclick = () => prevNextMusic("prev");
 nextButton.onclick = () => prevNextMusic();
-
 playPauseButton.onclick = () => playPause();
+player.ontimeupdate = () => updateTime();
+volumeButton.onclick = () => stateButtonVolume();
+prevNextMusic("init");
 
 const playPause = () => {
   if (player.paused) {
@@ -33,8 +42,6 @@ const playPause = () => {
     playPauseButton.innerHTML = textButtonPlay;
   }
 };
-
-player.ontimeupdate = () => updateTime();
 
 const updateTime = () => {
   const currentMinutes = Math.floor(player.currentTime / 60);
@@ -60,6 +67,36 @@ progressBar.onclick = (e) => {
   player.currentTime = newTime;
 };
 
+// Range Volume
+document.addEventListener("DOMContentLoaded", function () {
+  player.volume = voulmeSom.value;
+  volumeButton.innerHTML = textNormalAudio;
+
+  voulmeSom.addEventListener("input", function () {
+    player.volume = voulmeSom.value;
+
+    if (voulmeSom.value == 0) {
+      volumeButton.innerHTML = textMutedAudio;
+    } else {
+      volumeButton.innerHTML = textNormalAudio;
+    }
+  });
+});
+
+const stateButtonVolume = () => {
+  isMuted = !isMuted; // Alterna entre mutar e desmutar
+  player.muted = isMuted;
+
+  if (player.muted = isMuted) {
+    volumeButton.innerHTML = textMutedAudio;
+    
+  } else {
+    volumeButton.innerHTML = textNormalAudio;
+    
+  }
+}
+
+// Proximas faixas
 const prevNextMusic = (type = "next") => {
   if ((type == "next" && index + 1 === songs.length) || type === "init") {
     index = 0;
@@ -82,4 +119,15 @@ player.onended = () => {
   prevNextMusic();
 };
 
-prevNextMusic("init");
+// Keyboard atalhos
+function pressPrevNext(event) {
+  if (event.key === "a" || event.key === "A") {
+    prevNextMusic("prev");
+  }
+  if (event.key === "d" || event.key === "D") {
+    pressPrevNext("next");
+  }
+  if (event.key === "m" || event.key === "M") {
+    mutedAudio();
+  }
+}
