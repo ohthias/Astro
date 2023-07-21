@@ -24,6 +24,11 @@
     border-radius: 10px;
 }
 
+#imgSong{
+    max-width: 60px;
+    width: 100%;
+}
+
 .info {
     width: 100%;
     max-width: 220px;

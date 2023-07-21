@@ -9,6 +9,7 @@ const currentTime = document.querySelector("#currentTime");
 const duration = document.querySelector("#duration");
 const progressBar = document.querySelector(".progress-bar");
 const progress = document.querySelector(".progress");
+const imageSong = document.querySelector("#imgSong");
 
 const musicButton1 = document.querySelector("#music");
 import songs from "/Astro/Backend/JS/songs.js";
@@ -71,6 +72,7 @@ const prevNextMusic = (type = "next") => {
   player.src = songs[index].src;
   musicName.innerHTML = songs[index].name;
   artistName.innerHTML = songs[index].artist;
+  imgSong.src = songs[index].imgSong;
   if (type !== "init") playPause();
 
   updateTime();
