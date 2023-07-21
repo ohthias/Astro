@@ -43,14 +43,8 @@ export default [
 
   {
     src: "/Astro/Backend/JS/audio/1.mp3",
-    name: "Audio1",
-    artist: "endo1",
-  },
-
-  {
-    src: "/Astro/Backend/JS/audio/1.mp3",
-    name: "Audio1",
-    artist: "endo1",
+    name: "On My Way",
+    artist: "Alan Walker",
   },
 
   {
@@ -61,49 +55,49 @@ export default [
 
   {
     src: "/Astro/Backend/JS/audio/3.mp3",
-    name: "Audio3",
-    artist: "endo3",
+    name: "On and On",
+    artist: "Pagali World",
   },
 
   {
-    src: "/Astro/Backend/JS/audio/4.mp3",
-    name: "Audio4",
-    artist: "endo4",
+    src: "/Astro/Backend/JS/audio/13.mp3",
+    name: "Baarishein",
+    artist: "Atif Aslam",
   },
 
   {
-    src: "/Astro/Backend/JS/audio/5.mp3",
-    name: "Audio5",
-    artist: "endo5",
+    src: "/Astro/Backend/JS/audio/12.mp3",
+    name: "Putt Jatt Da",
+    artist: "Diljit Dosanjh",
   },
 
   {
-    src: "/Astro/Backend/JS/audio/6.mp3",
-    name: "Audio6",
-    artist: "endo6",
+    src: "/Astro/Backend/JS/audio/11.mp3",
+    name: "Lagdi Lahore",
+    artist: "Guru Randhawa",
   },
 
   {
     src: "/Astro/Backend/JS/audio/7.mp3",
-    name: "Audio7",
-    artist: "endo7",
+    name: "Agar Tum Saath",
+    artist: "Alka Yagnik",
   },
 
   {
     src: "/Astro/Backend/JS/audio/8.mp3",
-    name: "Audio8",
-    artist: "endo8",
+    name: "Suna Hai",
+    artist: "Pagla",
   },
 
   {
     src: "/Astro/Backend/JS/audio/9.mp3",
-    name: "Audio9",
-    artist: "endo9",
+    name: "Dibar",
+    artist: "Neha Kakkar",
   },
 
   {
     src: "/Astro/Backend/JS/audio/10.mp3",
-    name: "Audio10",
-    artist: "endo10",
+    name: "Duniya",
+    artist: "Abhijit Vaghani",
   },
 ];
