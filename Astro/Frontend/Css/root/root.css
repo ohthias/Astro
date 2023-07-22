@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
 @import url('https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -15,6 +16,7 @@
     --back-background-main: #05061E;
     --back-background-menu: #05061e8d;
     --font: #ffffff;
+    --font-detail: #f3f3f3;
     --de-detail-orange: #ff3d20;
     --de-detail-green: #29f247;
     --de-detail-purple: #4b0072;
@@ -24,6 +26,7 @@
     --sha-shadow-white: rgba(255, 255, 255, 0.5);
     
     /* Sizes */
+    /* Todo - Ajutar tamanhos */
     --fo-font-main: 1em;
     --fo-font-asidebar: 0.875em;
     --fo-font-detail: 0.625em;

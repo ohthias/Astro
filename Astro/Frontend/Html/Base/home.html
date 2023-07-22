@@ -22,40 +22,49 @@
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css"
     />
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
 
   <body>
     <!-- Player -->
     <div class="containner_player">
       <div class="player">
-        <div class="logo">
+        <div class="player_image">
           <img src="" id="imgSong">
         </div>
-        <div class="info">
+        <div class="player_infoMusic">
           <span id="musicName"></span>
           <span id="artistName"></span>
         </div>
-        <i class="fi fi-rr-heart"></i>
-        <audio id="player" src=""></audio>
+
+        <button id="heartMusic"><i class="fi fi-rr-heart"></i></button>
         <div class="controls">
           <button id="prevButton"><i class='bx bx-skip-previous'></i></button>
           <button id="playPauseButton"><i class='bx bx-caret-right'></i></button>
           <button id="nextButton"><i class='bx bx-skip-next'></i></button>
         </div>
+
+        <audio id="player" src=""></audio>
         <div class="footer">
-          <div class="progress-bar">
-            <div class="progress"></div>
-          </div>
-          <div class="time">
-            <span id="currentTime">0:00</span>
+          <span id="currentTime">0:00</span>
+          <div class="timecode_player">
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
             <span id="duration">0:00</span>
           </div>
         </div>
+
         <div class="containner_more">
-          <button id="volumeButton"><i class="fi fi-ss-volume"></i></button>
-          <input type="range"  min="0" max="1" step="0.01" value="1" id="voulmeSom">
+          <div class="container_volume">
+            <div class="volume-button">
+              <button id="volumeButton"><i class="fi fi-ss-volume"></i></button>
+            </div>
+            <div class="volume_control">
+              <input type="range"  min="0" max="1" step="0.01" value="1" id="voulmeSom">
+            </div>
+          </div>
           <i class="fi fi-ss-speakers"></i>
           <i class="fi fi-rr-align-justify"></i>
         </div>
@@ -132,8 +141,6 @@
       </section>
     </div>
 
-  
-
     <!-- Playlists -->
 
     <main>
@@ -146,7 +153,7 @@
           <div class="child-main-options">
             <div class="container_songs">
               <div class="song">
-                <button id="music">
+                <button id="buttonsMusicImg">
                   <img src="/Assets/Images/Capas_astro/Art_Drink.png" alt="song1" class="songButton">
                 </button>
               </div>
@@ -227,7 +234,8 @@
         </div>
       </div>
     </main>
-    <script type="module" src="/Astro/Frontend/JS/musicPlayer.js"></script>
-    <script type="module" src="/Astro/Backend/JS/backgroundAndName.js"></script>
+    <script type="module" src="/Astro/Backend/JS/Settings/musicPlayer.js"></script>
+    <script type="module" src="/Astro/Backend/JS/main.js"></script>
+    <script type="module" src="/Astro/Backend/JS/Settings/app.js"></script>
   </body>
 </html>
