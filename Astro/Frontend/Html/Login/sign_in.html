@@ -28,33 +28,20 @@
       <div class="containner_info">
         <h1>Cadastrar</h1>
         <a href="./sign_up.html" id="page"> Entrar </a>
-        <form action="/Astro/Frontend/Html/Base/home.html">
-          <div class="containner_user">
-            <h2 id="user">Email</h2>
-            <input type="text" placeholder="Digite um email" id="email" required />
-          </div>
-          <div class="containner_user">
-            <h2 id="user">Username</h2>
-            <input type="text" placeholder="Digite o nome de usuário" id="no" required />
-          </div>
-          <div class="containner_pass">
-            <h2 id="pass">Senha</h2>
-            <p id="label_pass">
-              <input type="password" placeholder="Digite sua senha" id="password" required />
-              <i class="bi bi-eye-slash" id="togglePassword"></i>
-            </p>
-          </div>
-          <div class="containner_term">
-            <a href="#">
-              Concordo com os
-              <p>termos da plataforma</p>
-            </a>
-          </div>
-          <input type="submit" value="Cadastrar" id="btn" />
-        </form>
+        <form id="cadastroForm">
+          <label for="nome" class="informationsCadatro">Nome de Usuário:</label>
+          <input type="text" name="user" id="user" required />
+
+          <label for="email" class="informationsCadatro">Email:</label>
+          <input type="email" name="email" id="email" required />
+
+          <label for="senha" class="informationsCadatro">Senha:</label>
+          <input type="password" name="password" id="loginSenha" required />
+          <button type="submit">Cadastrar</button>
       </div>
     </div>
   </main>
+  <script src="/Astro/Frontend/JS/cadastro.js"></script>
   <script src="/Astro/Frontend/JS/togglePassword.js"></script>
   <script>
     var audio = document.getElementById("myaudio");

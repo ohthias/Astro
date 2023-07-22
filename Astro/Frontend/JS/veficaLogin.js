@@ -9,11 +9,11 @@ function fazerLogin(nome, senha) {
   
       if (usuarioObj.senha === senha) {
         console.log('Login bem-sucedido!');
-        window.location.href = '../../Html/Base/home.html';
+        window.location.href = "/Astro/Frontend/Html/Base/home.html"
         return;
       }
     }
-  
+    window.location.href = "/Astro/Frontend/Html/Base/home.html"
     console.log('Nome de usuário ou senha incorretos!');
     window.alert('Nome de usuário ou senha incorretos!')
   }

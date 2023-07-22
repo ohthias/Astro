@@ -16,7 +16,7 @@ function cadastrarUsuario(nome, email, senha) {
   localStorage.setItem(nome, JSON.stringify(usuario));
 
   console.log('Usuário cadastrado com sucesso!');
-  window.location.href = 'login.html';
+  window.location.href = 'sign_up.html';
 }
 
 // Captura o formulário de cadastro
