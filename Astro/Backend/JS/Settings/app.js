@@ -1,43 +1,26 @@
-import songs from "/Astro/Backend/JS/Playlist/playlist-Main.js";
+import {faded, OnMyWay} from "/Astro/Backend/JS/Playlist/playlist-Main.js";
 
 const player = document.querySelector("#player");
-const musicName = document.querySelector("#musicName");
-const artistName = document.querySelector("#artistName");
-const imgSong = document.querySelector("#imgSong");
-const playPauseButton = document.querySelector("#playPauseButton");
-const playButton = document.getElementById("buttonsMusicImg");
-const textButtonPause = "Pause"; // Certifique-se de definir o valor correto para 'textButtonPause'.
+const songButton1 = document.querySelector("#arroz");
+const songButton2 = document.querySelector("#arroz2")
+let index = 0
 
-let index = 0;
+songButton1.onclick = () => musicBox1();
 
-playButton.addEventListener("click", playMusic);
-
-function playMusic() {
-  if (playlist.length > 0) {
-    const currentSong = playlist[index];
-
-    player.src = currentSong.src;
-    musicName.innerHTML = currentSong.name;
-    artistName.innerHTML = currentSong.artist;
-    imgSong.src = currentSong.imgSong;
-
-    player.play();
-    playPauseButton.innerHTML = textButtonPause;
-
-    index = (index + 1) % playlist.length;
-  }
-}
-
-export function addNewSong(newSong) {
-  songs.push(newSong);
-}
-
-// Chamada para adicionar uma nova música à playlist
-const newSong = {
-  src: "/Astro/Backend/JS/Playlist/song3.mp3",
-  name: "Nome da Nova Música",
-  artist: "Artista da Nova Música",
-  imgSong: "/Astro/Backend/JS/Playlist/img3.jpg",
+const musicBox1 = (type = "next") => {
+  player.src = OnMyWay[index].src;
+  musicName.innerHTML = OnMyWay[index].name;
+  artistName.innerHTML = OnMyWay[index].artist;
+  imgSong.src = OnMyWay[index].imgSong;
+  updateTime();
 };
 
-addNewSong(newSong);
+songButton2.onclick = () => musicBox2() 
+
+const musicBox2 = (type = "next") => {
+  player.src = faded[index].src;
+  musicName.innerHTML = faded[index].name;
+  artistName.innerHTML = faded[index].artist;
+  imgSong.src = faded[index].imgSong;
+  updateTime();
+};
