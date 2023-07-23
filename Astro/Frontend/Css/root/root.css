@@ -32,4 +32,7 @@
     --fo-font-detail: 0.625em;
     --fo-font-main-detail: 1.125em;
     --fo-font-main-title: 1.25em;
+
+    --background-gradient-parallax: linear-gradient(to top, var(--back-background-main) 15%, rgba(255,255,255,0));
+    --background-gradient-parallax-footer-page: linear-gradient(to top, var(--de-detail-purple-sha-shadow) 1%, rgba(255,255,255,0));
 }
