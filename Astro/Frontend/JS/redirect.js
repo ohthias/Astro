@@ -2,7 +2,7 @@
 
 const tophitsPlaylist = document.querySelector("#topHits")
 tophitsPlaylist.onclick = () => {
-    window.location.href = "/Astro/Frontend/Html/Erro/404.html"
+    window.location.href = "/Astro/Frontend/Html/Playlists/Astro_Playlists/topHits.html"
 }
 
 const debutsSemanaPlaylist = document.querySelector("#debutsSemana")
