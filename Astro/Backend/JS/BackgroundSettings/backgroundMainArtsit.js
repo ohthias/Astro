@@ -1,6 +1,6 @@
 const backArtist = [
     {
-        src: "https://www.vagalume.com.br/dynimage/news32194-big.jpg",
+        src: "https://wallpaperaccess.com/full/3763154.jpg",
         nameArtist: "Alan Walker",
     },
 

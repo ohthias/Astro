@@ -1,6 +1,6 @@
 /*
  * Page: Home Page
- * UTA - Matheus 17/07
+ * UTA - Matheus 23/07
  * código documentado conforme html
  */
 
@@ -24,7 +24,7 @@ section.module.parallax {
     position: relative;
     overflow: hidden;
     
-    background: url("https://www.vagalume.com.br/dynimage/news32194-big.jpg") no-repeat;
+    background: url("") no-repeat;
     background-size: cover;
     animation: fadeIn 800ms ease;
 }
