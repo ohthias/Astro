@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Músicas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/Astro/Frontend/Css/root/player.css">
+    <link rel="stylesheet" href="/Astro/Frontend/Css/root/root.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css"
+    />
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="containner_player">
+        <div class="player">
+          <div class="player_image">
+            <img src="" id="imgSong">
+          </div>
+          <div class="player_infoMusic">
+            <span id="musicName"></span>
+            <span id="artistName"></span>
+          </div>
+  
+          <button id="heartMusic"><i class="fi fi-rr-heart"></i></button>
+          <div class="controls">
+            <button id="prevButton"><i class='bx bx-skip-previous'></i></button>
+            <button id="playPauseButton"><i class='bx bx-caret-right'></i></button>
+            <button id="nextButton"><i class='bx bx-skip-next'></i></button>
+          </div>
+  
+          <audio id="player" src=""></audio>
+          <div class="footer">
+            <span id="currentTime">0:00</span>
+            <div class="timecode_player">
+              <div class="progress-bar">
+                <div class="progress"></div>
+              </div>
+              <span id="duration">0:00</span>
+            </div>
+          </div>
+  
+          <div class="containner_more">
+            <div class="container_volume">
+              <div class="volume-button">
+                <button id="volumeButton"><i class="fi fi-ss-volume"></i></button>
+              </div>
+              <div class="volume_control">
+                <input type="range"  min="0" max="1" step="0.01" value="1" id="voulmeSom">
+              </div>
+            </div>
+            <i class="fi fi-ss-speakers"></i>
+            <i class="fi fi-rr-align-justify"></i>
+          </div>
+        </div>
+      </div>
+
+    <h1>Lista de Músicas</h1>
+    <ul id="music-list"></ul>
+    <script type="module" src="/Astro/Backend/JS/Settings/musicPlayer.js"></script>
+    <script src="/Astro/Backend/JS/Settings/playlistFunction.js"></script>
+</body>
+</html>

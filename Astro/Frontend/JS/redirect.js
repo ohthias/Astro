@@ -1,19 +1,28 @@
-var botaocadastro = document.getElementById('cadastrar')
-botaocadastro.addEventListener("click", function() {
-    window.location.href = "/Astro/Frontend/Html/Login/sign_in.html"
-});
+//Redirect playlists do astro
 
-var botaoLogin = document.getElementById('entrar')
-botaoLogin.addEventListener("click", function() {
-    window.location.href = "/Astro/Frontend/Html/Login/sign_up.html"
-});
+const tophitsPlaylist = document.querySelector("#topHits")
+tophitsPlaylist.onclick = () => {
+    window.location.href = "/Astro/Frontend/Html/Erro/404.html"
+}
 
-var botaoHome = document.getElementById('buttonHome')
-botaoHome.addEventListener("click", function() {
-    window.location.href = "/Astro/Frontend/Html/Base/home.html"
-});
+const debutsSemanaPlaylist = document.querySelector("#debutsSemana")
+debutsSemanaPlaylist.onclick = () => {
+    window.location.href = "/Astro/Frontend/Html/Erro/404.html"
+}
 
-var botaoOtherSongs = document.getElementById("othersSongs")
-botaoOtherSongs.addEventListener("click", function() {
-    window.location.href = "/Astro/Frontend/Html/Erro/comingSoon.html"
-});
+const seuUniversoPlaylist = document.querySelector("#seuUniverso")
+seuUniversoPlaylist.onclick = () => {
+    window.location.href = "/Astro/Frontend/Html/Erro/404.html"
+}
+
+const noPiquePlaylist = document.querySelector("#noPique")
+noPiquePlaylist.onclick = () => {
+    window.location.href = "/Astro/Frontend/Html/Erro/404.html"
+}
+
+const naCalmaPlaylist = document.querySelector("#naCalma")
+naCalmaPlaylist.onclick = () => {
+    window.location.href = "/Astro/Frontend/Html/Erro/404.html"
+}
+
+// Outros redirects...

@@ -9,77 +9,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Header navbar & Logo*/
-
-header {
-    width: 100%;
-    height: 60px;
-    z-index: 10;
-}
-
-.containner_header {
-    display: flex;
-    align-items: end;
-    justify-content: right;
-}
-
-#logo {
-    margin-top: 15px;
-    margin-right: 67%;
-    font-size: 30px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    line-height: 34px;
-    color: var(--font);
-    transition: 0.8s;
-    cursor: pointer;
-
-    background:
-        linear-gradient(to right, rgba(255, 255, 255, 0), rgba(100, 200, 200, 0)),
-        linear-gradient(to right, var(--de-detail-green), var(--de-detail-green));
-    background-size: 100% 0.1em, 0 0.1em;
-    background-position: 100% 70%, 0 100%;
-    background-repeat: no-repeat;
-    transition: background-size 400ms;
-
-    /* @param background - linha abaixo da logo para :hover para clique*/ 
-
-    text-shadow: 2px 0 2px var(--sha-shadow-white);
-    animation: fadeIn 1s ease;
-    transition: 0.5s;
-}
-
-#logo:hover,
-#logo:focus {
-    color: var(--de-detail-green);
-    background-size: 0 0.1em, 100% 0.1em;
-    transition: 0.3s;
-}
-
-.menu a {
-    margin-right: 25px;
-    font-size: 16px;
-    text-decoration: none;
-}
-
-menu.fi-ss-user,
-.fi-ss-settings {
-    margin-left: 16px;
-    color: var(--font);
-    filter: drop-shadow(0 0 10px var(--sha-shadow-white));
-    animation: fadeIn 1s ease;
-    transition: 0.8s;
-}
-
-menu.fi-ss-user:hover,
-.fi-ss-settings:hover {
-    color: var(--de-detail-green);
-    text-shadow: 0 0 10px var(--sha-shadow-white), 0 0 50px var(--de-detail-green);
-    transition: 0.5s;
-}
-
 /* Background Parallax Image*/
-/* TODO - Ajustar o tamanho da imagem para fullscreen */
 
 .back-image {
     margin: 0 auto;
@@ -209,120 +139,34 @@ main.containner_content{
 .child_anter img:hover {
     position: relative;
     transform: translateY(-10px);
-    box-shadow: 0 -1px 2px rgba(41,242,71,1), 0 -5px 20px rgba(57,138,20,1);
+    box-shadow: 0 -1px 2px #29f247, 0 -5px 20px rgba(57,138,20,1);
     transition: 0.5s ease;
 }
 
-/* Menu lateral */
-
-aside {
-    margin: 15px;
-    padding: 10px;
-    border-radius: 10px;
-    z-index: 15;
-    position:fixed;
-    max-width: 225px;
-    height: 80%;
-    float: left;
-    background: var(--back-background-menu);
-    backdrop-filter: blur(10px);
-}
-
-.containner_opc {
-    margin: 10px 10px;
-    padding: 15px 10px;
-    border: 0;
-    border-radius: 10px;
-    background: var(--sha-shadow-black-menu);
-    backdrop-filter: blur(10px);
-}
-
-.containner_opc a{
-    margin: 5px auto;
-    padding: 8px 10px;
-    border-radius: 20px;
-    font-size:20px;
-    display: list-item;
-    justify-content: start;
-    list-style: none;
-    text-decoration: none;
-    transition: 0.5s;
-}
-
-.containner_opc a i.fi-ss-home:hover, .containner_opc a i.fi-ss-user:hover{
-    color: var(--de-detail-green);
-    transition: 0.3s
-}
-
-.containner_opc a i.fi-ss-home::after{
-    content: 'home';
-    margin:auto 8px;
-    font-style: normal;
-    font-weight: 700;
-    text-transform: capitalize;
-    letter-spacing: 4px;
-    text-shadow: none;
-}
-
-.containner_opc a i.fi-ss-user::after{
-    content: 'user';
-    margin:auto 8px;
-    font-style: normal;
-    font-weight: 700;
-    text-transform: capitalize;
-    letter-spacing: 4px;
-    text-shadow: none;
-}
-
-.containner_playlist{
-    position: relative;
-    height: 70%;
-    margin: 10px 10px;
-    padding: 15px 10px;
-    border: 0;
-    border-radius: 10px;
-    background: var(--sha-shadow-black-menu);
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.child_play, .child_podc{
-    margin: 20px auto;
-    padding: 8px 10px;
-    border-radius: 10px;
-    font-size:20px;
-    font-weight: 500;
-    text-align: center;
-    background: var(--sha-shadow-black-menu);
-}
-
-.child_play::before, .child_podc::before{
-    content: '+';
-    display: inline;
-    margin: 0 5px;
-}
 
 /* Main */
 
 .containner-main{
     float: right;
-    margin-right: 80px;
+    margin: 25px 80px 0 25px;
 }
 
 .name-opitions h3{
-    font-size: 2em;
-    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25em;
+    font-weight: 700;
+    line-height: 35px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
     color: var(--de-detail-green);
 }
 
 .name-opitions hr{
     max-width: 225px;
     height: 3px;
-    border: 1px solid var(--de-detail-green);
-    background: var(--de-detail-green);
+    border: 1px solid #29f247d0;
+    border-radius: 0 10px 10px 0;
+    background: #29f247d0;
 }
 
 .child-main-options{

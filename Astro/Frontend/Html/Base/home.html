@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/Astro/Frontend/Css/styleHomePage.css" />
     <link rel="stylesheet" href="/Astro/Frontend/Css/root/root.css"/>
     <link rel="stylesheet" href="/Astro/Frontend/Css/root/player.css">
+    <link rel="stylesheet" href="/Astro/Frontend/Css/root/menus.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -101,8 +102,8 @@
           <div class="containner_header">
             <label id="logo">Astro</label>
             <div class="menu">
-              <a href="/Astro/Frontend/Html/Erro/404.html"><i class="fi fi-ss-user"></i></a>
-              <a href="/Astro/Frontend/Html/Base/index.html"><i class="fi fi-ss-settings"></i></a>
+              <a href="/Astro/Frontend/Html/Erro/404.html"><i class="fi fi-ss-user menu-icon"></i></a>
+              <a href="/Astro/Frontend/Html/Base/index.html"><i class="fi fi-ss-settings menu-icon"></i></a>
             </div>
           </div>
         </header>
@@ -147,21 +148,68 @@
       <div class="background-main">
         <div class="containner-main">
           <div class="name-opitions">
-            <h3>Musicas</h3>
+            <h3>Originais</h3>
             <hr />
           </div>
           <div class="child-main-options">
             <div class="container_songs">
               <div class="song">
-                <button id="arroz">
-                  <img src="/Astro/Backend/JS/ImageAudio/1.jpg" alt="song1" class="songButton">
+                <button id="topHits">
+                  <img src="/Assets/Images/Astro_main-caps/1.png" class="songButton">
                 </button>
               </div>
             </div>
             <div class="container_songs">
               <div class="song">
-                <button id="arroz2">
-                  <img src="/Astro/Backend/JS/ImageAudio/2.jpg" alt="song1" class="songButton">
+                <button id="debutsSemana">
+                  <img src="/Assets/Images/Astro_main-caps/2.png" class="songButton">
+                </button>
+              </div>
+            </div>
+
+            <div class="container_songs">
+              <div class="song">
+                <button id="seuUniverso">
+                  <img src="/Assets/Images/Astro_main-caps/3.png" class="songButton">
+                </button>
+              </div>
+            </div>
+
+            <div class="container_songs">
+              <div class="song">
+                <button id="noPique">
+                  <img src="/Assets/Images/Astro_main-caps/4.png" class="songButton">
+                </button>
+              </div>
+            </div>
+
+            <div class="container_songs">
+              <div class="song">
+                <button id="naCalma">
+                  <img src="/Assets/Images/Astro_main-caps/5.png" class="songButton">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="containner-main">
+          <div class="name-opitions">
+            <h3>lançamentos da semana</h3>
+            <hr />
+          </div>
+          <div class="child-main-options">
+            <div class="container_songs">
+              <div class="song">
+                <button id="outra">
+                  <img src="/Assets/Images/Astro_main-caps/7.png" class="songButton">
+                </button>
+              </div>
+            </div>
+            <div class="container_songs">
+              <div class="song">
+                <button id="outra2">
+                  <img src="/Assets/Images/Astro_main-caps/8.png" class="songButton">
                 </button>
               </div>
             </div>
@@ -169,7 +217,7 @@
             <div class="container_songs">
               <div class="song">
                 <button id="music3">
-                  <img src="/Assets/Images/Capas_astro/Art_New World.png" alt="song1" class="songButton">
+                  <img src="/Assets/Images/Astro_main-caps/9.png" class="songButton">
                 </button>
               </div>
             </div>
@@ -177,7 +225,7 @@
             <div class="container_songs">
               <div class="song">
                 <button id="music4">
-                  <img src="/Assets/Images/Capas_astro/Art_Reflexão.png" alt="song1" class="songButton">
+                  <img src="/Assets/Images/Astro_main-caps/10.png" class="songButton">
                 </button>
               </div>
             </div>
@@ -185,57 +233,112 @@
             <div class="container_songs">
               <div class="song">
                 <button id="music5">
-                  <img src="/Assets/Images/Capas_astro/Art_Ocean.png" alt="song1" class="songButton">
+                  <img src="/Assets/Images/Astro_main-caps/11.png" class="songButton">
                 </button>
               </div>
             </div>
-
-            <div class="container_songs">
-              <div class="song">
-                <button id="music6">
-                  <img src="/Assets/Images/Capas_astro/Art_Pulsa.png" alt="song1" class="songButton">
-                </button>
-              </div>
-            </div>
-
-            <div class="container_songs">
-              <div class="song">
-                <button id="music10">
-                  <img src="/Assets/Images/Capas_astro/Art_M.5 (2).png" alt="song1" class="songButton">
-                </button>
-              </div>
-            </div>
-
-            <div class="container_songs">
-              <div class="song">
-                <button id="music7">
-                  <img src="/Assets/Images/Capas_astro/Art_M.3.png" alt="song1" class="songButton">
-                </button>
-              </div>
-            </div>
-
-            <div class="container_songs">
-              <div class="song">
-                <button id="music8">
-                  <img src="/Assets/Images/Capas_astro/Art_M.5.png" alt="song1" class="songButton">
-                </button>
-              </div>
-            </div>
-
-            <div class="container_songs">
-              <div class="song">
-                <button id="music9">
-                  <img src="/Assets/Images/Capas_astro/Art_Pulsa.png" alt="song1" class="songButton">
-                </button>
-              </div>
-            </div>
-
           </div>
         </div>
+
+        <div class="containner-main">
+          <div class="name-opitions">
+            <h3>Musicas</h3>
+            <hr />
+          </div>
+          <div class="child-main-options">
+            <div class="container_songs">
+              <div class="song">
+                <button id="arroz">
+                  <img src="/Astro/Backend/JS/ImageAudio/1.jpg" class="songButton">
+                </button>
+              </div>
+            </div>
+            <div class="container_songs">
+              <div class="song">
+                <button id="arroz2">
+                  <img src="/Astro/Backend/JS/ImageAudio/2.jpg" class="songButton">
+                </button>
+              </div>
+            </div>
+
+            <div class="container_songs">
+              <div class="song">
+                <button id="arroz3">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcz6vl7dthSyfdNh6Eg4ZrcAYSieDSn7yCmQ&usqp=CAU" class="songButton">
+                </button>
+              </div>
+            </div>
+
+            <div class="container_songs">
+              <div class="song">
+                <button id="arroz4">
+                  <img src="/Astro/Backend/JS/ImageAudio/3.jpg" class="songButton">
+                </button>
+              </div>
+            </div>
+
+            <div class="container_songs">
+              <div class="song">
+                <button id="arroz5">
+                  <img src="/Assets/Images/Capas_astro/Art_Ocean.png" class="songButton">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="containner-main">
+          <div class="name-opitions">
+            <h3>mixes</h3>
+            <hr />
+          </div>
+          <div class="child-main-options">
+            <div class="container_songs">
+              <div class="song">
+                <button id="outra">
+                  <img src="/Assets/Images/Astro_main-caps/12.png" class="songButton">
+                </button>
+              </div>
+            </div>
+            <div class="container_songs">
+              <div class="song">
+                <button id="outra2">
+                  <img src="/Assets/Images/Astro_main-caps/13.png" class="songButton">
+                </button>
+              </div>
+            </div>
+
+            <div class="container_songs">
+              <div class="song">
+                <button id="music3">
+                  <img src="/Assets/Images/Astro_main-caps/14.png" class="songButton">
+                </button>
+              </div>
+            </div>
+
+            <div class="container_songs">
+              <div class="song">
+                <button id="music4">
+                  <img src="/Assets/Images/Astro_main-caps/15.png" class="songButton">
+                </button>
+              </div>
+            </div>
+
+            <div class="container_songs">
+              <div class="song">
+                <button id="music5">
+                  <img src="/Assets/Images/Astro_main-caps/16.png" class="songButton">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </main>
     <script type="module" src="/Astro/Backend/JS/Settings/musicPlayer.js"></script>
     <script type="module" src="/Astro/Backend/JS/Settings/app.js"></script>
     <script type="module" src="/Astro/Backend/JS/BackgroundSettings/Backgroundmain.js"></script>
+    <script src="/Astro/Frontend/JS/redirect.js"></script>
   </body>
 </html>
