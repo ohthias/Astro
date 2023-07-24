@@ -188,7 +188,6 @@
 /* Container more options */
 
 .containner_more {
-    width: 100%;
     max-width: 350px;
     display: flex;
     align-items: center;
@@ -293,4 +292,20 @@ input[type="range"]::-moz-range-thumb {
         text-shadow: 0 0 10px var(--sha-shadow-white), 0 0 25px var(--sha-shadow-white);
     }
 
+}
+
+/* Media */
+
+@media screen and (max-width: 800px){
+    input[type="range"]{
+        display: none;
+    }
+
+    .controls i {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 425){
+    
 }

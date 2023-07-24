@@ -27,14 +27,16 @@
     <main>
       <div class="containner">
         <div class="containner_info">
-          <h1>Entrar</h1>
-          <a href="./sign_in.html" id="page"> Cadastrar </a>
+          <div class="containner_info_header">
+            <h1>Entrar</h1>
+            <a href="./sign_in.html" id="page"> Cadastrar </a>
+          </div>
           <form id="loginForm">
             <div class="containner_form">
-              <label for="loginNome">Nome de Usuário:</label>
+              <label for="loginNome" class="informationsLogin">Nome de Usuário:</label>
               <input type="text" id="loginNome" required />
   
-              <label for="loginSenha">Senha:</label>
+              <label for="loginSenha" class="informationsLogin">Senha:</label>
               <input type="password" id="loginSenha" required />
               <i class="bi bi-eye-slash" id="togglePassword"></i>
             </div>
@@ -48,6 +50,11 @@
     <script>
       var audio = document.getElementById("myaudio");
       audio.volume = 0.2;
+
+      const logo = document.querySelector("#logo")
+      logo.addEventListener("click", function() {
+        window.location.href = "/Astro/Frontend/Html/Base/index.html"
+      })
     </script>
   </body>
 </html>

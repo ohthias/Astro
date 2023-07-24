@@ -25,8 +25,10 @@
   <main>
     <div class="containner">
       <div class="containner_info">
-        <h1>Cadastrar</h1>
-        <a href="./sign_up.html" id="page"> Entrar </a>
+        <div class="containner_info_header">
+          <h1>Cadastrar</h1>
+          <a href="./sign_up.html" id="page"> Entrar </a>
+        </div>
         <form id="cadastroForm">
           <label for="nome" class="informationsCadatro">Nome de Usuário:</label>
           <input type="text" name="user" id="user" required />
@@ -45,6 +47,11 @@
   <script>
     var audio = document.getElementById("myaudio");
     audio.volume = 0.2;
+
+    const logo = document.querySelector("#logo")
+    logo.addEventListener("click", function() {
+      window.location.href = "/Astro/Frontend/Html/Base/index.html"
+    })
   </script>
 </body>
 

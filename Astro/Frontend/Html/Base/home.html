@@ -333,5 +333,11 @@
 
     <!--Frontend srcipts-->
     <script src="/Astro/Frontend/JS/redirects/redirect.js"></script>
+    <script>
+      const exit = document.querySelector(".fi-ss-settings menu-icon")
+      exit.addEventListener("click", function(){
+        window.confirm("Você realmente quer sair?")
+      })
+    </script>
   </body>
 </html>

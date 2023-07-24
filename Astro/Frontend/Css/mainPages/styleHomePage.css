@@ -104,8 +104,7 @@ main.containner_content{
     letter-spacing: 2px;
     text-shadow: 0 2px 2px var(--sha-shadow-black);
     
-    background:
-    linear-gradient(to right, var(--font), var(--font));
+    background: linear-gradient(to right, var(--font), var(--font));
     background-size: 40% 0.1em, 0 0.1em;
     background-position: 0 100%, 0 100%;
     background-repeat: no-repeat;
@@ -284,4 +283,18 @@ footer::after {
 footer p {
     z-index: 8;
     color: var(--font);
+}
+
+/* Media */
+
+@media screen and (min-width: 1024px){
+    
+}
+
+@media screen and (max-width: 768px){
+    
+}
+
+@media screen and (max-width: 425){
+    
 }
