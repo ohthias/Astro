@@ -11,13 +11,10 @@
 <div class="content" align="center">
   <hr width="50%"><br>
   <div align="left">
-    <h2 align="left">Versão - AA0203 </h2>
-    <li>Player de Música com atalhos via teclado</li>
-    <li>Botões com música</li>
-    <li>Cadastro e Login de Usuários</li>
-    <li>Listas de música</li>
-    <li>Controle de som</li>
-    <li>Lógica das playlists</li>
+    <h2 align="left">Versão - AA0402 </h2>
+    <li>Responsividade do index e telas de login</li>
+    <li>Responsividade do menu lateral</li>
+    <li>Playlists</li>
   </div>
 </div>
 
@@ -26,7 +23,8 @@
   <div align="left">
     <h2 align="left">Funcionalidades </h2>
     <li>Escute as músicas através do player interativo</li>
-    <li>"Botões" que reproduzem música</li>
+    <li>Player de Música com atalhos via teclado</li>
+    <li>Listas de música</li>
     <li>cadastro de usuários</li>
   </div>
 </div>
