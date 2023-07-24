@@ -90,7 +90,7 @@ aside {
 }
 
 .containner_opc a{
-    margin: 5px auto;
+    margin: 5px 0;
     padding: 8px 10px;
     border-radius: 20px;
     font-size:20px;
@@ -101,7 +101,7 @@ aside {
     transition: 0.5s;
 }
 
-.containner_opc a i.fi-ss-home:hover, .containner_opc a i.fi-ss-user:hover{
+.containner_opc a i.fi-ss-home:hover, .containner_opc a i.fi-br-search:hover{
     color: var(--de-detail-green);
     transition: 0.3s
 }
@@ -116,8 +116,8 @@ aside {
     text-shadow: none;
 }
 
-.containner_opc a i.fi-ss-user::after{
-    content: 'user';
+.containner_opc a i.fi-br-search::after{
+    content: 'buscar';
     margin:auto 8px;
     font-style: normal;
     font-weight: 700;

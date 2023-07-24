@@ -17,7 +17,7 @@ const musicas = [
     src: "http://physical-authority.surge.sh/music/3.mp3",
     nome: "джованна",
     artista: "enrasta",
-    capaAlbum: "https://source.unsplash.com/featured/60x60",
+    capaAlbum: "/Astro/Backend/Assets-Songs/ImageAudio/8.jpg",
   },
 
 
@@ -81,7 +81,8 @@ function exibirMusicas() {
 
     const infoMusica = document.createElement("div");
     infoMusica.innerHTML = `<div class='infoMusica'><div class='infoMusica_play'><strong class='musicnome_playlist'>${musica.nome}</strong><br>
-                            <p class='nomeArtista_playlist'>${musica.artista}</p></div>`;
+                            <p class='nomeArtista_playlist'>${musica.artista}</p></div>
+                            <button id='buttonSongPlay' onclick="tocarMusica(${index})"><i class='bx bx-caret-right'></i></button></div>`;
     listItem.appendChild(infoMusica);
 
     musicList.appendChild(listItem);

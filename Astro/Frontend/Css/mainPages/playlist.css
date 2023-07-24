@@ -12,7 +12,7 @@ body {
 section.module.parallax {
     display: flex;
     flex-direction: column;
-    height: 100vh !important;
+    height: 80vh !important;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -105,10 +105,17 @@ section.module.parallax-2::after{
 
 /* Main playlist */
 
-.container_playlist_main {
+main {
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.container_playlist_main{
+    padding: 15px 20px;
+    border-radius: 10px;
+    background: var(--sha-shadow-black-menu);
 }
 
 #music-list {
@@ -126,17 +133,18 @@ section.module.parallax-2::after{
     align-items: center;
     width: 850px;
     background: var(--sha-shadow-black);
-    box-shadow: 0 0 10px var(--sha-shadow-white), 0 0 5px var(--sha-shadow-white);
+    box-shadow: 0 0 10px var(--sha-shadow-black-menu), 0 0 5px var(--sha-shadow-white);
 }
 
 .infoMusica {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
 }
 
-.infoMusica_play {
-    flex-direction: column;
+.infoMusica_play{
+    width: 100vh;
+    margin-left: 25px;
 }
 
 #music-list li:hover {
@@ -151,13 +159,11 @@ section.module.parallax-2::after{
     width: 100%;
 }
 
-
-
 .musicnome_playlist {
     margin-bottom: 20px;
     font-size: 1.5em;
     letter-spacing: 1px;
-    color: var(--de-detail-orange);
+    color: var(--de-detail-green);
 }
 
 .nameArtista_playlist {
@@ -180,24 +186,40 @@ section.module.parallax-2::after{
 }
 
 .play-icon {
+    border-radius: 100px;
     position: absolute;
     top: 50%;
     left: 30%;
     transform: translate(-30%, -50%);
     font-size: 35px;
-    color: #fff;
+    color: var(--de-detail-green);
+    background: var(--sha-shadow-black);
     display: none;
 }
 
-/* CSS style for the album cover container to enable hovering effect */
 .album-container:hover {
     position: relative;
     cursor: pointer;
 }
 
-/* CSS style to show the play icon when hovering over the album cover container */
 .album-container:hover .play-icon {
     display: block;
+}
+
+#buttonSongPlay {
+    border: 0;
+    border-radius: 100px;
+    font-size: 22px;
+    background: transparent;
+    cursor: pointer;
+}
+
+#buttonSongPlay i{
+    color: var(--de-detail-green);
+}
+
+#buttonSongPlay i:hover{
+    color: var(--font);
 }
 
 /* footer */
