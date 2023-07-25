@@ -1,31 +1,32 @@
 import songs from "/Astro/Backend/JS/Playlist/playlist-Main.js";
 
-const player = document.querySelector("#player")
-const musicName = document.querySelector("#musicName")
-const artistName = document.querySelector("#artistName")
-const imgSong = document.querySelector("#imgSong")
-const heartMusic = document.querySelector("#heartMusic")
-const randomPlayerMusic = document.querySelector("#randomPlayerMusic")
-const playPauseButton = document.querySelector("#playPauseButton")
-const prevButton = document.querySelector("#prevButton")
-const nextButton = document.querySelector("#nextButton")
-const currentTime = document.querySelector("#currentTime")
-const duration = document.querySelector("#duration")
-const progressBar = document.querySelector(".progress-bar")
-const progress = document.querySelector(".progress")
-const voulmeSom = document.querySelector("#voulmeSom")
-const volumeButton = document.querySelector("#volumeButton")
+const player = document.querySelector("#player");
+const musicName = document.querySelector("#musicName");
+const artistName = document.querySelector("#artistName");
+const imgSong = document.querySelector("#imgSong");
+const heartMusic = document.querySelector("#heartMusic");
+const randomPlayerMusic = document.querySelector("#randomPlayerMusic");
+const playPauseButton = document.querySelector("#playPauseButton");
+const prevButton = document.querySelector("#prevButton");
+const nextButton = document.querySelector("#nextButton");
+const currentTime = document.querySelector("#currentTime");
+const duration = document.querySelector("#duration");
+const progressBar = document.querySelector(".progress-bar");
+const progress = document.querySelector(".progress");
+const voulmeSom = document.querySelector("#voulmeSom");
+const volumeButton = document.querySelector("#volumeButton");
 const fullScreenButton = document.querySelector("#fullScreen");
+const upcomingSongsList = document.querySelector("#upcomingSongsList");
 
 // Icones para botão
 const textButtonPlay = "<i class='bx bx-caret-right'></i>";
 const textButtonPause = "<i class='bx bx-pause'></i>";
 const textMutedAudio = "<i class='fi fi-ss-volume-mute'></i>";
 const textNormalAudio = "<i class='fi fi-ss-volume'></i>";
-const textNormalHeartMusic = "<i class='fi fi-rr-heart'>"
-const textLikeHeartMusic = "<i class='fi fi-sr-heart'></i>"
-const textrandomPlayerMusicAtive = "<i class='fi fi-rr-shuffle'></i>"
-const textrandomPlayerMusicNormal = "<i class='fi fi-ss-shuffle'></i>"
+const textNormalHeartMusic = "<i class='fi fi-rr-heart'>";
+const textLikeHeartMusic = "<i class='fi fi-sr-heart'></i>";
+const textrandomPlayerMusicAtive = "<i class='fi fi-rr-shuffle'></i>";
+const textrandomPlayerMusicNormal = "<i class='fi fi-ss-shuffle'></i>";
 
 // Variaveis globais
 let index = 0;
@@ -53,6 +54,7 @@ const playPause = () => {
   }
 };
 
+//Função do timecode
 const updateTime = () => {
   const currentMinutes = Math.floor(player.currentTime / 60);
   const currentSeconds = Math.floor(player.currentTime % 60);
@@ -97,28 +99,67 @@ const stateButtonVolume = () => {
   isMuted = !isMuted; // Alterna entre mutar e desmutar
   player.muted = isMuted;
 
-  if (player.muted = isMuted) {
+  if ((player.muted = isMuted)) {
     volumeButton.innerHTML = textMutedAudio;
-    
   } else {
     volumeButton.innerHTML = textNormalAudio;
-    
   }
 };
 
 //Like music
+const likedSongs = [];
+
 const likeMusic = () => {
   liked = !liked;
   player.likeMusic = liked;
 
-  if (player.likeMusic = liked) {
+  if (player.likeMusic === true) {
     heartMusic.innerHTML = textLikeHeartMusic;
+    // Adicionar a música curtida ao array likedSongs
+    saveLikedSong(musicName.textContent, artistName.textContent, imgSong.src);
   } else {
     heartMusic.innerHTML = textNormalHeartMusic;
+    // Remover a música descurtida do array likedSongs (opcional)
+    removeLikedSong(musicName.textContent, artistName.textContent, imgSong.src);
   }
 };
 
-//Random
+const saveLikedSong = (musicName, artistName, imgSong) => {
+  const likedSong = {
+    musicName: musicName,
+    artistName: artistName,
+    imgSong: imgSong,
+  };
+
+  // Verifica se a música já está no array antes de adicioná-la
+  const isAlreadyLiked = likedSongs.some(
+    (song) =>
+      song.musicName === likedSong.musicName &&
+      song.artistName === likedSong.artistName &&
+      song.imgSong === likedSong.imgSong
+  );
+
+  if (!isAlreadyLiked) {
+    likedSongs.push(likedSong);
+  }
+};
+
+// Função opcional para remover a música descurtida do array likedSongs
+const removeLikedSong = (musicName, artistName, imgSong) => {
+  for (let i = 0; i < likedSongs.length; i++) {
+    const song = likedSongs[i];
+    if (
+      song.musicName === musicName &&
+      song.artistName === artistName &&
+      song.imgSong === imgSong
+    ) {
+      likedSongs.splice(i, 1);
+      break;
+    }
+  }
+};
+
+//Random music
 let randomMode = false;
 
 const randomMusic = () => {
@@ -142,23 +183,21 @@ const getRandomIndex = () => {
   return randomIndex;
 };
 
-//List next songs
+//Função da criação da lista das proximas musicas
 const showUpcomingSongs = () => {
-  const upcomingSongsList = document.querySelector("#upcomingSongsList");
-  upcomingSongsList.innerHTML = ""; // Clear previous list
-  
-  const numberOfUpcomingSongsToShow = 5; // You can adjust this number as per your preference
-  
+  upcomingSongsList.innerHTML = "";
+
+  const numberOfUpcomingSongsToShow = 4;
+
   for (let i = 1; i <= numberOfUpcomingSongsToShow; i++) {
     const upcomingIndex = (index + i) % songs.length;
     const upcomingSong = songs[upcomingIndex];
     const listItem = document.createElement("li");
-    
+
     listItem.textContent = `${upcomingSong.name} - ${upcomingSong.artist}`;
 
-    // Add a click event listener to each list item
+    // Poder clicar em qualquer música e ela ser tocada
     listItem.addEventListener("click", () => {
-      // Play the clicked upcoming song
       playUpcomingSong(upcomingIndex);
     });
 
@@ -166,7 +205,7 @@ const showUpcomingSongs = () => {
   }
 };
 
-// Function to play the clicked upcoming song
+// Função da musica clicada
 const playUpcomingSong = (upcomingIndex) => {
   index = upcomingIndex;
   player.src = songs[index].src;
@@ -183,13 +222,17 @@ const playUpcomingSong = (upcomingIndex) => {
 const prevNextMusic = (type = "next") => {
   if (randomMode) {
     index = getRandomIndex();
-  } else if ((type == "next" && index + 1 === songs.length) || type === "init") {
+  } else if (
+    (type == "next" && index + 1 === songs.length) ||
+    type === "init"
+  ) {
     index = 0;
   } else if (type == "prev" && index === 0) {
     index = songs.length;
   } else {
     index = type === "prev" && index ? index - 1 : index + 1;
   }
+  // @param Nextsong - Verifica se elá em 'runMode' se sim ele faz o runmode, se não, segue normalmente
 
   player.src = songs[index].src;
   musicName.innerHTML = songs[index].name;
@@ -214,19 +257,18 @@ function pressPrevNext(event) {
   if (event.key === "a" || event.key === "A") {
     prevNextMusic("prev");
   }
-  if (event.key == "d" || event.key == "D") {
+  if (event.key == "d" || event.key == "D" || event.key == "VK_RIGHT") {
     prevNextMusic();
   }
   if (event.key === "m" || event.key === "M") {
     stateButtonVolume();
   }
-  if (event.key == 'space' || event.key == 'SPACE'){
+  if (event.key == "space" || event.key == "SPACE") {
     playPause();
   }
 }
 
 //FullScreen
-const toggleFullScreen = () => {
-};
+const toggleFullScreen = () => {};
 
 prevNextMusic("init");

@@ -1,3 +1,5 @@
+//Não está sendo usado no momento, funcionou até a versão: !aa0403!
+
 import {faded, OnMyWay, blindingLights, onAndOn, Beyond} from "/Astro/Backend/JS/songsRedirects.js";
 
 const player = document.querySelector("#player");
