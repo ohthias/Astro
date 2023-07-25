@@ -15,6 +15,7 @@ const progressBar = document.querySelector(".progress-bar")
 const progress = document.querySelector(".progress")
 const voulmeSom = document.querySelector("#voulmeSom")
 const volumeButton = document.querySelector("#volumeButton")
+const fullScreenButton = document.querySelector("#fullScreen");
 
 // Icones para botão
 const textButtonPlay = "<i class='bx bx-caret-right'></i>";
@@ -40,6 +41,7 @@ player.ontimeupdate = () => updateTime();
 volumeButton.onclick = () => stateButtonVolume();
 heartMusic.onclick = () => likeMusic();
 randomPlayerMusic.onclick = () => randomMusic();
+fullScreenButton.onclick = () => toggleFullScreen();
 
 const playPause = () => {
   if (player.paused) {
@@ -140,6 +142,43 @@ const getRandomIndex = () => {
   return randomIndex;
 };
 
+//List next songs
+const showUpcomingSongs = () => {
+  const upcomingSongsList = document.querySelector("#upcomingSongsList");
+  upcomingSongsList.innerHTML = ""; // Clear previous list
+  
+  const numberOfUpcomingSongsToShow = 5; // You can adjust this number as per your preference
+  
+  for (let i = 1; i <= numberOfUpcomingSongsToShow; i++) {
+    const upcomingIndex = (index + i) % songs.length;
+    const upcomingSong = songs[upcomingIndex];
+    const listItem = document.createElement("li");
+    
+    listItem.textContent = `${upcomingSong.name} - ${upcomingSong.artist}`;
+
+    // Add a click event listener to each list item
+    listItem.addEventListener("click", () => {
+      // Play the clicked upcoming song
+      playUpcomingSong(upcomingIndex);
+    });
+
+    upcomingSongsList.appendChild(listItem);
+  }
+};
+
+// Function to play the clicked upcoming song
+const playUpcomingSong = (upcomingIndex) => {
+  index = upcomingIndex;
+  player.src = songs[index].src;
+  musicName.innerHTML = songs[index].name;
+  artistName.innerHTML = songs[index].artist;
+  imgSong.src = songs[index].imgSong;
+  heartMusic.innerHTML = textNormalHeartMusic;
+
+  playPause();
+  updateTime();
+};
+
 // Proximas faixas
 const prevNextMusic = (type = "next") => {
   if (randomMode) {
@@ -160,6 +199,10 @@ const prevNextMusic = (type = "next") => {
 
   playPause();
   updateTime();
+
+  if (type === "next") {
+    showUpcomingSongs();
+  }
 };
 
 player.onended = () => {
@@ -181,5 +224,9 @@ function pressPrevNext(event) {
     playPause();
   }
 }
+
+//FullScreen
+const toggleFullScreen = () => {
+};
 
 prevNextMusic("init");
