@@ -234,12 +234,14 @@ const prevNextMusic = (type = "next") => {
   }
   // @param Nextsong - Verifica se elá em 'runMode' se sim ele faz o runmode, se não, segue normalmente
 
+  
   player.src = songs[index].src;
   musicName.innerHTML = songs[index].name;
   artistName.innerHTML = songs[index].artist;
   imgSong.src = songs[index].imgSong;
   heartMusic.innerHTML = textNormalHeartMusic;
-
+  
+  playPause()
   updateTime();
 
   if (type === "next") {
