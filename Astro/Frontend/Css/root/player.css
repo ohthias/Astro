@@ -11,6 +11,7 @@
 }
 
 .player {
+    z-index: 40;
     margin: 10px;
     padding: 10px;
     border: 0;

@@ -316,14 +316,6 @@ main.containner_content {
     margin: 25px auto;
 }
 
-.container_discografia{
-    position: relative;
-    left: 20%;
-    display: grid;
-    grid-template-columns: repeat(3, 3fr);
-    row-gap: 10px;
-}
-
 .container_discografia figure{
     width: max-content;
     padding: 15px 10px;
@@ -333,4 +325,19 @@ main.containner_content {
 .container_waper img {
     max-width: 250px;
     max-height: 250px;
+}
+
+/* footer */
+
+section.module.parallax-2 {
+    height: 150px !important;
+    width: 100%;
+}
+
+section.module.parallax-2 {
+    background: var(--background-gradient-parallax-footer-page-green);
+}
+
+section.module.parallax-2::after {
+    content: none;
 }
