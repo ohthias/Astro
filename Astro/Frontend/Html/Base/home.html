@@ -58,7 +58,12 @@
             </div>
           </div>
           <i class="fi fi-ss-speakers"></i>
-          <i class="fi fi-rr-menu-burger"></i>
+          <div class="container_faixas">
+            <i class="fi fi-rr-menu-burger"></i>
+            <div class="container_faixas_detalhes">
+              <ul id="upcomingSongsList"></ul>
+            </div>
+          </div>
           <button id="fullScreen"><i class="fi fi-rr-angle-up"></i></button>
         </div>
       </div>
@@ -73,11 +78,7 @@
       </div>
       <div class="containner_playlist">
         <div class="child_play">
-          <span class="span-playlist-mens"
-            >
-<ul id="upcomingSongsList"></ul>
-</span
-          >
+          <span class="span-playlist-mens">Nenhuma playlist salva, ou criada</span>
         </div>
         <div class="child_podc">
           <span class="span-playlist-mens">Não ha nenhum podcast salvo</span>
@@ -109,9 +110,9 @@
           </div>
           <div class="containner_anteriores">
             <h2>Continue Escutando</h2>
+            <button id="prevButtonAfter"><i class="fi fi-sr-angle-circle-right"></i></button>
             <div class="child_anter">
               <figure>
-                <button id="afterButton"></button>
                 <button>
                   <div class="anteriores">
                     <img src="https://br.paipee.com/wp-content/uploads/2022/03/camila_6_9441.jpg" alt="#" />
@@ -151,8 +152,8 @@
                   </div>
                 </button>
               </figure>
-              <button id="prevButton"></button>
             </div>
+            <button id="afterButton"><i class="fi fi-sr-angle-circle-right"></i></button>
           </div>
         </main>
       </section>
@@ -206,109 +207,15 @@
                 </button>
               </div>
             </div>
+
+            <button id="playlistButton"><i class="fi fi-sr-angle-circle-right"></i></button>
           </div>
         </div>
-
-        <div class="containner-main">
-          <div class="name-opitions">
-            <h3>lançamentos da semana</h3>
-            <hr />
-          </div>
-          <div class="child-main-options">
-            <div class="container_songs">
-              <div class="song">
-                <button id="outra">
-                  <img src="/Assets/Images/Astro_main-caps/7.png" class="songButton">
-                </button>
-              </div>
-            </div>
-            <div class="container_songs">
-              <div class="song">
-                <button id="outra2">
-                  <img src="/Assets/Images/Astro_main-caps/8.png" class="songButton">
-                </button>
-              </div>
-            </div>
-
-            <div class="container_songs">
-              <div class="song">
-                <button id="music3">
-                  <img src="/Assets/Images/Astro_main-caps/9.png" class="songButton">
-                </button>
-              </div>
-            </div>
-
-            <div class="container_songs">
-              <div class="song">
-                <button id="music4">
-                  <img src="/Assets/Images/Astro_main-caps/10.png" class="songButton">
-                </button>
-              </div>
-            </div>
-
-            <div class="container_songs">
-              <div class="song">
-                <button id="music5">
-                  <img src="/Assets/Images/Astro_main-caps/11.png" class="songButton">
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="containner-main">
-          <div class="name-opitions">
-            <h3>mixes</h3>
-            <hr />
-          </div>
-          <div class="child-main-options">
-            <div class="container_songs">
-              <div class="song">
-                <button id="outra">
-                  <img src="/Assets/Images/Astro_main-caps/12.png" class="songButton">
-                </button>
-              </div>
-            </div>
-            <div class="container_songs">
-              <div class="song">
-                <button id="outra2">
-                  <img src="/Assets/Images/Astro_main-caps/13.png" class="songButton">
-                </button>
-              </div>
-            </div>
-
-            <div class="container_songs">
-              <div class="song">
-                <button id="music3">
-                  <img src="/Assets/Images/Astro_main-caps/14.png" class="songButton">
-                </button>
-              </div>
-            </div>
-
-            <div class="container_songs">
-              <div class="song">
-                <button id="music4">
-                  <img src="/Assets/Images/Astro_main-caps/15.png" class="songButton">
-                </button>
-              </div>
-            </div>
-
-            <div class="container_songs">
-              <div class="song">
-                <button id="music5">
-                  <img src="/Assets/Images/Astro_main-caps/16.png" class="songButton">
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </main>
     
     <section class="module parallax parallax-2">
-      <footer>
-      </footer>
+      <footer></footer>
     </section>
 
     <!--Backend srcipts-->
@@ -317,6 +224,7 @@
 
     <!--Frontend srcipts-->
     <script src="/Astro/Frontend/JS/redirects/redirect.js"></script>
+    <script src="/Astro/Frontend/JS/others/slider.js"></script>
     <script>
       const exit = document.querySelector(".fi-ss-settings menu-icon")
       exit.addEventListener("click", function(){

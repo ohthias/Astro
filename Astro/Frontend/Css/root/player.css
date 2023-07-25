@@ -279,6 +279,45 @@ input[type="range"]::-moz-range-thumb {
     transition: 750ms;
 }
 
+/*Next Songs*/
+
+.container_faixas{
+    display: block;
+}
+
+.container_faixas .container_faixas_detalhes{
+    padding: 10px;
+    border-radius: 10px;
+
+    position: absolute;
+    top: -240px;
+    right: 0;
+    max-width: 200px;
+    width: 100%;
+    height: max-content;
+
+    background: var(--de-detail-purple-sha-shadow);
+    backdrop-filter: blur(10px);
+    visibility: hidden;
+}
+
+.container_faixas_detalhes li {
+    margin: 10px 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: left;
+    text-transform: capitalize;
+    list-style-type:circle;
+    color: var(--font);
+}
+
+.container_faixas:hover .container_faixas_detalhes{
+    visibility: visible;
+}
+
+/*Fullscreen*/
+
 #fullScreen {
     border: 0;
     font-size: 16px;
