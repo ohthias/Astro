@@ -29,3 +29,8 @@ var logo = document.getElementById('logo')
 logo.addEventListener("click", function() {
     window.location.href = "/Astro/Frontend/Html/Base/home.html"
 });
+
+const othersSongs = document.querySelector("#othersSongs")
+othersSongs.onclick = () => {
+    window.location.href = "/Astro/Frontend/Html/Artistas/A01-AK.html"
+}

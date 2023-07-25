@@ -20,6 +20,7 @@
     --font-detail: #f3f3f3;
     --de-detail-orange: #ff3d20;
     --de-detail-green: #29f247;
+    --de-detail-green-sha-shadow: #29f2473f;
     --de-detail-purple: #4b0072;
     --de-detail-purple-sha-shadow: #4a007276;
     --sha-shadow-black: rgba(0, 0, 0, 0.5);
@@ -36,4 +37,6 @@
 
     --background-gradient-parallax: linear-gradient(to top, var(--back-background-main) 15%, rgba(255,255,255,0));
     --background-gradient-parallax-footer-page: linear-gradient(to top, var(--de-detail-purple-sha-shadow) 1%, rgba(255,255,255,0));
+    --background-gradient-parallax-footer-page-green: linear-gradient(to top, var(--de-detail-green-sha-shadow) 1%, rgba(255,255,255,0));
+
 }

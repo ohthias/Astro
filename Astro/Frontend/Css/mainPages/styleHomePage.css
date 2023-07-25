@@ -1,6 +1,6 @@
 /*
  * Page: Home Page
- * UTA - Matheus 23/07
+ * UTA - Matheus 25/07
  * código documentado conforme html
  */
 
@@ -83,13 +83,12 @@ main.containner_content{
     transition: 0.4s ease;
 }
 
-/* Todo - ajustar active do botão */
-/*.containner_text button:active, .containner_text button:focus {
+.containner_text button:active {
     border: 0;
     color: var(--font);
     cursor: progress;
     background: linear-gradient(0deg, rgba(41,242,71,1) 0%, rgba(57,138,20,1) 100%);
-}*/
+}
 
 /* Músicas || Artistas anteriores */
 
@@ -126,22 +125,44 @@ main.containner_content{
     display: none;
 }
 
-.child_anter img {
+.child_anter button{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.anteriores img {
     width: 180px;
     height: 270px;
     border: 0;
+    object-fit: cover;
     border-radius: 20px;
     box-shadow: 10px 2px 10px var(--sha-shadow-black);
     transition: 0.3s;
 }
 
-.child_anter img:hover {
-    position: relative;
-    transform: translateY(-10px);
-    box-shadow: 0 -1px 2px #29f247, 0 -5px 20px rgba(57,138,20,1);
-    transition: 0.5s ease;
+figure .anteriores .anteriores_name {
+    margin: -50% auto;
+    padding: 5px 0;
+    z-index: 20;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: var(--font);
+    visibility: hidden;
 }
 
+.anteriores:hover .anteriores_name, .child_anter img:hover{
+    visibility: visible;
+    position: relative;
+    transform: translateY(-5px);
+    transition: 0.5s ease;
+    filter: brightness(70%);
+}
+
+.child_anter img:hover{
+    box-shadow: 0 0 10px var(--sha-shadow-black), 0 0 15px var(--de-detail-green);
+}
 
 /* Main */
 
@@ -188,7 +209,7 @@ main.containner_content{
     width: 200px;
     height: 200px;
     box-shadow: 0 0 10px var(--sha-shadow-white);
-    transition: 500ms;
+    transition: 100ms;
 }
 
 .song button:hover{
@@ -208,7 +229,7 @@ main.containner_content{
 /* Animations das playlists */
 
 
-/* Animations da main 
+/* Animations da main */
 
 @keyframes fadeIn {
     0% {
@@ -261,28 +282,17 @@ main.containner_content{
 
 /* footer */
 
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+section.module.parallax-2{
+    height: 150px !important;
     width: 100%;
-    height: 60px;
-    text-align: center;
-    background: var(--back-background-menu);
 }
 
-footer::after {
-    content: ' ';
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background: linear-gradient(to top, var(--sha-shadow-black), rgba(255, 255, 255, 0));
+section.module.parallax-2{
+    background: var(--background-gradient-parallax-footer-page-green);
 }
 
-footer p {
-    z-index: 8;
-    color: var(--font);
+section.module.parallax-2::after{
+    content: none;
 }
 
 /* Media */
