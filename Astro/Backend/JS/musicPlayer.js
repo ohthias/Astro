@@ -144,8 +144,12 @@ const getRandomIndex = () => {
 const prevNextMusic = (type = "next") => {
   if (randomMode) {
     index = getRandomIndex();
+  } else if ((type == "next" && index + 1 === songs.length) || type === "init") {
+    index = 0;
+  } else if (type == "prev" && index === 0) {
+    index = songs.length;
   } else {
-    index = (index + 1) % songs.length;
+    index = type === "prev" && index ? index - 1 : index + 1;
   }
 
   player.src = songs[index].src;
