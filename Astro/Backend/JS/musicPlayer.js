@@ -5,6 +5,7 @@ const musicName = document.querySelector("#musicName")
 const artistName = document.querySelector("#artistName")
 const imgSong = document.querySelector("#imgSong")
 const heartMusic = document.querySelector("#heartMusic")
+const randomPlayerMusic = document.querySelector("#randomPlayerMusic")
 const playPauseButton = document.querySelector("#playPauseButton")
 const prevButton = document.querySelector("#prevButton")
 const nextButton = document.querySelector("#nextButton")
@@ -22,6 +23,8 @@ const textMutedAudio = "<i class='fi fi-ss-volume-mute'></i>";
 const textNormalAudio = "<i class='fi fi-ss-volume'></i>";
 const textNormalHeartMusic = "<i class='fi fi-rr-heart'>"
 const textLikeHeartMusic = "<i class='fi fi-sr-heart'></i>"
+const textrandomPlayerMusicAtive = "<i class='fi fi-rr-shuffle'></i>"
+const textrandomPlayerMusicNormal = "<i class='fi fi-ss-shuffle'></i>"
 
 // Variaveis globais
 let index = 0;
@@ -36,6 +39,7 @@ playPauseButton.onclick = () => playPause();
 player.ontimeupdate = () => updateTime();
 volumeButton.onclick = () => stateButtonVolume();
 heartMusic.onclick = () => likeMusic();
+randomPlayerMusic.onclick = () => randomMusic();
 
 const playPause = () => {
   if (player.paused) {
@@ -112,14 +116,36 @@ const likeMusic = () => {
   }
 };
 
+//Random
+let randomMode = false;
+
+const randomMusic = () => {
+  randomMode = !randomMode;
+
+  if (randomMode) {
+    randomPlayerMusic.innerHTML = textrandomPlayerMusicNormal;
+  } else {
+    randomPlayerMusic.innerHTML = textrandomPlayerMusicAtive;
+  }
+};
+
+const getRandomIndex = () => {
+  const currentIndex = index;
+  let randomIndex = currentIndex;
+
+  while (randomIndex === currentIndex) {
+    randomIndex = Math.floor(Math.random() * songs.length);
+  }
+
+  return randomIndex;
+};
+
 // Proximas faixas
 const prevNextMusic = (type = "next") => {
-  if ((type == "next" && index + 1 === songs.length) || type === "init") {
-    index = 0;
-  } else if (type == "prev" && index === 0) {
-    index = songs.length;
+  if (randomMode) {
+    index = getRandomIndex();
   } else {
-    index = type === "prev" && index ? index - 1 : index + 1;
+    index = (index + 1) % songs.length;
   }
 
   player.src = songs[index].src;
@@ -127,8 +153,8 @@ const prevNextMusic = (type = "next") => {
   artistName.innerHTML = songs[index].artist;
   imgSong.src = songs[index].imgSong;
   heartMusic.innerHTML = textNormalHeartMusic;
-  
-  if (type !== "init") playPause();
+
+  playPause();
   updateTime();
 };
 
@@ -147,7 +173,7 @@ function pressPrevNext(event) {
   if (event.key === "m" || event.key === "M") {
     stateButtonVolume();
   }
-  if (event.key == 'p' || event.key == 'P'){
+  if (event.key == 'space' || event.key == 'SPACE'){
     playPause();
   }
 }

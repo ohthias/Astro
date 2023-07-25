@@ -63,18 +63,15 @@
     text-decoration: 1.5px underline var(--de-detail-green);
 }
 
-#heartMusic {
+#heartMusic, #randomPlayerMusic {
     margin: 0 20px;
     border: 0;
     background: transparent;
-}
-
-#heartMusic {
     font-size: 1.2em;
     cursor: pointer;
 }
 
-.fi-sr-heart {
+.fi-sr-heart, .fi-ss-shuffle {
     text-shadow: 0 0 10px var(--sha-shadow-white), 0 0 25px var(--de-detail-orange);
     color: var(--de-detail-orange);
     transition: 750ms ease;
@@ -137,7 +134,7 @@
 .footer {
     margin: 0 auto;
     width: 100%;
-    max-width: 550px;
+    max-width: 500px;
 }
 
 #currentTime {
@@ -271,15 +268,23 @@ input[type="range"]::-moz-range-thumb {
 /* Others options */
 
 .fi-ss-speakers,
-.fi-rr-align-justify {
+.fi-rr-menu-burger {
     cursor: pointer;
     transition: 750ms;
 }
 
 .fi-ss-speakers:hover,
-.fi-rr-align-justify:hover{
+.fi-rr-menu-burger:hover, #fullScreen .fi-rr-angle-up:hover {
     color: var(--de-detail-green);
     transition: 750ms;
+}
+
+#fullScreen {
+    border: 0;
+    font-size: 16px;
+    background: none;
+    transition: 750ms;
+    cursor: pointer;
 }
 
 /* Animations */
@@ -297,8 +302,8 @@ input[type="range"]::-moz-range-thumb {
 
 /* Media */
 
-@media screen and (max-width: 800px){
-    input[type="range"]{
+@media screen and (max-width: 800px) {
+    input[type="range"] {
         display: none;
     }
 
@@ -307,6 +312,4 @@ input[type="range"]::-moz-range-thumb {
     }
 }
 
-@media screen and (max-width: 425){
-    
-}
+@media screen and (max-width: 425) {}
