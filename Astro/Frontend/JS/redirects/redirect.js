@@ -25,7 +25,7 @@ naCalmaPlaylist.onclick = () => {
     window.location.href = "/Astro/Frontend/Html/Erro/404.html"
 };
 
-var logo = document.getElementById('logo')
+var logo = document.querySelector("#logo")
 logo.addEventListener("click", function() {
     window.location.href = "/Astro/Frontend/Html/Base/home.html"
 });
