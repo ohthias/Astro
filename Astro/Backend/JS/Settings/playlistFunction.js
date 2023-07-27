@@ -17,41 +17,42 @@ const musicas = [
     src: "http://physical-authority.surge.sh/music/3.mp3",
     nome: "джованна",
     artista: "enrasta",
-    capaAlbum: "/Astro/Backend/Assets-Songs/ImageAudio/8.jpg",
+    capaAlbum: "",
   },
 
-
-  {
-    src: "/Astro/Backend/Assets-Songs/Audio/1.mp3",
-    nome: "On My Way",
-    artista: "Alan Walker",
-    capaAlbum: "/Astro/Backend/Assets-Songs/ImageAudio/1.jpg",
-  },
-
-  {
-    src: "/Astro/Backend/Assets-Songs/Audio/2.mp3",
-    nome: "Faded",
-    artista: "Alan Walker",
-    capaAlbum: "/Astro/Backend/Assets-Songs/ImageAudio/2.jpg",
-  },
-
-  {
-    src: "/Astro/Backend/Assets-Songs/Audio/3.mp3",
-    nome: "On and On",
-    artista: "Pagali World",
-    capaAlbum: "/Astro/Backend/Assets-Songs/ImageAudio/3.jpg",
-  },
-
-  {
-    src: "/Astro/Backend/Assets-Songs/Audio/13.mp3",
-    nome: "Baarishein",
-    artista: "Atif Aslam",
-    capaAlbum: "/Astro/Backend/Assets-Songs/ImageAudio/AlbumArt_{B5020207-474E-4720-7BF7-351BB9943900}_Small.jpg",
-  }
 ];
 
 // Criação de playlists e a interação com o player
 
+function calcularDuracaoTotal() {
+  let duracaoTotal = 0;
+  let loadedCount = 0; // Contador de músicas carregadas
+
+  musicas.forEach((musica) => {
+    const audio = new Audio(musica.src);
+    audio.addEventListener("loadedmetadata", () => {
+      duracaoTotal += audio.duration;
+      loadedCount++;
+
+      // Verifica se todas as músicas foram carregadas
+      if (loadedCount === musicas.length) {
+        const duracaoTotalFormatada = formatarDuracao(duracaoTotal);
+
+        const duracaoTotalElement = document.getElementById("duracao-total");
+        duracaoTotalElement.textContent = `Duração total da playlist: ${duracaoTotalFormatada}`;
+      }
+    });
+  });
+}
+
+function formatarDuracao(segundos) {
+  const minutos = Math.floor(segundos / 60);
+  const segundosRestantes = Math.floor(segundos % 60);
+
+  return `${minutos}:${segundosRestantes.toString().padStart(2, "0")}`;
+}
+
+let currentPlaylist = "Playlist 1"; // Definir a playlist inicial
 let isPlaying = false;
 let currentSongIndex = -1;
 
@@ -96,11 +97,9 @@ function tocarMusica(index) {
   const player = document.querySelector("#player");
 
   if (isPlaying && currentSongIndex === index) {
-    // Pausa a música
     player.pause();
     isPlaying = false;
   } else {
-    // Inicia a reprodução ou alterna para a próxima música
     currentSongIndex = index;
     const musica = musicas[index];
     player.src = musica.src;
@@ -110,20 +109,18 @@ function tocarMusica(index) {
     player.play();
     isPlaying = true;
 
-    // Evento para detectar quando a música atual terminou
     player.addEventListener("ended", proximaMusica);
   }
 }
 
 function proximaMusica() {
-  // Remove o evento "ended" para evitar que ele seja chamado várias vezes
   const player = document.querySelector("#player");
   player.removeEventListener("ended", proximaMusica);
 
   // Avança para a próxima música
   currentSongIndex++;
   if (currentSongIndex >= musicas.length) {
-    currentSongIndex = 0; // Volta para a primeira música quando atingir o fim da playlist
+    currentSongIndex = 0; 
   }
 
   // Reproduz a próxima música
@@ -135,8 +132,28 @@ function proximaMusica() {
   player.play();
   isPlaying = true;
 
-  // Adiciona novamente o evento "ended" para a próxima música
   player.addEventListener("ended", proximaMusica);
 }
 
+function musicaAnterior() {
+  currentSongIndex--;
+  if (currentSongIndex < 0) {
+    currentSongIndex = musicas.length - 1; // Voltar para a última música se estiver na primeira
+  }
+  tocarMusica(currentSongIndex);
+}
+
+// Event listener para o botão "Próxima Música"
+const nextButton = document.querySelector("#nextButton");
+nextButton.addEventListener("click", () => {
+  proximaMusica();
+});
+
+// Event listener para o botão "Música Anterior"
+const prevButton = document.querySelector("#prevButton");
+prevButton.addEventListener("click", () => {
+  musicaAnterior();
+});
+
+calcularDuracaoTotal();
 exibirMusicas();
