@@ -44,13 +44,27 @@ heartMusic.onclick = () => likeMusic();
 randomPlayerMusic.onclick = () => randomMusic();
 fullScreenButton.onclick = () => toggleFullScreen();
 
+// Inicialização do player
+player.addEventListener("loadedmetadata", () => {
+  updatePlayPauseIcon(); // Atualiza o ícone do botão Play/Pause na inicialização
+  updateTime(); // Atualiza o tempo atual da música na inicialização
+});
+
 const playPause = () => {
   if (player.paused) {
     player.play();
-    playPauseButton.innerHTML = textButtonPause;
   } else {
     player.pause();
+  }
+  updatePlayPauseIcon(); // Atualiza o ícone do botão Play/Pause
+};
+
+// Função para atualizar o ícone do botão Play/Pause
+const updatePlayPauseIcon = () => {
+  if (player.paused) {
     playPauseButton.innerHTML = textButtonPlay;
+  } else {
+    playPauseButton.innerHTML = textButtonPause;
   }
 };
 
@@ -174,11 +188,11 @@ const randomMusic = () => {
 
 const getRandomIndex = () => {
   const currentIndex = index;
-  let randomIndex = currentIndex;
+  let randomIndex;
 
-  while (randomIndex === currentIndex) {
+  do {
     randomIndex = Math.floor(Math.random() * songs.length);
-  }
+  } while (randomIndex === currentIndex);
 
   return randomIndex;
 };
@@ -213,9 +227,6 @@ const playUpcomingSong = (upcomingIndex) => {
   artistName.innerHTML = songs[index].artist;
   imgSong.src = songs[index].imgSong;
   heartMusic.innerHTML = textNormalHeartMusic;
-
-  playPause();
-  updateTime();
 };
 
 // Proximas faixas
@@ -234,14 +245,13 @@ const prevNextMusic = (type = "next") => {
   }
   // @param Nextsong - Verifica se elá em 'runMode' se sim ele faz o runmode, se não, segue normalmente
 
-  
   player.src = songs[index].src;
   musicName.innerHTML = songs[index].name;
   artistName.innerHTML = songs[index].artist;
   imgSong.src = songs[index].imgSong;
   heartMusic.innerHTML = textNormalHeartMusic;
-  
-  playPause()
+
+  playPause();
   updateTime();
 
   if (type === "next") {
