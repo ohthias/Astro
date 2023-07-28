@@ -156,8 +156,6 @@ main {
   align-items: center;
   width: 850px;
   background: var(--sha-shadow-black);
-  box-shadow: 0 0 10px var(--sha-shadow-black-menu),
-    0 0 5px var(--sha-shadow-white);
 }
 
 .infoMusica {

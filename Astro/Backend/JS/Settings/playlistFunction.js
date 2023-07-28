@@ -31,7 +31,7 @@ const musicas = [
     src: "/Astro/Backend/Assets-Songs/Audio/HTML.mp3",
     nome: "HTML",
     artista: "Riot",
-    capaAlbum: "https://source.unsplash.com/featured/60x60",
+    capaAlbum: "https://source.unsplash.com/featured/80x80",
   },
 
   {
