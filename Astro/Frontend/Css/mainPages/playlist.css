@@ -70,28 +70,60 @@ section.module.parallax-2::after {
 }
 
 #namePlaylist {
-    margin: 10px 0;
-    font-size: 4em;
-    letter-spacing: 1px;
-    color: var(--de-detail-green);
+  margin: 10px 0;
+  font-size: 4em;
+  letter-spacing: 1px;
+  color: var(--de-detail-green);
 }
 
-#creatorPlaylist{
-    font-size: 1.8em;
-    text-decoration: underline solid 2px;
-    letter-spacing: 1px;
-    cursor: pointer;
+#creatorPlaylist {
+  font-size: 1.8em;
+  text-decoration: underline solid 2px;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 
-#creatorPlaylist:hover{
-    color: var(--sha-shadow-white);
+#creatorPlaylist:hover {
+  color: var(--sha-shadow-white);
 }
 
 /* Options */
 
-.container_options{
-    position: absolute;
-    left: 30%;
+.container_options {
+  margin-left: 350px;
+  margin-bottom: 25px;
+}
+
+.container_options_display {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.container_options_buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 8px;
+  border-radius: 10px;
+  background: var(--sha-shadow-black);
+}
+
+.container_options_buttons button {
+  margin: 5px;
+  border: 0;
+  font-size: 20px;
+  background: none;
+}
+
+.container_options_buttons #playPuase {
+  margin: 0;
+  font-size: 25px;
+}
+
+.container_options #duracao-total {
+  margin: 0 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
 }
 
 /* Main playlist */
@@ -135,7 +167,7 @@ main {
 }
 
 .infoMusica_play {
-  width: 100vh;
+  width: 90vh;
   margin-left: 25px;
 }
 
@@ -144,11 +176,10 @@ main {
 }
 
 #music-list img {
-  margin: 0 25px 0 0;
+  margin: 0 15px 0 0;
   border: 0;
   border-radius: 10px;
-  max-width: 80px;
-  width: 100%;
+  max-width: 50px;
 }
 
 .musicnome_playlist {
