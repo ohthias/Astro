@@ -39,7 +39,7 @@ function calcularDuracaoTotal() {
         const duracaoTotalFormatada = formatarDuracao(duracaoTotal);
 
         const duracaoTotalElement = document.getElementById("duracao-total");
-        duracaoTotalElement.textContent = `Duração total da playlist: ${duracaoTotalFormatada}`;
+        duracaoTotalElement.textContent = `${duracaoTotalFormatada} duração da playlist:`;
       }
     });
   });

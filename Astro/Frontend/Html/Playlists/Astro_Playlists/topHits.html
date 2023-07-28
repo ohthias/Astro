@@ -20,71 +20,77 @@
 
 <body>
       <!-- Player -->
-      <div class="containner_player">
-        <div class="player">
-          <div class="player_image">
-            <img src="" id="imgSong">
-          </div>
-          <div class="player_infoMusic">
-            <span id="musicName"></span>
-            <span id="artistName"></span>
-          </div>
-  
-          <button id="heartMusic"><i class="fi fi-rr-heart"></i></button>
-          <div class="controls">
-            <button id="prevButton"><i class='bx bx-skip-previous'></i></button>
-            <button id="playPauseButton"><i class='bx bx-caret-right'></i></button>
-            <button id="nextButton"><i class='bx bx-skip-next'></i></button>
-          </div>
-          <button id="randomPlayerMusic"><i class="fi fi-sr-shuffle"></i></button>
-  
-          <audio id="player" src=""></audio>
-          <div class="footer">
-            <span id="currentTime">0:00</span>
-            <div class="timecode_player">
-              <div class="progress-bar">
-                <div class="progress"></div>
-              </div>
-              <span id="duration">0:00</span>
+    <div class="containner_player">
+      <div class="player">
+        <div class="player_image">
+          <img src="" id="imgSong">
+        </div>
+        <div class="player_infoMusic">
+          <span id="musicName"></span>
+          <span id="artistName"></span>
+        </div>
+
+        <button id="heartMusic"><i class="fi fi-rr-heart"></i></button>
+        <div class="controls">
+          <button id="prevButton"><i class='bx bx-skip-previous'></i></button>
+          <button id="playPauseButton"><i class='bx bx-caret-right'></i></button>
+          <button id="nextButton"><i class='bx bx-skip-next'></i></button>
+        </div>
+        <button id="randomPlayerMusic"><i class="fi fi-sr-shuffle"></i></button>
+
+        <audio id="player" src=""></audio>
+        <div class="footer">
+          <span id="currentTime">0:00</span>
+          <div class="timecode_player">
+            <div class="progress-bar">
+              <div class="progress"></div>
             </div>
-          </div>
-  
-          <div class="containner_more">
-            <div class="container_volume">
-              <div class="volume-button">
-                <button id="volumeButton"><i class="fi fi-ss-volume"></i></button>
-              </div>
-              <div class="volume_control">
-                <input type="range"  min="0" max="1" step="0.01" value="1" id="voulmeSom">
-              </div>
-            </div>
-            <i class="fi fi-ss-speakers"></i>
-            <i class="fi fi-rr-menu-burger"></i>
-            <button id="fullScreen"><i class="fi fi-rr-angle-up"></i></button>
+            <span id="duration">0:00</span>
           </div>
         </div>
+
+        <div class="containner_more">
+          <div class="container_volume">
+            <div class="volume-button">
+              <button id="volumeButton"><i class="fi fi-ss-volume"></i></button>
+            </div>
+            <div class="volume_control">
+              <input type="range"  min="0" max="1" step="0.01" value="1" id="voulmeSom">
+            </div>
+          </div>
+          <i class="fi fi-ss-speakers"></i>
+          <div class="container_faixas">
+            <i class="fi fi-rr-menu-burger"></i>
+            <div class="container_faixas_detalhes">
+              <ul id="upcomingSongsList"></ul>
+            </div>
+          </div>
+          <button id="fullScreen"><i class="fi fi-rr-angle-up"></i></button>
+        </div>
       </div>
-
-  <!-- Menu Lateral -->
-
-  <aside>
-    <div class="containner_opc">
-      <a href="/Astro/Frontend/Html/Base/home.html"><i class="fi fi-ss-home"></i></a>
-      <a href="../Erro/comingSoon.html"><i class="fi fi-ss-user"></i></a>
     </div>
-    <div class="containner_playlist">
-      <div class="child_play">
-        <span class="span-playlist-mens">Não ha nenhuma playlist salva ou criada</span>
-      </div>
-      <div class="child_podc">
-        <span class="span-playlist-mens">Não ha nenhum podcast salvo</span>
-      </div>
-      <div class="credits">
-        <p>&copy Astro</p>
-      </div>
-    </div>
-  </aside>
 
+    <!-- Menu Lateral -->
+    <aside>
+      <div class="containner_opc">
+        <a href="./home.html"><i class="fi fi-ss-home"></i></a>
+        <a href="../Erro/comingSoon.html"><i class="fi fi-br-search"></i></a>
+      </div>
+      <div class="containner_playlist">
+        <div class="child_play">
+          <span class="span-playlist-mens">Nenhuma playlist salva, ou criada</span>
+        </div>
+        <div class="child_podc">
+          <span class="span-playlist-mens">Não ha nenhum podcast salvo</span>
+        </div>
+        <div class="credits">
+          <p>&copy Astro</p>
+        </div>
+      </div>
+    </aside>
+
+
+    <!--Parallax-->
   <section class="module parallax parallax-1" id="backParallax">
     <header>
       <div class="containner_header">
@@ -104,14 +110,21 @@
         <div class="container_playlist_header">
           <h1 id="namePlaylist">Top Hits</h1>
           <p id="creatorPlaylist">Astro</p>
-          <button id="heartMusic"><i class="fi fi-rr-heart"></i></button>
         </div>
       </div>
     </div>
   </section>
-
-  <main>
+  
+  <div class="container_options">
+    <div class="container_options_buttons">
+      <button id="random"><i class="fi fi-sr-shuffle"></i></button>
+      <button id="playPuase"><i class='bx bx-caret-right'></i></button>
+      <button id="heartMusic"><i class="fi fi-rr-heart"></i></button>
+    </div>
     <div id="duracao-total"></div>
+  </div>
+  
+  <main>
     <div class="container_playlist_main">
       <ul id="music-list"></ul>
     </div>
