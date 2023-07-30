@@ -164,8 +164,8 @@ figure .anteriores .anteriores_name {
     visibility: hidden;
 }
 
-.child_anter img:hover, 
-.anteriores:hover .anteriores_name{
+.child_anter img:hover,
+.anteriores:hover .anteriores_name {
     filter: grayscale(0);
     visibility: visible;
     position: relative;
@@ -248,13 +248,9 @@ figure .anteriores .anteriores_name {
     background: #29f247d0;
 }
 
-.child-main-options {
-    margin: 25px -10px;
-    display: flex;
-    flex-direction: row;
-}
-
-.song button {
+.carousel button {
+    width: 200px;
+    height: 200px;
     margin: 0 10px;
     border: 0;
     border-radius: 10px;
@@ -265,13 +261,11 @@ figure .anteriores .anteriores_name {
 
 .songButton {
     border-radius: 10px;
-    width: 200px;
-    height: 200px;
     box-shadow: 0 0 10px var(--sha-shadow-white);
     transition: 100ms;
 }
 
-.song button:hover {
+.carousel button:hover {
     transform: scale(1.05);
     transition: 250ms;
 }
@@ -281,25 +275,79 @@ figure .anteriores .anteriores_name {
     transition: 250ms;
 }
 
-.song button .songButton:active {
+button .songButton:active {
     box-shadow: 0 0 10px var(--de-detail-purple), 0 0 20px var(--de-detail-orange);
 }
 
-#playlistButton {
-    position: absolute;
-    margin: 0 15px;
-    padding: 2px 5px;
-    border: 0;
-    z-index: 12;
-    font-size: 24px;
-    background: none;
-    cursor: pointer;
+.wrapper {
+    height: 230px;
+    margin: 20px 0 25px;
+    display: flex;
     position: relative;
 }
 
-#playlistButton .fi-sr-angle-circle-righ {
-    color: var(--sha-shadow-white);
+.wrapper i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 35px;
+    width: 35px;
+    color: var(--de-detail-green);
+    cursor: pointer;
+    font-size: 1.15rem;
+    text-align: center;
+    line-height: 35px;
+    background: var(--de-detail-green-sha-shadow);
+    border-radius: 50%;
+    transition: transform 0.1s linear;
 }
+
+.wrapper i:active {
+    transform: translateY(-50%) scale(0.9);
+}
+
+.wrapper i:hover {
+    background: #f2f2f2;
+}
+
+.wrapper i:first-child {
+    left: -22px;
+    display: none;
+}
+
+.wrapper i:last-child {
+    right: 22px;
+}
+
+.wrapper .carousel {
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+.carousel.dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging img {
+    pointer-events: none;
+}
+
+.carousel img {
+    height: max-content;
+    object-fit: cover;
+    user-select: none;
+    margin-left: 14px;
+    width: 200px;
+}
+
+.carousel img:first-child {
+    margin-left: 0px;
+}
+
 
 /* Main container Artist */
 

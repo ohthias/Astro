@@ -4,17 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ASTRO</title>
-    <link rel="shortcut icon" href="/Assets/Images/Icons/iconAstro.png" type="image/x-icon"/>
-    <link rel="stylesheet" href="/Astro/Frontend/Css/mainPages/styleHomePage.css" />
-    <link rel="stylesheet" href="/Astro/Frontend/Css/root.css"/>
-    <link rel="stylesheet" href="/Astro/Frontend/Css/root/player.css">
-    <link rel="stylesheet" href="/Astro/Frontend/Css/root/menus.css">
+    <link
+      rel="shortcut icon"
+      href="/Assets/Images/Icons/iconAstro.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="/Astro/Frontend/Css/mainPages/styleHomePage.css"
+    />
+    <link rel="stylesheet" href="/Astro/Frontend/Css/root.css" />
+    <link rel="stylesheet" href="/Astro/Frontend/Css/root/player.css" />
+    <link rel="stylesheet" href="/Astro/Frontend/Css/root/menus.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css"/>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -22,7 +45,7 @@
     <div class="containner_player">
       <div class="player">
         <div class="player_image">
-          <img src="" id="imgSong">
+          <img src="" id="imgSong" />
         </div>
         <div class="player_infoMusic">
           <span id="musicName"></span>
@@ -31,9 +54,11 @@
 
         <button id="heartMusic"><i class="fi fi-rr-heart"></i></button>
         <div class="controls">
-          <button id="prevButton"><i class='bx bx-skip-previous'></i></button>
-          <button id="playPauseButton"><i class='bx bx-caret-right'></i></button>
-          <button id="nextButton"><i class='bx bx-skip-next'></i></button>
+          <button id="prevButton"><i class="bx bx-skip-previous"></i></button>
+          <button id="playPauseButton">
+            <i class="bx bx-caret-right"></i>
+          </button>
+          <button id="nextButton"><i class="bx bx-skip-next"></i></button>
         </div>
         <button id="randomPlayerMusic"><i class="fi fi-sr-shuffle"></i></button>
 
@@ -53,7 +78,14 @@
             <div class="volume-button">
               <button id="volumeButton"><i class="fi fi-ss-volume"></i></button>
               <div class="tooltip-volume_control">
-                <input type="range"  min="0" max="1" step="0.01" value="1" id="volumeSom">
+                <input
+                  type="range"
+                  min="0"
+                  max="1"
+                  step="0.01"
+                  value="1"
+                  id="volumeSom"
+                />
               </div>
             </div>
           </div>
@@ -73,7 +105,11 @@
 
     <div class="sidebar">
       <div class="logo-details">
-        <img src="/Assets/Images/Icons/iconAstro.png" class="logo_img" alt="astronaut">
+        <img
+          src="/Assets/Images/Icons/iconAstro.png"
+          class="logo_img"
+          alt="astronaut"
+        />
         <i class="bx bx-menu" id="btn"></i>
       </div>
       <ul class="nav-list">
@@ -117,8 +153,12 @@
             <label id="logo">Astro</label>
             <div class="header-list">
               <span id="level_user">01</span>
-              <a href="/Astro/Frontend/Html/Erro/404.html"><i class="fi fi-ss-user menu-icon"></i></a>
-              <a href="/Astro/Frontend/Html/Base/index.html"><i class="fi fi-ss-settings menu-icon"></i></a>
+              <a href="/Astro/Frontend/Html/Erro/404.html"
+                ><i class="fi fi-ss-user menu-icon"></i
+              ></a>
+              <a href="/Astro/Frontend/Html/Base/index.html"
+                ><i class="fi fi-ss-settings menu-icon"></i
+              ></a>
             </div>
           </section>
         </header>
@@ -130,12 +170,17 @@
           </div>
           <div class="containner_anteriores">
             <h2>Continue Escutando</h2>
-            <button id="prevButtonAfter"><i class="fi fi-sr-angle-circle-right"></i></button>
+            <button id="prevButtonAfter">
+              <i class="fi fi-sr-angle-circle-right"></i>
+            </button>
             <div class="child_anter">
               <figure>
                 <button>
                   <div class="anteriores">
-                    <img src="https://br.paipee.com/wp-content/uploads/2022/03/camila_6_9441.jpg" alt="#" />
+                    <img
+                      src="https://br.paipee.com/wp-content/uploads/2022/03/camila_6_9441.jpg"
+                      alt="#"
+                    />
                     <div class="anteriores_name">
                       <p>Camila Cabello</p>
                     </div>
@@ -145,7 +190,10 @@
               <figure>
                 <button>
                   <div class="anteriores">
-                    <img src="https://yt3.googleusercontent.com/2nYOm33klbI2QkbKuZfdSdkF1Fzb3cIggFcxhyO3NUwtMtZl_TImTkzjuc_j0wVLEA1joC2pJw=s900-c-k-c0x00ffffff-no-rj" alt="#" />
+                    <img
+                      src="https://yt3.googleusercontent.com/2nYOm33klbI2QkbKuZfdSdkF1Fzb3cIggFcxhyO3NUwtMtZl_TImTkzjuc_j0wVLEA1joC2pJw=s900-c-k-c0x00ffffff-no-rj"
+                      alt="#"
+                    />
                     <div class="anteriores_name">
                       <p>Jvke</p>
                     </div>
@@ -155,7 +203,10 @@
               <figure>
                 <button>
                   <div class="anteriores">
-                    <img src="https://akamai.sscdn.co/uploadfile/letras/fotos/8/8/5/f/885ff7ef23af2290d9a457d5d1b0c25a.jpg" alt="#" />
+                    <img
+                      src="https://akamai.sscdn.co/uploadfile/letras/fotos/8/8/5/f/885ff7ef23af2290d9a457d5d1b0c25a.jpg"
+                      alt="#"
+                    />
                     <div class="anteriores_name">
                       <p>Bea Duarte</p>
                     </div>
@@ -165,7 +216,10 @@
               <figure>
                 <button>
                   <div class="anteriores">
-                    <img src="https://s2.glbimg.com/MslefhyiGoMXUh7h663wcVL5vykfwXyPvuAd0GUu8yntyLfXE2NA_jJoYL1nfCL8/s.glbimg.com/jo/g1/f/original/2012/12/20/facebook-tom_odell_1.jpg" alt="#" />
+                    <img
+                      src="https://s2.glbimg.com/MslefhyiGoMXUh7h663wcVL5vykfwXyPvuAd0GUu8yntyLfXE2NA_jJoYL1nfCL8/s.glbimg.com/jo/g1/f/original/2012/12/20/facebook-tom_odell_1.jpg"
+                      alt="#"
+                    />
                     <div class="anteriores_name">
                       <p>tom odell</p>
                     </div>
@@ -173,7 +227,9 @@
                 </button>
               </figure>
             </div>
-            <button id="afterButton"><i class="fi fi-sr-angle-circle-right"></i></button>
+            <button id="afterButton">
+              <i class="fi fi-sr-angle-circle-right"></i>
+            </button>
           </div>
         </section>
       </section>
@@ -183,116 +239,132 @@
 
     <main class="home-section">
       <section class="containner-main">
-       <div class="name-opitions">
+        <div class="name-opitions">
           <h3>Originais</h3>
           <hr />
         </div>
-        <div class="child-main-options">
-          <div class="container_songs">
-            <div class="song">
-              <button id="topHits">
-                <img src="/Assets/Images/Astro_main-caps/1.png" class="songButton">
-              </button>
-            </div>
-          </div>
-          <div class="container_songs">
-            <div class="song">
-              <button id="debutsSemana">
-                <img src="/Assets/Images/Astro_main-caps/2.png" class="songButton">
-              </button>
-            </div>
-          </div>
-    
-          <div class="container_songs">
-            <div class="song">
-              <button id="seuUniverso">
-                <img src="/Assets/Images/Astro_main-caps/3.png" class="songButton">
-              </button>
-            </div>
-          </div>
-    
-          <div class="container_songs">
-            <div class="song">
-              <button id="noPique">
-                <img src="/Assets/Images/Astro_main-caps/4.png" class="songButton">
-              </button>
-            </div>
-          </div>
-    
-          <div class="container_songs">
-            <div class="song">
-              <button id="naCalma">
-                <img src="/Assets/Images/Astro_main-caps/5.png" class="songButton">
-              </button>
-            </div>
-          </div>
+        <div class="wrapper">
+          <i id="left" class="fa-solid fa-angle-left"></i>
+          <div class="carousel" id="carousel1">
+            <button id="topHits">
+              <img
+                src="/Assets/Images/Astro_main-caps/1.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
 
-          <div class="container_songs">
-            <div class="song">
-              <button id="naCalma">
-                <img src="/Assets/Images/Astro_main-caps/6.png" class="songButton">
-              </button>
-            </div>
-          </div>
+            <button id="debutsSemana">
+              <img
+                src="/Assets/Images/Astro_main-caps/2.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
 
-          <div class="container_songs">
-            <div class="song">
-              <button id="naCalma">
-                <img src="/Assets/Images/Astro_main-caps/6.png" class="songButton">
-              </button>
-            </div>
+            <button id="seuUniverso">
+              <img
+                src="/Assets/Images/Astro_main-caps/3.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="noPique">
+              <img
+                src="/Assets/Images/Astro_main-caps/4.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="naCalma">
+              <img
+                src="/Assets/Images/Astro_main-caps/5.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="naCalma">
+              <img
+                src="/Assets/Images/Astro_main-caps/6.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
           </div>
+          <i id="right" class="fa-solid fa-angle-right"></i>
         </div>
-      </section> 
+      </section>
 
       <section class="containner-main">
         <div class="name-opitions">
-           <h3>Top albuns da semana</h3>
-           <hr />
-         </div>
-         <div class="child-main-options">
-           <div class="container_songs">
-             <div class="song">
-               <button id="topHits">
-                 <img src="/Assets/Images/Astro_main-caps/10.png" class="songButton">
-               </button>
-             </div>
-           </div>
-           <div class="container_songs">
-             <div class="song">
-               <button id="debutsSemana">
-                 <img src="/Assets/Images/Astro_main-caps/11.png" class="songButton">
-               </button>
-             </div>
-           </div>
-     
-           <div class="container_songs">
-             <div class="song">
-               <button id="seuUniverso">
-                 <img src="/Assets/Images/Astro_main-caps/12.png" class="songButton">
-               </button>
-             </div>
-           </div>
-     
-           <div class="container_songs">
-             <div class="song">
-               <button id="noPique">
-                 <img src="/Assets/Images/Astro_main-caps/13.png" class="songButton">
-               </button>
-             </div>
-           </div>
-     
-           <div class="container_songs">
-             <div class="song">
-               <button id="naCalma">
-                 <img src="/Assets/Images/Astro_main-caps/14.png" class="songButton">
-               </button>
-             </div>
-           </div>
-     
-           <button id="playlistButton"><i class="fi fi-sr-angle-circle-right"></i></button>
-         </div>
-       </section> 
+          <h3>Top debuts da semana</h3>
+          <hr />
+        </div>
+        <div class="wrapper">
+          <i id="left" class="fa-solid fa-angle-left"></i>
+          <div class="carousel" id="carousel1">
+            <button id="topHits">
+              <img
+                src="/Assets/Images/Astro_main-caps/7.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="debutsSemana">
+              <img
+                src="/Assets/Images/Astro_main-caps/8.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="seuUniverso">
+              <img
+                src="/Assets/Images/Astro_main-caps/9.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="noPique">
+              <img
+                src="/Assets/Images/Astro_main-caps/10.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="naCalma">
+              <img
+                src="/Assets/Images/Astro_main-caps/11.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="naCalma">
+              <img
+                src="/Assets/Images/Astro_main-caps/12.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="naCalma">
+              <img
+                src="/Assets/Images/Astro_main-caps/13.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+          </div>
+          <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
+      </section>
 
       <!--Artistas container -->
       <section class="containner-main artists">
@@ -303,42 +375,60 @@
 
         <div class="container_artistas_grid">
           <figure class="fig_artistas">
-            <img src="https://yt3.googleusercontent.com/2nYOm33klbI2QkbKuZfdSdkF1Fzb3cIggFcxhyO3NUwtMtZl_TImTkzjuc_j0wVLEA1joC2pJw=s900-c-k-c0x00ffffff-no-rj" alt="artists">
+            <img
+              src="https://yt3.googleusercontent.com/2nYOm33klbI2QkbKuZfdSdkF1Fzb3cIggFcxhyO3NUwtMtZl_TImTkzjuc_j0wVLEA1joC2pJw=s900-c-k-c0x00ffffff-no-rj"
+              alt="artists"
+            />
             <div class="fig_artistas_toopkit">
               <p>Jvke</p>
             </div>
           </figure>
 
           <figure class="fig_artistas">
-            <img src="https://br.paipee.com/wp-content/uploads/2022/03/camila_6_9441.jpg" alt="artists">
+            <img
+              src="https://br.paipee.com/wp-content/uploads/2022/03/camila_6_9441.jpg"
+              alt="artists"
+            />
             <div class="fig_artistas_toopkit">
               <p>Camila Cabello</p>
             </div>
           </figure>
 
           <figure class="fig_artistas">
-            <img src="https://i.scdn.co/image/ab677762000056b8551afb70a72c9069fc8a469a" alt="artists">
+            <img
+              src="https://i.scdn.co/image/ab677762000056b8551afb70a72c9069fc8a469a"
+              alt="artists"
+            />
             <div class="fig_artistas_toopkit">
               <p>Lauv</p>
             </div>
           </figure>
 
           <figure class="fig_artistas">
-            <img src="https://uploads.metropoles.com/wp-content/uploads/2020/07/08183938/Katy-Perry5.jpg" alt="artists">
+            <img
+              src="https://uploads.metropoles.com/wp-content/uploads/2020/07/08183938/Katy-Perry5.jpg"
+              alt="artists"
+            />
             <div class="fig_artistas_toopkit">
               <p>katy perry</p>
             </div>
           </figure>
 
           <figure class="fig_artistas">
-            <img src="https://i.scdn.co/image/ab6761610000e5ebbf753c009fd9c2d53351dd3c" alt="artists">
+            <img
+              src="https://i.scdn.co/image/ab6761610000e5ebbf753c009fd9c2d53351dd3c"
+              alt="artists"
+            />
             <div class="fig_artistas_toopkit">
               <p>Alan Walker</p>
             </div>
           </figure>
 
           <figure class="fig_artistas">
-            <img src="https://i.guim.co.uk/img/media/c67fca03c47e048f5f71b9deefcada0be2206369/0_476_1945_1166/master/1945.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=3da3560d7b8196a511b22f14f74ed3fa" alt="artists">
+            <img
+              src="https://i.guim.co.uk/img/media/c67fca03c47e048f5f71b9deefcada0be2206369/0_476_1945_1166/master/1945.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=3da3560d7b8196a511b22f14f74ed3fa"
+              alt="artists"
+            />
             <div class="fig_artistas_toopkit">
               <p>Halsey</p>
             </div>
@@ -349,239 +439,226 @@
       <!--playlists-->
       <section class="containner-main">
         <div class="name-opitions">
-           <h3>Good Night</h3>
-           <hr />
-         </div>
-         <div class="child-main-options">
-           <div class="container_songs">
-             <div class="song">
-               <button id="topHits">
-                 <img src="/Assets/Images/Astro_main-caps/7.png" class="songButton">
-               </button>
-             </div>
-           </div>
-           <div class="container_songs">
-             <div class="song">
-               <button id="debutsSemana">
-                 <img src="/Assets/Images/Astro_main-caps/8.png" class="songButton">
-               </button>
-             </div>
-           </div>
-     
-           <div class="container_songs">
-             <div class="song">
-               <button id="seuUniverso">
-                 <img src="/Assets/Images/Astro_main-caps/9.png" class="songButton">
-               </button>
-             </div>
-           </div>
-     
-           <div class="container_songs">
-             <div class="song">
-               <button id="noPique">
-                 <img src="/Assets/Images/Astro_main-caps/15.png" class="songButton">
-               </button>
-             </div>
-           </div>
-     
-           <div class="container_songs">
-             <div class="song">
-               <button id="naCalma">
-                 <img src="/Assets/Images/Astro_main-caps/16.png" class="songButton">
-               </button>
-             </div>
-           </div>
-     
-           <button id="playlistButton"><i class="fi fi-sr-angle-circle-right"></i></button>
-         </div>
-       </section> 
+          <h3>Good Night</h3>
+          <hr />
+        </div>
+        <div class="wrapper">
+          <i id="left" class="fa-solid fa-angle-left"></i>
+          <div class="carousel" id="carousel1">
+            <button id="topHits">
+              <img
+                src="/Assets/Images/Capas_astro/Art_Drink.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
 
-       <section class="containner-main">
-        <div class="name-opitions">
-           <h3>Happy</h3>
-           <hr />
-         </div>
-         <div class="child-main-options">
-           <div class="container_songs">
-             <div class="song">
-               <button id="topHits">
-                 <img src="/Assets/Images/Capas_astro/Art_Drink.png" class="songButton">
-               </button>
-             </div>
-           </div>
-           <div class="container_songs">
-             <div class="song">
-               <button id="debutsSemana">
-                 <img src="/Assets/Images/Capas_astro/Art_Energy.png" class="songButton">
-               </button>
-             </div>
-           </div>
-     
-           <div class="container_songs">
-             <div class="song">
-               <button id="seuUniverso">
-                 <img src="/Assets/Images/Capas_astro/Art_New World.png" class="songButton">
-               </button>
-             </div>
-           </div>
-     
-           <div class="container_songs">
-             <div class="song">
-               <button id="noPique">
-                 <img src="/Assets/Images/Capas_astro/Art_Ocean.png" class="songButton">
-               </button>
-             </div>
-           </div>
-     
-           <div class="container_songs">
-             <div class="song">
-               <button id="naCalma">
-                 <img src="/Assets/Images/Capas_astro/Art_Pulsa.png" class="songButton">
-               </button>
-             </div>
-           </div>
-     
-           <button id="playlistButton"><i class="fi fi-sr-angle-circle-right"></i></button>
-         </div>
-       </section>
+            <button id="debutsSemana">
+              <img
+                src="/Assets/Images/Capas_astro/Art_Energy.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
 
-       <!--Podcasts-->
-       <section class="containner-main podcasts">
-        <div class="name-opitions">
-           <h3>podcasts Originais</h3>
-           <hr />
-         </div>
-         <div class="child-main-options">
-           <div class="container_songs">
-             <div class="song">
-               <button id="topHits">
-                 <img src="/Assets/Images/Capas_astro/Art_M.1.png" class="songButton">
-               </button>
-             </div>
-           </div>
-           <div class="container_songs">
-             <div class="song">
-               <button id="debutsSemana">
-                 <img src="/Assets/Images/Capas_astro/Art_M.2.png" class="songButton">
-               </button>
-             </div>
-           </div>
-     
-           <div class="container_songs">
-             <div class="song">
-               <button id="seuUniverso">
-                 <img src="/Assets/Images/Capas_astro/Art_M.3.png" class="songButton">
-               </button>
-             </div>
-           </div>
-     
-           <div class="container_songs">
-             <div class="song">
-               <button id="noPique">
-                 <img src="/Assets/Images/Capas_astro/Art_M.4.png" class="songButton">
-               </button>
-             </div>
-           </div>
-     
-           <div class="container_songs">
-             <div class="song">
-               <button id="naCalma">
-                 <img src="/Assets/Images/Capas_astro/Art_M.5.png" class="songButton">
-               </button>
-             </div>
-           </div>
-     
-           <button id="playlistButton"><i class="fi fi-sr-angle-circle-right"></i></button>
-         </div>
-       </section> 
+            <button id="seuUniverso">
+              <img
+                src="/Assets/Images/Capas_astro/Art_New World.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
 
-       <!--Playlists-->
-       <section class="containner-main mixes">
+            <button id="noPique">
+              <img
+                src="/Assets/Images/Capas_astro/Art_Ocean.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="naCalma">
+              <img
+                src="/Assets/Images/Capas_astro/Art_Pulsa.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="naCalma">
+              <img
+                src="/Assets/Images/Capas_astro/Art_Reflexão.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="naCalma">
+              <img
+                src="/Assets/Images/Astro_main-caps/16.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+          </div>
+          <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
+      </section>
+
+      <!--Podcasts-->
+      <section class="containner-main">
         <div class="name-opitions">
-           <h3>Mixes</h3>
-           <hr />
-         </div>
-         <div class="child-main-options">
-           <div class="container_songs">
-             <div class="song">
-               <button id="topHits">
-                 <img src="/Assets/Images/Capas_astro/Art_Reflexão.png" class="songButton">
-               </button>
-             </div>
-           </div>
-           <div class="container_songs">
-             <div class="song">
-               <button id="debutsSemana">
-                 <img src="/Assets/Images/Capas_astro/Art_M.6.png" class="songButton">
-               </button>
-             </div>
-           </div>
-     
-           <div class="container_songs">
-             <div class="song">
-               <button id="seuUniverso">
-                 <img src="/Assets/Images/Capas_astro/Art_M.5 (3).png" class="songButton">
-               </button>
-             </div>
-           </div>
-     
-           <div class="container_songs">
-             <div class="song">
-               <button id="noPique">
-                 <img src="/Assets/Images/Capas_astro/Art_M.5 (2).png" class="songButton">
-               </button>
-             </div>
-           </div>
-     
-           <div class="container_songs">
-             <div class="song">
-               <button id="naCalma">
-                 <img src="/Assets/Images/Capas_astro/Art_M.5 (5).png" class="songButton">
-               </button>
-             </div>
-           </div>
-     
-           <button id="playlistButton"><i class="fi fi-sr-angle-circle-right"></i></button>
-         </div>
-       </section>
+          <h3>Podcasts</h3>
+          <hr />
+        </div>
+        <div class="wrapper">
+          <i id="left" class="fa-solid fa-angle-left"></i>
+          <div class="carousel" id="carousel1">
+            <button id="topHits">
+              <img
+                src="/Assets/Images/Capas_astro/Art_Drink.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="debutsSemana">
+              <img
+                src="/Assets/Images/Astro_main-caps/8.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="seuUniverso">
+              <img
+                src="/Assets/Images/Astro_main-caps/9.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="noPique">
+              <img
+                src="/Assets/Images/Astro_main-caps/15.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="naCalma">
+              <img
+                src="/Assets/Images/Astro_main-caps/16.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="naCalma">
+              <img
+                src="/Assets/Images/Astro_main-caps/16.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="naCalma">
+              <img
+                src="/Assets/Images/Astro_main-caps/16.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+          </div>
+          <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
+      </section>
+
+      <!--Playlists-->
+      <section class="containner-main">
+        <div class="name-opitions">
+          <h3>Mixes</h3>
+          <hr />
+        </div>
+        <div class="wrapper">
+          <i id="left" class="fa-solid fa-angle-left"></i>
+          <div class="carousel" id="carousel1">
+            <button id="topHits">
+              <img
+                src="/Assets/Images/Capas_astro/Art_M.1.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="debutsSemana">
+              <img
+                src="/Assets/Images/Capas_astro/Art_M.2.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="seuUniverso">
+              <img
+                src="/Assets/Images/Capas_astro/Art_M.3.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="noPique">
+              <img
+                src="/Assets/Images/Capas_astro/Art_M.4.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="naCalma">
+              <img
+                src="/Assets/Images/Capas_astro/Art_M.5 (2).png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="naCalma">
+              <img
+                src="/Assets/Images/Capas_astro/Art_M.5.png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+
+            <button id="naCalma">
+              <img
+                src="/Assets/Images/Capas_astro/Art_M.5 (3).png"
+                class="songButton"
+                draggable="false"
+              />
+            </button>
+          </div>
+          <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
+      </section>
 
     </main>
-    
+
     <section class="module parallax parallax-2">
       <footer></footer>
     </section>
 
     <!--Backend srcipts-->
     <script type="module" src="/Astro/Backend/JS/musicPlayer.js"></script>
-    <script type="module" src="/Astro/Backend/JS/BackgroundSettings/Backgroundmain.js"></script>
+    <script
+      type="module"
+      src="/Astro/Backend/JS/BackgroundSettings/Backgroundmain.js"
+    ></script>
 
     <!--Frontend srcipts-->
     <script src="/Astro/Frontend/JS/redirects/redirect.js"></script>
     <script src="/Astro/Frontend/JS/others/slider.js"></script>
-    <script>
-      let sidebar = document.querySelector(".sidebar");
-      let closeBtn = document.querySelector("#btn");
-      let searchBtn = document.querySelector(".bx-search");
-
-      closeBtn.addEventListener("click", () => {
-        sidebar.classList.toggle("open");
-        menuBtnChange(); //calling the function(optional)
-      });
-
-      searchBtn.addEventListener("click", () => {
-        // Sidebar open when you click on the search iocn
-        sidebar.classList.toggle("open");
-        menuBtnChange(); //calling the function(optional)
-      });
-
-      // following are the code to change sidebar button(optional)
-      function menuBtnChange() {
-        if (sidebar.classList.contains("open")) {
-          closeBtn.classList.replace("bx-menu", "bx-menu-alt-right"); //replacing the iocns class
-        } else {
-          closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); //replacing the iocns class
-        }
-      }
-    </script>
+    <script src="/Astro/Frontend/JS/others/menu.js"></script>
   </body>
 </html>

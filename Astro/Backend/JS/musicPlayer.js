@@ -13,7 +13,7 @@ const currentTime = document.querySelector("#currentTime");
 const duration = document.querySelector("#duration");
 const progressBar = document.querySelector(".progress-bar");
 const progress = document.querySelector(".progress");
-const voulmeSom = document.querySelector("#voulmeSom");
+const voulmeSom = document.querySelector("#volumeSom");
 const volumeButton = document.querySelector("#volumeButton");
 const fullScreenButton = document.querySelector("#fullScreen");
 const upcomingSongsList = document.querySelector("#upcomingSongsList");
@@ -95,7 +95,7 @@ progressBar.onclick = (e) => {
 
 // Range Volume
 document.addEventListener("DOMContentLoaded", function () {
-  player.volume = voulmeSom.value;
+  player.volume = volumeSom.value;
   volumeButton.innerHTML = textNormalAudio;
 
   voulmeSom.addEventListener("input", function () {
