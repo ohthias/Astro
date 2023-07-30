@@ -52,9 +52,9 @@ player.addEventListener("loadedmetadata", () => {
 
 const playPause = () => {
   if (player.paused) {
-    player.pause();
-  } else {
     player.play();
+  } else {
+    player.pause();
   }
   updatePlayPauseIcon(); // Atualiza o ícone do botão Play/Pause
 };
@@ -172,6 +172,8 @@ const removeLikedSong = (musicName, artistName, imgSong) => {
     }
   }
 };
+
+export {likedSongs};
 
 //Random music
 let randomMode = false;

@@ -1,0 +1,10 @@
+/*
+ * Page: Liked Playlist
+ * UTA - Matheus 30/07
+ * código documentado conforme html
+ */
+
+ body {
+    background-color: var(--back-background-main);
+    overflow-x: hidden;
+}

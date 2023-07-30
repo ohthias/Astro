@@ -1,185 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASTRO</title>
+    <link
+      rel="shortcut icon"
+      href="/Assets/Images/Icons/iconAstro.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/Astro/Frontend/Css/mainPages/artist.css" />
+    <link rel="stylesheet" href="/Astro/Frontend/Css/root.css" />
+    <link rel="stylesheet" href="/Astro/Frontend/Css/root/player.css" />
+    <link rel="stylesheet" href="/Astro/Frontend/Css/root/menus.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ASTRO</title>
-  <link rel="shortcut icon" href="/Assets/Images/Icons/iconAstro.png" type="image/x-icon" />
-  <link rel="stylesheet" href="/Astro/Frontend/Css/mainPages/artist.css" />
-  <link rel="stylesheet" href="/Astro/Frontend/Css/root.css" />
-  <link rel="stylesheet" href="/Astro/Frontend/Css/root/player.css">
-  <link rel="stylesheet" href="/Astro/Frontend/Css/root/menus.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css" />
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-
-<body>
-  <!-- Player -->
-  <div class="containner_player">
-    <div class="player">
-      <div class="player_image">
-        <img src="" id="imgSong">
-      </div>
-      <div class="player_infoMusic">
-        <span id="musicName"></span>
-        <span id="artistName"></span>
-      </div>
-
-      <button id="heartMusic"><i class="fi fi-rr-heart"></i></button>
-      <div class="controls">
-        <button id="prevButton"><i class='bx bx-skip-previous'></i></button>
-        <button id="playPauseButton"><i class='bx bx-caret-right'></i></button>
-        <button id="nextButton"><i class='bx bx-skip-next'></i></button>
-      </div>
-      <button id="randomPlayerMusic"><i class="fi fi-sr-shuffle"></i></button>
-
-      <audio id="player" src=""></audio>
-      <div class="footer">
-        <span id="currentTime">0:00</span>
-        <div class="timecode_player">
-          <div class="progress-bar">
-            <div class="progress"></div>
-          </div>
-          <span id="duration">0:00</span>
+  <body>
+    <!-- Player -->
+    <div class="containner_player">
+      <div class="player">
+        <div class="player_image">
+          <img src="" id="imgSong" />
         </div>
-      </div>
+        <div class="player_infoMusic">
+          <span id="musicName"></span>
+          <span id="artistName"></span>
+        </div>
 
-      <div class="containner_more">
-        <div class="container_volume">
-          <div class="volume-button">
-            <button id="volumeButton"><i class="fi fi-ss-volume"></i></button>
-          </div>
-          <div class="volume_control">
-            <input type="range" min="0" max="1" step="0.01" value="1" id="voulmeSom">
+        <button id="heartMusic"><i class="fi fi-rr-heart"></i></button>
+        <div class="controls">
+          <button id="prevButton"><i class="bx bx-skip-previous"></i></button>
+          <button id="playPauseButton">
+            <i class="bx bx-caret-right"></i>
+          </button>
+          <button id="nextButton"><i class="bx bx-skip-next"></i></button>
+        </div>
+        <button id="randomPlayerMusic"><i class="fi fi-sr-shuffle"></i></button>
+
+        <audio id="player" src=""></audio>
+        <div class="footer">
+          <span id="currentTime">0:00</span>
+          <div class="timecode_player">
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <span id="duration">0:00</span>
           </div>
         </div>
-        <i class="fi fi-ss-speakers"></i>
-        <div class="container_faixas">
-          <i class="fi fi-rr-menu-burger"></i>
-          <div class="container_faixas_detalhes">
-            <ul id="upcomingSongsList"></ul>
+
+        <div class="containner_more">
+          <div class="container_volume">
+            <div class="volume-button">
+              <button id="volumeButton"><i class="fi fi-ss-volume"></i></button>
+              <div class="tooltip-volume_control">
+                <input
+                  type="range"
+                  min="0"
+                  max="1"
+                  step="0.01"
+                  value="1"
+                  id="volumeSom"
+                />
+              </div>
+            </div>
           </div>
+          <i class="fi fi-ss-speakers"></i>
+          <div class="container_faixas">
+            <i class="fi fi-rr-menu-burger"></i>
+            <div class="container_faixas_detalhes">
+              <ul id="upcomingSongsList"></ul>
+            </div>
+          </div>
+          <button id="fullScreen"><i class="fi fi-rr-angle-up"></i></button>
         </div>
-        <button id="fullScreen"><i class="fi fi-rr-angle-up"></i></button>
       </div>
     </div>
-  </div>
 
-  <!-- Menu Lateral -->
-
-  <aside>
-    <div class="containner_opc">
-      <a href="/Astro/Frontend/Html/Base/home.html"><i class="fi fi-ss-home"></i></a>
-      <a href="../Erro/comingSoon.html"><i class="fi fi-br-search"></i></a>
+    <!-- Menu Lateral -->
+    <div class="sidebar">
+      <div class="logo-details">
+        <img
+          src="/Assets/Images/Icons/iconAstro.png"
+          class="logo_img"
+          alt="astronaut"
+        />
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="/Astro/Frontend/Html/Base/home.html">
+            <i class="bx bx-home"></i>
+            <span class="links_name">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+        <li>
+          <a href="">
+            <i class="bx bx-search"></i>
+            <input type="text" placeholder="Search..." />
+            <span class="tooltip">Search</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-heart"></i>
+            <span class="links_name">Salvos</span>
+          </a>
+          <span class="tooltip">Salvos</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-plus"></i>
+            <span class="links_name">Criar</span>
+          </a>
+          <span class="tooltip">Criar</span>
+        </li>
+      </ul>
     </div>
-    <div class="containner_playlist">
-      <div class="child_play">
-        <span class="span-playlist-mens">Nenhuma playlist salva, ou criada</span>
-      </div>
-      <div class="child_podc">
-        <span class="span-playlist-mens">Não ha nenhum podcast salvo</span>
-      </div>
-      <div class="credits">
-        <p>&copy Astro</p>
-      </div>
+
+    <!-- Parallax -->
+    <div class="back-image">
+      <section class="module parallax parallax-1" id="backParallax">
+        <header>
+          <section class="section-header">
+            <label id="logo">Astro</label>
+            <div class="header-list">
+              <span id="level_user">01</span>
+              <a href="/Astro/Frontend/Html/Erro/404.html"
+                ><i class="fi fi-ss-user menu-icon"></i
+              ></a>
+              <a href="/Astro/Frontend/Html/Base/index.html"
+                ><i class="fi fi-ss-settings menu-icon"></i
+              ></a>
+            </div>
+          </section>
+        </header>
+
+        <main class="containner_content">
+          <div class="containner_text">
+            <h1 id="nameArtist">Alan Walker</h1>
+            <button id="follow">Seguir</button>
+          </div>
+          <div class="container_info_right">
+            <div class="container_text_about">
+              <h3>About</h3>
+              <p>
+                Alan Olav Walker é um DJ e produtor musical norueguês nascido no
+                Reino Unido. Ficou mundialmente conhecido pelo single "Faded".
+              </p>
+            </div>
+            <div class="container_text_numbers">
+              <p class="seguidores">156.458.002 seguidores</p>
+              <p class="ouvintes">250.025.120 Ouvintes</p>
+            </div>
+          </div>
+        </main>
+      </section>
     </div>
-  </aside>
 
-  <!-- Parallax -->
-  <div class="back-image">
-    <section class="module parallax parallax-1" id="backParallax">
-      <header>
-        <div class="containner_header">
-          <label id="logo">Astro</label>
-          <div class="menu">
-            <a href="/Astro/Frontend/Html/Erro/404.html"><i class="fi fi-ss-user menu-icon"></i></a>
-            <a href="/Astro/Frontend/Html/Base/index.html"><i class="fi fi-ss-settings menu-icon"></i></a>
-          </div>
-        </div>
-      </header>
+    <main class="container_main">
+      <section class="container_songs_toc">
+        <figure>
+          <img src="" alt="musicas" />
+          <p></p>
+          <button id="playMusic"><i class="bx bx-caret-right"></i></button>
+        </figure>
+      </section>
 
-      <main class="containner_content">
-        <div class="containner_text">
-          <h1 id="nameArtist">Alan Walker</h1>
-          <button id="follow">Seguir</button>
-        </div>
-        <div class="container_info_right">
-          <div class="container_text_about">
-            <h3>About</h3>
-            <p>Alan Olav Walker é um DJ e produtor musical norueguês nascido no Reino Unido. Ficou mundialmente conhecido pelo single "Faded".</p>
-          </div>
-          <div class="container_text_numbers">
-            <p class="seguidores">156.458.002 seguidores</p>
-            <p class="ouvintes">250.025.120 Ouvintes</p>
-          </div>
-        </div>
-      </main>
-    </section>
-  </div>
-  
-  <main class="container_main">
-    <section class="container_songs_toc">
-      <figure>
-        <img src="" alt="musicas">
-        <p></p>
-        <button id="playMusic"><i class='bx bx-caret-right'></i></button>
-      </figure>
-    </section>
-    
-    <div class="container_options_artist">
-      <div class="bar bar-grey">
-        <div class="option">Discografia</div>
-        <div class="option">Albuns</div>
-        <div class="option">EP's</div>
-      </div>
-      <div class="bar-outer">
-        <div class="bar bar-purple">
+      <div class="container_options_artist">
+        <div class="bar bar-grey">
           <div class="option">Discografia</div>
           <div class="option">Albuns</div>
           <div class="option">EP's</div>
         </div>
+        <div class="bar-outer">
+          <div class="bar bar-purple">
+            <div class="option">Discografia</div>
+            <div class="option">Albuns</div>
+            <div class="option">EP's</div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="container_waper">
-      <div class="container_discografia">
-        <figure>
-          <a>
-            <img src="/Astro/Backend/Assets-Songs/ImageAudio/1.jpg" alt="discografia">
-            <p class="informatons">On my way</p>
-            <p class="informatons year">XXXX</p>
-            <div class="topkit">
-              <i class='bx bx-caret-right' id="playSongByImg"></i>
-            </div>
-          </a>
-        </figure>
+      <div class="container_waper">
+        <div class="container_discografia">
+          <figure>
+            <a>
+              <img
+                src="/Astro/Backend/Assets-Songs/ImageAudio/1.jpg"
+                alt="discografia"
+              />
+              <p class="informatons">On my way</p>
+              <p class="informatons year">XXXX</p>
+              <div class="topkit">
+                <i class="bx bx-caret-right" id="playSongByImg"></i>
+              </div>
+            </a>
+          </figure>
 
-        <figure>
-          <a href="#">
-            <img src="/Astro/Backend/Assets-Songs/ImageAudio/2.jpg" alt="discografia">
-            <p class="informatons">Faded</p>
-            <p class="informatons year">XXXX</p>
-            <div class="topkit">
-              <i class='bx bx-caret-right' id="playSongByImg"></i>
-            </div>
-          </a>
-        </figure>
+          <figure>
+            <a href="#">
+              <img
+                src="/Astro/Backend/Assets-Songs/ImageAudio/2.jpg"
+                alt="discografia"
+              />
+              <p class="informatons">Faded</p>
+              <p class="informatons year">XXXX</p>
+              <div class="topkit">
+                <i class="bx bx-caret-right" id="playSongByImg"></i>
+              </div>
+            </a>
+          </figure>
+        </div>
       </div>
-    </div>
-  </main>
-  
-  <section class="module parallax parallax-2">
-    <footer></footer>
-  </section>
+    </main>
 
-  <!--Backend srcipts-->
-  <script type="module" src="/Astro/Backend/JS/musicPlayer.js"></script>
+    <section class="module parallax parallax-2">
+      <footer></footer>
+    </section>
 
-  <!--Frontend srcipts-->
-  <script src="/Astro/Frontend/JS/redirects/redirect.js"></script>
-  <script src="/Astro/Frontend/JS/others/bar.js"></script>
+    <!--Backend srcipts-->
+    <script type="module" src="/Astro/Backend/JS/musicPlayer.js"></script>
+
+    <!--Frontend srcipts-->
+    <script src="/Astro/Frontend/JS/redirects/redirect.js"></script>
+    <script src="/Astro/Frontend/JS/others/bar.js"></script>
+    <script src="/Astro/Frontend/JS/others/menu.js"></script>
+
+  </body>
 </html>
