@@ -247,7 +247,7 @@
 
 /*********** Baseline, reset styles ***********/
 input[type="range"] {
-    rotate: 90deg;
+    rotate: -90deg;
     -webkit-appearance: none;
     appearance: none;
     background: transparent;

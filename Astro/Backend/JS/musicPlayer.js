@@ -52,9 +52,9 @@ player.addEventListener("loadedmetadata", () => {
 
 const playPause = () => {
   if (player.paused) {
-    player.play();
-  } else {
     player.pause();
+  } else {
+    player.play();
   }
   updatePlayPauseIcon(); // Atualiza o ícone do botão Play/Pause
 };
