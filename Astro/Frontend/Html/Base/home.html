@@ -52,9 +52,9 @@
           <div class="container_volume">
             <div class="volume-button">
               <button id="volumeButton"><i class="fi fi-ss-volume"></i></button>
-            </div>
-            <div class="volume_control">
-              <input type="range"  min="0" max="1" step="0.01" value="1" id="voulmeSom">
+              <div class="tooltip-volume_control">
+                <input type="range"  min="0" max="1" step="0.01" value="1" id="volumeSom">
+              </div>
             </div>
           </div>
           <i class="fi fi-ss-speakers"></i>
@@ -71,39 +71,59 @@
 
     <!-- Menu Lateral -->
 
-    <aside>
-      <div class="containner_opc">
-        <a href="./home.html"><i class="fi fi-ss-home"></i></a>
-        <a href="../Erro/comingSoon.html"><i class="fi fi-br-search"></i></a>
+    <div class="sidebar">
+      <div class="logo-details">
+        <img src="/Assets/Images/Icons/iconAstro.png" class="logo_img" alt="astronaut">
+        <i class="bx bx-menu" id="btn"></i>
       </div>
-      <div class="containner_playlist">
-        <div class="child_play">
-          <span class="span-playlist-mens">Nenhuma playlist salva, ou criada</span>
-        </div>
-        <div class="child_podc">
-          <span class="span-playlist-mens">Não ha nenhum podcast salvo</span>
-        </div>
-        <div class="credits">
-          <p>&copy Astro</p>
-        </div>
-      </div>
-    </aside>
+      <ul class="nav-list">
+        <li>
+          <a href="/Astro/Frontend/Html/Base/home.html">
+            <i class="bx bx-home"></i>
+            <span class="links_name">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+        <li>
+          <a href="">
+            <i class="bx bx-search"></i>
+            <input type="text" placeholder="Search..." />
+            <span class="tooltip">Search</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-heart"></i>
+            <span class="links_name">Salvos</span>
+          </a>
+          <span class="tooltip">Salvos</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-plus"></i>
+            <span class="links_name">Criar</span>
+          </a>
+          <span class="tooltip">Criar</span>
+        </li>
+      </ul>
+    </div>
 
     <!-- Parallax -->
 
     <div class="back-image">
       <section class="module parallax parallax-1" id="backParallax">
         <header>
-          <div class="containner_header">
+          <section class="section-header">
             <label id="logo">Astro</label>
-            <div class="menu">
+            <div class="header-list">
+              <span id="level_user">01</span>
               <a href="/Astro/Frontend/Html/Erro/404.html"><i class="fi fi-ss-user menu-icon"></i></a>
               <a href="/Astro/Frontend/Html/Base/index.html"><i class="fi fi-ss-settings menu-icon"></i></a>
             </div>
-          </div>
+          </section>
         </header>
 
-        <main class="containner_content">
+        <section class="section-main">
           <div class="containner_text">
             <h1 id="nameArtist"></h1>
             <button id="othersSongs">Escute outras músicas</button>
@@ -155,13 +175,13 @@
             </div>
             <button id="afterButton"><i class="fi fi-sr-angle-circle-right"></i></button>
           </div>
-        </main>
+        </section>
       </section>
     </div>
 
     <!-- Playlists -->
 
-    <main>
+    <main class="home-section">
       <section class="containner-main">
        <div class="name-opitions">
           <h3>Originais</h3>
@@ -206,8 +226,22 @@
               </button>
             </div>
           </div>
-    
-          <button id="playlistButton"><i class="fi fi-sr-angle-circle-right"></i></button>
+
+          <div class="container_songs">
+            <div class="song">
+              <button id="naCalma">
+                <img src="/Assets/Images/Astro_main-caps/6.png" class="songButton">
+              </button>
+            </div>
+          </div>
+
+          <div class="container_songs">
+            <div class="song">
+              <button id="naCalma">
+                <img src="/Assets/Images/Astro_main-caps/6.png" class="songButton">
+              </button>
+            </div>
+          </div>
         </div>
       </section> 
 
@@ -524,5 +558,30 @@
     <!--Frontend srcipts-->
     <script src="/Astro/Frontend/JS/redirects/redirect.js"></script>
     <script src="/Astro/Frontend/JS/others/slider.js"></script>
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let closeBtn = document.querySelector("#btn");
+      let searchBtn = document.querySelector(".bx-search");
+
+      closeBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //calling the function(optional)
+      });
+
+      searchBtn.addEventListener("click", () => {
+        // Sidebar open when you click on the search iocn
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //calling the function(optional)
+      });
+
+      // following are the code to change sidebar button(optional)
+      function menuBtnChange() {
+        if (sidebar.classList.contains("open")) {
+          closeBtn.classList.replace("bx-menu", "bx-menu-alt-right"); //replacing the iocns class
+        } else {
+          closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); //replacing the iocns class
+        }
+      }
+    </script>
   </body>
 </html>

@@ -12,7 +12,7 @@
 
 .player {
     z-index: 40;
-    margin: 10px;
+    margin: 5px;
     padding: 10px;
     border: 0;
     border-radius: 10px;
@@ -64,7 +64,8 @@
     text-decoration: 1.5px underline var(--de-detail-green);
 }
 
-#heartMusic, #randomPlayerMusic {
+#heartMusic,
+#randomPlayerMusic {
     margin: 0 20px;
     border: 0;
     background: transparent;
@@ -72,7 +73,8 @@
     cursor: pointer;
 }
 
-.fi-sr-heart, .fi-ss-shuffle {
+.fi-sr-heart,
+.fi-ss-shuffle {
     text-shadow: 0 0 10px var(--sha-shadow-white), 0 0 25px var(--de-detail-orange);
     color: var(--de-detail-orange);
     transition: 750ms ease;
@@ -207,7 +209,6 @@
     background: transparent;
     cursor: pointer;
     transition: 500ms;
-
 }
 
 .fi-ss-volume-mute {
@@ -215,8 +216,38 @@
     transition: 500ms;
 }
 
+.volume-button:hover .tooltip-volume_control {
+    opacity: 1;
+    transition: all 0.4s ease;
+    top: -100%;
+    transform: translateY(100%);
+    pointer-events: all;
+}
+
+.volume-button:hover .tooltip-volume_control,
+.volume-button:active .tooltip-volume_control {
+    opacity: 1;
+}
+
+#volumeButton:hover .fi-ss-volume {
+    color: var(--de-detail-green);
+}
+
+.tooltip-volume_control {
+    background: var(--de-detail-purple-sha-shadow);
+    height: calc(100% - 100px);
+    width: calc(100% + 5px);
+    opacity: 0;
+    position: absolute;
+    left: calc(100% - 370px);
+    top: -30px;
+    white-space: nowrap;
+    pointer-events: visible;
+}
+
 /*********** Baseline, reset styles ***********/
 input[type="range"] {
+    rotate: 90deg;
     -webkit-appearance: none;
     appearance: none;
     background: transparent;
@@ -230,7 +261,8 @@ input[type="range"]:focus {
 /******** Chrome, Safari, Opera and Edge Chromium styles ********/
 /* slider track */
 input[type="range"]::-webkit-slider-runnable-track {
-    background: var(--sha-shadow-black);
+    background: var(--de-detail-purple-sha-shadow);
+    box-shadow: 0 0 2px var(--sha-shadow-white), 0 0 20px var(--sha-shadow-black);
     border-radius: 0.3rem;
     height: 0.3rem;
 }
@@ -240,7 +272,7 @@ input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     margin-top: -4px;
-    background-color: var(--de-detail-green);
+    background-color: var(--de-detail-purple);
     border-radius: 0.5rem;
     height: 0.8rem;
     width: 0.8rem;
@@ -271,22 +303,26 @@ input[type="range"]::-moz-range-thumb {
 .fi-ss-speakers,
 .fi-rr-menu-burger {
     cursor: pointer;
-    transition: 750ms;
+    transition: 200ms;
 }
 
 .fi-ss-speakers:hover,
-.fi-rr-menu-burger:hover, #fullScreen .fi-rr-angle-up:hover {
+.fi-rr-menu-burger:hover,
+#fullScreen .fi-rr-angle-up:hover {
     color: var(--de-detail-green);
     transition: 750ms;
 }
 
 /*Next Songs*/
-
-.container_faixas{
+.container_faixas {
     display: block;
 }
 
-.container_faixas .container_faixas_detalhes{
+.container_faixas.close{
+    display: none;
+}
+
+.container_faixas.open .container_faixas_detalhes {
     padding: 10px;
     border-radius: 10px;
 
@@ -309,11 +345,11 @@ input[type="range"]::-moz-range-thumb {
     font-size: 16px;
     text-align: left;
     text-transform: capitalize;
-    list-style-type:circle;
+    list-style-type: circle;
     color: var(--font);
 }
 
-.container_faixas:hover .container_faixas_detalhes{
+.container_faixas:hover .container_faixas_detalhes {
     visibility: visible;
 }
 

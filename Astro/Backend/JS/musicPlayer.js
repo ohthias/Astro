@@ -203,7 +203,7 @@ const showUpcomingSongs = () => {
 
   const numberOfUpcomingSongsToShow = 4;
 
-  for (let i = 1; i <= numberOfUpcomingSongsToShow; i++) {
+  for (let i = 0; i <= numberOfUpcomingSongsToShow; i++) {
     const upcomingIndex = (index + i) % songs.length;
     const upcomingSong = songs[upcomingIndex];
     const listItem = document.createElement("li");

@@ -1,6 +1,6 @@
 /*
  * Page: Home Page
- * UTA - Matheus 25/07
+ * UTA - Matheus 29/07
  * código documentado conforme html
  */
 
@@ -24,7 +24,7 @@ section.module.parallax {
     position: relative;
     overflow: hidden;
 
-    background: url("") no-repeat;
+    background: #d9d9d9 url("") no-repeat;
     background-size: cover;
     animation: fadeIn 800ms ease;
 }
@@ -41,25 +41,35 @@ section.module.parallax::after {
 /* Main iformations 'main content' */
 /* ! camadas a partir da '11' */
 
-main.containner_content {
+.section-main {
+    position: relative;
+    left: 78px;
+    width: calc(100% - 78px);
     z-index: 11;
+    transition: all 0.5s ease;
+}
+
+.sidebar.open~.back-image .section-main {
+    position: relative;
+    left: 250px;
+    width: calc(100% - 250px);
 }
 
 .containner_text {
+    margin-left: 50px;
     position: absolute;
-    top: 30%;
-    left: 30%;
-    transform: translate(-30%, -30%);
+    top: 75%;
+    transform: translateY(-75%);
 }
 
 .containner_text h1 {
-    margin: 25px 0;
+    margin: 20px 0;
+    max-width: 250px;
     font-size: 5em;
     letter-spacing: 5px;
-    line-height: 60px;
-    text-shadow: 0 2px 2px var(--sha-shadow-black);
+    line-height: 80px;
+    text-shadow: 0 0 2px var(--de-detail-orange), 0 0 20px var(--de-detail-orange);
     animation: giveMeDown 750ms linear;
-    animation-delay: calc(.1s * var(--i));
 }
 
 .containner_text button {
@@ -72,7 +82,7 @@ main.containner_content {
     cursor: pointer;
     color: var(--de-detail-green);
     box-shadow: 0 2px 2px var(--sha-shadow-black);
-    animation: downDown 500ms ease;
+    animation: downDown 250ms ease;
     transition: 0.8s;
 }
 
@@ -101,9 +111,10 @@ main.containner_content {
 
 .containner_anteriores h2 {
     letter-spacing: 2px;
-    text-shadow: 0 2px 2px var(--sha-shadow-black);
+    line-height: 40px;
+    color: var(--de-detail-orange);
 
-    background: linear-gradient(to right, var(--font), var(--font));
+    background: linear-gradient(to right, var(--de-detail-orange), var(--de-detail-orange));
     background-size: 40% 0.1em, 0 0.1em;
     background-position: 0 100%, 0 100%;
     background-repeat: no-repeat;
@@ -113,7 +124,7 @@ main.containner_content {
 }
 
 .child_anter {
-    margin: 20px;
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(4, auto);
     gap: 10px;
@@ -136,9 +147,10 @@ main.containner_content {
     height: 270px;
     border: 0;
     object-fit: cover;
+    filter: grayscale(80%);
     border-radius: 20px;
     box-shadow: 10px 2px 10px var(--sha-shadow-black);
-    transition: 0.3s;
+    transition: 100ms;
 }
 
 figure .anteriores .anteriores_name {
@@ -152,13 +164,13 @@ figure .anteriores .anteriores_name {
     visibility: hidden;
 }
 
-.anteriores:hover .anteriores_name,
-.child_anter img:hover {
+.child_anter img:hover, 
+.anteriores:hover .anteriores_name{
+    filter: grayscale(0);
     visibility: visible;
     position: relative;
     transform: translateY(-5px);
     transition: 0.5s ease;
-    filter: brightness(70%);
 }
 
 .child_anter img:hover {
@@ -179,7 +191,7 @@ figure .anteriores .anteriores_name {
 #afterButton {
     position: absolute;
     right: 0;
-    top: 50%;
+    top: 55%;
 }
 
 #prevButtonAfter {
@@ -200,9 +212,22 @@ figure .anteriores .anteriores_name {
 
 /* Main */
 
+.home-section {
+    position: relative;
+    left: 78px;
+    width: calc(100% - 78px);
+    z-index: 11;
+    transition: all 0.5s ease;
+}
+
+.sidebar.open~.home-section {
+    position: relative;
+    left: 250px;
+    width: calc(100% - 250px);
+}
+
 .containner-main {
-    float: right;
-    margin: 25px 0 0 25px;
+    margin: 5px 0 10px 50px;
 }
 
 .name-opitions h3 {
@@ -261,6 +286,7 @@ figure .anteriores .anteriores_name {
 }
 
 #playlistButton {
+    position: absolute;
     margin: 0 15px;
     padding: 2px 5px;
     border: 0;
@@ -280,8 +306,13 @@ figure .anteriores .anteriores_name {
 .container_artistas_grid {
     margin: 25px 30px 0 25px;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     align-items: center;
+    overflow-x: visible;
+}
+
+.sidebar.open~.container_artistas_grid {
+    grid-template-columns: repeat(6, 1fr);
 }
 
 .fig_artistas img {
@@ -381,7 +412,7 @@ section.module.parallax-2 {
 }
 
 section.module.parallax-2 {
-    background: var(--background-gradient-parallax-footer-page-green);
+    background: var(--background-gradient-parallax-footer-page-purple);
 }
 
 section.module.parallax-2::after {
