@@ -11,10 +11,25 @@
 <div class="content" align="center">
   <hr width="50%"><br>
   <div align="left">
-    <h2 align="left">Versão - AA0402 </h2>
-    <li>Responsividade do index e telas de login</li>
-    <li>Responsividade do menu lateral</li>
-    <li>Playlists</li>
+    <h2 align="left">Versão - AA0805 </h2>
+    <li>Melhorias no player: VolumeButton, nextFaixas, likedSong, rundomMusics</li>
+    <li>Menu lateral recolhivel</li>
+    <li>Carrossels</li>
+    <li>Melhorias no design das playlists</li>
+    <li>Novas músicas</li>
+  </div>
+</div>
+
+<div class="content" align="center">
+  <hr width="50%"><br>
+  <div align="left">
+    <h2 align="left">Em desenvolvimento </h2>
+    <li>Criação da wiki</li>
+    <li>Lista de músicas curtidas</li>
+    <li>Fullscreen do player</li>
+    <li>Tela de artistas</li>
+    <li>Geração de id para redirecionamento</li>
+    <li>Melhorias no script do player</li>
   </div>
 </div>
 
@@ -25,7 +40,7 @@
     <li>Escute as músicas através do player interativo</li>
     <li>Player de Música com atalhos via teclado</li>
     <li>Listas de música</li>
-    <li>cadastro de usuários</li>
+    <li>Cadastro de usuários</li>
   </div>
 </div>
 
