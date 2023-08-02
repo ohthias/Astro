@@ -1,6 +1,6 @@
 //Redirect playlists do astro
 
-var logo = document.querySelector("#logo")
+const logo = document.querySelector("#logo")
 logo.addEventListener("click", function() {
     window.location.href = "/Astro/Frontend/Html/Base/home.html"
 });
