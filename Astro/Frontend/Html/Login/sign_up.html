@@ -12,19 +12,13 @@
     />
     <link rel="stylesheet" href="/Astro/Frontend/Css/root.css" />
     <link rel="stylesheet" href="/Astro/Frontend/Css/mainPages/login.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-      rel="stylesheet"
-    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
     />
   </head>
   <body>
-    <audio autoplay loop="true" id="myaudio">
+    <audio autoplay loop="true" id="audio">
       <source src="/Assets/Music/Beyond.mp3" type="audio/mpeg" />
     </audio>
 
@@ -59,14 +53,6 @@
     </main>
     <script src="/Astro/Frontend/JS/userSettings/veficaLogin.js"></script>
     <script src="/Astro/Frontend/JS/others/togglePassword.js"></script>
-    <script>
-      var audio = document.getElementById("myaudio");
-      audio.volume = 0.2;
-
-      const logo = document.querySelector("#logo");
-      logo.addEventListener("click", function () {
-        window.location.href = "/Astro/Frontend/Html/Base/index.html";
-      });
-    </script>
+    <script src="/Astro/Frontend/JS/others/musicBack.js"></script>
   </body>
 </html>

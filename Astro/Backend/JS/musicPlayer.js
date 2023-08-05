@@ -253,9 +253,8 @@ const prevNextMusic = (type = "next") => {
   imgSong.src = songs[index].imgSong;
   heartMusic.innerHTML = textNormalHeartMusic;
 
-  playPause();
+  
   updateTime();
-
   if (type === "next") {
     showUpcomingSongs();
   }
