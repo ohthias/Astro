@@ -16,20 +16,20 @@ function cadastrarUsuario(nome, email, senha) {
   localStorage.setItem(nome, JSON.stringify(usuario));
 
   console.log('Usuário cadastrado com sucesso!');
-  window.location.href = '/Astro/Frontend/Html/Login/sign_up.html';
+  window.location.href = "/Astro/Frontend/Html/Login/sign_up.html";
 }
 
 // Captura o formulário de cadastro
 const cadastroForm = document.getElementById('cadastroForm');
 
 // Adiciona um evento de submit ao formulário de cadastro
-cadastroForm.addEventListener('btn', function(event) {
+cadastroForm.addEventListener('submit', function(event) {
   event.preventDefault();
 
   // Obtém os valores dos campos do formulário
   const nome = document.getElementById('user').value;
   const email = document.getElementById('email').value;
-  const senha = document.getElementById('password').value;
+  const senha = document.getElementById('loginSenha').value;
 
   // Chama a função cadastrarUsuario com os valores coletados
   cadastrarUsuario(nome, email, senha);

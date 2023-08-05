@@ -13,7 +13,6 @@ function fazerLogin(nome, senha) {
         return;
       }
     }
-    window.location.href = "/Astro/Frontend/Html/Base/home.html"
     console.log('Nome de usuário ou senha incorretos!');
     window.alert('Nome de usuário ou senha incorretos!')
   }

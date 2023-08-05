@@ -5,13 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ASTRO</title>
-    <link rel="shortcut icon" href="/Assets/Images/Icons/iconAstro.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="/Assets/Images/Icons/iconAstro.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="/Astro/Frontend/Css/root.css" />
     <link rel="stylesheet" href="/Astro/Frontend/Css/mainPages/login.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
   </head>
   <body>
     <audio autoplay loop="true" id="myaudio">
@@ -33,14 +43,16 @@
           </div>
           <form id="loginForm">
             <div class="containner_form">
-              <label for="loginNome" class="informationsLogin">Nome de Usuário:</label>
+              <label for="loginNome" class="informationsLogin"
+                >Nome de Usuário:</label
+              >
               <input type="text" id="loginNome" required />
-  
+
               <label for="loginSenha" class="informationsLogin">Senha:</label>
               <input type="password" id="loginSenha" required />
               <i class="bi bi-eye-slash" id="togglePassword"></i>
             </div>
-            <button type="submit">Entrar</button>
+            <button type="submit" id="btn">Entrar</button>
           </form>
         </div>
       </div>
@@ -51,10 +63,10 @@
       var audio = document.getElementById("myaudio");
       audio.volume = 0.2;
 
-      const logo = document.querySelector("#logo")
-      logo.addEventListener("click", function() {
-        window.location.href = "/Astro/Frontend/Html/Base/index.html"
-      })
+      const logo = document.querySelector("#logo");
+      logo.addEventListener("click", function () {
+        window.location.href = "/Astro/Frontend/Html/Base/index.html";
+      });
     </script>
   </body>
 </html>
