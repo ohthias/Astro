@@ -46,7 +46,7 @@ fullScreenButton.onclick = () => toggleFullScreen();
 
 // Inicialização do player
 player.addEventListener("loadedmetadata", () => {
-  updatePlayPauseIcon(); // Atualiza o ícone do botão Play/Pause na inicialização
+  playPause(); // Atualiza o ícone do botão Play/Pause na inicialização
   updateTime(); // Atualiza o tempo atual da música na inicialização
 });
 
@@ -229,6 +229,7 @@ const playUpcomingSong = (upcomingIndex) => {
   artistName.innerHTML = songs[index].artist;
   imgSong.src = songs[index].imgSong;
   heartMusic.innerHTML = textNormalHeartMusic;
+  playPause();
 };
 
 // Proximas faixas

@@ -6,6 +6,7 @@ html {
 }
 
 /* Criando o efieto de parallax*/
+
 main {
     margin: 0 auto;
     display: block;
@@ -33,6 +34,14 @@ section.module.container4 {
     justify-content: center;
     align-items: center;
     background: var(--sha-shadow-black);
+}
+
+section.module.container4 {
+    height: 50vh !important;
+}
+
+section.module.container5 {
+    background: linear-gradient(to top, var(--de-detail-green-sha-shadow) 0%, rgba(0, 0, 0, 0)) 95%;
 }
 
 /* Container 1 */
@@ -126,7 +135,7 @@ nav {
     display: flex;
     justify-content: start;
     flex-direction: column;
-    animation: fadeIn 300ms infinite;
+    animation: fadeIn 300ms;
 }
 
 .conteinner_logo h1 {
@@ -342,9 +351,77 @@ nav {
     }
 }
 
-/* Container 4*/
+/* Container 4 & 5*/
 
-/* Sreenc */
+.container5 .content {
+    margin: 100px auto;
+    text-align: center;
+}
+
+.container5 img {
+    margin: 20px auto;
+    max-width: 500px;
+    filter: drop-shadow(0 0 10px var(--sha-shadow-white));
+    animation: pulseGlow 10s infinite;
+}
+
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 10px var(--sha-shadow-white));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 0 var(--sha-shadow-white));
+
+    }
+}
+
+.container4 h2,
+.container5 h2 {
+    margin: 10px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    text-shadow: 2px 2px 5px var(--sha-shadow-black);
+    color: var(--de-detail-orange);
+}
+
+.container4 p {
+    margin: 10px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 5px var(--sha-shadow-black);
+    color: var(--font);
+}
+
+.container5 button#cadastrar {
+    margin: 10px 0;
+    padding: 8px 26px;
+    border: 2px solid var(--font);
+    border-radius: 100px;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    color: var(--font);
+    background: transparent;
+    cursor: pointer;
+}
+
+.container5 button#cadastrar:hover {
+    color: var(--de-detail-purple);
+    background: var(--font);
+}
+
+/* Footer */
+
+footer {
+    height: 300px;
+    background: var(--de-detail-green-sha-shadow);
+}
+
+/* Sreen */
 @media screen and (max-width:450px) {
     main {
         left: 50%;
@@ -353,5 +430,15 @@ nav {
 
     .buttons {
         flex-direction: column;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

@@ -94,13 +94,15 @@ figure img {
 }
 
 /* Containner form */
-#cadastroForm, #loginForm {
+#cadastroForm,
+#loginForm {
   margin: 50px 0;
   padding: 10px 15px;
   animation: fadeinDown 500ms ease;
 }
 
-.informationsCadatro, .informationsLogin{
+.informationsCadatro,
+.informationsLogin {
   margin: 10px 0;
   font-size: 18px;
   letter-spacing: 1px;
@@ -118,7 +120,7 @@ input {
   background: none;
 }
 
-input:focus{
+input:focus {
   outline: none;
   border-color: var(--de-detail-green);
 }
@@ -157,19 +159,39 @@ button[type="submit"]:hover {
   transition: 250ms;
 }
 
+
+.error {
+  border-color: #ff4747;
+}
+
+.valid {
+  border-color: #37a137;
+}
+
+.hide {
+  display: none;
+}
+
+.required-color {
+  color: #ff4747;
+}
+
 /* Media*/
 
 @media screen and (max-width:768px) {
-  #image, figure img{
+
+  #image,
+  figure img {
     width: 10px;
     opacity: 0;
     animation: none;
   }
 
-  .containner{
+  .containner {
     justify-content: center;
   }
 }
+
 /* Animations */
 @keyframes moviment {
   0% {

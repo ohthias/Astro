@@ -1,131 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASTRO</title>
+    <link
+      rel="shortcut icon"
+      href="/Assets/Images/Icons/iconAstro.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/Astro/Frontend/Css/mainPages/playlist.css" />
+    <link rel="stylesheet" href="/Astro/Frontend/Css/root.css" />
+    <link rel="stylesheet" href="/Astro/Frontend/Css/root/player.css" />
+    <link rel="stylesheet" href="/Astro/Frontend/Css/root/menus.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ASTRO</title>
-  <link rel="shortcut icon" href="/Assets/Images/Icons/iconAstro.png" type="image/x-icon" />
-  <link rel="stylesheet" href="/Astro/Frontend/Css/mainPages/playlist.css" />
-  <link rel="stylesheet" href="/Astro/Frontend/Css/root.css" />
-  <link rel="stylesheet" href="/Astro/Frontend/Css/root/player.css">
-  <link rel="stylesheet" href="/Astro/Frontend/Css/root/menus.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css" />
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
+  <body>
+    <!-- Player -->
+    <div class="containner_player">
+      <div class="player">
+        <div class="player_image">
+          <img src="" id="imgSong" />
+        </div>
+        <div class="player_infoMusic">
+          <span id="musicName"></span>
+          <span id="artistName"></span>
+        </div>
 
-<body>
-      <!-- Player -->
-      <div class="containner_player">
-        <div class="player">
-          <div class="player_image">
-            <img src="" id="imgSong">
+        <button id="heartMusic"><i class="fi fi-rr-heart"></i></button>
+        <div class="controls">
+          <button id="prevButton"><i class="bx bx-skip-previous"></i></button>
+          <button id="playPauseButton">
+            <i class="bx bx-caret-right"></i>
+          </button>
+          <button id="nextButton"><i class="bx bx-skip-next"></i></button>
+        </div>
+        <button id="randomPlayerMusic"><i class="fi fi-sr-shuffle"></i></button>
+
+        <audio id="player" src=""></audio>
+        <div class="footer">
+          <span id="currentTime">0:00</span>
+          <div class="timecode_player">
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <span id="duration">0:00</span>
           </div>
-          <div class="player_infoMusic">
-            <span id="musicName"></span>
-            <span id="artistName"></span>
-          </div>
-  
-          <button id="heartMusic"><i class="fi fi-rr-heart"></i></button>
-          <div class="controls">
-            <button id="prevButton"><i class='bx bx-skip-previous'></i></button>
-            <button id="playPauseButton"><i class='bx bx-caret-right'></i></button>
-            <button id="nextButton"><i class='bx bx-skip-next'></i></button>
-          </div>
-          <button id="randomPlayerMusic"><i class="fi fi-sr-shuffle"></i></button>
-  
-          <audio id="player" src=""></audio>
-          <div class="footer">
-            <span id="currentTime">0:00</span>
-            <div class="timecode_player">
-              <div class="progress-bar">
-                <div class="progress"></div>
-              </div>
-              <span id="duration">0:00</span>
+        </div>
+
+        <div class="containner_more">
+          <div class="container_volume">
+            <div class="volume-button">
+              <button id="volumeButton"><i class="fi fi-ss-volume"></i></button>
+            </div>
+            <div class="volume_control">
+              <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.01"
+                value="1"
+                id="voulmeSom"
+              />
             </div>
           </div>
-  
-          <div class="containner_more">
-            <div class="container_volume">
-              <div class="volume-button">
-                <button id="volumeButton"><i class="fi fi-ss-volume"></i></button>
-              </div>
-              <div class="volume_control">
-                <input type="range"  min="0" max="1" step="0.01" value="1" id="voulmeSom">
-              </div>
-            </div>
-            <i class="fi fi-ss-speakers"></i>
-            <i class="fi fi-rr-menu-burger"></i>
-            <button id="fullScreen"><i class="fi fi-rr-angle-up"></i></button>
+          <i class="fi fi-ss-speakers"></i>
+          <i class="fi fi-rr-menu-burger"></i>
+          <button id="fullScreen"><i class="fi fi-rr-angle-up"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Lateral -->
+
+    <aside>
+      <div class="containner_opc">
+        <a href="/Astro/Frontend/Html/Base/home.html"
+          ><i class="fi fi-ss-home"></i
+        ></a>
+        <a href="../Erro/comingSoon.html"><i class="fi fi-ss-user"></i></a>
+      </div>
+      <div class="containner_playlist">
+        <div class="child_play">
+          <span class="span-playlist-mens"
+            >Não ha nenhuma playlist salva ou criada</span
+          >
+        </div>
+        <div class="child_podc">
+          <span class="span-playlist-mens">Não ha nenhum podcast salvo</span>
+        </div>
+        <div class="credits">
+          <p>&copy Astro</p>
+        </div>
+      </div>
+    </aside>
+
+    <section class="module parallax parallax-1" id="backParallax">
+      <header>
+        <div class="containner_header">
+          <label id="logo">Astro</label>
+          <div class="menu">
+            <a href="/Astro/Frontend/Html/Erro/404.html"
+              ><i class="fi fi-ss-user menu-icon"></i
+            ></a>
+            <a href="/Astro/Frontend/Html/Base/index.html"
+              ><i class="fi fi-ss-settings menu-icon"></i
+            ></a>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="container_playlist">
+          <div class="cotainer_playlist_image">
+            <img
+              src="/Assets/Images/Astro_main-caps/2.png"
+              alt="imagePlay"
+              id="imagePlay"
+            />
+          </div>
+          <div class="container_playlist_header">
+            <h1 id="namePlaylist">Debuts da Semana</h1>
+            <p id="creatorPlaylist">Astro</p>
           </div>
         </div>
       </div>
+    </section>
 
-  <!-- Menu Lateral -->
-
-  <aside>
-    <div class="containner_opc">
-      <a href="/Astro/Frontend/Html/Base/home.html"><i class="fi fi-ss-home"></i></a>
-      <a href="../Erro/comingSoon.html"><i class="fi fi-ss-user"></i></a>
-    </div>
-    <div class="containner_playlist">
-      <div class="child_play">
-        <span class="span-playlist-mens">Não ha nenhuma playlist salva ou criada</span>
+    <main>
+      <div class="container_playlist_main">
+        <ul id="music-list"></ul>
       </div>
-      <div class="child_podc">
-        <span class="span-playlist-mens">Não ha nenhum podcast salvo</span>
-      </div>
-      <div class="credits">
-        <p>&copy Astro</p>
-      </div>
-    </div>
-  </aside>
+    </main>
 
-  <section class="module parallax parallax-1" id="backParallax">
-    <header>
-      <div class="containner_header">
-        <label id="logo">Astro</label>
-        <div class="menu">
-          <a href="/Astro/Frontend/Html/Erro/404.html"><i class="fi fi-ss-user menu-icon"></i></a>
-          <a href="/Astro/Frontend/Html/Base/index.html"><i class="fi fi-ss-settings menu-icon"></i></a>
-        </div>
-      </div>
-    </header>
+    <section class="module parallax parallax-2">
+      <footer></footer>
+    </section>
 
-    <div class="container">
-      <div class="container_playlist">
-        <div class="cotainer_playlist_image">
-          <img src="/Assets/Images/Astro_main-caps/2.png" alt="imagePlay" id="imagePlay" />
-        </div>
-        <div class="container_playlist_header">
-          <h1 id="namePlaylist">Debuts da Semana</h1>
-          <p id="creatorPlaylist">Astro</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!--Backend srcipts-->
+    <script type="module" src="/Astro/Backend/JS/musicPlayer.js"></script>
+    <script src="/Astro/Backend/JS/Settings/playlistFunction.js"></script>
 
-  <main>
-    <div class="container_playlist_main">
-      <ul id="music-list"></ul>
-    </div>
-  </main>
-
-  <section class="module parallax parallax-2">
-    <footer>
-    </footer>
-  </section>
-
-  <!--Backend srcipts-->
-  <script type="module" src="/Astro/Backend/JS/musicPlayer.js"></script>
-  <script src="/Astro/Backend/JS/Settings/playlistFunction.js"></script>
-
-  <!--Frontend srcipts-->
-  <script src="/Astro/Frontend/JS/redirects/redirect.js"></script>
-</body>
-
+    <!--Frontend srcipts-->
+    <script src="/Astro/Frontend/JS/redirects/redirect.js"></script>
+  </body>
 </html>
