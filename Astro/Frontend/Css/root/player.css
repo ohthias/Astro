@@ -140,16 +140,9 @@
     max-width: 500px;
 }
 
-#currentTime {
-    margin: 10px 0;
-    letter-spacing: 1px;
-    display: flex;
-    justify-content: center;
-}
-
 .timecode_player {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-evenly;
 }
 
@@ -178,7 +171,7 @@
     background: var(--de-detail-orange);
 }
 
-#duration {
+#duration, #currentTime {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.6em;
     letter-spacing: 1px;
