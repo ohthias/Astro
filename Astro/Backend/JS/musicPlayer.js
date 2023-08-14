@@ -210,7 +210,13 @@ const showUpcomingSongs = () => {
     const upcomingSong = songs[upcomingIndex];
     const listItem = document.createElement("li");
 
-    listItem.textContent = `${upcomingSong.name} - ${upcomingSong.artist}`;
+    listItem.innerHTML = `<div class="Songlits">
+                            <img src="${upcomingSong.imgSong}">
+                            <div class="Songlist-details">
+                              <h5> ${upcomingSong.name} </h5>
+                              <p> ${upcomingSong.artist}</p>
+                            </div>
+                          </div>`
 
     // Poder clicar em qualquer música e ela ser tocada
     listItem.addEventListener("click", () => {

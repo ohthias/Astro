@@ -1,13 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blgh de cor do astro</title>
-</head>
-<body>
-    <img id="imgSatori" src="download.jpg">
-    <div id="diplayDeCores"></div>
-    <script type="module" src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Color Analysis</title>
+    <style>
+      #displayDeCores {
+        background-color: wheat;
+        width: 300px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="imgSong" src="/Assets/Images/Capas_astro_podcast/5.png" alt="Image" />
+    <div id="displayDeCores"></div>
+
+    <script>
+      const imgSong = document.getElementById("imgSong");
+      const displayDeCores = document.querySelector("body");
+
+      imgSong.addEventListener("load", analiseDaImagem);
+
+      function analiseDaImagem() {
+        const imagem = new Image();
+        imagem.src = imgSong.src;
+
+        imagem.onload = function () {
+          const canvas = document.createElement("canvas"); // Change "image" to "canvas"
+          canvas.width = imagem.width;
+          canvas.height = imagem.height;
+
+          const gtx = canvas.getContext("2d");
+          gtx.drawImage(imagem, 0, 0, imagem.width, imagem.height); // Change "drawImagem" to "drawImage"
+
+          const imagemData = gtx.getImageData(
+            0,
+            0,
+            imagem.width,
+            imagem.height
+          ); // Change "getImagemData" to "getImageData"
+          const pixels = imagemData.data;
+
+          const contaCor = {};
+
+          for (let i = 0; i < pixels.length; i += 4) {
+            const r = pixels[i];
+            const g = pixels[i + 1];
+            const b = pixels[i + 2];
+
+            const rgb = `rgb(${r},${g},${b})`; // Add missing opening parenthesis
+            contaCor[rgb] = contaCor[rgb] ? contaCor[rgb] + 1 : 1;
+          }
+
+          const predominanteCor = Object.keys(contaCor).reduce((a, b) =>
+            contaCor[a] > contaCor[b] ? a : b
+          );
+
+          displayDeCores.style.backgroundColor = predominanteCor;
+        };
+      }
+    </script>
+  </body>
 </html>
