@@ -11,7 +11,7 @@
 <div class="content" align="center">
   <hr width="50%"><br>
   <div align="left">
-    <h2 align="left">Versão - AA0805 </h2>
+    <h2 align="left">Versão - AA0911 </h2>
     <li>Melhorias no player: VolumeButton, nextFaixas, likedSong, rundomMusics</li>
     <li>Menu lateral recolhivel</li>
     <li>Carrossels</li>
