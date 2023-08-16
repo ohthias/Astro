@@ -289,8 +289,6 @@ function pressPrevNext(event) {
 
 //FullScreen
 const toggleFullScreen = () => {
-  sidebar.classList.toggle("open");
-  menuBtnChange(); //calling the function(optional)
 };
 
 prevNextMusic("init");
