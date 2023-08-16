@@ -1,14 +1,14 @@
 /* Importação */
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 /* Icons & Images */
 @import url("https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css");
 @import url("https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 @import url("https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css");
-@import url('https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css');
+@import url("https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css");
 
 * {
   margin: 0;
@@ -57,8 +57,7 @@
     rgba(255, 255, 255, 0)
   );
   --background-gradient-parallax-index: linear-gradient(
-    to bottom
-    var(--de-detail-green-sha-shadow) 60%,
+    to bottom var(--de-detail-green-sha-shadow) 60%,
     rgba(255, 255, 255, 0)
   );
 

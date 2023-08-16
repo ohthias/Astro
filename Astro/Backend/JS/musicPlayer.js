@@ -288,6 +288,9 @@ function pressPrevNext(event) {
 }
 
 //FullScreen
-const toggleFullScreen = () => {};
+const toggleFullScreen = () => {
+  sidebar.classList.toggle("open");
+  menuBtnChange(); //calling the function(optional)
+};
 
 prevNextMusic("init");

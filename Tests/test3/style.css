@@ -1,310 +1,317 @@
 /* Player Fullscreen */
 
 body {
+    background: var(--back-background-main);
+    overflow-y: hidden;
 }
 
 .containner_player {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 .player {
-    margin: 50px;
-    padding: 20px 15px;
-    border-radius: 20px;
-    z-index: 40;
-    background: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 10px var(--sha-shadow-white), 0 0 35px var(--sha-shadow-white);
+  margin: 50px;
+  padding: 20px 15px;
+  border-radius: 20px;
+  z-index: 40;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px var(--sha-shadow-white), 0 0 35px var(--sha-shadow-white);
 }
 
 .player-faixa-detail {
-    margin: 15px 0;
-    display: flex;
-    align-items: center;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
 }
 
 .player_image {
-    margin: 0 25px;
+  margin: 0 25px;
 }
 
 .player_image #imgSong {
-    border: 0;
-    border-radius: 20px;
-    width: 100%;
-    height: 100%;
-    max-width: 300px;
-    max-height: 300px;
+  border: 0;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 300px;
 }
 
 .player_infoMusic {
-    margin: 0 5px;
-    max-width: max-content;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
+  margin: 0 5px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
 }
 
 .player_infoMusic #musicName {
-    font-size: 4em;
-    letter-spacing: 1px;
-    text-transform: capitalize;
-    color: var(--de-detail-green);
+  font-size: 3em;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  color: var(--de-detail-green);
 }
 
 .player_infoMusic #artistName {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5em;
-    text-decoration: underline;
-    text-transform: capitalize;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5em;
+  text-decoration: underline;
+  text-transform: capitalize;
 }
 
 /* Controls */
 
 .player-controls {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
 }
 
 .controls {
-    width: max-content;
-    margin: 0 25px;
-    padding: 10px;
-    color: var(--font-detail);
+  width: max-content;
+  margin: 0 25px;
+  padding: 10px;
+  color: var(--font-detail);
 }
 
 .controls button,
 #heartMusic,
 #randomPlayerMusic {
-    border: none;
-    background: transparent;
-    cursor: pointer;
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
 
 #heartMusic i,
 #randomPlayerMusic i {
-    font-size: 1.5em;
-    color: var(--font-detail);
+  font-size: 1.5em;
+  color: var(--font-detail);
 }
 
 .controls i {
-    margin: 0 5px;
-    font-size: 50px;
-    padding: 5px;
-    border-radius: 50%;
-    background-color: transparent;
-    transition: all .2s;
+  margin: 0 5px;
+  font-size: 50px;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: all 0.2s;
 }
 
 .controls i:hover,
 #heartMusic i:hover,
 #randomPlayerMusic i:hover {
-    color: var(--de-detail-orange);
+  color: var(--de-detail-orange);
 }
 
 #playPauseButton i {
-    color: var(--de-detail-green);
-    background: var(--sha-shadow-black);
+  color: var(--de-detail-green);
+  background: var(--sha-shadow-black);
 }
 
 /* Timecode player */
 
 .footer {
-    margin: 10px auto;
-    width: 100%;
+  margin: 10px auto;
+  width: 100%;
 }
 
 .timecode_player {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .progress-bar {
-    width: 80%;
-    height: 5px;
-    background: var(--sha-shadow-black);
-    cursor: pointer;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    transition: 150ms;
+  width: 80%;
+  height: 5px;
+  background: var(--sha-shadow-black);
+  box-shadow: 0 0 5px var(--sha-shadow-white), 0 0 20px var(--back-background-menu);
+  cursor: pointer;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: 150ms;
 }
 
 .progress {
-    position: relative;
-    top: -1px;
-    height: 7px;
-    background: var(--de-detail-green);
-    border-radius: 15px;
-    transition: 150ms;
+  position: relative;
+  top: -1px;
+  height: 7px;
+  background: var(--de-detail-green);
+  border-radius: 15px;
+  transition: 150ms;
 }
 
 .progress:hover {
-    background: var(--sha-shadow-white);
+  background: var(--sha-shadow-white);
 }
 
 #duration,
 #currentTime {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.6em;
-    letter-spacing: 1px;
-    text-align: center;
-    line-height: normal;
-    color: var(--font-detail);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.6em;
+  letter-spacing: 1px;
+  text-align: center;
+  line-height: normal;
+  color: var(--font-detail);
 }
 
 /* Next Songs */
 .container_faixas_detalhes {
-    margin: 10px;
-    padding: 10px 15px;
-    border-radius: 20px;
-    max-width: 450px;
-    width: 100%;
-    position: absolute;
-    right: 5%;
-    top: 10%;
-    background: var(--sha-shadow-black-menu);
+  margin: 10px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 450px;
+  width: 100%;
+  position: absolute;
+  right: 5%;
+  top: 10%;
+  background: var(--sha-shadow-black-menu);
 }
 
 #upcomingSongsList {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 #upcomingSongsList li {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .Songlits {
-    display: flex;
-    align-items: center;
-    filter: contrast(50%);
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  filter: contrast(50%);
+  cursor: pointer;
 }
 
 .Songlits:hover {
-    filter: contrast(100%)
+  filter: contrast(100%);
 }
 
 .Songlits img {
-    border-radius: 5px;
-    width: 50px;
+  border-radius: 5px;
+  width: 50px;
 }
 
 .Songlist-details {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 .Songlist-details h5 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.8em;
-    font-weight: 700;
-    text-align: left;
-    text-transform: capitalize;
-    color: var(--font-detail);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  font-weight: 700;
+  text-align: left;
+  text-transform: capitalize;
+  color: var(--font-detail);
 }
 
 .Songlist-details p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.7em;
-    text-align: left;
-    text-transform: capitalize;
-    color: var(--de-detail-green);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7em;
+  text-align: left;
+  text-transform: capitalize;
+  color: var(--de-detail-green);
 }
 
 /* Others */
 
 .containner_more {
-    margin: 25px 0;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+  margin: 25px 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 #fullScreen {
-    rotate: 180deg;
-    border: 0;
-    font-size: 16px;
-    background: none;
-    transition: 750ms;
-    cursor: pointer;
+  rotate: 180deg;
+  border: 0;
+  font-size: 16px;
+  background: none;
+  transition: 750ms;
+  cursor: pointer;
 }
 
-.fi-rr-menu-burger, .fi-ss-speakers {
-    display: none;
+.fi-rr-menu-burger,
+.fi-ss-speakers {
+  display: none;
 }
 
 /* Volume */
 
 .volume-button {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-#volumeButton{
-    padding: 5px;
-    border: 0;
-    font-size: 1em;
-    line-height: 0;
-    background: transparent;
-    cursor: pointer;
-    transition: 500ms;
+#volumeButton {
+  padding: 5px;
+  border: 0;
+  font-size: 1em;
+  line-height: 0;
+  background: transparent;
+  cursor: pointer;
+  transition: 500ms;
 }
 
 .fi-ss-volume-mute {
-    color: var(--sha-shadow-black);
-    transition: 500ms;
+  color: var(--sha-shadow-black);
+  transition: 500ms;
 }
 
 /*********** Baseline, reset styles ***********/
 input[type="range"] {
-    margin: 0 10px;
-    -webkit-appearance: none;
-    appearance: none;
-    background: transparent;
-    cursor: pointer;
+  margin: 0 10px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: 0 0 5px var(--sha-shadow-white), 0 0 20px var(--back-background-menu);
+
 }
 
 input[type="range"]:focus {
-    outline: none;
+  outline: none;
 }
 
 /******** Chrome, Safari, Opera and Edge Chromium styles ********/
 /* slider track */
 input[type="range"]::-webkit-slider-runnable-track {
-    background: var(--sha-shadow-black);
-    border-radius: 0.3rem;
-    height: 0.3rem;
+  background: var(--sha-shadow-black);
+  border-radius: 0.3rem;
+  height: 0.3rem;
 }
 
 /* slider thumb */
 input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    margin-top: -3px;
-    background-color: var(--font-detail);
-    border-radius: 0.5rem;
-    height: 0.6rem;
-    width: 0.6rem;
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -3px;
+  background-color: var(--font-detail);
+  border-radius: 0.5rem;
+  height: 0.6rem;
+  width: 0.6rem;
 }
 
 input[type="range"]:hover::-webkit-slider-thumb {
-    background-color: var(--de-detail-green);
+  background-color: var(--de-detail-green);
 }
 
 /*********** Firefox styles ***********/
 /* slider track */
 input[type="range"]::-moz-range-track {
-    background: var(--sha-shadow-black);
-    border-radius: 0.3rem;
-    height: 0.3rem;
+  background: var(--sha-shadow-black);
+  border-radius: 0.3rem;
+  height: 0.3rem;
 }
 
 /* slider thumb */
 input[type="range"]::-moz-range-thumb {
-    background-color: var(--font-detail);
-    border-radius: 0.5rem;
-    border: none;
+  background-color: var(--font-detail);
+  border-radius: 0.5rem;
+  border: none;
 }
+

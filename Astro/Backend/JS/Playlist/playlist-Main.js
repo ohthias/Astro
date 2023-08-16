@@ -38,7 +38,7 @@ export default [
     src: "http://physical-authority.surge.sh/music/3.mp3",
     name: "джованна",
     artist: "enrasta",
-    imgSong: "https://source.unsplash.com/featured/60x60",
+    imgSong: "https://source.unsplash.com/featured/300x300",
   },
 
   {
@@ -59,7 +59,7 @@ export default [
     src: "/Astro/Backend/Assets-Songs/Audio/HTML.mp3",
     name: "HTML",
     artist: "Riot",
-    imgSong: "https://source.unsplash.com/featured/60x60",
+    imgSong: "https://source.unsplash.com/featured/300X299",
   },
 
   {
