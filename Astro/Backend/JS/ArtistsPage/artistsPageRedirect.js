@@ -9,6 +9,7 @@ function updateArtistInfo(artistId) {
   const artist = artistsObject.find((artist) => artist.id === artistId);
 
   if (artist) {
+    window.location.href = "/Astro/Frontend/Html/Artistas/A01-AK.html"
     nameArtist.innerHTML = artist.name;
     aboutText.innerHTML = artist.about;
     follows.innerHTML = artist.follows;
