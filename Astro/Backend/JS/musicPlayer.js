@@ -173,7 +173,7 @@ const removeLikedSong = (musicName, artistName, imgSong) => {
   }
 };
 
-export {likedSongs};
+export { likedSongs };
 
 //Random music
 let randomMode = false;
@@ -216,7 +216,7 @@ const showUpcomingSongs = () => {
                               <h5> ${upcomingSong.name} </h5>
                               <p> ${upcomingSong.artist}</p>
                             </div>
-                          </div>`
+                          </div>`;
 
     // Poder clicar em qualquer música e ela ser tocada
     listItem.addEventListener("click", () => {
@@ -260,7 +260,6 @@ const prevNextMusic = (type = "next") => {
   imgSong.src = songs[index].imgSong;
   heartMusic.innerHTML = textNormalHeartMusic;
 
-  
   updateTime();
   if (type === "next") {
     showUpcomingSongs();
@@ -289,6 +288,21 @@ function pressPrevNext(event) {
 
 //FullScreen
 const toggleFullScreen = () => {
+  const playerCss = document.getElementById("style1");
+  const fullScreenCss = document.getElementById("style2");
+
+  // Variável para controlar o estado
+  let currentStyle = "playerCss";
+
+  if (currentStyle === "playerCss") {
+    playerCss.disabled = true;
+    fullScreenCss.disabled = false;
+    currentStyle = "fullScreenCss";
+  } else {
+    playerCss.disabled = false;
+    fullScreenCss.disabled = true;
+    currentStyle = "playerCss";
+  }
 };
 
 prevNextMusic("init");

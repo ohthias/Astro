@@ -4,8 +4,6 @@ arrowIcons = document.querySelectorAll(".wrapper i");
 
 let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
 
-// Updated JavaScript code
-
 // Function to activate the clicked carousel and deactivate others
 const activateCarousel = (carouselId) => {
     const carousels = document.querySelectorAll(".carousel");
