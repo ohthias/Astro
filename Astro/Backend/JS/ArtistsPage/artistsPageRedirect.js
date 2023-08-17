@@ -1,3 +1,6 @@
+const artistInfoString = decodeURIComponent(window.location.search.substr(6));
+const artistInfo = JSON.parse(artistInfoString);
+
 import artistsObject from "/Astro/Backend/JS/ArtistsPage/artistspage.js";
 
 const nameArtist = document.getElementById("nameArtist");

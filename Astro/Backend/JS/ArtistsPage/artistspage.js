@@ -1,47 +1,47 @@
 const artistpage = {
-  id001: {
+  idAt001: {
     nameArtist: "",
     about: "Descrição do Artista 1.",
     follows: "1000",
     ouvintes: "50000",
   },
-  id002: {
+  idAt002: {
     nameArtist: "",
     about: "Descrição do Artista 1.",
     follows: "1000",
     ouvintes: "50000",
   },
-  id003: {
+  idAt003: {
     nameArtist: "",
     about: "Descrição do Artista 1.",
     follows: "1000",
     ouvintes: "50000",
   },
-  id004: {
+  idAt004: {
     nameArtist: "",
     about: "Descrição do Artista 1.",
     follows: "1000",
     ouvintes: "50000",
   },
-  id005: {
+  idAt005: {
     nameArtist: "",
     about: "Descrição do Artista 1.",
     follows: "1000",
     ouvintes: "50000",
   },
-  id006: {
+  idAt006: {
     nameArtist: "",
     about: "Descrição do Artista 1.",
     follows: "1000",
     ouvintes: "50000",
   },
-  id007: {
+  idAt007: {
     nameArtist: "",
     about: "Descrição do Artista 1.",
     follows: "1000",
     ouvintes: "50000",
   },
-  id008: {
+  idAt008: {
     nameArtist: "",
     about: "Descrição do Artista 1.",
     follows: "1000",
@@ -49,4 +49,10 @@ const artistpage = {
   },
 };
 
-export default artistpage;
+function redirectToArtist(artistId) {
+  const artistInfo = artistpage[artistId];
+  if (artistInfo) {
+    const artistQueryString = encodeURIComponent(JSON.stringify(artistInfo));
+    window.location.href = `artist.html?info=${artistQueryString}`;
+  }
+}
