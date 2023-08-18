@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Song</title>
+    <link rel="stylesheet" href="/Astro/Frontend/Css/Others/newSong.css">
+  </head>
+  <body>
+    <main>
+      <input type="text" id="nameSong" placeholder="Nome da Música" />
+      <input type="text" id="artist" placeholder="Artista" />
+      <input type="text" id="songAudio" placeholder="Áudio" />
+      <input type="text" id="imageSong" placeholder="Imagem" />
+      <input type="text" id="genero" placeholder="Gênero" />
+      <div class="container">
+          <button id="calmo">Calmo</button>
+          <button id="moderado">Moderado</button>
+          <button id="agitado">Agitado</button>
+          <button id="intenso">Intenso</button>
+          <button id="raiva">Raiva</button>
+          <button id="sombrio">Sombrio</button>
+          <button id="romantico">Romantico</button>
+          <button id="dramatico">Dramatico</button>
+      </div>
+
+      <button id="done">Enviar</button>
+
+      <span id="results"></span>
+    </main>
+    <script src="/Astro/Backend/JS/newSongs.js"></script>
+  </body>
+</html>

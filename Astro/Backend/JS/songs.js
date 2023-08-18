@@ -9,7 +9,7 @@ const allSongs = {
   },
 
   /**@param - Ritmo & Genero:
-   * Catégorias usadas para a geração das listas genêricas, 
+   * Categorias usadas para a geração das listas genêricas, 
    * podendo ser agrupadas com musicas com as mesmas 
    * caracteristicas em um array
    */
