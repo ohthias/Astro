@@ -288,8 +288,8 @@ function pressPrevNext(event) {
 
 //FullScreen
 const toggleFullScreen = () => {
-  const playerCss = document.getElementById("style1");
-  const fullScreenCss = document.getElementById("style2");
+  const playerCss = document.getElementById("normal");
+  const fullScreenCss = document.getElementById("fullScreen");
 
   // Variável para controlar o estado
   let currentStyle = "playerCss";

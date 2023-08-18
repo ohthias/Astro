@@ -11,6 +11,7 @@ const calmo = document.querySelector("#calmo");
 calmo.addEventListener("click", function () {
   selectRitmo = "Calmo";
 });
+
 const moderado = document.querySelector("#moderado");
 moderado.addEventListener("click", function () {
   selectRitmo = "moderado";
@@ -114,7 +115,7 @@ const updateMusicList = () => {
     i++;
   }
   resultados.appendChild(ul);
-  
+
   /**
    * @param - updateMusicList()
    *    Criação de lista a partir dos dados do objeto.
