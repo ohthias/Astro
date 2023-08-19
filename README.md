@@ -11,12 +11,12 @@
 <div class="content" align="center">
   <hr width="50%"><br>
   <div align="left">
-    <h2 align="left">Versão - AA1002 </h2>
-    <li>Melhorias no player: VolumeButton, nextFaixas, likedSong, rundomMusics</li>
-    <li>Menu lateral recolhivel</li>
-    <li>Carrossels</li>
-    <li>Melhorias no design das playlists</li>
+    <h2 align="left">Versão - AA1004 </h2>
     <li>Novas músicas</li>
+    <li>Gerador de Playlists</li>
+    <li>Id's de músicas</li>
+    <li>Melhorias no design</li>
+    <li>Fullscreen do player</li>
   </div>
 </div>
 
@@ -26,7 +26,6 @@
     <h2 align="left">Em desenvolvimento </h2>
     <li>Criação da wiki</li>
     <li>Lista de músicas curtidas</li>
-    <li>Fullscreen do player</li>
     <li>Tela de artistas</li>
     <li>Geração de id para redirecionamento</li>
     <li>Melhorias no script do player</li>

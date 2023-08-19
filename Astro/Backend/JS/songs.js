@@ -8,12 +8,11 @@ const allSongs = {
     ritmo: "agitado",
   },
 
-    /**@param - Ritmo & Genero:
+  /**@param - Ritmo & Genero:
    * Categorias usadas para a geração das listas genêricas,
    * podendo ser agrupadas com musicas com as mesmas
    * caracteristicas em um array
-   */
-  
+  */
 
   aa001: {
     nameSong: "6 Shots",
