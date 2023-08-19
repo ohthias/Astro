@@ -15,6 +15,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Bebas Neue", sans-serif;
+  list-style: none;
   color: var(--font);
 }
 
@@ -22,7 +23,7 @@
   /* Colors */
   --back-background-main: #05061e;
   --back-background-menu: #05061e8d;
-  --font: #000000;
+  --font: #ffffff;
   --font-detail: #f3f3f3;
   --de-detail-orange: #ff3d20;
   --de-detail-green: #29f247;
