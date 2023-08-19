@@ -1,18 +1,20 @@
 import allSongs from "/Astro/Backend/JS/songs.js";
 
 function filterByRhythm(songs, targetRhythm) {
-  return Object.values(songs).filter(song => song.ritmo === targetRhythm);
+  return Object.values(songs).filter((song) => song.ritmo === targetRhythm);
 }
 
 // Função para filtrar músicas com base no gênero
 function filterByGenre(songs, targetGenre) {
-  return Object.values(songs).filter(song => song.genero === targetGenre);
+  return Object.values(songs).filter((song) => song.genero === targetGenre);
 }
 
 function filterRandomByGenre(index, songs, targetGenre) {
-  let playLength = Math.round(Object.keys(songs).length * index / 100); // Calcula o número de músicas a serem tocadas com base no índice
-  const filteredSongs = Object.values(songs).filter(song => song.genero === targetGenre);
-  
+  let playLength = Math.round((Object.keys(songs).length * index) / 100); // Calcula o número de músicas a serem tocadas com base no índice
+  const filteredSongs = Object.values(songs).filter(
+    (song) => song.genero === targetGenre
+  );
+
   if (filteredSongs.length === 0) {
     console.log(`Nenhuma música encontrada no gênero ${targetGenre}`);
     return;
@@ -76,17 +78,6 @@ function displaySongs(songs) {
   });
 }
 
-const playAgitadoSongs = () => {
-  const agitadoSongs = filterByRhythm(allSongs, "agitado");
-  playSongs(agitadoSongs);
-};
-
-// Função para tocar músicas de rock
-const playRockSongs = () => {
-  const rockSongs = filterByGenre(allSongs, "Rock");
-  playSongs(rockSongs);
-};
-
 // Função para tocar um array de músicas
 let index;
 const playSongs = (songs) => {
@@ -99,10 +90,11 @@ const playSongs = (songs) => {
   imgSong.src = song.imgSong;
 };
 
+const playAgitadoSongs = () => {
+  const agitadoSongs = filterSongsByRhythm(allSongs, "agitado");
+  playSongs(agitadoSongs);
+};
+
 // Event listeners dos botões
 document.getElementById("playAgitado").addEventListener("click", playAgitadoSongs);
 document.getElementById("playRock").addEventListener("click", playRockSongs);
-
-const randomInstrumentalSongs = filterRandomByGenre(25, allSongs, "Instrumental");
-// Exibindo as músicas aleatórias na tela
-displaySongs(randomInstrumentalSongs);

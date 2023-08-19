@@ -44,12 +44,6 @@ heartMusic.onclick = () => likeMusic();
 randomPlayerMusic.onclick = () => randomMusic();
 fullScreenButton.onclick = () => toggleFullScreen();
 
-// Inicialização do player
-player.addEventListener("loadedmetadata", () => {
-  playPause(); // Atualiza o ícone do botão Play/Pause na inicialização
-  updateTime(); // Atualiza o tempo atual da música na inicialização
-});
-
 const playPause = () => {
   if (player.paused) {
     player.play();
