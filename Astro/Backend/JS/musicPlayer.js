@@ -1,4 +1,4 @@
-import songs from "/Astro/Backend/JS/Playlist/playlist-Main.js";
+import allSongs from "/Astro/Backend/JS/songs.js";
 
 const player = document.querySelector("#player");
 const musicName = document.querySelector("#musicName");
@@ -193,27 +193,27 @@ const getRandomIndex = () => {
   let randomIndex;
 
   do {
-    randomIndex = Math.floor(Math.random() * songs.length);
+    randomIndex = Math.floor(Math.random() * Object.keys(allSongs).length);
   } while (randomIndex === currentIndex);
 
   return randomIndex;
 };
 
-//Função da criação da lista das proximas musicas
+// Função da criação da lista das próximas músicas
 const showUpcomingSongs = () => {
   upcomingSongsList.innerHTML = "";
 
   const numberOfUpcomingSongsToShow = 4;
 
   for (let i = 0; i <= numberOfUpcomingSongsToShow; i++) {
-    const upcomingIndex = (index + i) % songs.length;
-    const upcomingSong = songs[upcomingIndex];
+    const upcomingIndex = (index + i) % Object.keys(allSongs).length;
+    const upcomingSong = allSongs[Object.keys(allSongs)[upcomingIndex]];
     const listItem = document.createElement("li");
 
     listItem.innerHTML = `<div class="Songlits">
                             <img src="${upcomingSong.imgSong}">
                             <div class="Songlist-details">
-                              <h5> ${upcomingSong.name} </h5>
+                              <h5> ${upcomingSong.nameSong} </h5>
                               <p> ${upcomingSong.artist}</p>
                             </div>
                           </div>`;
@@ -243,21 +243,21 @@ const prevNextMusic = (type = "next") => {
   if (randomMode) {
     index = getRandomIndex();
   } else if (
-    (type == "next" && index + 1 === songs.length) ||
+    (type == "next" && index + 1 === allSongs.length) ||
     type === "init"
   ) {
     index = 0;
   } else if (type == "prev" && index === 0) {
-    index = songs.length;
+    index = allSongs.length;
   } else {
     index = type === "prev" && index ? index - 1 : index + 1;
   }
   // @param Nextsong - Verifica se elá em 'runMode' se sim ele faz o runmode, se não, segue normalmente
 
-  player.src = songs[index].src;
-  musicName.innerHTML = songs[index].name;
-  artistName.innerHTML = songs[index].artist;
-  imgSong.src = songs[index].imgSong;
+  player.src = Object.values(allSongs)[index].src;
+  musicName.innerHTML = Object.values(allSongs)[index].nameSong;
+  artistName.innerHTML = Object.values(allSongs)[index].artist;
+  imgSong.src = Object.values(allSongs)[index].imgSong;
   heartMusic.innerHTML = textNormalHeartMusic;
 
   updateTime();
