@@ -1,6 +1,6 @@
 function salvarEstadoAudio() {
   const audio = document.getElementById("audio");
-  audio.volume = 0.1;
+  audio.volume = 0.3;
   const currentTime = audio.currentTime;
   localStorage.setItem("audioEstado", currentTime);
 }

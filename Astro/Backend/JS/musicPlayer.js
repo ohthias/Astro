@@ -15,7 +15,7 @@ const progressBar = document.querySelector(".progress-bar");
 const progress = document.querySelector(".progress");
 const voulmeSom = document.querySelector("#volumeSom");
 const volumeButton = document.querySelector("#volumeButton");
-const fullScreenButton = document.querySelector("#fullScreen");
+const fullScreenButton = document.querySelector("#fullScreenButton");
 const upcomingSongsList = document.querySelector("#upcomingSongsList");
 
 // Icones para botão
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const stateButtonVolume = () => {
   isMuted = !isMuted; // Alterna entre mutar e desmutar
-  player.muted = isMuted;
+  player.muted === isMuted;
 
   if ((player.muted = isMuted)) {
     volumeButton.innerHTML = textMutedAudio;
@@ -287,12 +287,11 @@ function pressPrevNext(event) {
 }
 
 //FullScreen
+let currentStyle = "playerCss";
+
 const toggleFullScreen = () => {
   const playerCss = document.getElementById("normal");
   const fullScreenCss = document.getElementById("fullScreen");
-
-  // Variável para controlar o estado
-  let currentStyle = "playerCss";
 
   if (currentStyle === "playerCss") {
     playerCss.disabled = true;
