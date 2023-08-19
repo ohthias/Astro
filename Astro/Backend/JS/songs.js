@@ -63,7 +63,7 @@ const allSongs = {
   aa006: {
     nameSong: "Bounce",
     artist: "Audionautix",
-    src: "/Astro/Backend/Assets-Songs/Audio/Bouce.mp3",
+    src: "/Astro/Backend/Assets-Songs/Audio/Bounce.mp3",
     imgSong: "/Assets/Images/",
     genero: "Dance",
     ritmo: "agitado",
@@ -160,9 +160,9 @@ const allSongs = {
   },
 
   aa0017: {
-    nameSong: "Hore it Comes",
+    nameSong: "Here it Comes",
     artist: "TrackTribe",
-    src: "/Astro/Backend/Assets-Songs/Audio/HoreitComes.mp3",
+    src: "/Astro/Backend/Assets-Songs/Audio/HereitComes.mp3",
     imgSong: "/Assets/Images/",
     genero: "Instrumental",
     ritmo: "raiva",
@@ -207,7 +207,7 @@ const allSongs = {
   aa0022: {
     nameSong: "I Wish I Knew",
     artist: "Otis McDonald",
-    src: "/Astro/Backend/Assets-Songs/Audio/IWishIKnew",
+    src: "/Astro/Backend/Assets-Songs/Audio/IWishIKnew.mp3",
     imgSong: "/Assets/Images/",
     genero: "Pop",
     ritmo: "moderado",
