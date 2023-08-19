@@ -99,16 +99,16 @@ const newSong = () => {
 const updateMusicList = () => {
   resultados.innerHTML = "";
   const ul = document.createElement("ul");
-  let i = 0;
+  let i = 41;
 
   for (const music of musicList) {
     const li = document.createElement("li");
     li.innerHTML = `<br> aa00${[i]}: {<br>
             nameSong: "${music.nameSong}",<br>
             artist: "${music.artist}",<br>
-            src: "/Astro/Backend/Assets-Songs/Audio/${music.src}",<br>
+            src: "/Astro/Backend/Assets-Songs/Audio/${music.src}.mp3",<br>
             imgSong: "/Assets/Images/${music.imgSong}",<br>
-            genero; "${music.genero}", <br>
+            genero: "${music.genero}", <br>
             ritmo: "${music.ritmo}",<br>
         }, <br>`;
     ul.appendChild(li);
