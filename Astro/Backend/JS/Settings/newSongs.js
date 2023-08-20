@@ -4,6 +4,7 @@ const artist = document.querySelector("#artist");
 const songAudio = document.querySelector("#songAudio");
 const imageSong = document.querySelector("#imageSong");
 const genero = document.querySelector("#genero");
+const album = document.querySelector("#album");
 
 //Botões de ritmo
 let selectRitmo = "";
@@ -67,6 +68,10 @@ const newSong = () => {
   let songAudioName = songAudio.value;
   let imageSongName = imageSong.value;
   let generoMusic = genero.value;
+  let albumMusic = album.value;
+  if(albumMusic == " ") {
+    return none
+  }
 
   const newMusic = {
     nameSong: SongName,
@@ -75,6 +80,7 @@ const newSong = () => {
     imgSong: imageSongName,
     genero: generoMusic,
     ritmo: selectRitmo,
+    album: albumMusic
   };
   musicList.push(newMusic);
 
@@ -83,6 +89,7 @@ const newSong = () => {
   songAudio.value = "";
   imageSong.value = "";
   genero.value = "";
+  album.value = "";
 
   updateMusicList();
 
@@ -110,6 +117,7 @@ const updateMusicList = () => {
             imgSong: "/Assets/Images/${music.imgSong}",<br>
             genero: "${music.genero}", <br>
             ritmo: "${music.ritmo}",<br>
+            album: "${music.album}",<br>
         }, <br>`;
     ul.appendChild(li);
     i++;

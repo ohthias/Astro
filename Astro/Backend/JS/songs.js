@@ -12,7 +12,7 @@ const allSongs = {
    * Categorias usadas para a geração das listas genêricas,
    * podendo ser agrupadas com musicas com as mesmas
    * caracteristicas em um array
-  */
+   */
 
   aa001: {
     nameSong: "6 Shots",
@@ -374,6 +374,106 @@ const allSongs = {
     imgSong: "https://source.unsplash.com/featured/300x300",
     genero: "Árabe",
     ritmo: "Calma",
+  },
+
+  aa0041: {
+    nameSong: "A Year Ago",
+    artist: "NEFFEX",
+    src: "/Astro/Backend/Assets-Songs/Audio/AYearAgo.mp3",
+    imgSong: "/Assets/Images/Astro_main-caps/7.png",
+    genero: "Pop",
+    ritmo: "moderado",
+    album: "Lost In Space",
+  },
+
+  aa0042: {
+    nameSong: "Addict",
+    artist: "NEFFEX",
+    src: "/Astro/Backend/Assets-Songs/Audio/Addict.mp3",
+    imgSong: "/Assets/Images/",
+    genero: "Rock",
+    ritmo: "raiva",
+    album: "Lost In Space",
+  },
+
+  aa0043: {
+    nameSong: "AsYouFadeAway",
+    artist: "NEFFEX",
+    src: "/Astro/Backend/Assets-Songs/Audio/As You Fade Away.mp3",
+    imgSong: "/Assets/Images/",
+    genero: "Pop",
+    ritmo: "agitado",
+    album: "Lost In Space",
+  },
+
+  aa0044: {
+    nameSong: "Coast",
+    artist: "Anno Domini Beats",
+    src: "/Astro/Backend/Assets-Songs/Audio/Coast.mp3",
+    imgSong: "/Assets/Images/Astro_main-caps/15.png",
+    genero: "Hip-Hop",
+    ritmo: "moderado",
+    album: "Abstraction",
+  },
+
+  aa0045: {
+    nameSong: "Contrast",
+    artist: "Anno Domini Beats",
+    src: "/Astro/Backend/Assets-Songs/Audio/Contrast.mp3",
+    imgSong: "/Assets/Images/Astro_main-caps/15.png",
+    genero: "Instrumental",
+    ritmo: "dramatico",
+    album: "Abstraction",
+  },
+
+  aa0046: {
+    nameSong: "Crazy",
+    artist: "Patrick PatriKios",
+    src: "/Astro/Backend/Assets-Songs/Audio/Crazy.mp3",
+    imgSong: "/Assets/Images/",
+    genero: "Pop",
+    ritmo: "agitado",
+    album: "Future",
+  },
+
+  aa0047: {
+    nameSong: "How's It Supposed to Feel",
+    artist: "NEFFEX",
+    src: "/Astro/Backend/Assets-Songs/Audio/How'sItSupposedtoFeel.mp3",
+    imgSong: "/Assets/Images/",
+    genero: "Pop",
+    ritmo: "intenso",
+    album: "Lost In Space",
+  },
+
+  aa0048: {
+    nameSong: "Just Breathing",
+    artist: "NEFFEX",
+    src: "/Astro/Backend/Assets-Songs/Audio/JustBreathing.mp3",
+    imgSong: "/Assets/Images/",
+    genero: "Pop",
+    ritmo: "agitado",
+    album: "Lost In Space",
+  },
+
+  aa0049: {
+    nameSong: "Pressure Cooker",
+    artist: "Jeremy Korpas",
+    src: "/Astro/Backend/Assets-Songs/Audio/PressureCooker.mp3",
+    imgSong: "/Assets/Images/",
+    genero: "Rock",
+    ritmo: "intenso",
+    album: "",
+  },
+
+  aa0050: {
+    nameSong: "Sharp",
+    artist: "Jeremy Korpas",
+    src: "/Astro/Backend/Assets-Songs/Audio/Sharp.mp3",
+    imgSong: "/Assets/Images/",
+    genero: "Rock",
+    ritmo: "raiva",
+    album: "",
   },
 };
 

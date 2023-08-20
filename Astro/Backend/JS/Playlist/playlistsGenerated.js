@@ -95,6 +95,37 @@ const playAgitadoSongs = () => {
   playSongs(agitadoSongs);
 };
 
-// Event listeners dos botões
-document.getElementById("playAgitado").addEventListener("click", playAgitadoSongs);
-document.getElementById("playRock").addEventListener("click", playRockSongs);
+export function getUniqueAlbums(songsObject) {
+  const uniqueAlbums = [];
+  const albumSet = new Set();
+
+  for (const songId in songsObject) {
+    const album = songsObject[songId].album;
+    if (album && !albumSet.has(album)) {
+      albumSet.add(album);
+      uniqueAlbums.push({
+        name: album,
+        author: songsObject[songId].artist,
+        coverImage: songsObject[songId].imgSong
+      });
+    }
+  }
+
+  return uniqueAlbums;
+}
+
+// Função para exibir músicas de um álbum específico
+export function displayAlbumSongs(albumName, songsObject) {
+  console.log(`Músicas do álbum "${albumName}":`);
+
+  for (const songId in songsObject) {
+    if (songsObject[songId].album === albumName) {
+      document.getElementById("nameAlbum").innerHTML = albumName;
+      document.getElementById("creatorAlbum").innerHTML = songsObject[songId].artist;
+      document.getElementById("imagePlay").src = albumName.coverImage;
+      console.log(`Música: ${songsObject[songId].nameSong}`);
+      console.log(`Artista: ${songsObject[songId].artist}`);
+      console.log("---");
+    }
+  }
+}
