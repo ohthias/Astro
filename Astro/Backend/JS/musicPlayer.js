@@ -33,6 +33,19 @@ let index = 0;
 let isMuted = false;
 let liked = false;
 
+// Keyboard atalhos
+const pressPrevNext = (event) => {
+  if (event.key === "ArrowLeft") {
+    prevNextMusic("prev");
+  } else if (event.key == "ArrowRight") {
+    prevNextMusic();
+  } else if (event.key === "m" && event.ctrlKey) {
+    stateButtonVolume();
+  } else if (event.key === "p" && event.altKey && event.ctrlKey) {
+    playPause()
+  }
+}
+
 //Eventos
 document.addEventListener("keydown", pressPrevNext);
 prevButton.onclick = () => prevNextMusic("prev");
@@ -264,22 +277,6 @@ const prevNextMusic = (type = "next") => {
 player.onended = () => {
   prevNextMusic();
 };
-
-// Keyboard atalhos
-function pressPrevNext(event) {
-  if (event.key === "a" || event.key === "A") {
-    prevNextMusic("prev");
-  }
-  if (event.key == "d" || event.key == "D" || event.key == "VK_RIGHT") {
-    prevNextMusic();
-  }
-  if (event.key === "m" || event.key === "M") {
-    stateButtonVolume();
-  }
-  if (event.key == "space" || event.key == "SPACE") {
-    playPause();
-  }
-}
 
 //FullScreen
 let currentStyle = "playerCss";
