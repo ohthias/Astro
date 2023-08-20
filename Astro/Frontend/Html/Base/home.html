@@ -14,9 +14,13 @@
       href="/Astro/Frontend/Css/mainPages/styleHomePage.css"
     />
     <link rel="stylesheet" href="/Astro/Frontend/Css/root.css" />
-    
+
     <!--Player -->
-    <link id="normal" rel="stylesheet" href="/Astro/Frontend/Css/root/player.css" />
+    <link
+      id="normal"
+      rel="stylesheet"
+      href="/Astro/Frontend/Css/root/player.css"
+    />
 
     <link rel="stylesheet" href="/Astro/Frontend/Css/root/menus.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -99,7 +103,9 @@
               <ul id="upcomingSongsList"></ul>
             </div>
           </div>
-          <button id="fullScreenButton"><i class="fi fi-rr-angle-up"></i></button>
+          <button id="fullScreenButton">
+            <i class="fi fi-rr-angle-up"></i>
+          </button>
         </div>
       </div>
     </div>
@@ -376,65 +382,55 @@
         </div>
 
         <div class="container_artistas_grid">
-          <figure class="fig_artistas">
+          <button class="fig_artistas" id="artist1">
             <img
-              src="https://yt3.googleusercontent.com/2nYOm33klbI2QkbKuZfdSdkF1Fzb3cIggFcxhyO3NUwtMtZl_TImTkzjuc_j0wVLEA1joC2pJw=s900-c-k-c0x00ffffff-no-rj"
+              src="https://i0.wp.com/musically.com/wp-content/uploads/2019/05/otis-mcdonald.jpg?fit=1500%2C500&ssl=1"
               alt="artists"
             />
             <div class="fig_artistas_toopkit">
-              <p>Jvke</p>
+              <p>Otis McDonald</p>
             </div>
-          </figure>
+          </button>
 
-          <figure class="fig_artistas">
+          <button class="fig_artistas" id="artist2">
             <img
-              src="https://br.paipee.com/wp-content/uploads/2022/03/camila_6_9441.jpg"
+              src="https://media.ticketmaster.com/en-us/dam/a/d5f/6a860b69-c9e8-46d3-9c5d-f5a6abc21d5f_1264201_RETINA_PORTRAIT_16_9.jpg"
               alt="artists"
             />
             <div class="fig_artistas_toopkit">
-              <p>Camila Cabello</p>
+              <p>NEFFEX</p>
             </div>
-          </figure>
+          </button>
 
-          <figure class="fig_artistas">
+          <button class="fig_artistas" id="artist3">
             <img
-              src="https://i.scdn.co/image/ab677762000056b8551afb70a72c9069fc8a469a"
+              src="https://cdn3.pitchfork.com/longform/928/EmilyASpragueheader.jpg"
               alt="artists"
             />
             <div class="fig_artistas_toopkit">
-              <p>Lauv</p>
+              <p>Emily Sprague</p>
             </div>
-          </figure>
+          </button>
 
-          <figure class="fig_artistas">
+          <button class="fig_artistas" id="artist4">
             <img
-              src="https://uploads.metropoles.com/wp-content/uploads/2020/07/08183938/Katy-Perry5.jpg"
+              src="https://i1.sndcdn.com/artworks-000189710518-dzqj1v-t500x500.jpg"
               alt="artists"
             />
             <div class="fig_artistas_toopkit">
-              <p>katy perry</p>
+              <p>E's Jammy Jams</p>
             </div>
-          </figure>
+          </button>
 
-          <figure class="fig_artistas">
+          <button class="fig_artistas" id="artist5">
             <img
-              src="https://i.scdn.co/image/ab6761610000e5ebbf753c009fd9c2d53351dd3c"
+              src="https://media.tracktribe.com/images/Social_Share_img.jpg"
               alt="artists"
             />
             <div class="fig_artistas_toopkit">
-              <p>Alan Walker</p>
+              <p>TrackTribe</p>
             </div>
-          </figure>
-
-          <figure class="fig_artistas">
-            <img
-              src="https://i.guim.co.uk/img/media/c67fca03c47e048f5f71b9deefcada0be2206369/0_476_1945_1166/master/1945.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=3da3560d7b8196a511b22f14f74ed3fa"
-              alt="artists"
-            />
-            <div class="fig_artistas_toopkit">
-              <p>Halsey</p>
-            </div>
-          </figure>
+          </button>
         </div>
       </section>
 
@@ -676,7 +672,6 @@
           <i id="right" class="fa-solid fa-angle-right"></i>
         </div>
       </section>
-
     </main>
 
     <section class="module parallax parallax-2">
@@ -690,6 +685,7 @@
       src="/Astro/Backend/JS/BackgroundSettings/Backgroundmain.js"
     ></script>
     <script src="/Astro/Backend/JS/Mixes/mixesRedirect.js"></script>
+    <script src="/Astro/Backend/JS/ArtistsPage/artistRedirect.js"></script>
 
     <!--Frontend srcipts-->
     <script src="/Astro/Frontend/JS/redirects/redirect.js"></script>

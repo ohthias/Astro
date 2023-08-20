@@ -34,15 +34,15 @@
   </head>
 
   <body>
-    <!-- Player -->
-    <div class="containner_player">
+     <!-- Player -->
+     <div class="containner_player">
       <div class="player">
         <div class="player_image">
-          <img src="" id="imgSong" />
+          <img src="https://fakeimg.pl/210x210/e9e9e9/e9e9e9" id="imgSong" />
         </div>
         <div class="player_infoMusic">
-          <span id="musicName"></span>
-          <span id="artistName"></span>
+          <span id="musicName">▅▅▅▅▅▅</span>
+          <span id="artistName">▅▅▅▅▅▅</span>
         </div>
 
         <button id="heartMusic"><i class="fi fi-rr-heart"></i></button>
@@ -57,8 +57,8 @@
 
         <audio id="player" src=""></audio>
         <div class="footer">
-          <span id="currentTime">0:00</span>
           <div class="timecode_player">
+            <span id="currentTime">0:00</span>
             <div class="progress-bar">
               <div class="progress"></div>
             </div>
@@ -70,54 +70,81 @@
           <div class="container_volume">
             <div class="volume-button">
               <button id="volumeButton"><i class="fi fi-ss-volume"></i></button>
-            </div>
-            <div class="volume_control">
-              <input
-                type="range"
-                min="0"
-                max="1"
-                step="0.01"
-                value="1"
-                id="voulmeSom"
-              />
+              <div class="tooltip-volume_control">
+                <input
+                  type="range"
+                  min="0"
+                  max="1"
+                  step="0.01"
+                  value="1"
+                  id="volumeSom"
+                />
+              </div>
             </div>
           </div>
-          <i class="fi fi-ss-speakers"></i>
-          <i class="fi fi-rr-menu-burger"></i>
-          <button id="fullScreen"><i class="fi fi-rr-angle-up"></i></button>
+          <a href="../Erro/403.html"><i class="fi fi-ss-speakers"></i></a>
+          <div class="container_faixas">
+            <i class="fi fi-rr-menu-burger"></i>
+            <div class="container_faixas_detalhes">
+              <ul id="upcomingSongsList"></ul>
+            </div>
+          </div>
+          <button id="fullScreenButton">
+            <i class="fi fi-rr-angle-up"></i>
+          </button>
         </div>
       </div>
     </div>
 
     <!-- Menu Lateral -->
+    <div class="sidebar">
+      <div class="logo-details">
+        <img
+          src="/Assets/Images/Icons/iconAstro.png"
+          class="logo_img"
+          alt="astronaut"
+        />
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="/Astro/Frontend/Html/Base/home.html">
+            <i class="bx bx-home"></i>
+            <span class="links_name">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+        <li>
+          <a href="/Astro/Frontend/Html/Erro/manutenção.html">
+            <i class="bx bx-search"></i>
+            <input type="text" placeholder="Search..." />
+            <span class="tooltip">Search</span>
+          </a>
+        </li>
+        <li>
+          <a href="/Astro/Frontend/Html/Erro/comingSoon.html">
+            <i class="bx bx-heart"></i>
+            <span class="links_name">Salvos</span>
+          </a>
+          <span class="tooltip">Salvos</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-plus"></i>
+            <span class="links_name">Criar</span>
+          </a>
+          <span class="tooltip">Criar</span>
+        </li>
+      </ul>
+    </div>
 
-    <aside>
-      <div class="containner_opc">
-        <a href="/Astro/Frontend/Html/Base/home.html"
-          ><i class="fi fi-ss-home"></i
-        ></a>
-        <a href="../Erro/comingSoon.html"><i class="fi fi-ss-user"></i></a>
-      </div>
-      <div class="containner_playlist">
-        <div class="child_play">
-          <span class="span-playlist-mens"
-            >Não ha nenhuma playlist salva ou criada</span
-          >
-        </div>
-        <div class="child_podc">
-          <span class="span-playlist-mens">Não ha nenhum podcast salvo</span>
-        </div>
-        <div class="credits">
-          <p>&copy Astro</p>
-        </div>
-      </div>
-    </aside>
 
     <section class="module parallax parallax-1" id="backParallax">
       <header>
-        <div class="containner_header">
+        <section class="section-header">
           <label id="logo">Astro</label>
-          <div class="menu">
+          <div class="header-list">
+            <span id="level_user">01</span>
             <a href="/Astro/Frontend/Html/Erro/404.html"
               ><i class="fi fi-ss-user menu-icon"></i
             ></a>
@@ -125,7 +152,7 @@
               ><i class="fi fi-ss-settings menu-icon"></i
             ></a>
           </div>
-        </div>
+        </section>
       </header>
 
       <div class="container">

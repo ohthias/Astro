@@ -6,7 +6,7 @@ for (let indiceArtista = 1; indiceArtista <= numeroDeArtistas; indiceArtista++) 
   if (elementoArtista) {
     elementoArtista.addEventListener("click", function () {
       // Redirecionar para a página de mixes com um parâmetro indicando o artista escolhido
-      window.location.href = `/Astro/Frontend/Html/Artistas/A01-AK.html?artist=${indiceArtista}`;
+      window.location.href = `/Astro/Frontend/Html/Artistas/artistPage.html?artist=${indiceArtista}`;
     });
   }
 }

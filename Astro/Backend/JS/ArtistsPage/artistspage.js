@@ -1,12 +1,17 @@
-import allSongs from "/Astro/Backend/JS/songs.js";
 import artistsArray from "/Astro/Backend/JS/ArtistsPage/artistsArray.js";
 
-//Consulta e envio de informações correspondentes a uma página dos artistas
+/**
+ * @artistParam: Verifica se um parâmetro 'artist' está presente na URL,
+ *  valida o índice do artista e, se tudo estiver correto,
+ *  atualiza informações relacionadas a esse artista e carrega
+ *  com base no artista selecionado. Se ocorrer algum problema,
+ *  ele registra mensagens de erro apropriadas no console.
+*/
 const urlParams = new URLSearchParams(window.location.search);
 const artistParam = urlParams.get("artist");
 
 if (!artistParam) {
-  console.error("Parâmetro 'artista' ausente no URL.");
+  console.error("Parâmetro 'artist' ausente no URL.");
 } else {
   const artistIndex = parseInt(artistParam, 10);
 
@@ -17,64 +22,45 @@ if (!artistParam) {
   ) {
     const selectedArtist = artistsArray[artistIndex - 1];
     updateArtistInfo(selectedArtist);
-    loadMixBasedOnArtist(selectedArtist.name);
+    loadBasedOnArtist(selectedArtist.artist);
   } else {
-    console.error("Artista no encontrado o parámetro inválido en la URL.");
+    console.error("Artista não encontrado ou parâmetro inválido no URL.");
   }
 }
 
-function attachSongClickHandlers() {
-  const songItems = document.querySelectorAll("#songs-list li");
-  songItems.forEach((songItem, index) => {
-    songItem.addEventListener("click", () => {
-      playMusic(allSongs[index]); // Play the corresponding song from allSongs
-    });
-  });
-}
-
-// Call the function to attach click handlers to song elements
-attachSongClickHandlers();
-
-let isPlaying = false;
-let index = 0;
-let currentSongIndex = -1;
-
-function playMusic() {
-  const musicName = document.querySelector("#musicName");
-  const artistName = document.querySelector("#artistName");
-  const imgSong = document.querySelector("#imgSong");
-  const player = document.querySelector("#player");
-
-  if (isPlaying && currentSongIndex === index) {
-    player.pause();
-    isPlaying = false;
-  } else {
-    currentSongIndex = index;
-    player.src = allSongs[index].src;
-    musicName.innerHTML = allSongs[index].nome;
-    artistName.innerHTML = allSongs[index].artista;
-    imgSong.src = allSongs[index].capaAlbum;
-    player.play();
-    isPlaying = true;
-  }
-}
-
-function loadMixBasedOnArtist(artistName) {
+function loadBasedOnArtist(artistName) {
   switch (artistName) {
     case "Otis McDonald":
+      console.log("Carregando mix para Otis McDonald...");
       break;
 
     case "NEFFEX":
+      console.log("Carregando mix para NEFFEX...");
+      break;
+
+    case "Emily Sprague":
+      console.log("Carregando mix para Emily Sprague...");
+      break;
+
+    case "E's Jammy Jams":
+      console.log("Carregando mix para E's Jammy Jams...");
+      break;
+
+    case "TrackTribe":
+      console.log("Carregando mix para TrackTribe...");
       break;
 
     default:
-      console.error("Mix no encontrado para el artista:", artistName);
+      console.log("Página do", artistName, "não encontrado");
       return;
   }
 }
 
 function updateArtistInfo(artist) {
   document.getElementById("nameArtist").innerText = artist.artist;
+  document.getElementById("about").innerText = artist.about;
+  document.getElementById("seguidores").innerText = artist.seguidores + " Seguidores";
+  document.getElementById("ouvintes").innerText = artist.ouvintes + " Ouvintes";
   document.getElementById(
     "backParallax"
   ).style.backgroundImage = `url(${artist.imgArtist})`;

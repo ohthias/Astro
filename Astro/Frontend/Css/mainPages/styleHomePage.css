@@ -359,6 +359,11 @@ button .songButton:active {
     overflow-x: visible;
 }
 
+.container_artistas_grid button{
+    background: none;
+    border: 0;
+}
+
 .sidebar.open~.container_artistas_grid {
     grid-template-columns: repeat(6, 1fr);
 }

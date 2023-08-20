@@ -17,7 +17,7 @@ section.module.parallax {
     position: relative;
     overflow: hidden;
 
-    background: url("https://wallpaperaccess.com/full/3763154.jpg") no-repeat;
+    background: url("https://fakeimg.pl/1000x1000/e9e9e9/e9e9e9") no-repeat;
     background-size: cover;
     animation: fadeIn 800ms ease;
 }
@@ -106,8 +106,8 @@ main.containner_content {
     margin-top: 250px;
 }
 
-.seguidores,
-.ouvintes {
+#seguidores,
+#ouvintes {
     margin: 10px 0;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;

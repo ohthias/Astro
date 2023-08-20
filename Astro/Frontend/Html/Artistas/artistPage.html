@@ -42,11 +42,11 @@
     <div class="containner_player">
       <div class="player">
         <div class="player_image">
-          <img src="" id="imgSong" />
+          <img src="https://fakeimg.pl/210x210/e9e9e9/e9e9e9" id="imgSong" />
         </div>
         <div class="player_infoMusic">
-          <span id="musicName"></span>
-          <span id="artistName"></span>
+          <span id="musicName">▅▅▅▅▅▅</span>
+          <span id="artistName">▅▅▅▅▅▅</span>
         </div>
 
         <button id="heartMusic"><i class="fi fi-rr-heart"></i></button>
@@ -61,8 +61,8 @@
 
         <audio id="player" src=""></audio>
         <div class="footer">
-          <span id="currentTime">0:00</span>
           <div class="timecode_player">
+            <span id="currentTime">0:00</span>
             <div class="progress-bar">
               <div class="progress"></div>
             </div>
@@ -86,14 +86,16 @@
               </div>
             </div>
           </div>
-          <i class="fi fi-ss-speakers"></i>
+          <a href="../Erro/403.html"><i class="fi fi-ss-speakers"></i></a>
           <div class="container_faixas">
             <i class="fi fi-rr-menu-burger"></i>
             <div class="container_faixas_detalhes">
               <ul id="upcomingSongsList"></ul>
             </div>
           </div>
-          <button id="fullScreenButton"><i class="fi fi-rr-angle-up"></i></button>
+          <button id="fullScreenButton">
+            <i class="fi fi-rr-angle-up"></i>
+          </button>
         </div>
       </div>
     </div>
@@ -160,20 +162,17 @@
 
         <main class="containner_content">
           <div class="containner_text">
-            <h1 id="nameArtist">Alan Walker</h1>
+            <h1 id="nameArtist">▅▅▅▅▅▅</h1>
             <button id="follow">Seguir</button>
           </div>
           <div class="container_info_right">
             <div class="container_text_about">
               <h3>About</h3>
-              <p>
-                Alan Olav Walker é um DJ e produtor musical norueguês nascido no
-                Reino Unido. Ficou mundialmente conhecido pelo single "Faded".
-              </p>
+              <p id="about">▅▅▅▅▅▅▅▅▅▅▅▅▅▅ ▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅</p>
             </div>
             <div class="container_text_numbers">
-              <p class="seguidores">156.458.002 seguidores</p>
-              <p class="ouvintes">250.025.120 Ouvintes</p>
+              <p id="seguidores">▅▅▅▅▅▅</p>
+              <p id="ouvintes">▅▅▅▅▅▅</p>
             </div>
           </div>
         </main>
@@ -181,14 +180,6 @@
     </div>
 
     <main class="container_main">
-      <section class="container_songs_toc">
-        <figure>
-          <img src="" alt="musicas" />
-          <p></p>
-          <button id="playMusic"><i class="bx bx-caret-right"></i></button>
-        </figure>
-      </section>
-
       <div class="container_options_artist">
         <div class="bar bar-grey">
           <div class="option">Discografia</div>
@@ -217,12 +208,14 @@
 
     <!--Backend srcipts-->
     <script type="module" src="/Astro/Backend/JS/musicPlayer.js"></script>
-    <script type="module" src="/Astro/Backend/JS/ArtistsPage/artistspage.js"></script>
+    <script
+      type="module"
+      src="/Astro/Backend/JS/ArtistsPage/artistspage.js"
+    ></script>
 
     <!--Frontend srcipts-->
     <script src="/Astro/Frontend/JS/redirects/redirect.js"></script>
     <script src="/Astro/Frontend/JS/others/bar.js"></script>
     <script src="/Astro/Frontend/JS/others/menu.js"></script>
-
   </body>
 </html>

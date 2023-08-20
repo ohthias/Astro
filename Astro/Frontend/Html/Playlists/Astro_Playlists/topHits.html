@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/Astro/Frontend/Css/root.css" />
     <link rel="stylesheet" href="/Astro/Frontend/Css/root/player.css" />
     <link rel="stylesheet" href="/Astro/Frontend/Css/root/menus.css" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -38,15 +39,15 @@
   </head>
 
   <body>
-    <!-- Player -->
-    <div class="containner_player">
+     <!-- Player -->
+     <div class="containner_player">
       <div class="player">
         <div class="player_image">
-          <img src="" id="imgSong" />
+          <img src="https://fakeimg.pl/210x210/e9e9e9/e9e9e9" id="imgSong" />
         </div>
         <div class="player_infoMusic">
-          <span id="musicName"></span>
-          <span id="artistName"></span>
+          <span id="musicName">▅▅▅▅▅▅</span>
+          <span id="artistName">▅▅▅▅▅▅</span>
         </div>
 
         <button id="heartMusic"><i class="fi fi-rr-heart"></i></button>
@@ -61,8 +62,8 @@
 
         <audio id="player" src=""></audio>
         <div class="footer">
-          <span id="currentTime">0:00</span>
           <div class="timecode_player">
+            <span id="currentTime">0:00</span>
             <div class="progress-bar">
               <div class="progress"></div>
             </div>
@@ -86,14 +87,16 @@
               </div>
             </div>
           </div>
-          <i class="fi fi-ss-speakers"></i>
+          <a href="../Erro/403.html"><i class="fi fi-ss-speakers"></i></a>
           <div class="container_faixas">
             <i class="fi fi-rr-menu-burger"></i>
             <div class="container_faixas_detalhes">
               <ul id="upcomingSongsList"></ul>
             </div>
           </div>
-          <button id="fullScreen"><i class="fi fi-rr-angle-up"></i></button>
+          <button id="fullScreenButton">
+            <i class="fi fi-rr-angle-up"></i>
+          </button>
         </div>
       </div>
     </div>
@@ -143,9 +146,10 @@
     <!--Parallax-->
     <section class="module parallax parallax-1" id="backParallax">
       <header>
-        <div class="containner_header">
+        <section class="section-header">
           <label id="logo">Astro</label>
-          <div class="menu">
+          <div class="header-list">
+            <span id="level_user">01</span>
             <a href="/Astro/Frontend/Html/Erro/404.html"
               ><i class="fi fi-ss-user menu-icon"></i
             ></a>
@@ -153,7 +157,7 @@
               ><i class="fi fi-ss-settings menu-icon"></i
             ></a>
           </div>
-        </div>
+        </section>
       </header>
 
       <div class="container">
