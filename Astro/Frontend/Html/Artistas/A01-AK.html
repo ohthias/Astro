@@ -93,7 +93,7 @@
               <ul id="upcomingSongsList"></ul>
             </div>
           </div>
-          <button id="fullScreen"><i class="fi fi-rr-angle-up"></i></button>
+          <button id="fullScreenButton"><i class="fi fi-rr-angle-up"></i></button>
         </div>
       </div>
     </div>
@@ -205,43 +205,19 @@
       </div>
       <div class="container_waper">
         <div class="container_discografia">
-          <figure>
-            <a>
-              <img
-                src="/Astro/Backend/Assets-Songs/ImageAudio/1.jpg"
-                alt="discografia"
-              />
-              <p class="informatons">On my way</p>
-              <p class="informatons year">XXXX</p>
-              <div class="topkit">
-                <i class="bx bx-caret-right" id="playSongByImg"></i>
-              </div>
-            </a>
-          </figure>
-
-          <figure>
-            <a href="#">
-              <img
-                src="/Astro/Backend/Assets-Songs/ImageAudio/2.jpg"
-                alt="discografia"
-              />
-              <p class="informatons">Faded</p>
-              <p class="informatons year">XXXX</p>
-              <div class="topkit">
-                <i class="bx bx-caret-right" id="playSongByImg"></i>
-              </div>
-            </a>
-          </figure>
+          <ul id="songs-list"></ul>
         </div>
       </div>
     </main>
 
+    <span id="artists-container"></span>
     <section class="module parallax parallax-2">
       <footer></footer>
     </section>
 
     <!--Backend srcipts-->
     <script type="module" src="/Astro/Backend/JS/musicPlayer.js"></script>
+    <script type="module" src="/Astro/Backend/JS/ArtistsPage/artistspage.js"></script>
 
     <!--Frontend srcipts-->
     <script src="/Astro/Frontend/JS/redirects/redirect.js"></script>
