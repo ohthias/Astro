@@ -58,19 +58,6 @@ function createRandomMix(filteredSongs, numberOfSongs) {
   return randomSongs;
 }
 
-// Função para criar e salvar um mix aleatório por ritmo
-function createAndSaveRandomMixByRhythm(songs, targetRhythm, numberOfSongs) {
-  const filteredSongs = filterSongsByRhythm(songs, targetRhythm);
-  const randomSongs = createRandomMix(filteredSongs, numberOfSongs);
-
-  localStorage.setItem(
-    `randomMix_${targetRhythm}`,
-    JSON.stringify(randomSongs)
-  );
-
-  return randomSongs;
-}
-
 let currentSongIndex = 0; // Inicializa o índice da música atual
 function playSongs() {
   if (currentSongIndex >= 0 && currentSongIndex < currentMix.length) {

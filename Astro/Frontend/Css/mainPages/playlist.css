@@ -44,19 +44,32 @@ section.module.parallax-2::after {
   content: none;
 }
 
+
+.sidebar.open~.back-image .section-main {
+  position: relative;
+  left: 250px;
+  width: calc(100% - 250px);
+}
+
 /* Conainer name playlist */
 .container {
   z-index: 11;
   position: absolute;
   top: 50%;
-  left: 30%;
-  transform: translate(-30%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .container_playlist {
+  padding: 15px 25px;
+  border-radius: 20px;
+  width: 680px;
+  height: 320px;
   display: flex;
   align-items: center;
   flex-direction: row;
+  background: var(--sha-shadow-black-menu);
+  backdrop-filter: blur(10px);
 }
 
 .cotainer_playlist_image {
@@ -71,15 +84,15 @@ section.module.parallax-2::after {
 
 #namePlaylist {
   margin: 10px 0;
-  font-size: 4em;
+  font-size: 3.5em;
   letter-spacing: 1px;
   color: var(--de-detail-green);
 }
 
 #creatorPlaylist {
-  font-size: 1.8em;
-  text-decoration: underline solid 2px;
-  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
   cursor: pointer;
 }
 
@@ -90,49 +103,72 @@ section.module.parallax-2::after {
 /* Options */
 
 .container_options {
-  margin-left: 350px;
-  margin-bottom: 25px;
+  margin: 20px 0;
 }
 
 .container_options_display {
   display: flex;
-  justify-content: flex-start;
+  justify-content: start;
   align-items: center;
 }
 
 .container_options_buttons {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   padding: 10px 8px;
   border-radius: 10px;
   background: var(--sha-shadow-black);
 }
 
-.container_options_buttons button {
-  margin: 5px;
+.container_options_buttons #random,
+.container_options_buttons #playPause,
+.container_options_buttons #heartMusic {
+  margin: 8px 10px;
+  padding: 10px;
   border: 0;
-  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 0;
   background: none;
+  cursor: pointer;
 }
 
-.container_options_buttons #playPuase {
-  margin: 0;
-  font-size: 25px;
+.container_options_buttons #playPause {
+  font-size: 36px;
+  border-radius: 50px;
+  background: var(--sha-shadow-black);
+}
+
+.container_options_buttons #playPause i {
+  color: var(--de-detail-orange);
 }
 
 .container_options #duracao-total {
-  margin: 0 10px;
+  margin: 0 25px;
   font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   letter-spacing: 1px;
 }
 
 /* Main playlist */
 
 main {
-  margin: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+}
+
+.container_main {
+  display: flex;
+  flex-direction: column;
 }
 
 .container_playlist_main {

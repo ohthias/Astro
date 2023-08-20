@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/Astro/Frontend/Css/root.css" />
     <link rel="stylesheet" href="/Astro/Frontend/Css/root/player.css" />
     <link rel="stylesheet" href="/Astro/Frontend/Css/root/menus.css" />
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -39,8 +39,8 @@
   </head>
 
   <body>
-     <!-- Player -->
-     <div class="containner_player">
+    <!-- Player -->
+    <div class="containner_player">
       <div class="player">
         <div class="player_image">
           <img src="https://fakeimg.pl/210x210/e9e9e9/e9e9e9" id="imgSong" />
@@ -144,54 +144,58 @@
     </div>
 
     <!--Parallax-->
-    <section class="module parallax parallax-1" id="backParallax">
-      <header>
-        <section class="section-header">
-          <label id="logo">Astro</label>
-          <div class="header-list">
-            <span id="level_user">01</span>
-            <a href="/Astro/Frontend/Html/Erro/404.html"
-              ><i class="fi fi-ss-user menu-icon"></i
-            ></a>
-            <a href="/Astro/Frontend/Html/Base/index.html"
-              ><i class="fi fi-ss-settings menu-icon"></i
-            ></a>
-          </div>
-        </section>
-      </header>
+    <div class="back-image">
+      <section class="module parallax parallax-1" id="backParallax">
+        <header>
+          <section class="section-header">
+            <label id="logo">Astro</label>
+            <div class="header-list">
+              <span id="level_user">01</span>
+              <a href="/Astro/Frontend/Html/Erro/404.html"
+                ><i class="fi fi-ss-user menu-icon"></i
+              ></a>
+              <a href="/Astro/Frontend/Html/Base/index.html"
+                ><i class="fi fi-ss-settings menu-icon"></i
+              ></a>
+            </div>
+          </section>
+        </header>
 
-      <div class="container">
-        <div class="container_playlist">
-          <div class="cotainer_playlist_image">
-            <img
-              src="/Assets/Images/Astro_main-caps/1.png"
-              alt="imagePlay"
-              id="imagePlay"
-            />
-          </div>
-          <div class="container_playlist_header">
-            <h1 id="namePlaylist">Top Hits</h1>
-            <p id="creatorPlaylist">Astro</p>
+        <div class="container">
+          <div class="container_playlist">
+            <div class="cotainer_playlist_image">
+              <img
+                src="/Assets/Images/Astro_main-caps/1.png"
+                alt="imagePlay"
+                id="imagePlay"
+              />
+            </div>
+            <div class="container_playlist_header">
+              <h1 id="namePlaylist">Top Hits</h1>
+              <p id="creatorPlaylist">Astro</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <div class="container_options">
-      <div class="container_options_display">
-        <div class="container_options_buttons">
-          <button id="random"><i class="fi fi-sr-shuffle"></i></button>
-          <button id="playPuase"><i class="bx bx-caret-right"></i></button>
-          <button id="heartMusic"><i class="fi fi-rr-heart"></i></button>
-        </div>
-        <div id="duracao-total"></div>
-      </div>
+      </section>
     </div>
 
     <main>
-      <div class="container_playlist_main">
-        <ul id="music-list"></ul>
-      </div>
+      <section class="container_main">
+        <div class="container_options">
+          <div class="container_options_display">
+            <div class="container_options_buttons">
+              <button id="random"><i class="fi fi-sr-shuffle"></i></button>
+              <button id="playPause"><i class="bx bx-caret-right"></i></button>
+              <button id="heartMusic"><i class="fi fi-rr-heart"></i></button>
+            </div>
+            <div id="duracao-total"></div>
+          </div>
+        </div>
+
+        <div class="container_playlist_main">
+          <ul id="music-list"></ul>
+        </div>
+      </section>
     </main>
 
     <section class="module parallax parallax-2">
@@ -203,7 +207,8 @@
     <script src="/Astro/Backend/JS/Settings/playlistFunction.js"></script>
 
     <!--Frontend srcipts-->
-    <script src="/Astro/Frontend/JS/redirects/redirect.js"></script>
     <script src="/Astro/Frontend/JS/others/menu.js"></script>
+    <script src="/Astro/Frontend/JS/redirects/redirect.js"></script>
+    <script src="/Astro/Frontend/JS/others/gradientPlaylist.js"></script>
   </body>
 </html>

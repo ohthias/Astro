@@ -21,7 +21,7 @@
 
 :root {
   /* Colors */
-  --back-background-main: #05061e;
+  --back-background-main: rgb(5, 6, 30);
   --back-background-menu: #05061e8d;
   --font: #ffffff;
   --font-detail: #f3f3f3;
