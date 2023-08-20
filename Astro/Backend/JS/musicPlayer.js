@@ -255,6 +255,7 @@ const prevNextMusic = (type = "next") => {
   heartMusic.innerHTML = textNormalHeartMusic;
 
   updateTime();
+  playPause();
   if (type === "next") {
     showUpcomingSongs();
   }

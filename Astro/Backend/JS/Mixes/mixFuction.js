@@ -9,7 +9,7 @@ const imgSong = document.getElementById("imgSong");
 
 // Função para exibir músicas em um mix aleatório
 function displayRandomMix(mix) {
-  const container = document.getElementById("random-mix-container");
+  const container = document.getElementById("music-list");
 
   mix.forEach((song) => {
     const listItem = document.createElement("li");
@@ -102,23 +102,39 @@ function playNextSong() {
 // Carregar mix aleatório salvo ou criar e salvar se não existir
 const savedAgitadoMix = JSON.parse(localStorage.getItem("randomMix_agitado"));
 const savedModeradoMix = JSON.parse(localStorage.getItem("randomMix_moderado"));
+const savedintensoMix = JSON.parse(localStorage.getItem("randomMix_raiva"));
+const savedCalmoMix = JSON.parse(localStorage.getItem("randomMix_Calmo"));
 
 const Global =
-  savedAgitadoMix || createAndSaveRandomMixByRhythm(allSongs, "agitado", 16);
+  savedAgitadoMix || createAndSaveRandomMixByRhythm(allSongs, "agitado", 10);
 const PelaJanela =
-savedModeradoMix || createAndSaveRandomMixByRhythm(allSongs, "moderado", 16);
+  savedModeradoMix || createAndSaveRandomMixByRhythm(allSongs, "moderado", 10);
+const AutoAstral =
+  savedintensoMix || createAndSaveRandomMixByRhythm(allSongs, "raiva", 10);
+const TimeofStudy =
+savedCalmoMix || createAndSaveRandomMixByRhythm(allSongs, "Calmo", 10);
 
 const playlists = [
   {
     name: "Global",
     image: "/Assets/Images/Capas_astro/Art_M.2.png",
-    creator: "Matheus"
+    creator: "Matheus",
   },
   {
     name: "Pela Janela",
     image: "/Assets/Images/Capas_astro/Art_M.3.png",
-    creator: "Matheus"
-  }
+    creator: "Matheus",
+  },
+  {
+    name: "Auto Astral",
+    image: "/Assets/Images/Capas_astro/Art_M.4.png",
+    creator: "Matheus",
+  },
+  {
+    name: "Time of Study",
+    image: "/Assets/Images/Capas_astro/Art_M.5.png",
+    creator: "Matheus",
+  },
 ];
 
 // Obtenha o valor do parâmetro "playlist" da URL
@@ -129,7 +145,11 @@ const playlistParam = urlParams.get("playlist");
 const playlistIndex = parseInt(playlistParam, 10);
 
 // Verifica se o valor é um número válido e dentro do intervalo de playlists
-if (!isNaN(playlistIndex) && playlistIndex >= 1 && playlistIndex <= playlists.length) {
+if (
+  !isNaN(playlistIndex) &&
+  playlistIndex >= 1 &&
+  playlistIndex <= playlists.length
+) {
   const selectedPlaylist = playlists[playlistIndex - 1];
   updatePlaylistInfo(selectedPlaylist);
   loadMixBasedOnPlaylist(selectedPlaylist.name);
@@ -145,9 +165,19 @@ function loadMixBasedOnPlaylist(playlistName) {
     case "Global":
       currentMix = Global;
       break;
+
     case "Pela Janela":
       currentMix = PelaJanela;
       break;
+
+    case "Auto Astral":
+      currentMix = AutoAstral;
+      break;
+
+    case "Time of Study":
+      currentMix = TimeofStudy;
+      break;
+
     default:
       console.error("Mix não encontrado para a playlist:", playlistName);
       return;
@@ -163,7 +193,6 @@ function updatePlaylistInfo(playlistData) {
   document.getElementById("creatorPlaylist").innerHTML = playlistData.creator;
   document.getElementById("imagePlay").src = playlistData.image;
 }
-
 
 // Adicionar um ouvinte de evento para o botão de reprodução
 document.getElementById("playPuase").addEventListener("click", playSongs);
