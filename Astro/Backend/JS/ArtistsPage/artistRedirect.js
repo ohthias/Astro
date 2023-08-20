@@ -1,4 +1,3 @@
-// Supondo que existam 4 artistas, você pode ajustar esse número conforme necessário
 const numeroDeArtistas = 20;
 
 for (let indiceArtista = 1; indiceArtista <= numeroDeArtistas; indiceArtista++) {
