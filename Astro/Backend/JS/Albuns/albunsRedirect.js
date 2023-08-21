@@ -9,3 +9,9 @@ document.getElementById("abstraction").addEventListener("click", function () {
   window.location.href =
     "/Astro/Frontend/Html/Playlists/Albuns_Playlists/album.html?album=2";
 });
+
+document.getElementById("Future").addEventListener("click", function () {
+  // Redirecionar para a página de mixes com um parâmetro para indicar a playlist escolhida
+  window.location.href =
+    "/Astro/Frontend/Html/Playlists/Albuns_Playlists/album.html?album=3";
+});

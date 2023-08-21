@@ -1,14 +1,38 @@
 import allSongs from "/Astro/Backend/JS/songs.js";
 
+/**
+ * Filtra um conjunto de músicas com base no ritmo especificado.
+ *
+ * @param {Object} songs - Um objeto contendo informações sobre músicas.
+ * @param {string} targetRhythm - O ritmo alvo que desejamos filtrar.
+ * @returns {Array} Um array contendo as músicas que possuem o ritmo correspondente.
+*/
 function filterByRhythm(songs, targetRhythm) {
   return Object.values(songs).filter((song) => song.ritmo === targetRhythm);
 }
 
-// Função para filtrar músicas com base no gênero
+/**
+ * Filtra um conjunto de músicas com base no gênero especificado.
+ *
+ * @param {Object} songs - Um objeto contendo informações sobre músicas.
+ * @param {string} targetGenre - O gênero alvo que desejamos filtrar.
+ * @returns {Array} Um array contendo as músicas que pertencem ao gênero correspondente.
+*/
 function filterByGenre(songs, targetGenre) {
   return Object.values(songs).filter((song) => song.genero === targetGenre);
 }
 
+
+/**
+ * Filtra e retorna um número aleatório de músicas de um determinado gênero.
+ *
+ * @param {number} index - O índice de seleção aleatória (em porcentagem) das
+ * músicas com base no número total de músicas disponíveis.
+ * @param {Object} songs - Um objeto contendo informações sobre músicas.
+ * @param {string} targetGenre - O gênero alvo para filtragem aleatória.
+ * @returns {Array|undefined} Um array contendo músicas aleatórias do gênero 
+ * especificado ou undefined se nenhum resultado for encontrado.
+*/
 function filterRandomByGenre(index, songs, targetGenre) {
   let playLength = Math.round((Object.keys(songs).length * index) / 100); // Calcula o número de músicas a serem tocadas com base no índice
   const filteredSongs = Object.values(songs).filter(
@@ -68,8 +92,6 @@ function displaySongs(songs) {
     const genre = document.createElement("p");
     genre.textContent = `Genre: ${song.genero}`;
 
-    // Adicionar mais informações conforme necessário (imgSong, ritmo, etc.)
-
     songDiv.appendChild(songName);
     songDiv.appendChild(artistName);
     songDiv.appendChild(genre);
@@ -78,11 +100,16 @@ function displaySongs(songs) {
   });
 }
 
-// Função para tocar um array de músicas
-let index;
+let index; // Variável para rastrear o índice da música atual
+
+/**
+ * Reproduzir a próxima música da lista de músicas.
+ *
+ * @param {Array} songs - Um array contendo informações sobre músicas.
+*/
 const playSongs = (songs) => {
   index = 0; // Resetar o índice
-  const song = songs[index];
+  const song = songs[index]; // Obtém a música atual com base no índice
 
   player.src = song.src;
   musicName.innerHTML = song.nameSong;
@@ -90,42 +117,8 @@ const playSongs = (songs) => {
   imgSong.src = song.imgSong;
 };
 
+/* Não Usado
 const playAgitadoSongs = () => {
   const agitadoSongs = filterSongsByRhythm(allSongs, "agitado");
   playSongs(agitadoSongs);
-};
-
-export function getUniqueAlbums(songsObject) {
-  const uniqueAlbums = [];
-  const albumSet = new Set();
-
-  for (const songId in songsObject) {
-    const album = songsObject[songId].album;
-    if (album && !albumSet.has(album)) {
-      albumSet.add(album);
-      uniqueAlbums.push({
-        name: album,
-        author: songsObject[songId].artist,
-        coverImage: songsObject[songId].imgSong
-      });
-    }
-  }
-
-  return uniqueAlbums;
-}
-
-// Função para exibir músicas de um álbum específico
-export function displayAlbumSongs(albumName, songsObject) {
-  console.log(`Músicas do álbum "${albumName}":`);
-
-  for (const songId in songsObject) {
-    if (songsObject[songId].album === albumName) {
-      document.getElementById("nameAlbum").innerHTML = albumName;
-      document.getElementById("creatorAlbum").innerHTML = songsObject[songId].artist;
-      document.getElementById("imagePlay").src = albumName.coverImage;
-      console.log(`Música: ${songsObject[songId].nameSong}`);
-      console.log(`Artista: ${songsObject[songId].artist}`);
-      console.log("---");
-    }
-  }
-}
+};*/
