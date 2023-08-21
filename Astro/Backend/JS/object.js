@@ -1,3 +1,5 @@
+//Obsoleto
+
 import playlist from '/Astro/Backend/JS/ArtistsPage/artistsArray.js';
 import allSongs from '/Astro/Backend/JS/songs.js';
 

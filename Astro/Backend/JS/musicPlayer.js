@@ -160,7 +160,7 @@ const saveLikedSong = (musicName, artistName, imgSong) => {
       song.imgSong === likedSong.imgSong
   );
 
-  if (!isAlreadyLiked) {
+  if (!isAlreadyLiked) {''
     likedSongs.push(likedSong);
   }
 };

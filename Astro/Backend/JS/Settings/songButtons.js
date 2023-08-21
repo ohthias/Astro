@@ -1,4 +1,4 @@
-//Não está sendo usado no momento, funcionou até a versão: !aa0403!
+//Absoleto
 
 import {faded, OnMyWay, blindingLights, onAndOn, Beyond} from "/Astro/Backend/JS/songsRedirects.js";
 
