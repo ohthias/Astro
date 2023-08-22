@@ -21,15 +21,15 @@
 
 :root {
   /* Colors */
-  --back-background-main: rgb(5, 6, 30);
-  --back-background-menu: #05061e8d;
+  --back-background-main: #1d1a39;
+  --back-background-menu: #451952;
   --font: #ffffff;
   --font-detail: #f3f3f3;
-  --de-detail-orange: #ff3d20;
-  --de-detail-green: #29f247;
-  --de-detail-green-sha-shadow: #29f2473f;
-  --de-detail-purple: #4b0072;
-  --de-detail-purple-sha-shadow: #4a007276;
+  --de-detail-orange: #ae4454;
+  --de-detail-green: #f39f5a;
+  --de-detail-green-sha-shadow: #f39f5a76;
+  --de-detail-purple: #451952;
+  --de-detail-purple-sha-shadow: #45195276;
   --sha-shadow-black: rgba(0, 0, 0, 0.5);
   --sha-shadow-black-menu: rgba(0, 0, 0, 0.25);
   --sha-shadow-white: rgba(255, 255, 255, 0.5);

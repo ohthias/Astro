@@ -9,10 +9,7 @@
       href="/Assets/Images/Icons/iconAstro.png"
       type="image/x-icon"
     />
-    <link
-      rel="stylesheet"
-      href="/Astro/Frontend/Css/mainPages/search.css"
-    />
+    <link rel="stylesheet" href="/Astro/Frontend/Css/mainPages/search.css" />
     <link rel="stylesheet" href="/Astro/Frontend/Css/root.css" />
 
     <!--Player -->
@@ -151,10 +148,38 @@
         </li>
       </ul>
     </div>
-    <script type="module" src="/Astro/Backend/JS/musicPlayer.js"></script>
-    <script src="/Astro/Frontend/JS/others/menu.js"></script>
-    <script src="/Astro/Frontend/JS/redirects/redirect.js"></script>
 
+    <div class="back-image">
+      <main>
+        <section class="module container search">
+          <label for="searchResult">Busca</label>
+          <div class="search">
+            <i class="bx bx-search" aria-hidden="true"></i>
+            <input
+              type="text" id="searchResult"
+              placeholder="Digite o nome de uma música, artista, playlist, album"
+            />
+          </div>
+        </section>
+        <section class="module container search-recent">
+          <div class="search-recent">
+            <ul id="recent-list"></ul>
+          </div>
+        </section>
+        <section class="module container sessons">
+          <div class="sessons">
+            <ul id="sessons-list"></ul>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!--Backend srcipts-->
+    <script type="module" src="/Astro/Backend/JS/musicPlayer.js"></script>
+    <script type="module" src="/Astro/Backend/JS/Settings/search.js"></script>
+
+    <!--Frontend srcipts-->
+    <script src="/Astro/Frontend/JS/redirects/redirect.js"></script>
+    <script src="/Astro/Frontend/JS/others/menu.js"></script>
   </body>
-</body>
 </html>

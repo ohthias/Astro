@@ -26,7 +26,7 @@ header {
 .section-header #logo {
     margin-left: 20px;
     display: inline-block;
-    
+
     font-size: 30px;
     font-weight: bold;
     letter-spacing: 2px;
@@ -56,12 +56,12 @@ header {
     transition: 0.3s;
 }
 
-.header_list{
+.header_list {
     display: flex;
     align-items: center;
 }
 
-.header-list #level_user{
+.header-list #level_user {
     padding: 8px 12px;
     border: 3px solid var(--font);
     border-radius: 100px;
@@ -74,7 +74,8 @@ header {
     border-color: var(--de-detail-purple);
 }
 
-.header-list a, .header-list #level_user{
+.header-list a,
+.header-list #level_user {
     margin-left: 25px;
 }
 
@@ -83,7 +84,7 @@ header {
     text-decoration: none;
 }
 
-.header-list a:last-child{
+.header-list a:last-child {
     margin-right: 50px;
 }
 
@@ -141,8 +142,25 @@ header {
     opacity: 0;
     width: 40px;
     transition: all 0.5s ease;
+    animation: upInDown 5s ease infinite;
 }
 
+@keyframes upInDown {
+    0%,
+    100% {
+        transform: translateY(0);
+        rotate: 0;
+    }
+
+    25% {
+        transform: translateY(5px);
+    }
+
+    75% {
+        transform: translateY(-5px);
+        rotate: 5deg;
+    }
+}
 
 .sidebar.open .logo-details .icon,
 .sidebar.open .logo-details .logo_img {

@@ -35,7 +35,7 @@ section.module.parallax::after {
     height: 100%;
     position: absolute;
     z-index: 1;
-    background: linear-gradient(to top, var(--back-background-main), rgba(255, 255, 255, 0) 85%);
+    background: linear-gradient(to top, var(--back-background-main), rgba(0, 0, 0, 0.552) 12%);
 }
 
 /* Main iformations 'main content' */
@@ -243,9 +243,9 @@ figure .anteriores .anteriores_name {
 .name-opitions hr {
     max-width: 225px;
     height: 3px;
-    border: 1px solid #29f247d0;
+    border: 1px solid var(--de-detail-green);
     border-radius: 0 10px 10px 0;
-    background: #29f247d0;
+    background: var(--de-detail-green);
 }
 
 .carousel button {
