@@ -297,3 +297,6 @@ const toggleFullScreen = () => {
 };
 
 prevNextMusic("init");
+
+const createdPlayer = () => {
+}

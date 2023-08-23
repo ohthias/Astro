@@ -11,12 +11,12 @@
 <div class="content" align="center">
   <hr width="50%"><br>
   <div align="left">
-    <h2 align="left">Versão - AA1004 </h2>
-    <li>Novas músicas</li>
-    <li>Gerador de Playlists</li>
-    <li>Id's de músicas</li>
-    <li>Melhorias no design</li>
-    <li>Fullscreen do player</li>
+    <h2 align="left">Versão - AA1105 </h2>
+    <li>Albuns</li>
+    <li>Mixes</li>
+    <li>Tela de busca</li>
+    <li>Melhorias no design das playlists</li>
+    <li>Documentação</li>
   </div>
 </div>
 
