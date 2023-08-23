@@ -86,20 +86,16 @@ function playNextSong() {
   playSongs(); // Reproduz a próxima música
 }
 
-// Carregar mix aleatório salvo ou criar e salvar se não existir
-const savedAgitadoMix = JSON.parse(localStorage.getItem("randomMix_agitado"));
-const savedModeradoMix = JSON.parse(localStorage.getItem("randomMix_moderado"));
-const savedintensoMix = JSON.parse(localStorage.getItem("randomMix_raiva"));
-const savedCalmoMix = JSON.parse(localStorage.getItem("randomMix_Calmo"));
+function createRandomMixByRhythm(songs, rhythm, numberOfSongs) {
+  const filteredSongs = Object.values(songs).filter((song) => song.ritmo === rhythm);
+  return createRandomMix(filteredSongs, numberOfSongs);
+}
 
-const Global =
-  savedAgitadoMix || createAndSaveRandomMixByRhythm(allSongs, "agitado", 10);
-const PelaJanela =
-  savedModeradoMix || createAndSaveRandomMixByRhythm(allSongs, "moderado", 10);
-const AutoAstral =
-  savedintensoMix || createAndSaveRandomMixByRhythm(allSongs, "raiva", 10);
-const TimeofStudy =
-savedCalmoMix || createAndSaveRandomMixByRhythm(allSongs, "Calmo", 10);
+// Carregar mix aleatório salvo ou criar e salvar se não existir
+const Global = createRandomMixByRhythm(allSongs, "agitado", 10);
+const PelaJanela = createRandomMixByRhythm(allSongs, "moderado", 10);
+const AutoAstral = createRandomMixByRhythm(allSongs, "raiva", 10);
+const TimeofStudy = createRandomMixByRhythm(allSongs, "Calmo", 10);
 
 const playlists = [
   {
@@ -182,4 +178,3 @@ function updatePlaylistInfo(playlistData) {
 }
 
 // Adicionar um ouvinte de evento para o botão de reprodução
-document.getElementById("playPuase").addEventListener("click", playSongs);

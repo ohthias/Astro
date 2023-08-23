@@ -35,33 +35,53 @@
   --sha-shadow-white: rgba(255, 255, 255, 0.5);
 
   /* Sizes */
-  --fo-font-main: 1em; /**/
-  --fo-font-asidebar: 0.875em; /**/
-  --fo-font-detail: 0.625em; /**/
-  --fo-font-main-detail: 1.125em; /**/
-  --fo-font-main-title: 1.25em; /**/
+  --fo-font-main: 1em;
+  /**/
+  --fo-font-asidebar: 0.875em;
+  /**/
+  --fo-font-detail: 0.625em;
+  /**/
+  --fo-font-main-detail: 1.125em;
+  /**/
+  --fo-font-main-title: 1.25em;
+  /**/
 
   /* Background & Gradients */
-  --background-gradient-parallax: linear-gradient(
-    to top,
-    var(--back-background-main) 15%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-footer-page-purple: linear-gradient(
-    to top,
-    var(--de-detail-purple-sha-shadow) 1%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-footer-page-green: linear-gradient(
-    to top,
-    var(--de-detail-green-sha-shadow) 1%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-index: linear-gradient(
-    to bottom var(--de-detail-green-sha-shadow) 60%,
-    rgba(255, 255, 255, 0)
-  );
+  --background-gradient-parallax: linear-gradient(to top,
+      var(--back-background-main) 15%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-footer-page-purple: linear-gradient(to top,
+      var(--de-detail-purple-sha-shadow) 1%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-footer-page-green: linear-gradient(to top,
+      var(--de-detail-green-sha-shadow) 1%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-index: linear-gradient(to bottom var(--de-detail-green-sha-shadow) 60%,
+      rgba(255, 255, 255, 0));
 
   /* Size Images */
   --size-img-disco: 210px;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #451952 #ffffff00;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff00;
+  backdrop-filter: blur(10px);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--de-detail-orange);
+  border-radius: 10px;
+  border: 3px solid var(--back-background-main);
 }

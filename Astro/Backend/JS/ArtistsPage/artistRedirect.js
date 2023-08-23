@@ -1,11 +1,24 @@
-const numeroDeArtistas = 20;
+document.getElementById("artist1").addEventListener("click", function () {
+  window.location.href =
+    "/Astro/Frontend/Html/Artistas/artistPage.html?artist=1";
+});
 
-for (let indiceArtista = 1; indiceArtista <= numeroDeArtistas; indiceArtista++) {
-  const elementoArtista = document.getElementById(`artist${indiceArtista}`);
-  if (elementoArtista) {
-    elementoArtista.addEventListener("click", function () {
-      // Redirecionar para a página de mixes com um parâmetro indicando o artista escolhido
-      window.location.href = `/Astro/Frontend/Html/Artistas/artistPage.html?artist=${indiceArtista}`;
-    });
-  }
-}
+document.getElementById("artist2").addEventListener("click", function () {
+  window.location.href =
+    "/Astro/Frontend/Html/Artistas/artistPage.html?artist=2";
+});
+
+document.getElementById("artist3").addEventListener("click", function () {
+  window.location.href =
+    "/Astro/Frontend/Html/Artistas/artistPage.html?artist=3";
+});
+
+document.getElementById("artist4").addEventListener("click", function () {
+  window.location.href =
+    "/Astro/Frontend/Html/Artistas/artistPage.html?artist=4";
+});
+
+document.getElementById("artist5").addEventListener("click", function () {
+  window.location.href =
+    "/Astro/Frontend/Html/Artistas/artistPage.html?artist=5";
+});

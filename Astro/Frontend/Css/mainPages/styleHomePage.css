@@ -97,7 +97,6 @@ section.module.parallax::after {
     border: 0;
     color: var(--font);
     cursor: progress;
-    background: linear-gradient(0deg, rgba(41, 242, 71, 1) 0%, rgba(57, 138, 20, 1) 100%);
 }
 
 /* Músicas || Artistas anteriores */
@@ -132,7 +131,7 @@ section.module.parallax::after {
     overflow-x: scroll;
 }
 
-::-webkit-scrollbar {
+.child_anter::-webkit-scrollbar {
     display: none;
 }
 
