@@ -19,7 +19,8 @@
   color: var(--font);
 }
 
-:root {
+:root,
+:root.light {
   /* Colors */
   --back-background-main: #1d1a39;
   --back-background-menu: #451952;
@@ -47,17 +48,25 @@
   /**/
 
   /* Background & Gradients */
-  --background-gradient-parallax: linear-gradient(to top,
-      var(--back-background-main) 15%,
-      rgba(255, 255, 255, 0));
-  --background-gradient-parallax-footer-page-purple: linear-gradient(to top,
-      var(--de-detail-purple-sha-shadow) 1%,
-      rgba(255, 255, 255, 0));
-  --background-gradient-parallax-footer-page-green: linear-gradient(to top,
-      var(--de-detail-green-sha-shadow) 1%,
-      rgba(255, 255, 255, 0));
-  --background-gradient-parallax-index: linear-gradient(to bottom var(--de-detail-green-sha-shadow) 60%,
-      rgba(255, 255, 255, 0));
+  --background-gradient-parallax: linear-gradient(
+    to top,
+    var(--back-background-main) 15%,
+    rgba(255, 255, 255, 0)
+  );
+  --background-gradient-parallax-footer-page-purple: linear-gradient(
+    to top,
+    var(--de-detail-purple-sha-shadow) 1%,
+    rgba(255, 255, 255, 0)
+  );
+  --background-gradient-parallax-footer-page-green: linear-gradient(
+    to top,
+    var(--de-detail-green-sha-shadow) 1%,
+    rgba(255, 255, 255, 0)
+  );
+  --background-gradient-parallax-index: linear-gradient(
+    to bottom var(--de-detail-green-sha-shadow) 60%,
+    rgba(255, 255, 255, 0)
+  );
 
   /* Size Images */
   --size-img-disco: 210px;
@@ -84,4 +93,159 @@
   background-color: var(--de-detail-orange);
   border-radius: 10px;
   border: 3px solid var(--back-background-main);
+}
+
+/* Themes */
+
+:root.blue {
+  --back-background-main: #05161a;
+  --back-background-menu: #072e33;
+  --font: #ffffff;
+  --font-detail: #f3f3f3;
+  --de-detail-orange: #294d61;
+  --de-detail-green: #0f9890;
+  --de-detail-green-sha-shadow: #0f989076;
+  --de-detail-purple: #6da5c0;
+  --de-detail-purple-sha-shadow: #6da5c076;
+  --sha-shadow-black: rgba(0, 0, 0, 0.5);
+  --sha-shadow-black-menu: rgba(0, 0, 0, 0.25);
+  --sha-shadow-white: rgba(255, 255, 255, 0.5);
+
+  /* Sizes */
+  --fo-font-main: 1em;
+  /**/
+  --fo-font-asidebar: 0.875em;
+  /**/
+  --fo-font-detail: 0.625em;
+  /**/
+  --fo-font-main-detail: 1.125em;
+  /**/
+  --fo-font-main-title: 1.25em;
+  /**/
+
+  /* Background & Gradients */
+  --background-gradient-parallax: linear-gradient(
+    to top,
+    var(--back-background-main) 15%,
+    rgba(255, 255, 255, 0)
+  );
+  --background-gradient-parallax-footer-page-purple: linear-gradient(
+    to top,
+    var(--de-detail-purple-sha-shadow) 1%,
+    rgba(255, 255, 255, 0)
+  );
+  --background-gradient-parallax-footer-page-green: linear-gradient(
+    to top,
+    var(--de-detail-green-sha-shadow) 1%,
+    rgba(255, 255, 255, 0)
+  );
+  --background-gradient-parallax-index: linear-gradient(
+    to bottom var(--de-detail-green-sha-shadow) 60%,
+    rgba(255, 255, 255, 0)
+  );
+
+  /* Size Images */
+  --size-img-disco: 210px;
+}
+
+:root.purple {
+  --back-background-main: #06142e;
+  --back-background-menu: #1b3358;
+  --font: #ffffff;
+  --font-detail: #f3f3f3;
+  --de-detail-orange: #473e66;
+  --de-detail-green: #bd83b8;
+  --de-detail-green-sha-shadow: #bd83b876;
+  --de-detail-purple: #603176;
+  --de-detail-purple-sha-shadow: #60317676;
+  --sha-shadow-black: rgba(0, 0, 0, 0.5);
+  --sha-shadow-black-menu: rgba(0, 0, 0, 0.25);
+  --sha-shadow-white: rgba(255, 255, 255, 0.5);
+
+  /* Sizes */
+  --fo-font-main: 1em;
+  /**/
+  --fo-font-asidebar: 0.875em;
+  /**/
+  --fo-font-detail: 0.625em;
+  /**/
+  --fo-font-main-detail: 1.125em;
+  /**/
+  --fo-font-main-title: 1.25em;
+  /**/
+
+  /* Background & Gradients */
+  --background-gradient-parallax: linear-gradient(
+    to top,
+    var(--back-background-main) 15%,
+    rgba(255, 255, 255, 0)
+  );
+  --background-gradient-parallax-footer-page-purple: linear-gradient(
+    to top,
+    var(--de-detail-purple-sha-shadow) 1%,
+    rgba(255, 255, 255, 0)
+  );
+  --background-gradient-parallax-footer-page-green: linear-gradient(
+    to top,
+    var(--de-detail-green-sha-shadow) 1%,
+    rgba(255, 255, 255, 0)
+  );
+  --background-gradient-parallax-index: linear-gradient(
+    to bottom var(--de-detail-green-sha-shadow) 60%,
+    rgba(255, 255, 255, 0)
+  );
+
+  /* Size Images */
+  --size-img-disco: 210px;
+}
+
+:root.red {
+  --back-background-main: #2A3D45;
+  --back-background-menu: #2A3D4550;
+  --font: #ffffff;
+  --font-detail: #f3f3f3;
+  --de-detail-orange: #DDC9B4;
+  --de-detail-green: #C17C74;
+  --de-detail-green-sha-shadow: #C17C7476;
+  --de-detail-purple: #BCAC9B;
+  --de-detail-purple-sha-shadow: #BCAC9B76;
+  --sha-shadow-black: rgba(0, 0, 0, 0.5);
+  --sha-shadow-black-menu: rgba(0, 0, 0, 0.25);
+  --sha-shadow-white: rgba(255, 255, 255, 0.5);
+
+  /* Sizes */
+  --fo-font-main: 1em;
+  /**/
+  --fo-font-asidebar: 0.875em;
+  /**/
+  --fo-font-detail: 0.625em;
+  /**/
+  --fo-font-main-detail: 1.125em;
+  /**/
+  --fo-font-main-title: 1.25em;
+  /**/
+
+  /* Background & Gradients */
+  --background-gradient-parallax: linear-gradient(
+    to top,
+    var(--back-background-main) 15%,
+    rgba(255, 255, 255, 0)
+  );
+  --background-gradient-parallax-footer-page-purple: linear-gradient(
+    to top,
+    var(--de-detail-purple-sha-shadow) 1%,
+    rgba(255, 255, 255, 0)
+  );
+  --background-gradient-parallax-footer-page-green: linear-gradient(
+    to top,
+    var(--de-detail-green-sha-shadow) 1%,
+    rgba(255, 255, 255, 0)
+  );
+  --background-gradient-parallax-index: linear-gradient(
+    to bottom var(--de-detail-green-sha-shadow) 60%,
+    rgba(255, 255, 255, 0)
+  );
+
+  /* Size Images */
+  --size-img-disco: 210px;
 }
