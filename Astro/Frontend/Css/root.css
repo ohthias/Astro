@@ -49,25 +49,17 @@
   /**/
 
   /* Background & Gradients */
-  --background-gradient-parallax: linear-gradient(
-    to top,
-    var(--back-background-main) 15%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-footer-page-purple: linear-gradient(
-    to top,
-    var(--de-detail-purple-sha-shadow) 1%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-footer-page-green: linear-gradient(
-    to top,
-    var(--de-detail-green-sha-shadow) 1%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-index: linear-gradient(
-    to bottom var(--de-detail-green-sha-shadow) 60%,
-    rgba(255, 255, 255, 0)
-  );
+  --background-gradient-parallax: linear-gradient(to top,
+      var(--back-background-main) 15%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-footer-page-purple: linear-gradient(to top,
+      var(--de-detail-purple-sha-shadow) 1%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-footer-page-green: linear-gradient(to top,
+      var(--de-detail-green-sha-shadow) 1%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-index: linear-gradient(to bottom var(--de-detail-green-sha-shadow) 60%,
+      rgba(255, 255, 255, 0));
 
   /* Size Images */
   --size-img-disco: 210px;
@@ -126,25 +118,17 @@
   /**/
 
   /* Background & Gradients */
-  --background-gradient-parallax: linear-gradient(
-    to top,
-    var(--back-background-main) 15%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-footer-page-purple: linear-gradient(
-    to top,
-    var(--de-detail-purple-sha-shadow) 1%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-footer-page-green: linear-gradient(
-    to top,
-    var(--de-detail-green-sha-shadow) 1%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-index: linear-gradient(
-    to bottom var(--de-detail-green-sha-shadow) 60%,
-    rgba(255, 255, 255, 0)
-  );
+  --background-gradient-parallax: linear-gradient(to top,
+      var(--back-background-main) 15%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-footer-page-purple: linear-gradient(to top,
+      var(--de-detail-purple-sha-shadow) 1%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-footer-page-green: linear-gradient(to top,
+      var(--de-detail-green-sha-shadow) 1%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-index: linear-gradient(to bottom var(--de-detail-green-sha-shadow) 60%,
+      rgba(255, 255, 255, 0));
 
   /* Size Images */
   --size-img-disco: 210px;
@@ -178,25 +162,17 @@
   /**/
 
   /* Background & Gradients */
-  --background-gradient-parallax: linear-gradient(
-    to top,
-    var(--back-background-main) 15%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-footer-page-purple: linear-gradient(
-    to top,
-    var(--de-detail-purple-sha-shadow) 1%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-footer-page-green: linear-gradient(
-    to top,
-    var(--de-detail-green-sha-shadow) 1%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-index: linear-gradient(
-    to bottom var(--de-detail-green-sha-shadow) 60%,
-    rgba(255, 255, 255, 0)
-  );
+  --background-gradient-parallax: linear-gradient(to top,
+      var(--back-background-main) 15%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-footer-page-purple: linear-gradient(to top,
+      var(--de-detail-purple-sha-shadow) 1%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-footer-page-green: linear-gradient(to top,
+      var(--de-detail-green-sha-shadow) 1%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-index: linear-gradient(to bottom var(--de-detail-green-sha-shadow) 60%,
+      rgba(255, 255, 255, 0));
 
   /* Size Images */
   --size-img-disco: 210px;
@@ -230,25 +206,17 @@
   /**/
 
   /* Background & Gradients */
-  --background-gradient-parallax: linear-gradient(
-    to top,
-    var(--back-background-main) 15%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-footer-page-purple: linear-gradient(
-    to top,
-    var(--de-detail-purple-sha-shadow) 1%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-footer-page-green: linear-gradient(
-    to top,
-    var(--de-detail-green-sha-shadow) 1%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-index: linear-gradient(
-    to bottom var(--de-detail-green-sha-shadow) 60%,
-    rgba(255, 255, 255, 0)
-  );
+  --background-gradient-parallax: linear-gradient(to top,
+      var(--back-background-main) 15%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-footer-page-purple: linear-gradient(to top,
+      var(--de-detail-purple-sha-shadow) 1%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-footer-page-green: linear-gradient(to top,
+      var(--de-detail-green-sha-shadow) 1%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-index: linear-gradient(to bottom var(--de-detail-green-sha-shadow) 60%,
+      rgba(255, 255, 255, 0));
 
   /* Size Images */
   --size-img-disco: 210px;
@@ -282,25 +250,17 @@
   /**/
 
   /* Background & Gradients */
-  --background-gradient-parallax: linear-gradient(
-    to top,
-    var(--back-background-main) 15%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-footer-page-purple: linear-gradient(
-    to top,
-    var(--de-detail-purple-sha-shadow) 1%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-footer-page-green: linear-gradient(
-    to top,
-    var(--de-detail-green-sha-shadow) 1%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-index: linear-gradient(
-    to bottom var(--de-detail-green-sha-shadow) 60%,
-    rgba(255, 255, 255, 0)
-  );
+  --background-gradient-parallax: linear-gradient(to top,
+      var(--back-background-main) 15%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-footer-page-purple: linear-gradient(to top,
+      var(--de-detail-purple-sha-shadow) 1%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-footer-page-green: linear-gradient(to top,
+      var(--de-detail-green-sha-shadow) 1%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-index: linear-gradient(to bottom var(--de-detail-green-sha-shadow) 60%,
+      rgba(255, 255, 255, 0));
 
   /* Size Images */
   --size-img-disco: 210px;
@@ -334,25 +294,17 @@
   /**/
 
   /* Background & Gradients */
-  --background-gradient-parallax: linear-gradient(
-    to top,
-    var(--back-background-main) 15%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-footer-page-purple: linear-gradient(
-    to top,
-    var(--de-detail-purple-sha-shadow) 1%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-footer-page-green: linear-gradient(
-    to top,
-    var(--de-detail-green-sha-shadow) 1%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-index: linear-gradient(
-    to bottom var(--de-detail-green-sha-shadow) 60%,
-    rgba(255, 255, 255, 0)
-  );
+  --background-gradient-parallax: linear-gradient(to top,
+      var(--back-background-main) 15%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-footer-page-purple: linear-gradient(to top,
+      var(--de-detail-purple-sha-shadow) 1%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-footer-page-green: linear-gradient(to top,
+      var(--de-detail-green-sha-shadow) 1%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-index: linear-gradient(to bottom var(--de-detail-green-sha-shadow) 60%,
+      rgba(255, 255, 255, 0));
 
   /* Size Images */
   --size-img-disco: 210px;
@@ -386,25 +338,17 @@
   /**/
 
   /* Background & Gradients */
-  --background-gradient-parallax: linear-gradient(
-    to top,
-    var(--back-background-main) 15%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-footer-page-purple: linear-gradient(
-    to top,
-    var(--de-detail-purple-sha-shadow) 1%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-footer-page-green: linear-gradient(
-    to top,
-    var(--de-detail-green-sha-shadow) 1%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-index: linear-gradient(
-    to bottom var(--de-detail-green-sha-shadow) 60%,
-    rgba(255, 255, 255, 0)
-  );
+  --background-gradient-parallax: linear-gradient(to top,
+      var(--back-background-main) 15%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-footer-page-purple: linear-gradient(to top,
+      var(--de-detail-purple-sha-shadow) 1%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-footer-page-green: linear-gradient(to top,
+      var(--de-detail-green-sha-shadow) 1%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-index: linear-gradient(to bottom var(--de-detail-green-sha-shadow) 60%,
+      rgba(255, 255, 255, 0));
 
   /* Size Images */
   --size-img-disco: 210px;
@@ -438,25 +382,17 @@
   /**/
 
   /* Background & Gradients */
-  --background-gradient-parallax: linear-gradient(
-    to top,
-    var(--back-background-main) 15%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-footer-page-purple: linear-gradient(
-    to top,
-    var(--de-detail-purple-sha-shadow) 1%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-footer-page-green: linear-gradient(
-    to top,
-    var(--de-detail-green-sha-shadow) 1%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-index: linear-gradient(
-    to bottom var(--de-detail-green-sha-shadow) 60%,
-    rgba(255, 255, 255, 0)
-  );
+  --background-gradient-parallax: linear-gradient(to top,
+      var(--back-background-main) 15%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-footer-page-purple: linear-gradient(to top,
+      var(--de-detail-purple-sha-shadow) 1%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-footer-page-green: linear-gradient(to top,
+      var(--de-detail-green-sha-shadow) 1%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-index: linear-gradient(to bottom var(--de-detail-green-sha-shadow) 60%,
+      rgba(255, 255, 255, 0));
 
   /* Size Images */
   --size-img-disco: 210px;
@@ -491,25 +427,17 @@
   /**/
 
   /* Background & Gradients */
-  --background-gradient-parallax: linear-gradient(
-    to top,
-    var(--back-background-main) 15%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-footer-page-purple: linear-gradient(
-    to top,
-    var(--de-detail-purple-sha-shadow) 1%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-footer-page-green: linear-gradient(
-    to top,
-    var(--de-detail-green-sha-shadow) 1%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-index: linear-gradient(
-    to bottom var(--de-detail-green-sha-shadow) 60%,
-    rgba(255, 255, 255, 0)
-  );
+  --background-gradient-parallax: linear-gradient(to top,
+      var(--back-background-main) 15%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-footer-page-purple: linear-gradient(to top,
+      var(--de-detail-purple-sha-shadow) 1%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-footer-page-green: linear-gradient(to top,
+      var(--de-detail-green-sha-shadow) 1%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-index: linear-gradient(to bottom var(--de-detail-green-sha-shadow) 60%,
+      rgba(255, 255, 255, 0));
 
   /* Size Images */
   --size-img-disco: 210px;
@@ -544,25 +472,17 @@
   /**/
 
   /* Background & Gradients */
-  --background-gradient-parallax: linear-gradient(
-    to top,
-    var(--back-background-main) 15%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-footer-page-purple: linear-gradient(
-    to top,
-    var(--de-detail-purple-sha-shadow) 1%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-footer-page-green: linear-gradient(
-    to top,
-    var(--de-detail-green-sha-shadow) 1%,
-    rgba(255, 255, 255, 0)
-  );
-  --background-gradient-parallax-index: linear-gradient(
-    to bottom var(--de-detail-green-sha-shadow) 60%,
-    rgba(255, 255, 255, 0)
-  );
+  --background-gradient-parallax: linear-gradient(to top,
+      var(--back-background-main) 15%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-footer-page-purple: linear-gradient(to top,
+      var(--de-detail-purple-sha-shadow) 1%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-footer-page-green: linear-gradient(to top,
+      var(--de-detail-green-sha-shadow) 1%,
+      rgba(255, 255, 255, 0));
+  --background-gradient-parallax-index: linear-gradient(to bottom var(--de-detail-green-sha-shadow) 60%,
+      rgba(255, 255, 255, 0));
 
   /* Size Images */
   --size-img-disco: 210px;
