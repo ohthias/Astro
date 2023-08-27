@@ -1,20 +1,31 @@
-body,
-html {
-  background: linear-gradient(90deg, rgba(41, 242, 71, 0.05) 44.32%, rgba(41, 242, 71, 0.2) 82.83%), #05061e;
-  color: var(--font);
+body {
+  background: url('/Assets/svg/blob-Index.svg') no-repeat center/cover;
+  background-size: cover;
   overflow-y: hidden;
 }
 
-/*Logo header */
+body::after {
+  content: '';
+  width: 100%;
+  height: 100% !important;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background: var(--sha-shadow-black);
+  animation: smoothFilter 5s infinite;
+}
 
+/*Logo header */
 #logo {
+  position: relative;
+  z-index: 2;
+  width: max-content;
   margin: 15px;
   padding: 3px 5px;
   font-size: 20px;
   letter-spacing: 1px;
-  cursor: pointer;
   transition: 500ms;
-  animation: fade 500ms ease;
+  cursor: pointer;
 }
 
 #logo:hover {
@@ -24,6 +35,7 @@ html {
 /* Astronaut */
 
 figure {
+  z-index: 2;
   position: fixed;
   left: 5%;
   top: 10%;
@@ -32,6 +44,7 @@ figure {
 }
 
 figure img {
+  z-index: 2;
   width: -moz-max-content;
   width: max-content;
   height: 650px;
@@ -39,7 +52,7 @@ figure img {
 }
 
 #image {
-  z-index: 0;
+  z-index: 2;
   position: fixed;
   bottom: 0;
   max-width: 550px;
@@ -50,7 +63,7 @@ figure img {
 /* Forms */
 
 .containner {
-  z-index: 12;
+  z-index: 2;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -59,6 +72,7 @@ figure img {
 }
 
 .containner_info {
+  z-index: 2;
   margin: 10px;
   padding: 15px;
   max-width: 650px;
@@ -66,11 +80,14 @@ figure img {
 }
 
 .containner_info_header {
+  z-index: 2;
+
   margin: 10px auto;
   text-align: center;
 }
 
 .containner_info h1 {
+  z-index: 2;
   margin: 2px 0;
   font-size: 40px;
   text-align: center;
@@ -80,6 +97,7 @@ figure img {
 }
 
 #page {
+  z-index: 2;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -96,6 +114,7 @@ figure img {
 /* Containner form */
 #cadastroForm,
 #loginForm {
+  z-index: 2;
   margin: 50px 0;
   padding: 10px 15px;
   animation: fadeinDown 500ms ease;
@@ -103,12 +122,15 @@ figure img {
 
 .informationsCadatro,
 .informationsLogin {
+  z-index: 2;
   margin: 10px 0;
   font-size: 18px;
   letter-spacing: 1px;
 }
 
 input {
+  z-index: 2;
+
   font-family: 'Montserrat', sans-serif;
   margin: 10px 0;
   margin-bottom: 15px;
@@ -128,6 +150,7 @@ input:focus {
 /* Button */
 
 button[type="submit"] {
+  z-index: 2;
   margin: 30px auto;
   padding: 10px 15px;
   border: 1px solid var(--font);
@@ -256,4 +279,12 @@ button[type="submit"]:hover {
   }
 }
 
-/*# sourceMappingURL=login.css.map */
+@keyframes smoothFilter {
+  0%, 100% {
+    backdrop-filter: blur(0)
+  }
+
+  50% {
+    backdrop-filter: blur(5px)
+  }
+}
