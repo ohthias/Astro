@@ -26,6 +26,7 @@ section.module.parallax {
 
     background: #d9d9d9 url("") no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     animation: fadeIn 800ms ease;
 }
 
@@ -44,6 +45,7 @@ section.module.parallax::after {
 .section-main {
     position: relative;
     left: 78px;
+    top: 40%;
     width: calc(100% - 78px);
     z-index: 11;
     transition: all 0.5s ease;
@@ -255,7 +257,8 @@ figure .anteriores .anteriores_name {
     border-radius: 10px;
     padding: 5px;
     cursor: pointer;
-    background: var(--back-background-menu);
+    background: none;
+    transition: 250ms;
 }
 
 .songButton {
@@ -282,11 +285,14 @@ button .songButton:active {
     height: 230px;
     margin: 20px 0 25px;
     display: flex;
+    align-self: center;
+    place-content: center;
     position: relative;
 }
 
 .wrapper i {
     position: absolute;
+    z-index: 20;
     top: 50%;
     transform: translateY(-50%);
     height: 35px;
@@ -358,7 +364,7 @@ button .songButton:active {
     overflow-x: visible;
 }
 
-.container_artistas_grid button{
+.container_artistas_grid button {
     background: none;
     border: 0;
 }
