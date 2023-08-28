@@ -342,7 +342,7 @@ input[type="range"]::-moz-range-thumb {
 
 .container_faixas:hover .container_faixas_detalhes {
   visibility: visible;
-  pointer-events:fill;
+  pointer-events: fill;
 }
 
 #upcomingSongsList li {
@@ -411,15 +411,6 @@ input[type="range"]::-moz-range-thumb {
 
 /* Media */
 
-@media screen and (max-width: 800px) {
-  input[type="range"] {
-    display: none;
-  }
-
-  .controls i {
-    font-size: 20px;
-  }
-}
-
-@media screen and (max-width: 425) {
+@media screen and (1280px <= width <= 780px) {
+  
 }

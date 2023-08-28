@@ -28,10 +28,7 @@ const textLikeHeartMusic = "<i class='fi fi-sr-heart'></i>";
 const textrandomPlayerMusicAtive = "<i class='fi fi-rr-shuffle'></i>";
 const textrandomPlayerMusicNormal = "<i class='fi fi-ss-shuffle'></i>";
 
-// Variaveis globais
 let index = 0;
-let isMuted = false;
-let liked = false;
 
 // Keyboard atalhos
 const pressPrevNext = (event) => {
@@ -42,9 +39,9 @@ const pressPrevNext = (event) => {
   } else if (event.key === "m" && event.ctrlKey) {
     stateButtonVolume();
   } else if (event.key === "p" && event.altKey && event.ctrlKey) {
-    playPause()
+    playPause();
   }
-}
+};
 
 //Eventos
 document.addEventListener("keydown", pressPrevNext);
@@ -57,11 +54,15 @@ heartMusic.onclick = () => likeMusic();
 randomPlayerMusic.onclick = () => randomMusic();
 fullScreenButton.onclick = () => toggleFullScreen();
 
+let isPlaying = false;
+
 const playPause = () => {
   if (player.paused) {
     player.play();
+    isPlaying = true; // Atualize o estado para tocando
   } else {
     player.pause();
+    isPlaying = false; // Atualize o estado para pausado
   }
   updatePlayPauseIcon(); // Atualiza o ícone do botão Play/Pause
 };
@@ -117,6 +118,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const stateButtonVolume = () => {
+  let isMuted = false;
+
   isMuted = !isMuted; // Alterna entre mutar e desmutar
   player.muted === isMuted;
 
@@ -131,6 +134,8 @@ const stateButtonVolume = () => {
 const likedSongs = [];
 
 const likeMusic = () => {
+  let liked = false;
+
   liked = !liked;
   player.likeMusic = liked;
 
@@ -160,7 +165,8 @@ const saveLikedSong = (musicName, artistName, imgSong) => {
       song.imgSong === likedSong.imgSong
   );
 
-  if (!isAlreadyLiked) {''
+  if (!isAlreadyLiked) {
+    ("");
     likedSongs.push(likedSong);
   }
 };
@@ -266,16 +272,17 @@ const prevNextMusic = (type = "next") => {
   artistName.innerHTML = Object.values(allSongs)[index].artist;
   imgSong.src = Object.values(allSongs)[index].imgSong;
   heartMusic.innerHTML = textNormalHeartMusic;
+  
+  if(isPlaying) {
+    player.play()
+  }
 
   updateTime();
   playPause();
+
   if (type === "next") {
     showUpcomingSongs();
   }
-};
-
-player.onended = () => {
-  prevNextMusic();
 };
 
 //FullScreen
@@ -297,6 +304,3 @@ const toggleFullScreen = () => {
 };
 
 prevNextMusic("init");
-
-const createdPlayer = () => {
-}
