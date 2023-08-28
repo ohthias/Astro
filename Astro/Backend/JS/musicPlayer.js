@@ -273,7 +273,7 @@ const prevNextMusic = (type = "next") => {
   imgSong.src = Object.values(allSongs)[index].imgSong;
   heartMusic.innerHTML = textNormalHeartMusic;
   
-  if(isPlaying) {
+  if(!isPlaying) {
     player.play()
   }
 
