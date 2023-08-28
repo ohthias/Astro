@@ -56,6 +56,10 @@ fullScreenButton.onclick = () => toggleFullScreen();
 
 let isPlaying = false;
 
+/**
+ * @param {function} playPause - controle de estado de reprodução do player de áudio,
+ * juntamente com a atualização do ícone do botão de reprodução/pausa, @param {updatePlayPauseIcon}.
+ */
 const playPause = () => {
   if (player.paused) {
     player.play();
@@ -67,7 +71,6 @@ const playPause = () => {
   updatePlayPauseIcon(); // Atualiza o ícone do botão Play/Pause
 };
 
-// Função para atualizar o ícone do botão Play/Pause
 const updatePlayPauseIcon = () => {
   if (player.paused) {
     playPauseButton.innerHTML = textButtonPlay;
@@ -76,7 +79,18 @@ const updatePlayPauseIcon = () => {
   }
 };
 
-//Função do timecode
+/**
+ * @param {fuction} updateTime - Atualiza a exibição do tempo de reprodução
+ *  atual e da duração da faixa no formato de minutos e segundos, bem como
+ *  atualizar visualmente a barra de progresso, com base no estado de reprodução
+ *  do player de áudio. A função updateTime calcula os minutos e segundos do tempo
+ *  atual de reprodução e da duração total da faixa, formatando-os para exibição.
+ *  Além disso, ela atualiza a largura da barra de progresso de acordo com o
+ * progresso da reprodução. A função formatZero garante que os números menores que
+ * 10 sejam exibidos com um zero à esquerda. O evento onclick na progressBar permite
+ * que o usuário clique na barra de progresso para ajustar a minutagem da reprodução
+ * com base na posição do clique.
+ */
 const updateTime = () => {
   const currentMinutes = Math.floor(player.currentTime / 60);
   const currentSeconds = Math.floor(player.currentTime % 60);
@@ -101,7 +115,15 @@ progressBar.onclick = (e) => {
   player.currentTime = newTime;
 };
 
-// Range Volume
+/**
+ * @param {event} volumeButton - gerencia o controle de volume em um player de áudio.
+ *  Quando a página é carregada, ele define o volume inicial com base no valor do controle
+ *  de volume, atualiza o ícone do botão de volume e acompanha as mudanças no controle.
+ *  A função stateButtonVolume é responsável por alternar entre o volume mudo e normal,
+ *  ajustando o ícone do botão de volume de acordo. No entanto, havia erros na versão
+ *  original da função, os quais foram corrigidos para fazer a alternância correta entre
+ *  os estados de mudo e normal.
+ */
 document.addEventListener("DOMContentLoaded", function () {
   player.volume = volumeSom.value;
   volumeButton.innerHTML = textNormalAudio;
@@ -118,19 +140,26 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const stateButtonVolume = () => {
-  let isMuted = false;
+  player.muted = !player.muted; // Alterna entre mutar e desmutar
 
-  isMuted = !isMuted; // Alterna entre mutar e desmutar
-  player.muted === isMuted;
-
-  if ((player.muted = isMuted)) {
+  if (player.muted) {
     volumeButton.innerHTML = textMutedAudio;
   } else {
     volumeButton.innerHTML = textNormalAudio;
   }
 };
 
-//Like music
+/**
+ * @param {block fuction} likedSong -  gerencia a funcionalidade de curtir músicas,
+ *  mantendo um array likedSongs para armazenar detalhes de músicas curtidas. A função
+ *  likeMusic é acionada quando o botão de curtir é clicado, alternando o estado de
+ *  curtir para a música atual e atualizando o ícone do botão de coração. A função
+ *  saveLikedSong adiciona uma música ao array likedSongs se ela ainda não estiver
+ *  presente, verificando se já existe. A função removeLikedSong possibilita a remoção
+ *  de uma música do array likedSongs com base nos detalhes da música. O array likedSongs
+ *  pode ser exportado para uso em outras partes do código. Essencialmente, essa parte do
+ *  código oferece a funcionalidade de manter uma lista de músicas curtidas.
+ */
 const likedSongs = [];
 
 const likeMusic = () => {
@@ -171,7 +200,6 @@ const saveLikedSong = (musicName, artistName, imgSong) => {
   }
 };
 
-// Função opcional para remover a música descurtida do array likedSongs
 const removeLikedSong = (musicName, artistName, imgSong) => {
   for (let i = 0; i < likedSongs.length; i++) {
     const song = likedSongs[i];
@@ -188,7 +216,16 @@ const removeLikedSong = (musicName, artistName, imgSong) => {
 
 export { likedSongs };
 
-//Random music
+/**
+ * @param {block fuction} rundomMode - Função de reprodução de músicas
+ *  aleatórias em um player de áudio. Através da variável randomMode, ele controla
+ *  se o modo de reprodução aleatória está ativo ou não. Quando o botão de reprodução
+ *  aleatória é clicado, a função randomMusic alterna o estado do modo aleatório e
+ *  atualiza o ícone correspondente. A função getRandomIndex gera um índice aleatório
+ *  para escolher uma música aleatória, assegurando que não seja a mesma música
+ *  atualmente em reprodução. Em resumo, o código permite a seleção de músicas aleatórias
+ *  para reprodução no player de áudio, com opção de ativar ou desativar o modo aleatório.
+ */
 let randomMode = false;
 
 const randomMusic = () => {
@@ -212,7 +249,15 @@ const getRandomIndex = () => {
   return randomIndex;
 };
 
-// Função da criação da lista das próximas músicas
+/**
+ * @param {block fuction} showUpcomingSongs - Gerencia a exibição e reprodução
+ *  de músicas próximas em um player de áudio. A função showUpcomingSongs atualiza
+ *  a lista de próximas músicas, criando elementos de lista com capa, nome e artista
+ *  para um número determinado de músicas próximas. Cada item da lista possui um
+ *  evento de clique que aciona a função playUpcomingSong, a qual seleciona uma música
+ *  da lista e a reproduz no player de áudio, atualizando os detalhes da música exibidos,
+ *  como nome, artista e capa, além de iniciar a reprodução.
+ */
 const showUpcomingSongs = () => {
   upcomingSongsList.innerHTML = "";
 
@@ -243,15 +288,32 @@ const showUpcomingSongs = () => {
 // Função da musica clicada
 const playUpcomingSong = (upcomingIndex) => {
   index = upcomingIndex;
-  player.src = songs[index].src;
-  musicName.innerHTML = songs[index].name;
-  artistName.innerHTML = songs[index].artist;
-  imgSong.src = songs[index].imgSong;
+  player.src = Object.values(allSongs)[index].src;
+  musicName.innerHTML = Object.values(allSongs)[index].nameSong;
+  artistName.innerHTML = Object.values(allSongs)[index].artist;
+  imgSong.src = Object.values(allSongs)[index].imgSong;
   heartMusic.innerHTML = textNormalHeartMusic;
+
   playPause();
 };
 
-// Proximas faixas
+/**
+ * @param {fuction} prevNextMusic - Gerencia a reprodução de músicas
+ *  anteriores e próximas do player, considerando também o modo de reprodução
+ *  aleatória. A função prevNextMusic é acionada ao clicar nos botões de
+ *  avançar ou retroceder e aceita um argumento type, que especifica a ação
+ *  ("next" para avançar ou "prev" para retroceder). Dependendo do modo de
+ *  reprodução aleatória (randomMode), ele pode selecionar aleatoriamente uma
+ *  nova música (getRandomIndex()) ou atualizar o índice da música atual. Se
+ *  o modo aleatório não estiver ativado, ele ajusta o índice com base nas ações
+ *  do usuário. Os detalhes da nova música são carregados no player de áudio,
+ *  incluindo a fonte, o nome, o artista e a capa. Além disso, se o player não
+ *  estiver reproduzindo, inicia a reprodução, atualiza os detalhes exibidos e
+ *  chama a função updateTime(). Se a ação for "next", também atualiza a lista de
+ *  próximas músicas com showUpcomingSongs(). Em resumo, esse código permite a
+ *  navegação entre músicas e a atualização dos detalhes da reprodução, considerando
+ *  tanto a reprodução aleatória quanto o estado de reprodução anterior.
+ */
 const prevNextMusic = (type = "next") => {
   if (randomMode) {
     index = getRandomIndex();
@@ -272,9 +334,9 @@ const prevNextMusic = (type = "next") => {
   artistName.innerHTML = Object.values(allSongs)[index].artist;
   imgSong.src = Object.values(allSongs)[index].imgSong;
   heartMusic.innerHTML = textNormalHeartMusic;
-  
-  if(!isPlaying) {
-    player.play()
+
+  if (!isPlaying) {
+    player.play();
   }
 
   updateTime();
@@ -284,6 +346,8 @@ const prevNextMusic = (type = "next") => {
     showUpcomingSongs();
   }
 };
+
+prevNextMusic("init");
 
 //FullScreen
 let currentStyle = "playerCss";
@@ -302,5 +366,3 @@ const toggleFullScreen = () => {
     currentStyle = "playerCss";
   }
 };
-
-prevNextMusic("init");
