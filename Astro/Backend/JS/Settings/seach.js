@@ -1,24 +1,37 @@
 import allSongs from "/Astro/Backend/JS/songs.js";
 
-const searchButton =  document.getElementById("search")
-searchButton.onclick = () => search()
+const searchInput = document.getElementById("searchResult"); // Corrected the ID to "searchResult"
+const resultsDiv = document.getElementById("results");
+
+searchInput.addEventListener("input", search);
 
 function search() {
-  const searchInput = document.getElementById("searchResult"); // Corrigido o ID para "searchInput"
   const searchTerm = searchInput.value.toLowerCase();
-  const resultsDiv = document.getElementById("results");
   resultsDiv.innerHTML = "";
 
   const matchingSongs = Object.values(allSongs).filter((song) =>
-    song.nameSong.toLowerCase().includes(searchTerm)
+    song.nameSong.toLowerCase().includes(searchTerm) ||
+    song.album.toLowerCase().includes(searchTerm) ||
+    song.artist.toLowerCase().includes(searchTerm)
   );
 
   if (matchingSongs.length === 0) {
-    resultsDiv.textContent = "Nenhuma música encontrada.";
+    resultsDiv.textContent = "Nenhuma música, álbum ou artista encontrados.";
   } else {
     matchingSongs.forEach((song) => {
       const songDiv = document.createElement("div");
-      songDiv.textContent = `${song.nameSong} - ${song.artist}`;
+      songDiv.classList.add("container-results");
+
+      // Create a structure for displaying song information
+      const songInfo = document.createElement("p");
+      songInfo.textContent = `${song.nameSong} - ${song.artist}`;
+      songDiv.appendChild(songInfo);
+
+      // If you have an image URL in song.imgSong, you can add an image element too
+      // const songImage = document.createElement("img");
+      // songImage.src = song.imgSong;
+      // songDiv.appendChild(songImage);
+
       resultsDiv.appendChild(songDiv);
     });
   }
