@@ -1,4 +1,5 @@
 import allSongs from "/Astro/Backend/JS/songs.js";
+import { startListening, stopListening } from "/Astro/Backend/JS/levelSystem/base.js";
 
 const player = document.querySelector("#player");
 const musicName = document.querySelector("#musicName");
@@ -63,8 +64,10 @@ let isPlaying = false;
 const playPause = () => {
   if (player.paused) {
     player.play();
+    startListening()
     isPlaying = true; // Atualize o estado para tocando
   } else {
+    stopListening()
     player.pause();
     isPlaying = false; // Atualize o estado para pausado
   }
