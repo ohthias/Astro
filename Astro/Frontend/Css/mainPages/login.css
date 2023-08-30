@@ -1,5 +1,5 @@
 body {
-  background: url('/Assets/svg/blob-Index.svg') no-repeat center/cover;
+  background: url('/Assets/svg/blob-Index.svg') no-repeat;
   background-size: cover;
   overflow-y: hidden;
 }

@@ -1,18 +1,17 @@
 import allSongs from "/Astro/Backend/JS/songs.js";
 
-const searchInput = document.getElementById("searchResult"); // Corrected the ID to "searchResult"
+const searchInput = document.getElementById("searchResult");
+const searchButton = document.getElementById("search")
 const resultsDiv = document.getElementById("results");
 
-searchInput.addEventListener("input", search);
+searchButton.onclick = () => search()
 
 function search() {
   const searchTerm = searchInput.value.toLowerCase();
   resultsDiv.innerHTML = "";
 
   const matchingSongs = Object.values(allSongs).filter((song) =>
-    song.nameSong.toLowerCase().includes(searchTerm) ||
-    song.album.toLowerCase().includes(searchTerm) ||
-    song.artist.toLowerCase().includes(searchTerm)
+    song.nameSong.toLowerCase().includes(searchTerm)
   );
 
   if (matchingSongs.length === 0) {
