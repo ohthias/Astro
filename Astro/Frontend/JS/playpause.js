@@ -1,3 +1,5 @@
+//Obsoleto
+
 const playSongByImg = document.querySelector("#playSongByImg")
 const location = document.querySelector(".topkit")
 
