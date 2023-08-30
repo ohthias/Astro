@@ -1,7 +1,7 @@
 import artistsArray from "/Astro/Backend/JS/ArtistsPage/artistsArray.js";
 
 /**
- * @artistParam: Verifica se um parâmetro 'artist' está presente na URL,
+ * @param {const} artistParam: Verifica se um parâmetro 'artist' está presente na URL,
  *  valida o índice do artista e, se tudo estiver correto,
  *  atualiza informações relacionadas a esse artista e carrega
  *  com base no artista selecionado. Se ocorrer algum problema,

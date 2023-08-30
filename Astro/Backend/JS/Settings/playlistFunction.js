@@ -1,58 +1,11 @@
-const musicas = [
-  {
-    src: "http://physical-authority.surge.sh/music/1.mp3",
-    nome: "No Time",
-    artista: "Lastlings",
-    capaAlbum:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBuflyiNrBSP0o-7KM9YqUsAZN8HIx7VCExFerUh4FMg&s",
-  },
+// Script de criação de playlists geradas pelo usuário, ou carregadas por padrão
 
-  {
-    src: "http://physical-authority.surge.sh/music/2.mp3",
-    nome: "blinding lights",
-    artista: "the weekend",
-    capaAlbum:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcz6vl7dthSyfdNh6Eg4ZrcAYSieDSn7yCmQ&usqp=CAU",
-  },
-
-  {
-    src: "/Astro/Backend/Assets-Songs/Audio/NoMercy.mp3",
-    nome: "No Mercy",
-    artista: "TrackTribe",
-    capaAlbum: "/Assets/Images/Astro_main-caps/11.png",
-  },
-
-  {
-    src: "/Astro/Backend/Assets-Songs/Audio/IWishIKnew.mp3",
-    nome: "I Wish I Knew",
-    artista: "Otis McDonald",
-    capaAlbum: "/Assets/Images/Astro_main-caps/15.png",
-  },
-
-  {
-    src: "/Astro/Backend/Assets-Songs/Audio/HTML.mp3",
-    nome: "HTML",
-    artista: "Riot",
-    capaAlbum: "https://source.unsplash.com/featured/80x80",
-  },
-
-  {
-    src: "/Astro/Backend/Assets-Songs/Audio/Fingers.mp3",
-    nome: "Fingers",
-    artista: "Otis McDonald",
-    capaAlbum: "/Assets/Images/Astro_main-caps/13.png",
-  },
-
-  {
-    src: "/Astro/Backend/Assets-Songs/Audio/YouWillNeverSeeMeComing.mp3",
-    nome: "You Will Never See Me Coming",
-    artista: "NEFFEX",
-    capaAlbum: "/Assets/Images/Astro_main-caps/8.png",
-  },
-];
-
-// Criação de playlists e a interação com o player
-
+/**
+ * @param {function} calcularDuracaoTotal - Calcula o tamanho da playlist, com base
+ *  na somatória do tempo de duração de cada música, onde é formatada na  funcçaõ
+ *  'formatarDuracao', que transforma os tempo em minutos e segundos. Sendo usado
+ *  na criação da playlist pela função 'exibirMusicas'
+ */
 function calcularDuracaoTotal() {
   let duracaoTotal = 0;
   let loadedCount = 0; // Contador de músicas carregadas
@@ -84,6 +37,10 @@ function formatarDuracao(segundos) {
 let isPlaying = false;
 let currentSongIndex = -1;
 
+/**
+ * @param {function} exibirMusicas - exibi em tela para o usuário a playlist de
+ * música, com base nas informações coletadas no array das músicas
+ */
 function exibirMusicas() {
   const musicList = document.getElementById("music-list");
 
@@ -105,15 +62,25 @@ function exibirMusicas() {
     listItem.appendChild(albumContainer);
 
     const infoMusica = document.createElement("div");
-    infoMusica.innerHTML = `<div class='infoMusica'><div class='infoMusica_play'><strong class='musicnome_playlist'>${musica.nome}</strong><br>
-                            <p class='nomeArtista_playlist'>${musica.artista}</p></div>
-                            <button id='buttonSongPlay' onclick="tocarMusica(${index})"><i class='bx bx-caret-right'></i></button></div>`;
+    infoMusica.innerHTML = `<div class='infoMusica'>
+                              <div class='infoMusica_play'>
+                                <strong class='musicnome_playlist'>${musica.nome}</strong><br>
+                                <p class='nomeArtista_playlist'>${musica.artista}</p><
+                              /div>
+                              <button id='buttonSongPlay' onclick="tocarMusica(${index})"><i class='bx bx-caret-right'></i></button>
+                            </div>`;
+
     listItem.appendChild(infoMusica);
 
     musicList.appendChild(listItem);
   });
 }
 
+/**
+ * @param {function} tocarMusica - toca a música do botão que chamou a função,
+ * verificando sua posição no array e sendo reproduzida automaticamente.
+ * 
+*/
 function tocarMusica(index) {
   const musicName = document.querySelector("#musicName");
   const artistName = document.querySelector("#artistName");
@@ -136,6 +103,11 @@ function tocarMusica(index) {
   }
 }
 
+/**
+ * @param {function} proximaMusica - verifica a posição da musica que está
+ *  sendo tocada. Se for verdadeira a afirmação ele avança para a próxima posição
+ *  do array, e só substitui as informações no player
+ */
 function proximaMusica() {
   const imgSong = document.querySelector("#imgSong");
   const player = document.querySelector("#player");
@@ -173,9 +145,11 @@ tocarPlaylist.addEventListener("click", () => {
   proximaMusica();
 });
 
+
+// Função para atualizar o ícone do botão Play/Pause
 const textButtonPlay = "<i class='bx bx-caret-right'></i>";
 const textButtonPause = "<i class='bx bx-pause'></i>";
-// Função para atualizar o ícone do botão Play/Pause
+
 const playPauseIcon = () => {
   if (player.paused) {
     tocarPlaylist.innerHTML = textButtonPlay;
@@ -184,13 +158,13 @@ const playPauseIcon = () => {
   }
 };
 
-// Event listener para o botão "Próxima Música"
+// Evento para o botão "Próxima Música"
 const nextButton = document.querySelector("#nextButton");
 nextButton.addEventListener("click", () => {
   proximaMusica();
 });
 
-// Event listener para o botão "Música Anterior"
+// Evento para o botão "Música Anterior"
 const prevButton = document.querySelector("#prevButton");
 prevButton.addEventListener("click", () => {
   musicaAnterior();

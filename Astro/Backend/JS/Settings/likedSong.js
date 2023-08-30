@@ -1,10 +1,13 @@
-// Import the likedSongs array from musicPlayer.js (Assuming it's exported from that file)
 import { likedSongs } from "/Astro/Backend/JS/musicPlayer.js";
 
-// Function to generate the list of liked songs
-const generateLikedSongsList = () => {
+/**
+ * @param {function} generateLikedSongsList - gera a playlist de musicas curtidas
+ * pelo usuário, com base nas musicas do objeto geral,e nas musicas que curtiu e 
+ * entram no array 'likedSongs'.
+ */
+const generateLikedSongsList = () => { 
   const likedSongsList = document.getElementById("likedSongsList");
-  likedSongsList.innerHTML = ""; // Clear the existing list before regenerating
+  likedSongsList.innerHTML = "";
 
   likedSongs.forEach((song) => {
     const listItem = document.createElement("li");
@@ -29,5 +32,4 @@ const generateLikedSongsList = () => {
   });
 };
 
-// Call the function to generate the initial list of liked songs (when the page loads)
 generateLikedSongsList();

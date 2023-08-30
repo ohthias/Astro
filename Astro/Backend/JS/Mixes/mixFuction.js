@@ -1,7 +1,6 @@
 // Importar todas as músicas do módulo songs.js
 import allSongs from "/Astro/Backend/JS/songs.js";
 
-// Elementos do DOM
 const player = document.getElementById("player");
 const musicName = document.getElementById("musicName");
 const artistName = document.getElementById("artistName");
@@ -29,9 +28,14 @@ function displayRandomMix(mix) {
     listItem.appendChild(albumContainer);
 
     const infoMusica = document.createElement("div");
-    infoMusica.innerHTML = `<div class='infoMusica'><div class='infoMusica_play'><strong class='musicnome_playlist'>${song.nameSong}</strong><br>
-                            <p class='nomeArtista_playlist'>${song.artist}</p></div>
-                            <button id='buttonSongPlay'><i class='bx bx-caret-right'></i></button></div>`;
+    infoMusica.innerHTML = `<div class='infoMusica'>
+                                <div class='infoMusica_play'>
+                                  <strong class='musicnome_playlist'>${song.nameSong}</strong><br>
+                                  <p class='nomeArtista_playlist'>${song.artist}</p>
+                              </div>
+                              <button id='buttonSongPlay'><i class='bx bx-caret-right'></i></button>
+                            </div>`;
+
     listItem.appendChild(infoMusica);
 
     container.appendChild(listItem);
@@ -176,5 +180,3 @@ function updatePlaylistInfo(playlistData) {
   document.getElementById("creatorPlaylist").innerHTML = playlistData.creator;
   document.getElementById("imagePlay").src = playlistData.image;
 }
-
-// Adicionar um ouvinte de evento para o botão de reprodução

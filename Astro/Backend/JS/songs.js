@@ -1,3 +1,8 @@
+/**
+ * @param {object} allSongs - Objeto de armazenamento de todas as musicas
+ * da aplicação com suas caracteristicas
+ */
+
 const allSongs = {
   aa000: {
     nameSong: "(Look Out) She's America",
@@ -8,7 +13,8 @@ const allSongs = {
     ritmo: "agitado",
   },
 
-  /**@param - Ritmo & Genero:
+  /**
+   * @param {atributes}  Ritmo_Genero -
    * Categorias usadas para a geração das listas genêricas,
    * podendo ser agrupadas com musicas com as mesmas
    * caracteristicas em um array
