@@ -11,12 +11,33 @@
 <div class="content" align="center">
   <hr width="50%"><br>
   <div align="left">
-    <h2 align="left">Versão - AA1105 </h2>
-    <li>Albuns</li>
-    <li>Mixes</li>
-    <li>Tela de busca</li>
-    <li>Melhorias no design das playlists</li>
-    <li>Documentação</li>
+    <h2 align="left">Versão Beta - atb0101 </h2>
+    <li>Crie uma conta e experencie o Astro</li>
+    <li>Escute suas músicas, albuns e seus artistas</li>
+    <li>Navegue pelas sessões e encontre o que deseja</li>
+    <li>É do seu jeito que escute música</li>
+  </div>
+</div>
+
+
+
+
+<div class="content" align="center">
+<br>
+  
+### Discussões
+[Clique aqui](https://github.com/Matheus-Gabriel07/Astro/discussions)
+
+<br>
+
+  <div align="left">
+    <h2 align="left">Funcionalidades </h2>
+    <li>Escute as músicas através do player interativo</li>
+    <li>Player de Música com atalhos via teclado</li>
+    <li>Sistema de busca</li>
+    <li>Albuns e mixes</li>
+    <li>Listas de música</li>
+    <li>Cadastro de usuários</li>
   </div>
 </div>
 
@@ -24,22 +45,11 @@
   <hr width="50%"><br>
   <div align="left">
     <h2 align="left">Em desenvolvimento </h2>
-    <li>Criação da wiki</li>
-    <li>Lista de músicas curtidas</li>
-    <li>Tela de artistas</li>
-    <li>Geração de id para redirecionamento</li>
-    <li>Melhorias no script do player</li>
-  </div>
-</div>
 
-<div class="content" align="center">
-  <hr width="50%"><br>
-  <div align="left">
-    <h2 align="left">Funcionalidades </h2>
-    <li>Escute as músicas através do player interativo</li>
-    <li>Player de Música com atalhos via teclado</li>
-    <li>Listas de música</li>
-    <li>Cadastro de usuários</li>
+[Versão - atb0200](https://github.com/Matheus-Gabriel07/Astro/pull/5)
+
+[Wiki](https://github.com/Matheus-Gabriel07/Astro/wiki)
+
   </div>
 </div>
 
