@@ -1,5 +1,7 @@
 import allSongs from "/Astro/Backend/JS/songs.js";
 import { startListening, stopListening } from "/Astro/Backend/JS/levelSystem/base.js";
+import {createMusicPlayer} from "/Astro/Backend/JS/Settings/createdMusicPlayer.js"
+createMusicPlayer()
 
 const player = document.querySelector("#player");
 const musicName = document.querySelector("#musicName");
