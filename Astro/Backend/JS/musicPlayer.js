@@ -1,7 +1,10 @@
 import allSongs from "/Astro/Backend/JS/songs.js";
-import { startListening, stopListening } from "/Astro/Backend/JS/levelSystem/base.js";
-import {createMusicPlayer} from "/Astro/Backend/JS/Settings/createdMusicPlayer.js"
-createMusicPlayer()
+import {
+  startListening,
+  stopListening,
+} from "/Astro/Backend/JS/levelSystem/base.js";
+import { createMusicPlayer } from "/Astro/Backend/JS/Settings/createdMusicPlayer.js";
+createMusicPlayer();
 
 const player = document.querySelector("#player");
 const musicName = document.querySelector("#musicName");
@@ -66,10 +69,10 @@ let isPlaying = false;
 const playPause = () => {
   if (player.paused) {
     player.play();
-    startListening()
+    startListening();
     isPlaying = true; // Atualize o estado para tocando
   } else {
-    stopListening()
+    stopListening();
     player.pause();
     isPlaying = false; // Atualize o estado para pausado
   }
@@ -332,7 +335,6 @@ const prevNextMusic = (type = "next") => {
   } else {
     index = type === "prev" && index ? index - 1 : index + 1;
   }
-  // @param Nextsong - Verifica se elá em 'runMode' se sim ele faz o runmode, se não, segue normalmente
 
   player.src = Object.values(allSongs)[index].src;
   musicName.innerHTML = Object.values(allSongs)[index].nameSong;
@@ -340,19 +342,17 @@ const prevNextMusic = (type = "next") => {
   imgSong.src = Object.values(allSongs)[index].imgSong;
   heartMusic.innerHTML = textNormalHeartMusic;
 
+  if (type === "next") {
+    showUpcomingSongs();
+  }
+
   if (!isPlaying) {
     player.play();
   }
 
-  updateTime();
   playPause();
-
-  if (type === "next") {
-    showUpcomingSongs();
-  }
+  updateTime();
 };
-
-prevNextMusic("init");
 
 //FullScreen
 let currentStyle = "playerCss";
@@ -371,3 +371,5 @@ const toggleFullScreen = () => {
     currentStyle = "playerCss";
   }
 };
+
+prevNextMusic("init");

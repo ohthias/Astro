@@ -1,5 +1,6 @@
 // Variáveis de configuração
 const levels = [
+  //Tempo test
   { name: "01", requiredTime: 15 }, // 25 minutos
   { name: "02", requiredTime: 27 }, // 45 minutos
   { name: "03", requiredTime: 45 }, // 1 e 15 minutos
@@ -12,7 +13,7 @@ const levels = [
   { name: "10", requiredTime: 26784 }, // 1 meês
 ];
 
-const level = document.getElementById("level_user")
+const level = document.querySelector("#level_user")
 
 // Função para verificar o nível com base no tempo acumulado
 function getLevel(totalTime) {
@@ -22,19 +23,25 @@ function getLevel(totalTime) {
       return levels[i].name;
     }
   }
-  return "Novato";
+  return "00";
 }
 
 // Simulação de uso de música
 let totalTimeListened = 0; // Tempo acumulado em segundos
 let interval;
 
+function updateBackgroundGradient() {
+  const conicGradientValue = `${(totalTimeListened / levels[levels.length - 1].requiredTime) * 360}deg`;
+  level.style.background = `radial-gradient(closest-side, var(--back-background-main) 79%, transparent 80% 100%),
+  conic-gradient(var(--de-detail-purple) ${conicGradientValue}, var(--sha-shadow-black) 0)`;
+}
 // Simula o início da escuta de música
 function startListening() {
   console.log("Iniciando a escuta de música...");
   interval = setInterval(() => {
     totalTimeListened += 1;
-    const level = getLevel(totalTimeListened);
+    const levelValue = getLevel(totalTimeListened);
+    updateBackgroundGradient();
     console.log(
       `Tempo total escutado: ${totalTimeListened} segundos. Nível: ${level}`
     );
