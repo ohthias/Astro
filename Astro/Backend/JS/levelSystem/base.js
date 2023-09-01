@@ -40,7 +40,6 @@ function startListening() {
   console.log("Iniciando a escuta de música...");
   interval = setInterval(() => {
     totalTimeListened += 1;
-    const levelValue = getLevel(totalTimeListened);
     updateBackgroundGradient();
     console.log(
       `Tempo total escutado: ${totalTimeListened} segundos. Nível: ${level}`

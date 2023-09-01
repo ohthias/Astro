@@ -69,12 +69,12 @@ let isPlaying = false;
 const playPause = () => {
   if (player.paused) {
     player.play();
-    startListening();
     isPlaying = true; // Atualize o estado para tocando
+    startListening();
   } else {
-    stopListening();
     player.pause();
     isPlaying = false; // Atualize o estado para pausado
+    stopListening();
   }
   updatePlayPauseIcon(); // Atualiza o ícone do botão Play/Pause
 };
@@ -346,13 +346,19 @@ const prevNextMusic = (type = "next") => {
     showUpcomingSongs();
   }
 
+  playPause();
+  updateTime();
+
   if (!isPlaying) {
     player.play();
   }
-
-  playPause();
-  updateTime();
 };
+
+player.onended = () => {
+  prevNextMusic();
+};
+
+prevNextMusic("init");
 
 //FullScreen
 let currentStyle = "playerCss";
@@ -360,7 +366,6 @@ let currentStyle = "playerCss";
 const toggleFullScreen = () => {
   const playerCss = document.getElementById("normal");
   const fullScreenCss = document.getElementById("fullScreen");
-
   if (currentStyle === "playerCss") {
     playerCss.disabled = true;
     fullScreenCss.disabled = false;
@@ -371,5 +376,3 @@ const toggleFullScreen = () => {
     currentStyle = "playerCss";
   }
 };
-
-prevNextMusic("init");

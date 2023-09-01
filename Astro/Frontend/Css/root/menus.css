@@ -72,12 +72,6 @@ header {
     transition: 300ms;
     cursor: pointer;
     background-size: cover;
-    animation: gradientAnimation 10s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-  
 }
 
 @keyframes gradientAnimation {
