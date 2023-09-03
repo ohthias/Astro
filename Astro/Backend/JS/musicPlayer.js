@@ -123,6 +123,22 @@ progressBar.onclick = (e) => {
   player.currentTime = newTime;
 };
 
+progressBar.addEventListener("drag", (event) => {
+  const newTime = (event.offsetX / progressBar.offsetWidth) * player.duration;
+  player.currentTime = newTime;
+  updateTime();
+});
+
+// Evento ao iniciar o arrasto
+progressBar.addEventListener("dragstart", () => {
+  player.pause(); // Pausa o player durante o arrasto
+});
+
+// Evento ao soltar o arrasto
+progressBar.addEventListener("dragend", () => {
+  player.play(); // Retoma a reprodução após soltar o arrasto
+});
+
 /**
  * @param {event} volumeButton - gerencia o controle de volume em um player de áudio.
  *  Quando a página é carregada, ele define o volume inicial com base no valor do controle
