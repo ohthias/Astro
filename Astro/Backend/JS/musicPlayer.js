@@ -346,12 +346,12 @@ const prevNextMusic = (type = "next") => {
     showUpcomingSongs();
   }
 
-  playPause();
-  updateTime();
-
+  
   if (!isPlaying) {
     player.play();
   }
+  updateTime();
+  playPause();
 };
 
 player.onended = () => {
@@ -366,11 +366,14 @@ let currentStyle = "playerCss";
 const toggleFullScreen = () => {
   const playerCss = document.getElementById("normal");
   const fullScreenCss = document.getElementById("fullScreen");
+  const body = document.querySelector("body")
   if (currentStyle === "playerCss") {
+    body.classList.remove("fullscreen")
     playerCss.disabled = true;
     fullScreenCss.disabled = false;
     currentStyle = "fullScreenCss";
   } else {
+    body.classList.add("fullscreen")
     playerCss.disabled = false;
     fullScreenCss.disabled = true;
     currentStyle = "playerCss";
