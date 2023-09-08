@@ -1,6 +1,6 @@
 /*
  * Page: Home Page
- * UTA - Matheus 29/07
+ * UTA - Matheus 08/09
  * código documentado conforme html
  */
 
@@ -19,7 +19,7 @@ body {
 section.module.parallax {
     display: flex;
     flex-direction: column;
-    height: 100vh !important;
+    height: 80vh !important;
     width: 100%;
     position: relative;
     overflow: hidden;

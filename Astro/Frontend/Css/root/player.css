@@ -158,6 +158,7 @@
   cursor: pointer;
   margin-bottom: 5px;
   border-radius: 5px;
+  pointer-events: all;
   transition: 150ms;
 }
 
