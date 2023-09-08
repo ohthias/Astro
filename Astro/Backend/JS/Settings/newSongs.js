@@ -1,3 +1,8 @@
+/**
+ * Script utlizado para a criação automatiza do obejto 'allSongs',
+ * com seus atributos.
+ */
+
 // Características padrões
 const nameSong = document.querySelector("#nameSong");
 const artist = document.querySelector("#artist");
@@ -62,6 +67,11 @@ const resultados = document.querySelector("#results");
 done.onclick = () => newSong();
 const musicList = [];
 
+/**
+ * Pega as informações coletadas nos inputs e botões e insere elas
+ * no objeto 'newSong' que é utlizado para inserir na tela para a 
+ * criação da lista para cópia
+*/
 const newSong = () => {
   let SongName = nameSong.value;
   let artistName = artist.value;

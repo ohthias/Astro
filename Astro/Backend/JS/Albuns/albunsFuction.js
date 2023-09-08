@@ -1,7 +1,7 @@
 import allSongs from "/Astro/Backend/JS/songs.js";
 
 /**
- * @function getUniqueAlbums: Usada para obter um ambum unico,
+ * @param {function} getUniqueAlbums - Usada para obter um ambum unico,
  * com seus autores e a URL da imagem da capa do primeiro álbum.
  * Pois as informações que chegam atráves de 'allSongs', vem embaralhadas
  * e todas juntsas. Essa função crir um objeto para cada album com seus 
@@ -28,7 +28,7 @@ function getUniqueAlbums(songsObject) {
 }
 
 /**
- * @function displayAlbumSongs(songs): cria a lista 'li' das faixas
+ * @param {function} displayAlbumSongs - cria a lista 'li' das faixas
  * dos respectivo album, exibindo nome da faixa e o artista
  */
 function displayAlbumSongs(songs) {
@@ -59,7 +59,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const albumParam = urlParams.get("album");
 
 /**
- * @param albumParam: A variável armazena o valor do parâmetro 'album' 
+ * @param {const} albumParam - A variável armazena o valor do parâmetro 'album' 
  * extraído da URL usando o URLSearchParams. Esse valor de parâmetro é 
  * então convertido para um inteiro (albumIndex) para ser usado em 
  * processamentos posteriores. O script verifica se o albumIndex 
@@ -99,7 +99,7 @@ if (!albumParam) {
 }
 
 /**
- *  @function loadBasedOnAlbum: Com base nas informações do
+ *  @param {function} loadBasedOnAlbum - Com base nas informações do
  *  album selecionado, ele exibe na tela.
  *
  * example:

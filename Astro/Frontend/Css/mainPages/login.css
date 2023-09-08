@@ -1,179 +1,187 @@
-body,
-html {
-  background: linear-gradient(90deg, rgba(41, 242, 71, 0.05) 44.32%, rgba(41, 242, 71, 0.2) 82.83%), #05061e;
-  color: var(--font);
+/*
+ * Page: Login
+ * UTA - Matheus 08/08
+ * código documentado conforme html
+ */
+
+
+body {
+  background: url('/Assets/svg/blob-Index.svg') no-repeat;
+  background-size: cover;
   overflow-y: hidden;
+  animation: smoothFilter 10s ease infinite;
 }
 
 /*Logo header */
-
 #logo {
+  position: fixed;
+  z-index: 2;
+  width: max-content;
   margin: 15px;
   padding: 3px 5px;
   font-size: 20px;
   letter-spacing: 1px;
-  cursor: pointer;
   transition: 500ms;
-  animation: fade 500ms ease;
+  cursor: pointer;
 }
 
 #logo:hover {
   color: var(--de-detail-green);
 }
 
-/* Astronaut */
+/* Astronaut img*/
 
 figure {
   position: fixed;
-  left: 5%;
-  top: 10%;
-  transform: translate(-10%, -5%);
-  transform: rotate(-8deg);
+  top: 50%;
+  left: 10%;
+  transform: translate(-10%, -50%);
 }
 
 figure img {
-  width: -moz-max-content;
-  width: max-content;
-  height: 650px;
-  animation: moviment 5s infinite;
+  animation: moviment 10s ease infinite;
+  max-width: 450px;
 }
 
-#image {
-  z-index: 0;
-  position: fixed;
-  bottom: 0;
+/* Main */
+
+main {
+  z-index: 5;
+  padding-inline: 1rem;
   max-width: 550px;
-  height: auto;
-  animation: pulse 5s infinite;
-}
-
-/* Forms */
-
-.containner {
-  z-index: 12;
+  height: 100vh !important;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  animation: fade 500ms ease;
-
+  position: relative;
+  left: calc(100% - 550px);
+  background: var(--sha-shadow-black);
+  backdrop-filter: blur(10px);
+  animation: fade 250ms ease;
 }
 
-.containner_info {
-  margin: 10px;
-  padding: 15px;
-  max-width: 650px;
-  height: 100%;
-}
-
-.containner_info_header {
-  margin: 10px auto;
+.containner-info-header {
+  margin: 25px 0;
   text-align: center;
+  animation: fadeinDown 500ms ease;
 }
 
-.containner_info h1 {
-  margin: 2px 0;
-  font-size: 40px;
-  text-align: center;
-  letter-spacing: 1px;
-  color: var(--de-detail-green);
-  text-shadow: 0 0 5px var(--sha-shadow-black), 0 0 15px var(--sha-shadow-black-menu);
+.containner-info-header h1{
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 2.5em;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 10px var(--sha-shadow-black);
 }
 
-#page {
+.containner-info-header a#page {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  text-shadow: 0 2px 2px var(--sha-shadow-black);
+  color: var(--de-detail-orange);
+  transition: all 250ms;
+}
+
+.containner-info-header a#page:hover {
+  color: var(--de-detail-purple);
+}
+
+/*Form*/
+.input-group {
+  margin: 25px 0;
+  position: relative;
+}
+
+.input {
+  font-family: 'Montserrat', sans-serif;
+  width: 400px;
+  border: solid 1.5px #9e9e9e;
+  border-radius: 1rem;
+  background: none;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #f5f5f5;
+  transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.user-label,
+.password-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em;
+  position: absolute;
+  left: 15px;
+  color: #e8e8e8;
+  pointer-events: none;
+  transform: translateY(1.25rem);
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus,
+input:valid {
+  outline: none;
+  border: 1.5px solid var(--back-background-menu);
+}
+
+.input:focus~label,
+input:valid~label {
+  transform: translateY(-50%) scale(0.8);
+  background: var(--back-background-menu);
+  border-radius: 50px;
+  padding: 0 .5em;
   color: var(--font);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+
+/* Button */
+
+button {
+  margin: 25px auto;
+  padding: 0.8em 1.3em 0.8em 0.9em;
+  border: none;
+  border-radius: 16px;
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(to right,var(--back-background-menu), var(--de-detail-purple), var(--de-detail-orange));
   transition: 500ms;
   cursor: pointer;
 }
 
-#page:hover {
-  color: var(--de-detail-green);
+button svg {
+  margin-right: 3px;
+  transform: rotate(30deg);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-/* Containner form */
-#cadastroForm,
-#loginForm {
-  margin: 50px 0;
-  padding: 10px 15px;
-  animation: fadeinDown 500ms ease;
+button span {
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-.informationsCadatro,
-.informationsLogin {
-  margin: 10px 0;
-  font-size: 18px;
-  letter-spacing: 1px;
+button:hover {
+  box-shadow: 0 0 5px var(--de-detail-orange), 0 0 50px var(--back-background-menu), 0 0 100px var(--sha-shadow-black);
+  transition: 500ms;
 }
 
-input {
-  font-family: 'Montserrat', sans-serif;
-  margin: 10px 0;
-  margin-bottom: 15px;
-  padding: 5px 8px;
-  width: 100%;
-  border: 0;
-  border-bottom: 2px solid var(--font);
-  font-size: 18px;
-  background: none;
+button:hover svg {
+  transform: translateX(5px) rotate(90deg);
 }
 
-input:focus {
-  outline: none;
-  border-color: var(--de-detail-green);
-}
-
-/* Button */
-
-button[type="submit"] {
-  margin: 30px auto;
-  padding: 10px 15px;
-  border: 1px solid var(--font);
-  border-radius: 100px;
-  display: flex;
-  justify-content: center;
-
-  font-family: "Bebas Neue";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 25px;
-  letter-spacing: 1px;
-  line-height: 30px;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--font);
-
-  background: transparent;
-  box-shadow: 2px 5px 2px var(--sha-shadow-black-menu);
-  transition: 300ms;
-  animation: fadeinUp 0.5s;
-  cursor: pointer;
-}
-
-button[type="submit"]:hover {
-  border-color: var(--de-detail-orange);
-  background: var(--de-detail-orange);
-  transform: translateY(-10px);
-  transition: 250ms;
-}
-
-
-.error {
-  border-color: #ff4747;
-}
-
-.valid {
-  border-color: #37a137;
-}
-
-.hide {
-  display: none;
-}
-
-.required-color {
-  color: #ff4747;
+button:hover span {
+  transform: translateX(7px);
 }
 
 /* Media*/
@@ -256,4 +264,14 @@ button[type="submit"]:hover {
   }
 }
 
-/*# sourceMappingURL=login.css.map */
+@keyframes smoothFilter {
+
+  0%,
+  100% {
+    backdrop-filter: blur(0)
+  }
+
+  50% {
+    backdrop-filter: blur(5px)
+  }
+}

@@ -61,17 +61,34 @@ header {
     align-items: center;
 }
 
-.header-list #level_user {
+#level_user {
     padding: 8px 12px;
-    border: 3px solid var(--font);
-    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background:
+        radial-gradient(closest-side, var(--back-background-main) 79%, transparent 80% 100%),
+        conic-gradient(var(--de-detail-purple), var(--sha-shadow-black) 0);
+    transition: 300ms;
     cursor: pointer;
-    transition: 150ms;
+    background-size: cover;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background: radial-gradient(closest-side, var(--back-background-main) 79%, transparent 80% 100%),
+            conic-gradient(var(--de-detail-purple) 0%, var(--sha-shadow-black) 0deg);
+    }
+
+    100% {
+        background: radial-gradient(closest-side, var(--back-background-main) 79%, transparent 80% 100%),
+            conic-gradient(var(--de-detail-purple) 100%, var(--sha-shadow-black) 0deg);
+    }
 }
 
 .header-list #level_user:hover {
-    color: var(--de-detail-purple);
-    border-color: var(--de-detail-purple);
+    padding: 10px 14px;
+    box-shadow: 0 0 10px var(--sha-shadow-white), 0 0 50px var(--de-detail-purple), 0 0 100px var(--sha-shadow-black)
 }
 
 .header-list a,
@@ -131,7 +148,7 @@ header {
 
 
 .sidebar .logo-details .logo_name {
-    color: #fff;
+    color: #ffffff;
     letter-spacing: 2px;
     font-size: 20px;
     opacity: 0;
@@ -146,6 +163,7 @@ header {
 }
 
 @keyframes upInDown {
+
     0%,
     100% {
         transform: translateY(0);
@@ -185,7 +203,7 @@ header {
 }
 
 .sidebar i {
-    color: #fff;
+    color: #ffffff;
     height: 60px;
     min-width: 50px;
     font-size: 28px;
@@ -209,8 +227,8 @@ header {
     top: -20px;
     left: calc(100% + 15px);
     z-index: 3;
-    background: #fff;
-    color: #ff3d20;
+    background: #ffffff;
+    color: var(--de-detail-purple);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     padding: 6px 12px;
     border-radius: 4px;
@@ -237,7 +255,7 @@ header {
 .sidebar input {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
-    color: #FFF;
+    color: #ffffff;
     font-weight: 400;
     outline: none;
     height: 50px;
@@ -245,17 +263,22 @@ header {
     width: 50px;
     border: none;
     border-radius: 12px;
-    background: var(--back-background-header-list);
     transition: all 0.5s ease;
     opacity: 0;
+    cursor: pointer;
     pointer-events: none;
 }
 
+.sidebar input::placeholder {
+    color: #ffffff;
+}
+
 .sidebar.open input {
-    padding: 0 20px 0 60px;
+    padding: 0 0 0 50px;
     width: 100%;
     opacity: 1;
-    pointer-events: visible;
+    pointer-events: all;
+    background: none;
 }
 
 .sidebar .bx-search {
@@ -264,18 +287,47 @@ header {
     left: 0;
     transform: translateY(-50%);
     font-size: 22px;
-    color: #FFF;
-    background: var(--back-background-header-list);
+    color: #ffffff;
 }
 
-.sidebar.open .bx-search:hover {
-    background: var(--back-background-header-list);
-    color: #ff3d20;
+.sidebar.open .bx-search:hover,
+.sidebar input:hover::placeholder {
+    color: var(--de-detail-purple);
 }
 
 .sidebar .bx-search:hover {
-    background: #FFF;
-    color: #ff3d20;
+    color: var(--de-detail-purple);
+}
+
+.sidebar .bx-heart {
+    background: linear-gradient(180deg, rgba(174, 68, 84, 1) 50%, rgba(69, 25, 82, 1) 100%);
+    transition: 500ms;
+}
+
+.sidebar .bx-plus {
+    background: linear-gradient(180deg, rgba(109, 165, 192, 1) 50%, rgba(7, 46, 51, 1) 100%);
+    transition: 500ms;
+}
+
+.sidebar.open .bx-plus,
+.sidebar.open .bx-heart {
+    background: none;
+    transition: 500ms;
+}
+
+.sidebar .bx-plus:hover,
+.sidebar .bx-heart:hover {
+    color: #ffffff;
+}
+
+.sidebar li.exit {
+    position: absolute;
+    bottom: 10px;
+    width: 50px;
+}
+
+.sidebar.open li.exit {
+    width: 90%;
 }
 
 .sidebar li a {
@@ -286,16 +338,15 @@ header {
     align-items: center;
     text-decoration: none;
     transition: all 0.4s ease;
-    background: var(--back-background-header-list);
 }
 
 .sidebar li a:hover {
-    background: #FFF;
+    background: #ffffff;
 }
 
 .sidebar li a .links_name {
     font-family: 'Montserrat', sans-serif;
-    color: #fff;
+    color: #ffffff;
     font-size: 15px;
     font-weight: 500;
     letter-spacing: 1px;
@@ -313,7 +364,7 @@ header {
 .sidebar li a:hover .links_name,
 .sidebar li a:hover i {
     transition: all 0.5s ease;
-    color: var(--de-detail-orange);
+    color: var(--de-detail-purple);
 }
 
 .sidebar li i {

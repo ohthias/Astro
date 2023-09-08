@@ -1,14 +1,14 @@
-/*
- * Page: Erro - Coming Soon
- * UTA - Matheus 31/08
- * código documentado conforme html
- */
-
 html,
 body {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 51.56%, rgba(51, 167, 68, 0.116) 75.52%, rgba(41, 242, 71, 0.15) 87.5%), #071220;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 51.56%,
+      rgba(51, 167, 68, 0.116) 75.52%,
+      rgba(41, 242, 71, 0.15) 87.5%
+    ),
+    #071220;
   color: #ffffff;
 }
 
@@ -28,5 +28,3 @@ body {
   align-self: center;
   align-items: center;
 }
-
-/*# sourceMappingURL=comingSoon.css.map */
