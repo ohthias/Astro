@@ -476,11 +476,3 @@ section.module.parallax-2 {
 section.module.parallax-2::after {
     content: none;
 }
-
-/* Media */
-
-@media screen and (min-width: 1024px) {}
-
-@media screen and (max-width: 768px) {}
-
-@media screen and (max-width: 425) {}
