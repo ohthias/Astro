@@ -286,7 +286,7 @@ button .songButton:active {
     margin: 20px 0 25px;
     display: flex;
     align-self: center;
-    place-content: center;
+    place-content: left;
     position: relative;
 }
 

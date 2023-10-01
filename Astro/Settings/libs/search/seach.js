@@ -1,10 +1,10 @@
-import allSongs from "/Astro/Backend/JS/songs.js";
+import allSongs from "/Astro/Settings/libs/songs.js";
 
 const searchInput = document.getElementById("searchResult");
-const searchButton = document.getElementById("search")
+const searchButton = document.getElementById("search");
 const resultsDiv = document.getElementById("results");
 
-searchButton.onclick = () => search()
+searchButton.onclick = () => search();
 
 function search() {
   const searchTerm = searchInput.value.toLowerCase();
@@ -21,15 +21,9 @@ function search() {
       const songDiv = document.createElement("div");
       songDiv.classList.add("container-results");
 
-      // Create a structure for displaying song information
       const songInfo = document.createElement("p");
       songInfo.textContent = `${song.nameSong} - ${song.artist}`;
       songDiv.appendChild(songInfo);
-
-      // If you have an image URL in song.imgSong, you can add an image element too
-      // const songImage = document.createElement("img");
-      // songImage.src = song.imgSong;
-      // songDiv.appendChild(songImage);
 
       resultsDiv.appendChild(songDiv);
     });

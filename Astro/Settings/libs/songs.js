@@ -14,7 +14,7 @@ const allSongs = {
   },
 
   /**
-   * @param {atributes}  Ritmo_Genero -
+   * @param {atributes}  Ritmo_e_Genero -
    * Categorias usadas para a geração das listas genêricas,
    * podendo ser agrupadas com musicas com as mesmas
    * caracteristicas em um array
