@@ -1,5 +1,5 @@
 // Importar todas as músicas do módulo songs.js
-import allSongs from "/Astro/Backend/JS/songs.js";
+import allSongs from "/Astro/Settings/libs/songs.js";
 
 const player = document.getElementById("player");
 const musicName = document.getElementById("musicName");

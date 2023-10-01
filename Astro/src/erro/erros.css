@@ -48,7 +48,7 @@ body {
     color: var(--de-detail-orange);
 }
 
-.erro .erro img {
+.erro img {
     width: 350px;
     height: -moz-max-content;
     height: max-content;

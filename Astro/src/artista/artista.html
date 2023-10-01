@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ASTRO</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/Astro/Frontend/Css/mainPages/artist.css" />
-    <link rel="stylesheet" href="/Astro/Frontend/Css/root.css" />
-    <link rel="stylesheet" href="/Astro/Frontend/Css/root/player.css" />
-    <link rel="stylesheet" href="/Astro/Frontend/Css/root/menus.css" />
+    <link rel="shortcut icon" href="../../Assets/Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../root/css/root.css">
+    <link rel="stylesheet" href="../../root/css/player.css">
+    <link rel="stylesheet" href="../../root/css/menus.css">
+    <link rel="stylesheet" href="./artista.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -141,15 +141,15 @@
     </section>
 
     <!--Backend srcipts-->
-    <script type="module" src="/Astro/Backend/JS/musicPlayer.js"></script>
+    <script type="module" src="/Astro/Settings/libs/musicPlayer/musicPlayer.js"></script>
     <script
       type="module"
-      src="/Astro/Backend/JS/ArtistsPage/artistspage.js"
+      src="/Astro/Settings/libs/artistsPage/artistspage.js"
     ></script>
 
     <!--Frontend srcipts-->
-    <script src="/Astro/Frontend/JS/redirects/redirect.js"></script>
-    <script src="/Astro/Frontend/JS/others/bar.js"></script>
-    <script src="/Astro/Frontend/JS/others/menu.js"></script>
+    <script src="../home/redirect.js"></script>
+    <script src="../../root/js/menu.js"></script>
+    <script src="../../root/js/modes.js"></script>
   </body>
 </html>

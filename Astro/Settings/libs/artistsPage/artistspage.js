@@ -1,4 +1,4 @@
-import artistsArray from "/Astro/Backend/JS/ArtistsPage/artistsArray.js";
+import artistsArray from "./artistsArray.js";
 
 /**
  * @param {const} artistParam: Verifica se um parâmetro 'artist' está presente na URL,
