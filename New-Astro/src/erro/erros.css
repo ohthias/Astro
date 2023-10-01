@@ -10,18 +10,6 @@ body {
     background: var(--back-background-main);
 }
 
-.erro_400 {
-    background: #7dd4ff;
-}
-
-.erro_403 {
-    background: #3aaaff;
-}
-
-.erro_449 {
-    background: #d9cfcc;
-}
-
 .erro_404 {
     background: #c6c5ff;
 }
