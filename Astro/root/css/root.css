@@ -1,0 +1,468 @@
+/*
+ * Root
+ * UTA - Matheus 03/09
+*/
+
+@charset "UTF-8";
+/* Importação */
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+/* Icons & Images */
+@import url("https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css");
+@import url("https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css");
+@import url("https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
+    list-style: none;
+    color: var(--font);
+}
+
+/* Theme Normal */
+:root,
+:root.light {
+    /* Colors */
+    --back-background-main: #1d1a39;
+    --back-background-menu: #451952;
+    --font: #ffffff;
+    --font-detail: #f3f3f3;
+    --de-detail-orange: #ae4454;
+    --de-detail-green: #f39f5a;
+    --de-detail-green-sha-shadow: #f39f5a76;
+    --de-detail-purple: #451952;
+    --de-detail-purple-sha-shadow: #45195276;
+    --sha-shadow-black: rgba(0, 0, 0, 0.5);
+    --sha-shadow-black-menu: rgba(0, 0, 0, 0.25);
+    --sha-shadow-white: rgba(255, 255, 255, 0.5);
+    /* Sizes */
+    --fo-font-main: 1em;
+    /**/
+    --fo-font-asidebar: 0.875em;
+    /**/
+    --fo-font-detail: 0.625em;
+    /**/
+    --fo-font-main-detail: 1.125em;
+    /**/
+    --fo-font-main-title: 1.25em;
+    /**/
+    /* Background & Gradients */
+    --background-gradient-parallax: linear-gradient(to top,
+            var(--back-background-main) 15%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-footer-page-purple: linear-gradient(to top,
+            var(--de-detail-purple-sha-shadow) 1%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-footer-page-green: linear-gradient(to top,
+            var(--de-detail-green-sha-shadow) 1%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-index: linear-gradient(to bottom var(--de-detail-green-sha-shadow) 60%,
+            rgba(255, 255, 255, 0));
+    /* Size Images */
+    --size-img-disco: 210px;
+}
+
+/* ===== Scrollbar ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #451952 rgba(255, 255, 255, 0);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--de-detail-orange);
+    border-radius: 10px;
+    border: 3px solid var(--back-background-main);
+}
+
+/* === Themes === */
+/* Theme Blue */
+:root.blue {
+    --back-background-main: #05161a;
+    --back-background-menu: #072e33;
+    --font: #ffffff;
+    --font-detail: #f3f3f3;
+    --de-detail-orange: #294d61;
+    --de-detail-green: #0f9890;
+    --de-detail-green-sha-shadow: #0f989076;
+    --de-detail-purple: #6da5c0;
+    --de-detail-purple-sha-shadow: #6da5c076;
+    --sha-shadow-black: rgba(0, 0, 0, 0.5);
+    --sha-shadow-black-menu: rgba(0, 0, 0, 0.25);
+    --sha-shadow-white: rgba(255, 255, 255, 0.5);
+    /* Sizes */
+    --fo-font-main: 1em;
+    /**/
+    --fo-font-asidebar: 0.875em;
+    /**/
+    --fo-font-detail: 0.625em;
+    /**/
+    --fo-font-main-detail: 1.125em;
+    /**/
+    --fo-font-main-title: 1.25em;
+    /**/
+    /* Background & Gradients */
+    --background-gradient-parallax: linear-gradient(to top,
+            var(--back-background-main) 15%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-footer-page-purple: linear-gradient(to top,
+            var(--de-detail-purple-sha-shadow) 1%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-footer-page-green: linear-gradient(to top,
+            var(--de-detail-green-sha-shadow) 1%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-index: linear-gradient(to bottom var(--de-detail-green-sha-shadow) 60%,
+            rgba(255, 255, 255, 0));
+    /* Size Images */
+    --size-img-disco: 210px;
+}
+
+/* Theme Purple */
+:root.purple {
+    --back-background-main: #06142e;
+    --back-background-menu: #1b3358;
+    --font: #ffffff;
+    --font-detail: #f3f3f3;
+    --de-detail-orange: #473e66;
+    --de-detail-green: #bd83b8;
+    --de-detail-green-sha-shadow: #bd83b876;
+    --de-detail-purple: #603176;
+    --de-detail-purple-sha-shadow: #60317676;
+    --sha-shadow-black: rgba(0, 0, 0, 0.5);
+    --sha-shadow-black-menu: rgba(0, 0, 0, 0.25);
+    --sha-shadow-white: rgba(255, 255, 255, 0.5);
+    /* Sizes */
+    --fo-font-main: 1em;
+    /**/
+    --fo-font-asidebar: 0.875em;
+    /**/
+    --fo-font-detail: 0.625em;
+    /**/
+    --fo-font-main-detail: 1.125em;
+    /**/
+    --fo-font-main-title: 1.25em;
+    /**/
+    /* Background & Gradients */
+    --background-gradient-parallax: linear-gradient(to top,
+            var(--back-background-main) 15%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-footer-page-purple: linear-gradient(to top,
+            var(--de-detail-purple-sha-shadow) 1%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-footer-page-green: linear-gradient(to top,
+            var(--de-detail-green-sha-shadow) 1%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-index: linear-gradient(to bottom var(--de-detail-green-sha-shadow) 60%,
+            rgba(255, 255, 255, 0));
+    /* Size Images */
+    --size-img-disco: 210px;
+}
+
+/* Theme Red */
+:root.red {
+    --back-background-main: #2A3D45;
+    --back-background-menu: #2A3D4550;
+    --font: #ffffff;
+    --font-detail: #f3f3f3;
+    --de-detail-orange: #DDC9B4;
+    --de-detail-green: #C17C74;
+    --de-detail-green-sha-shadow: #C17C7476;
+    --de-detail-purple: #BCAC9B;
+    --de-detail-purple-sha-shadow: #BCAC9B76;
+    --sha-shadow-black: rgba(0, 0, 0, 0.5);
+    --sha-shadow-black-menu: rgba(0, 0, 0, 0.25);
+    --sha-shadow-white: rgba(255, 255, 255, 0.5);
+    /* Sizes */
+    --fo-font-main: 1em;
+    /**/
+    --fo-font-asidebar: 0.875em;
+    /**/
+    --fo-font-detail: 0.625em;
+    /**/
+    --fo-font-main-detail: 1.125em;
+    /**/
+    --fo-font-main-title: 1.25em;
+    /**/
+    /* Background & Gradients */
+    --background-gradient-parallax: linear-gradient(to top,
+            var(--back-background-main) 15%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-footer-page-purple: linear-gradient(to top,
+            var(--de-detail-purple-sha-shadow) 1%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-footer-page-green: linear-gradient(to top,
+            var(--de-detail-green-sha-shadow) 1%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-index: linear-gradient(to bottom var(--de-detail-green-sha-shadow) 60%,
+            rgba(255, 255, 255, 0));
+    /* Size Images */
+    --size-img-disco: 210px;
+}
+
+/* Theme Green */
+:root.green {
+    --back-background-main: rgb(12, 18, 20);
+    --back-background-menu: #293816;
+    --font: #ffffff;
+    --font-detail: #f3f3f3;
+    --de-detail-orange: #9BB37B;
+    --de-detail-green: #4B6628;
+    --de-detail-green-sha-shadow: #4B662876;
+    --de-detail-purple: #6F963B;
+    --de-detail-purple-sha-shadow: #6F963B76;
+    --sha-shadow-black: rgba(0, 0, 0, 0.5);
+    --sha-shadow-black-menu: rgba(0, 0, 0, 0.25);
+    --sha-shadow-white: rgba(255, 255, 255, 0.5);
+    /* Sizes */
+    --fo-font-main: 1em;
+    /**/
+    --fo-font-asidebar: 0.875em;
+    /**/
+    --fo-font-detail: 0.625em;
+    /**/
+    --fo-font-main-detail: 1.125em;
+    /**/
+    --fo-font-main-title: 1.25em;
+    /**/
+    /* Background & Gradients */
+    --background-gradient-parallax: linear-gradient(to top,
+            var(--back-background-main) 15%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-footer-page-purple: linear-gradient(to top,
+            var(--de-detail-purple-sha-shadow) 1%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-footer-page-green: linear-gradient(to top,
+            var(--de-detail-green-sha-shadow) 1%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-index: linear-gradient(to bottom var(--de-detail-green-sha-shadow) 60%,
+            rgba(255, 255, 255, 0));
+    /* Size Images */
+    --size-img-disco: 210px;
+}
+
+/* Theme Pastel */
+:root.pastel {
+    --back-background-main: #CC9576;
+    --back-background-menu: #8BCCCB;
+    --font: #ffffff;
+    --font-detail: #f3f3f3;
+    --de-detail-orange: #315454;
+    --de-detail-green: #E6C5FD;
+    --de-detail-green-sha-shadow: #E6C5FD76;
+    --de-detail-purple: ##C3CC8176;
+    --de-detail-purple-sha-shadow: ##C3CC8176;
+    --sha-shadow-black: rgba(0, 0, 0, 0.5);
+    --sha-shadow-black-menu: rgba(0, 0, 0, 0.25);
+    --sha-shadow-white: rgba(255, 255, 255, 0.5);
+    /* Sizes */
+    --fo-font-main: 1em;
+    /**/
+    --fo-font-asidebar: 0.875em;
+    /**/
+    --fo-font-detail: 0.625em;
+    /**/
+    --fo-font-main-detail: 1.125em;
+    /**/
+    --fo-font-main-title: 1.25em;
+    /**/
+    /* Background & Gradients */
+    --background-gradient-parallax: linear-gradient(to top,
+            var(--back-background-main) 15%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-footer-page-purple: linear-gradient(to top,
+            var(--de-detail-purple-sha-shadow) 1%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-footer-page-green: linear-gradient(to top,
+            var(--de-detail-green-sha-shadow) 1%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-index: linear-gradient(to bottom var(--de-detail-green-sha-shadow) 60%,
+            rgba(255, 255, 255, 0));
+    /* Size Images */
+    --size-img-disco: 210px;
+}
+
+/* Theme Ice & Fire */
+:root.iceFire {
+    --back-background-main: #0c0b0a;
+    --back-background-menu: #142466;
+    --font: #ffffff;
+    --font-detail: #f3f3f3;
+    --de-detail-orange: #233a94;
+    --de-detail-green: #ff5454;
+    --de-detail-green-sha-shadow: #ff54549d;
+    --de-detail-purple: #4e5c9a;
+    --de-detail-purple-sha-shadow: #4e5c9a97;
+    --sha-shadow-black: rgba(0, 0, 0, 0.5);
+    --sha-shadow-black-menu: rgba(0, 0, 0, 0.25);
+    --sha-shadow-white: rgba(255, 255, 255, 0.5);
+    /* Sizes */
+    --fo-font-main: 1em;
+    /**/
+    --fo-font-asidebar: 0.875em;
+    /**/
+    --fo-font-detail: 0.625em;
+    /**/
+    --fo-font-main-detail: 1.125em;
+    /**/
+    --fo-font-main-title: 1.25em;
+    /**/
+    /* Background & Gradients */
+    --background-gradient-parallax: linear-gradient(to top,
+            var(--back-background-main) 15%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-footer-page-purple: linear-gradient(to top,
+            var(--de-detail-purple-sha-shadow) 1%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-footer-page-green: linear-gradient(to top,
+            var(--de-detail-green-sha-shadow) 1%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-index: linear-gradient(to bottom var(--de-detail-green-sha-shadow) 60%,
+            rgba(255, 255, 255, 0));
+    /* Size Images */
+    --size-img-disco: 210px;
+}
+
+/* Theme White Mode */
+:root.whiteMode {
+    --back-background-main: #EBE5D8;
+    --back-background-menu: #C4C0B5;
+    --font: #3f3f3a;
+    --font-detail: #2d2d2b;
+    --de-detail-orange: #5E5C57;
+    --de-detail-green: #161615;
+    --de-detail-green-sha-shadow: #DED9CC76;
+    --de-detail-purple: #9E9B91;
+    --de-detail-purple-sha-shadow: #9E9B9176;
+    --sha-shadow-black: rgba(0, 0, 0, 0.5);
+    --sha-shadow-black-menu: rgba(0, 0, 0, 0.25);
+    --sha-shadow-white: rgba(255, 255, 255, 0.5);
+    /* Sizes */
+    --fo-font-main: 1em;
+    /**/
+    --fo-font-asidebar: 0.875em;
+    /**/
+    --fo-font-detail: 0.625em;
+    /**/
+    --fo-font-main-detail: 1.125em;
+    /**/
+    --fo-font-main-title: 1.25em;
+    /**/
+    /* Background & Gradients */
+    --background-gradient-parallax: linear-gradient(to top,
+            var(--back-background-main) 15%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-footer-page-purple: linear-gradient(to top,
+            var(--de-detail-purple-sha-shadow) 1%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-footer-page-green: linear-gradient(to top,
+            var(--de-detail-green-sha-shadow) 1%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-index: linear-gradient(to bottom var(--de-detail-green-sha-shadow) 60%,
+            rgba(255, 255, 255, 0));
+    /* Size Images */
+    --size-img-disco: 210px;
+}
+
+/* Theme Dark Mode */
+:root.darkMode {
+    /* Colors */
+    --back-background-main: #0E0F0F;
+    --back-background-menu: #212C33;
+    --font: #ffffff;
+    --font-detail: #f3f3f3;
+    --de-detail-orange: #908ecf;
+    --de-detail-green: #2C5670;
+    --de-detail-green-sha-shadow: #2C567076;
+    --de-detail-purple: #CED6DB;
+    --de-detail-purple-sha-shadow: #CED6DB76;
+    --sha-shadow-black: rgba(0, 0, 0, 0.5);
+    --sha-shadow-black-menu: rgba(0, 0, 0, 0.25);
+    --sha-shadow-white: rgba(255, 255, 255, 0.5);
+    /* Sizes */
+    --fo-font-main: 1em;
+    /**/
+    --fo-font-asidebar: 0.875em;
+    /**/
+    --fo-font-detail: 0.625em;
+    /**/
+    --fo-font-main-detail: 1.125em;
+    /**/
+    --fo-font-main-title: 1.25em;
+    /**/
+    /* Background & Gradients */
+    --background-gradient-parallax: linear-gradient(to top,
+            var(--back-background-main) 15%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-footer-page-purple: linear-gradient(to top,
+            var(--de-detail-purple-sha-shadow) 1%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-footer-page-green: linear-gradient(to top,
+            var(--de-detail-green-sha-shadow) 1%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-index: linear-gradient(to bottom var(--de-detail-green-sha-shadow) 60%,
+            rgba(255, 255, 255, 0));
+    /* Size Images */
+    --size-img-disco: 210px;
+}
+
+/* Theme Black */
+:root.black {
+    /* Colors */
+    --back-background-main: #1a1c1c;
+    --back-background-menu: #292928;
+    --font: #ffffff;
+    --font-detail: #f3f3f3;
+    --de-detail-orange: #292824;
+    --de-detail-green: #757163;
+    --de-detail-green-sha-shadow: #75716376;
+    --de-detail-purple: #433c3a;
+    --de-detail-purple-sha-shadow: #433c3a76;
+    --sha-shadow-black: rgba(0, 0, 0, 0.5);
+    --sha-shadow-black-menu: rgba(0, 0, 0, 0.25);
+    --sha-shadow-white: rgba(255, 255, 255, 0.5);
+    /* Sizes */
+    --fo-font-main: 1em;
+    /**/
+    --fo-font-asidebar: 0.875em;
+    /**/
+    --fo-font-detail: 0.625em;
+    /**/
+    --fo-font-main-detail: 1.125em;
+    /**/
+    --fo-font-main-title: 1.25em;
+    /**/
+    /* Background & Gradients */
+    --background-gradient-parallax: linear-gradient(to top,
+            var(--back-background-main) 15%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-footer-page-purple: linear-gradient(to top,
+            var(--de-detail-purple-sha-shadow) 1%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-footer-page-green: linear-gradient(to top,
+            var(--de-detail-green-sha-shadow) 1%,
+            rgba(255, 255, 255, 0));
+    --background-gradient-parallax-index: linear-gradient(to bottom var(--de-detail-green-sha-shadow) 60%,
+            rgba(255, 255, 255, 0));
+    /* Size Images */
+    --size-img-disco: 210px;
+}
+
+/*# sourceMappingURL=root.css.map */

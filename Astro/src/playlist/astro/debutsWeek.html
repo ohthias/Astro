@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASTRO</title>
+    <link rel="shortcut icon" href="../../../Assets/Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../../root/css/root.css">
+    <link rel="stylesheet" href="../../../root/css/player.css">
+    <link rel="stylesheet" href="../../../root/css/menus.css">
+    <link rel="stylesheet" href="../playlist.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Menu Lateral -->
+    <div class="sidebar">
+      <div class="logo-details">
+        <img
+          src="/Assets/Images/Icons/iconAstro.png"
+          class="logo_img"
+          alt="astronaut"
+        />
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="/Astro/Frontend/Html/Base/home.html">
+            <i class="bx bx-home"></i>
+            <span class="links_name">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+        <li>
+          <a href="/Astro/Frontend/Html/Erro/manutenção.html">
+            <i class="bx bx-search"></i>
+            <input type="text" placeholder="Search..." />
+            <span class="tooltip">Search</span>
+          </a>
+        </li>
+        <li>
+          <a href="/Astro/Frontend/Html/Erro/comingSoon.html">
+            <i class="bx bx-heart"></i>
+            <span class="links_name">Salvos</span>
+          </a>
+          <span class="tooltip">Salvos</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-plus"></i>
+            <span class="links_name">Criar</span>
+          </a>
+          <span class="tooltip">Criar</span>
+        </li>
+      </ul>
+    </div>
+
+    <section class="module parallax parallax-1" id="backParallax">
+      <header>
+        <section class="section-header">
+          <label id="logo">Astro</label>
+          <div class="header-list">
+            <span id="level_user">01</span>
+            <a href="/Astro/Frontend/Html/Erro/404.html"
+              ><i class="fi fi-ss-user menu-icon"></i
+            ></a>
+            <a href="/Astro/Frontend/Html/Base/index.html"
+              ><i class="fi fi-ss-settings menu-icon"></i
+            ></a>
+          </div>
+        </section>
+      </header>
+
+      <div class="container">
+        <div class="container_playlist">
+          <div class="cotainer_playlist_image">
+            <img
+              src="/Assets/Images/Astro_main-caps/2.png"
+              alt="imagePlay"
+              id="imagePlay"
+            />
+          </div>
+          <div class="container_playlist_header">
+            <h1 id="namePlaylist">Debuts da Semana</h1>
+            <p id="creatorPlaylist">Astro</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section class="container_main">
+        <div class="container_options">
+          <div class="container_options_display">
+            <div class="container_options_buttons">
+              <button id="random"><i class="fi fi-sr-shuffle"></i></button>
+              <button id="playPause"><i class="bx bx-caret-right"></i></button>
+              <button id="heartMusic"><i class="fi fi-rr-heart"></i></button>
+            </div>
+            <div id="duracao-total"></div>
+          </div>
+        </div>
+
+        <div class="container_playlist_main">
+          <ul id="music-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <section class="module parallax parallax-2">
+      <footer></footer>
+    </section>
+
+    <!--Backend srcipts-->
+    <script type="module" src="/Astro/Settings/libs/musicPlayer/musicPlayer.js"></script>
+    <script type="module" src="/Astro/Settings/libs/playlist/playlistFunction.js"></script>
+
+    <!--Frontend srcipts-->
+    <script src="/Astro/root/js/menu.js"></script>
+    <script src="/Astro/root/js/gradientPlaylist.js"></script>
+    <script src="../../home/redirect.js"></script>
+  </body>
+</html>

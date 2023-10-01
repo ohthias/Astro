@@ -1,0 +1,435 @@
+/*
+ * Root: Player
+ * UTA - Matheus 03/09
+ * código documentado conforme html
+ */
+
+.containner_player {
+  margin: 0;
+  padding: 10px;
+  z-index: 12;
+  position: fixed;
+  bottom: 30px;
+  width: 100%;
+  max-height: 110px;
+}
+
+.player {
+  z-index: 40;
+  margin: 5px;
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--de-detail-purple-sha-shadow);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+
+.player_image {
+  margin: 0 10px;
+}
+
+.player_image #imgSong {
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  max-width: 60px;
+  max-height: 60px;
+  box-shadow: 0 0 5px var(--sha-shadow-white), 0 0 20px var(--de-detail-orange);
+}
+
+.player_infoMusic {
+  margin: 0 5px;
+  width: 100%;
+  max-width: 150px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.player_infoMusic #musicName {
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.player_infoMusic #artistName {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.725em;
+  text-transform: capitalize;
+  color: var(--de-detail-green);
+}
+
+#artistName:hover,
+#musicName:hover {
+  -webkit-text-decoration: 1.5px underline var(--de-detail-green);
+          text-decoration: 1.5px underline var(--de-detail-green);
+}
+
+#heartMusic,
+#randomPlayerMusic {
+  margin: 0 20px;
+  border: 0;
+  background: transparent;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.fi-sr-heart,
+.fi-ss-shuffle {
+  text-shadow: 0 0 10px var(--sha-shadow-white), 0 0 25px var(--de-detail-orange);
+  color: var(--de-detail-orange);
+  transition: 750ms ease;
+}
+
+/* Controls */
+.controls {
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--sha-shadow-black-menu);
+}
+
+.controls button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.controls i {
+  margin: 0 5px;
+  font-size: 28px;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: all 0.2s;
+}
+
+.controls i:hover {
+  color: var(--de-detail-green);
+  background: var(--sha-shadow-black);
+}
+
+.controls i.bx-caret-right {
+  color: var(--de-detail-orange);
+  background: var(--sha-shadow-black);
+}
+
+.controls i.bx-caret-right:hover {
+  color: var(--font-detail);
+}
+
+/* Timecode player */
+.time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.time span {
+  margin: 10px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: var(--font);
+  text-shadow: 0 0 10px var(--sha-shadow-white);
+}
+
+.footer {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+}
+
+.timecode_player {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+
+.progress-bar {
+  width: 80%;
+  height: 8px;
+  background: var(--de-detail-purple);
+  cursor: pointer;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  pointer-events: all;
+  transition: 150ms;
+}
+
+.progress-bar:hover {
+  background: var(--sha-shadow-black-menu);
+}
+
+.progress {
+  height: 8px;
+  background: var(--de-detail-green);
+  border-radius: 15px;
+  transition: 150ms;
+}
+
+.progress:hover {
+  background: var(--de-detail-orange);
+}
+
+#duration,
+#currentTime {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.6em;
+  letter-spacing: 1px;
+  color: var(--font-detail);
+}
+
+/* Container more options */
+.containner_more {
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Range volume*/
+.container_volume {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+#volumeButton {
+  margin: 0 10px;
+  border: 0;
+  font-size: 1.2em;
+  background: none;
+  cursor: pointer;
+  transition: 500ms;
+  display: flex;
+  align-items: center;
+}
+
+.fi-ss-volume,
+.fi-ss-volume-mute {
+  color: var(--font-detail);
+  transition: 500ms;
+}
+
+.fi-ss-volume:hover,
+.fi-ss-volume-mute:hover {
+  filter: drop-shadow(0 0 5px var(--sha-shadow-white), 0 0 20px var(--sha-shadow-black));
+}
+
+.tooltip-volume_control {
+  background: none;
+  white-space: nowrap;
+  pointer-events: visible;
+}
+
+/*********** Baseline, reset styles ***********/
+input[type=range] {
+  max-width: 120px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider track */
+input[type=range]::-webkit-slider-runnable-track {
+  border-radius: 0.4rem;
+  height: 0.4rem;
+  background: var(--de-detail-purple);
+}
+
+/* slider thumb */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-top: -4px;
+  border-radius: 0.5rem;
+  height: 0.8rem;
+  width: 0.8rem;
+  background-color: var(--sha-shadow-white);
+  box-shadow: 0 0 5px var(--sha-shadow-white), 0 0 20px var(--sha-shadow-black);
+  appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track:hover {
+  margin-top: -2px;
+}
+
+/*********** Firefox styles ***********/
+/* slider track */
+input[type=range]::-moz-range-track {
+  background: var(--sha-shadow-black);
+  border-radius: 0.3rem;
+  height: 0.3rem;
+}
+
+/* slider thumb */
+input[type=range]::-moz-range-thumb {
+  background-color: var(--de-detail-green);
+  border: none;
+  border-radius: 0.5rem;
+}
+
+/* Others options */
+.fi-ss-speakers,
+.fi-rr-menu-burger {
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.fi-ss-speakers:hover,
+.fi-rr-menu-burger:hover,
+#fullScreenButton .fi-rr-angle-up:hover {
+  color: var(--de-detail-green);
+  transition: 750ms;
+}
+
+/*Next Songs*/
+.container_faixas {
+  display: block;
+}
+
+.container_faixas .container_faixas_detalhes {
+  animation: inDown 500ms ease;
+  display: none;
+}
+
+.container_faixas .container_faixas_detalhes.open {
+  display: block;
+  margin: 10px 0;
+  padding: 8px 0;
+  border-radius: 20px;
+  position: absolute;
+  top: -360px;
+  right: 0;
+  max-width: 200px;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  background: var(--de-detail-purple-sha-shadow);
+  animation: inTop 500ms ease;
+}
+
+@keyframes inTop {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes inDown {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+.container_faixas_detalhes li {
+  padding: 8px 0;
+  padding-inline: 1rem;
+  filter: opacity(0.5);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: left;
+  text-transform: capitalize;
+  color: var(--font);
+  transition: 250ms;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.container_faixas_detalhes li:hover {
+  filter: opacity(1);
+  filter: drop-shadow(0 0 5px var(--sha-shadow-white), 0 0 20px var(--sha-shadow-black));
+}
+
+#upcomingSongsList li {
+  list-style: none;
+}
+
+.Songlits {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Songlits img {
+  border-radius: 5px;
+  width: 50px;
+}
+
+.Songlist-details {
+  margin: 0 15px;
+}
+
+.Songlist-details h5 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8em;
+  font-weight: 700;
+  text-align: left;
+  text-transform: capitalize;
+  color: var(--font-detail);
+}
+
+.Songlist-details p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7em;
+  text-align: left;
+  text-transform: capitalize;
+  color: var(--de-detail-green);
+}
+
+/*Fullscreen*/
+#fullScreenButton {
+  border: 0;
+  font-size: 16px;
+  background: none;
+  transition: 750ms;
+  cursor: pointer;
+}
+
+/* Animations */
+@keyframes upInDownMusic {
+  0% {
+    text-shadow: 0 0 10px var(--sha-shadow-white);
+  }
+  100% {
+    text-shadow: 0 0 10px var(--sha-shadow-white), 0 0 25px var(--sha-shadow-white);
+  }
+}
+/* Media */
+@media screen and (max-width: 1080px) {
+  .player_infoMusic #musicName {
+    font-size: 1em;
+  }
+  .player_infoMusic #artistName {
+    font-size: 0.5em;
+  }
+  .player i,
+  #heartMusic,
+  #randomPlayerMusic {
+    margin: 0 5px;
+    font-size: 16px;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 0.2rem;
+  }
+}/*# sourceMappingURL=player.css.map */
