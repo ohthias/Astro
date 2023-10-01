@@ -9,7 +9,7 @@ function fazerLogin(nome, senha) {
   
       if (usuarioObj.senha === senha) {
         console.log('Login bem-sucedido!');
-        window.location.href = "/Astro/Frontend/Html/Base/home.html"
+        window.location.href = "/Astro/src/home/home.html"
         return;
       }
     }

@@ -1,4 +1,4 @@
-import backlist from "/Astro/Backend/JS/BackgroundSettings/backgroundMainArtsit.js";
+import backlist from "./backgroundMainArtsit.js";
 
 const h1Element = document.getElementById("nameArtist");
 const backgroundDiv = document.getElementById("backParallax");
