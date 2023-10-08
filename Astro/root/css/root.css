@@ -22,7 +22,7 @@
         box-sizing: border-box;
         font-family: "Bebas Neue", sans-serif;
         list-style: none;
-        color: var(--font);
+        color: var(--font-all);
 }
 
 :root {
@@ -44,7 +44,7 @@
         --primary-light-shadow: #6DA5C082;
         --secondary-shadow: #072E3382;
         --secondary-dark-shadow: #294D6182;
-        --details-shadow: #0f989682;
+        --details-shadow: #c5c5c582;
         --details-dark-shadow: #00000082;
         --background-details-shadow: #05161A82;
 
