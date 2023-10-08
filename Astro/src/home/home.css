@@ -5,8 +5,7 @@
  */
 
 body {
-    background-color: var(--back-background-main);
-    overflow-x: hidden;
+    background: linear-gradient(to bottom, var(--background-all) 80%, var(--background-smoke));
 }
 
 /* Background Parallax Image*/
@@ -27,6 +26,7 @@ section.module.parallax {
     background: #d9d9d9 url("") no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    background-position: center;
     animation: fadeIn 800ms ease;
 }
 
@@ -36,7 +36,7 @@ section.module.parallax::after {
     height: 100%;
     position: absolute;
     z-index: 1;
-    background: linear-gradient(to top, var(--back-background-main), rgba(0, 0, 0, 0.552) 12%);
+    background: linear-gradient(to top, var(--background-all), rgba(0, 0, 0, 0.552) 12%);
 }
 
 /* Main iformations 'main content' */
@@ -65,150 +65,32 @@ section.module.parallax::after {
 }
 
 .containner_text h1 {
-    margin: 20px 0;
-    max-width: 250px;
-    font-size: 5em;
-    letter-spacing: 5px;
-    line-height: 80px;
-    text-shadow: 0 0 2px var(--de-detail-orange), 0 0 20px var(--de-detail-orange);
-    animation: giveMeDown 750ms linear;
+    font-size: 6.25rem;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    animation: fadeIn 1s ease;
+    cursor: default;
 }
 
-.containner_text button {
-    padding: 15px 10px;
-    border: 2px solid var(--de-detail-green);
-    border-radius: 100px;
-
-    font-size: 1.25em;
-    background: none;
-    cursor: pointer;
-    color: var(--de-detail-green);
-    box-shadow: 0 2px 2px var(--sha-shadow-black);
-    animation: downDown 250ms ease;
-    transition: 0.8s;
-}
-
-.containner_text button:hover {
-    color: var(--font);
-    background: var(--de-detail-green);
-    box-shadow: 0 0 2px var(--de-detail-green), 0 0 40px var(--de-detail-green);
-    transition: 0.4s ease;
-}
-
-.containner_text button:active {
+.containner_text #othersSongs {
+    margin: var(--marginY);
+    padding: 10px;
+    padding-inline: 1em;
     border: 0;
-    color: var(--font);
-    cursor: progress;
-}
-
-/* Músicas || Artistas anteriores */
-
-.containner_anteriores {
-    position: relative;
-    top: 70%;
-    max-width: 650px;
-    float: right;
-}
-
-.containner_anteriores h2 {
-    letter-spacing: 2px;
-    line-height: 40px;
-    color: var(--de-detail-orange);
-
-    background: linear-gradient(to right, var(--de-detail-orange), var(--de-detail-orange));
-    background-size: 40% 0.1em, 0 0.1em;
-    background-position: 0 100%, 0 100%;
-    background-repeat: no-repeat;
-    /* detalhe com o mesmo efeito de 'hr' */
-
-    animation: downDown 500ms ease;
-}
-
-.child_anter {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    gap: 10px;
-    animation: rightToLeft 750ms linear;
-    overflow-x: scroll;
-}
-
-.child_anter::-webkit-scrollbar {
-    display: none;
-}
-
-.child_anter button {
-    border: none;
-    background: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    background: var(--secondary-dark);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 1s ease;
+    transition: 250ms;
     cursor: pointer;
 }
 
-.anteriores img {
-    width: 180px;
-    height: 270px;
-    border: 0;
-    object-fit: cover;
-    filter: grayscale(80%);
-    border-radius: 20px;
-    box-shadow: 10px 2px 10px var(--sha-shadow-black);
-    transition: 100ms;
-}
-
-figure .anteriores .anteriores_name {
-    margin: -50% auto;
-    padding: 5px 0;
-    z-index: 20;
-    font-size: 16px;
-    text-align: center;
-    letter-spacing: 1px;
-    color: var(--font);
-    visibility: hidden;
-}
-
-.child_anter img:hover,
-.anteriores:hover .anteriores_name {
-    filter: grayscale(0);
-    visibility: visible;
-    position: relative;
-    transform: translateY(-5px);
-    transition: 0.5s ease;
-}
-
-.child_anter img:hover {
-    box-shadow: 0 0 10px var(--sha-shadow-black), 0 0 15px var(--de-detail-green);
-}
-
-#afterButton,
-#prevButtonAfter {
-    margin: 0 15px;
-    padding: 2px 5px;
-    border: 0;
-    z-index: 12;
-    font-size: 24px;
-    background: none;
-    cursor: pointer;
-}
-
-#afterButton {
-    position: absolute;
-    right: 0;
-    top: 55%;
-}
-
-#prevButtonAfter {
-    position: absolute;
-    left: -10px;
-    top: 50%;
-    rotate: 180deg;
-}
-
-#afterButton .fi-sr-angle-circle-right {
-    color: var(--de-detail-green);
-}
-
-#prevButtonAfter .fi-sr-angle-circle-right {
-    visibility: hidden;
-    color: var(--de-detail-orange);
+.containner_text #othersSongs:is(:hover, :focus) {
+    color: var(--details);
+    background: var(--font-all);
 }
 
 /* Main */
@@ -228,7 +110,7 @@ figure .anteriores .anteriores_name {
 }
 
 .containner-main {
-    margin: 5px 0 10px 50px;
+    margin: 16px;
 }
 
 .name-opitions h3 {
@@ -238,51 +120,19 @@ figure .anteriores .anteriores_name {
     line-height: 35px;
     letter-spacing: 1px;
     text-transform: capitalize;
-    color: var(--de-detail-green);
+    color: var(--details-green);
 }
 
 .name-opitions hr {
     max-width: 225px;
     height: 3px;
-    border: 1px solid var(--de-detail-green);
+    border: 1px solid var(--details-green);
     border-radius: 0 10px 10px 0;
-    background: var(--de-detail-green);
-}
-
-.carousel button {
-    width: 200px;
-    height: 200px;
-    margin: 0 10px;
-    border: 0;
-    border-radius: 10px;
-    padding: 5px;
-    cursor: pointer;
-    background: none;
-    transition: 250ms;
-}
-
-.songButton {
-    border-radius: 10px;
-    box-shadow: 0 0 10px var(--sha-shadow-white);
-    transition: 100ms;
-}
-
-.carousel button:hover {
-    transform: scale(1.05);
-    transition: 250ms;
-}
-
-.songButton:hover {
-    box-shadow: 0 0 10px var(--de-detail-green);
-    transition: 250ms;
-}
-
-button .songButton:active {
-    box-shadow: 0 0 10px var(--de-detail-purple), 0 0 20px var(--de-detail-orange);
+    background: var(--details-green);
 }
 
 .wrapper {
-    height: 230px;
+    max-height: 230px;
     margin: 20px 0 25px;
     display: flex;
     align-self: center;
@@ -297,14 +147,15 @@ button .songButton:active {
     transform: translateY(-50%);
     height: 35px;
     width: 35px;
-    color: var(--de-detail-green);
+    color: var(--primary);
     cursor: pointer;
     font-size: 1.15rem;
     text-align: center;
     line-height: 35px;
-    background: var(--de-detail-green-sha-shadow);
+    background: var(--secondary-dark-shadow);
     border-radius: 50%;
     transition: transform 0.1s linear;
+    transition: 250ms;
 }
 
 .wrapper i:active {
@@ -344,7 +195,6 @@ button .songButton:active {
 .carousel img {
     height: max-content;
     object-fit: cover;
-    user-select: none;
     margin-left: 14px;
     width: 200px;
 }
@@ -353,6 +203,36 @@ button .songButton:active {
     margin-left: 0px;
 }
 
+.carousel button {
+    --size: 200px;
+    max-width: var(--size);
+    max-height: var(--size);
+    margin: 0 10px;
+    border: 0;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    background: none;
+    transition: 250ms;
+}
+
+.songButton {
+    --size: 200px;
+    max-width: var(--size);
+    max-height: var(--size);
+    border-radius: 10px;
+    box-shadow: 0 0 8px var(--details-shadow);
+    transition: 100ms;
+}
+
+.songButton:hover {
+    box-shadow: 0 0 10px var(--primary-light);
+    transition: 250ms;
+}
+
+button .songButton:active {
+    box-shadow: 0 0 10px var(--de-detail-purple), 0 0 20px var(--de-detail-orange);
+}
 
 /* Main container Artist */
 
@@ -388,7 +268,7 @@ button .songButton:active {
 .fig_artistas img:hover,
 .fig_artistas:hover .fig_artistas_toopkit {
     filter: brightness(100%);
-    box-shadow: 0 0 5px var(--de-detail-green), 0 0 25px var(--de-detail-green);
+    box-shadow: 0 0 5px var(--details-green), 0 0 25px var(--details-green);
 }
 
 .fig_artistas:hover .fig_artistas_toopkit {
@@ -465,7 +345,7 @@ button .songButton:active {
 /* footer */
 
 section.module.parallax-2 {
-    height: 150px !important;
+    max-height: 150px !important;
     width: 100%;
 }
 
@@ -475,4 +355,77 @@ section.module.parallax-2 {
 
 section.module.parallax-2::after {
     content: none;
+}
+
+@media screen and (max-width:1025px) {
+
+    .carousel button,
+    .songButton {
+        --size: 180px;
+        max-width: var(--size);
+        max-height: var(--size);
+    }
+}
+
+@media screen and (max-width:769px) {
+    section.module.parallax {
+        height: 70vh !important;
+    }
+
+    .containner_text {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .containner_text h1 {
+        font-size: 5rem;
+    }
+
+    .name-opitions h3 {
+        font-size: 1.15em;
+    }
+
+    .carousel button,
+    .songButton {
+        --size: 180px;
+        max-width: var(--size);
+        max-height: var(--size);
+    }
+}
+
+@media screen and (max-width:426px) {
+    .section-main {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .containner_text {
+        margin: 0;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+
+    .home-section {
+        margin: 20px 0;
+        width: 100%;
+        left: 0;
+    }
+
+    .name-opitions h3 {
+        font-size: 1em;
+    }
+
+    .name-opitions hr {
+        width: 150px;
+    }
+
+    .carousel button,
+    .songButton {
+        --size: 150px;
+        max-width: var(--size);
+        max-height: var(--size);
+    }
 }

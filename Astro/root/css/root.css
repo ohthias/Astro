@@ -28,6 +28,7 @@
 :root {
         /* Alls */
         --background-all: #0E0D0D;
+        --background-smoke: #171616;
         --font-all: #F3F3F3;
 
         /* Colors */
@@ -36,6 +37,7 @@
         --secondary: #072E33;
         --secondary-dark: #294D61;
         --details: #0F9890;
+        --details-green: #29F247;
         --details-dark: #000000;
         --background-details: #05161A;
 
@@ -45,6 +47,7 @@
         --secondary-shadow: #072E3382;
         --secondary-dark-shadow: #294D6182;
         --details-shadow: #c5c5c582;
+        --details-green-shadow: #29F24776;
         --details-dark-shadow: #00000082;
         --background-details-shadow: #05161A82;
 
@@ -80,4 +83,10 @@
         background-color: var(--background-details);
         border-radius: 10px;
         border: 3px solid var(--background-details);
+}
+
+@media screen and (max-width:426px) {
+        ::-webkit-scrollbar {
+                display: none;
+        }
 }

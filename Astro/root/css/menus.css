@@ -374,6 +374,12 @@ header {
     border-radius: 12px;
 }
 
+@media screen and (max-width: 426px) {
+    .sidebar {
+        display: none;
+    }
+}
+
 
 @media (max-width: 420px) {
     .sidebar li .tooltip {
