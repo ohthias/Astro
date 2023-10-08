@@ -110,7 +110,7 @@ section.module.parallax::after {
 }
 
 .containner-main {
-    margin: 16px;
+    margin-left: 53px;
 }
 
 .name-opitions h3 {
@@ -234,56 +234,6 @@ button .songButton:active {
     box-shadow: 0 0 10px var(--de-detail-purple), 0 0 20px var(--de-detail-orange);
 }
 
-/* Main container Artist */
-
-.container_artistas_grid {
-    margin: 25px 30px 0 25px;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    align-items: center;
-    overflow-x: visible;
-}
-
-.container_artistas_grid button {
-    background: none;
-    border: 0;
-}
-
-.sidebar.open~.container_artistas_grid {
-    grid-template-columns: repeat(6, 1fr);
-}
-
-.fig_artistas img {
-    margin: 0 20px;
-    border: 0;
-    border-radius: 100px;
-    max-width: 150px;
-    height: 150px;
-    object-fit: cover;
-    filter: brightness(50%);
-    cursor: pointer;
-    transition: 200ms;
-}
-
-.fig_artistas img:hover,
-.fig_artistas:hover .fig_artistas_toopkit {
-    filter: brightness(100%);
-    box-shadow: 0 0 5px var(--details-green), 0 0 25px var(--details-green);
-}
-
-.fig_artistas:hover .fig_artistas_toopkit {
-    box-shadow: none;
-}
-
-.fig_artistas_toopkit {
-    margin: 10px auto;
-    text-align: center;
-    filter: brightness(50%);
-}
-
-/* Animations das playlists */
-
-
 /* Animations da main */
 
 @keyframes fadeIn {
@@ -372,6 +322,12 @@ section.module.parallax-2::after {
         height: 70vh !important;
     }
 
+    .sidebar.open~.back-image .section-main,
+    .sidebar.open~.home-section {
+        left: 150px;
+        width: calc(100% - 150px);
+    }
+
     .containner_text {
         top: 50%;
         transform: translateY(-50%);
@@ -394,9 +350,19 @@ section.module.parallax-2::after {
 }
 
 @media screen and (max-width:426px) {
+    .containner-main {
+        margin: 1.5rem;
+    }
+    
     .section-main {
         left: 50%;
         transform: translateX(-50%);
+    }
+    
+    .sidebar.open~.back-image .section-main,
+    .sidebar.open~.home-section {
+        left: 0;
+        width: 100%;
     }
 
     .containner_text {
@@ -406,7 +372,6 @@ section.module.parallax-2::after {
         transform: translate(-50%, -50%);
         text-align: center;
     }
-
 
     .home-section {
         margin: 20px 0;
