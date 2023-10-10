@@ -74,15 +74,13 @@
 }
 
 *::-webkit-scrollbar-track {
-        background: rgba(255, 255, 255, 0);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
+        background-color: var(--background-all);
 }
 
 *::-webkit-scrollbar-thumb {
         background-color: var(--background-details);
         border-radius: 10px;
-        border: 3px solid var(--background-details);
+        box-shadow: 0 0 10px var(--primary-shadow), 0 0 100px var(--secondary);
 }
 
 @media screen and (max-width:426px) {
