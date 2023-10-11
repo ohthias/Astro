@@ -91,7 +91,9 @@ function playNextSong() {
 }
 
 function createRandomMixByRhythm(songs, rhythm, numberOfSongs) {
-  const filteredSongs = Object.values(songs).filter((song) => song.ritmo === rhythm);
+  const filteredSongs = Object.values(songs).filter(
+    (song) => song.ritmo === rhythm
+  );
   return createRandomMix(filteredSongs, numberOfSongs);
 }
 
@@ -100,6 +102,9 @@ const Global = createRandomMixByRhythm(allSongs, "agitado", 10);
 const PelaJanela = createRandomMixByRhythm(allSongs, "moderado", 10);
 const AutoAstral = createRandomMixByRhythm(allSongs, "raiva", 10);
 const TimeofStudy = createRandomMixByRhythm(allSongs, "Calmo", 10);
+const PeloCampo = createRandomMixByRhythm(allSongs, "sombrio", 10);
+const LofiVibe = createRandomMixByRhythm(allSongs, "dramatico", 10);
+const Retro = createRandomMixByRhythm(allSongs, "intenso", 10);
 
 const playlists = [
   {
@@ -120,6 +125,21 @@ const playlists = [
   {
     name: "Time of Study",
     image: "/Assets/Images/Capas_astro/Art_M.5.png",
+    creator: "Matheus",
+  },
+  {
+    name: "Lofi Vibe",
+    image: "/Assets/Images/Capas_astro/Art_M.1.png",
+    creator: "Matheus",
+  },
+  {
+    name: "Pelo Campo",
+    image: "/Assets/Images/Capas_astro/Art_M.5 (2).png",
+    creator: "Matheus",
+  },
+  {
+    name: "Retro",
+    image: "/Assets/Images/Capas_astro/Art_M.5 (3).png",
     creator: "Matheus",
   },
 ];
@@ -165,13 +185,30 @@ function loadMixBasedOnPlaylist(playlistName) {
       currentMix = TimeofStudy;
       break;
 
+    case "Pelo Campo":
+      currentMix = PeloCampo;
+      break;
+
+    case "Lofi Vibe":
+      currentMix = LofiVibe;
+      break;
+
+    case "Retro":
+      currentMix = Retro;
+      break;
+
     default:
       console.error("Mix não encontrado para a playlist:", playlistName);
+      currentMix = `Mix não encontrado para a playlist: ${playlistName}`;
       return;
   }
 
   // Exibir o mix na lista e configurar os botões de reprodução
-  displayRandomMix(currentMix);
+  if (currentMix == 0) {
+    displayRandomMix("Playlist em manutenção. " + currentMix);
+  } else {
+    displayRandomMix(currentMix);
+  }
 }
 
 // Atualiza as informações da página de acordo com a playlist selecionada

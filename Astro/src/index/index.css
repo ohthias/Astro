@@ -1,8 +1,8 @@
 body,
 html {
-    color: var(--font);
+    color: var(--font-all);
     font-family: 'Montserrat', sans-serif;
-    background: var(--back-background-main);
+    background: var(--background-details);
 }
 
 /* Criando o efieto de parallax*/
@@ -22,29 +22,9 @@ section.module {
 
     background-size: cover;
     animation: fadeIn 300ms ease;
+    background: linear-gradient(var(--details-shadow) 0%, rgba(0, 0, 0, 0) 35%);
 }
 
-section.module.container1 {
-    background: linear-gradient(var(--de-detail-green-sha-shadow) 0%, rgba(0, 0, 0, 0)) 95%;
-}
-
-section.module.container2,
-section.module.container4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--sha-shadow-black);
-}
-
-section.module.container4 {
-    height: 50vh !important;
-}
-
-section.module.container5 {
-    background: linear-gradient(to top, var(--de-detail-green-sha-shadow) 0%, rgba(0, 0, 0, 0)) 95%;
-}
-
-/* Container 1 */
 
 nav {
     width: 100%;
@@ -62,19 +42,16 @@ nav {
 .details .detail-logo label {
     font-size: 2em;
     line-height: 34px;
-    color: var(--font);
     transition: 0.8s;
     cursor: pointer;
 
     background:
         linear-gradient(to right, rgba(255, 255, 255, 0), rgba(100, 200, 200, 0)),
-        linear-gradient(to right, var(--de-detail-green), var(--de-detail-green));
+        linear-gradient(to right, var(--details), var(--details));
     background-size: 100% 0.1em, 0 0.1em;
     background-position: 100% 70%, 0 100%;
     background-repeat: no-repeat;
     transition: background-size 400ms;
-
-    /* @param background - linha abaixo da logo para :hover para clique*/
 
     animation: fadeIn 1s ease;
     transition: 0.5s;
@@ -84,7 +61,7 @@ nav {
 .details .detail-logo label:focus,
 .details .detail-menu .nav-menu:hover,
 .details .detail-menu .nav-menu:focus {
-    color: var(--de-detail-green);
+    color: var(--primary-light);
     background-size: 0 0.1em, 100% 0.1em;
     transition: 0.3s;
 }
@@ -95,18 +72,17 @@ nav {
     letter-spacing: 1px;
     text-decoration: none;
 
-    color: var(--font);
+    color: var(--font-all);
     transition: 0.8s;
     cursor: pointer;
 
     background:
         linear-gradient(to right, rgba(255, 255, 255, 0), rgba(100, 200, 200, 0)),
-        linear-gradient(to right, var(--de-detail-green), var(--de-detail-green));
+        linear-gradient(to right, var(--details), var(--details));
     background-size: 100% 0.1em, 0 0.1em;
     background-position: 100% 70%, 0 100%;
     background-repeat: no-repeat;
     transition: background-size 400ms;
-    /* @param background - linha abaixo da logo para :hover para clique*/
 
     animation: fadeIn 1s ease;
     transition: 0.5s;
@@ -114,17 +90,16 @@ nav {
 
 .details .detail-menu .nav-menu.entrarButton {
     padding: 10px 25px;
-    border: 2px solid var(--font);
+    border: 2px solid var(--font-all);
     border-radius: 50px;
-    color: var(--font);
     background: transparent;
     background-position: 0;
     background-size: initial;
 }
 
 .details .detail-menu .nav-menu.entrarButton:hover {
-    background: var(--font);
-    color: var(--de-detail-orange);
+    background: var(--font-all);
+    color: var(--secondary-dark);
 }
 
 .containner {
@@ -141,8 +116,7 @@ nav {
 .conteinner_logo h1 {
     font-size: 5em;
     letter-spacing: 4px;
-    text-shadow: 0 2px 2px var(--sha-shadow-black);
-    color: var(--de-detail-green);
+    text-shadow: 0 2px 2px var(--details-dark-shadow);
 }
 
 .containner_info {
@@ -154,13 +128,13 @@ nav {
 .containner_info h3 {
     margin: 10px 0;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    text-shadow: 2px 2px 5px var(--sha-shadow-black);
+    font-weight: 400;
+    text-shadow: 2px 2px 5px var(--details-dark-shadow);
 }
 
 .wrapper {
     box-sizing: content-box;
-    color: #05061e;
+    color: var(--font-all);
     height: 70px;
     display: flex;
     border-radius: 8px;
@@ -176,9 +150,9 @@ nav {
     display: flex;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 20px;
-    color: var(--de-detail-orange);
+    color: var(--details);
     animation: spin_words 15s infinite;
 }
 
@@ -236,22 +210,21 @@ nav {
 
 #entrar {
     background: transparent;
-    border: 2px solid var(--font);
-    color: var(--font);
+    border: 2px solid var(--font-all);
     transition: 300ms;
 }
 
 #entrar:hover {
     transform: translateY(-10px);
-    background: var(--font);
-    color: var(--de-detail-purple);
+    background: var(--font-all);
+    color: var(--secondary);
     transition: 500ms;
 }
 
 #cadastrar {
-    background: var(--de-detail-purple);
+    background: var(--details);
     border: 0;
-    color: var(--font);
+    color: var(--font-all);
     transition: 300ms;
 }
 
@@ -260,172 +233,10 @@ nav {
     transition: 500ms;
 }
 
-/* Container 2 */
-
-
-.contant-bolls {
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
-}
-
-.bolls {
-    margin: 0 50px;
-    display: block;
-}
-
-.circle {
-    margin: 35px auto;
-    max-width: 160px;
-    height: 160px;
-    border: 0;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to top, #FF3D20, #72006E);
-    box-shadow: 0 0 10px var(--sha-shadow-black), 0 0 20px var(--de-detail-purple);
-}
-
-.circle i.fi {
-    margin: 0;
-    padding: 0;
-    font-size: 35px;
-    line-height: 0;
-}
-
-.bolls-details {
-    text-align: center;
-}
-
-.bolls-details h4 {
-    font-size: 1.25em;
-    letter-spacing: 1px;
-}
-
-.bolls-details p {
-    margin: 10px auto;
-    width: 200px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 0.8rem;
-}
-
-/* Container 3 */
-.content-image {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.content-image img {
-    margin: 100px 20px;
-}
-
-.content-image img.atronaut {
-    width: 350px;
-    animation: astronaut 20s ease-in-out infinite;
-}
-
-.content-image img.grid {
-    width: 550px;
-    height: fit-content;
-}
-
-@keyframes astronaut {
-
-    0%,
-    100% {
-        rotate: 0deg;
-        transform: translateY(0);
-    }
-
-    25% {
-        rotate: 2deg;
-        transform: translateY(-50px);
-    }
-
-    75% {
-        rotate: -2deg;
-        transform: translateY(50px);
-    }
-}
-
-/* Container 4 & 5*/
-
-.container5 .content {
-    margin: 100px auto;
-    text-align: center;
-}
-
-.container5 img {
-    margin: 20px auto;
-    max-width: 500px;
-    filter: drop-shadow(0 0 10px var(--sha-shadow-white));
-    animation: pulseGlow 10s infinite;
-}
-
-@keyframes pulseGlow {
-
-    0%,
-    100% {
-        filter: drop-shadow(0 0 10px var(--sha-shadow-white));
-    }
-
-    50% {
-        filter: drop-shadow(0 0 0 var(--sha-shadow-white));
-
-    }
-}
-
-.container4 h2,
-.container5 h2 {
-    margin: 10px 0;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 2em;
-    text-shadow: 2px 2px 5px var(--sha-shadow-black);
-    color: var(--de-detail-orange);
-}
-
-.container4 p {
-    margin: 10px 0;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 1.5em;
-    text-shadow: 2px 2px 5px var(--sha-shadow-black);
-    color: var(--font);
-}
-
-.container5 button#cadastrar {
-    margin: 10px 0;
-    padding: 8px 26px;
-    border: 2px solid var(--font);
-    border-radius: 100px;
-    font-size: 1.5em;
-    letter-spacing: 1px;
-    color: var(--font);
-    background: transparent;
-    cursor: pointer;
-}
-
-.container5 button#cadastrar:hover {
-    color: var(--de-detail-purple);
-    background: var(--font);
-}
-
-/* Footer */
-
-footer {
-    height: 300px;
-    background: var(--de-detail-green-sha-shadow);
-}
-
 /* Sreen */
 @media screen and (max-width:450px) {
     main {
         left: 50%;
-
     }
 
     .buttons {

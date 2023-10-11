@@ -6,10 +6,8 @@
 
 
 body {
-  background: url('/Assets/svg/blob-Index.svg') no-repeat;
-  background-size: cover;
+  background: linear-gradient(90deg, rgba(31, 183, 169, 0.00) 50.94%, rgba(31, 183, 169, 0.20) 82.83%), #0E0D0D;
   overflow-y: hidden;
-  animation: smoothFilter 10s ease infinite;
 }
 
 /*Logo header */
@@ -26,7 +24,7 @@ body {
 }
 
 #logo:hover {
-  color: var(--de-detail-green);
+  color: var(--details);
 }
 
 /* Astronaut img*/
@@ -40,6 +38,7 @@ figure {
 
 figure img {
   animation: moviment 10s ease infinite;
+  filter: brightness(80%) drop-shadow(0 0 10px var(--background-details-shadow));
   max-width: 450px;
 }
 
@@ -55,7 +54,6 @@ main {
   align-items: center;
   position: relative;
   left: calc(100% - 550px);
-  background: var(--sha-shadow-black);
   backdrop-filter: blur(10px);
   animation: fade 250ms ease;
 }
@@ -66,25 +64,25 @@ main {
   animation: fadeinDown 500ms ease;
 }
 
-.containner-info-header h1{
+.containner-info-header h1 {
   font-family: inherit;
   font-weight: 700;
-  font-size: 2.5em;
-  letter-spacing: 1.5px;
-  text-shadow: 2px 2px 10px var(--sha-shadow-black);
+  font-size: 3em;
+  letter-spacing: 5px;
+  text-shadow: 2px 0 10px var(--details-dark-shadow);
 }
 
 .containner-info-header a#page {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   letter-spacing: 0.8px;
-  text-shadow: 0 2px 2px var(--sha-shadow-black);
-  color: var(--de-detail-orange);
+  text-shadow: 0 2px 2px var(--details-dark-shadow);
+  color: var(--primary);
   transition: all 250ms;
 }
 
 .containner-info-header a#page:hover {
-  color: var(--de-detail-purple);
+  color: var(--secondary);
 }
 
 /*Form*/
@@ -120,23 +118,23 @@ main {
 .input:focus,
 input:valid {
   outline: none;
-  border: 1.5px solid var(--back-background-menu);
+  border: 1.5px solid var(--background-all);
 }
 
 .input:focus~label,
 input:valid~label {
   transform: translateY(-50%) scale(0.8);
-  background: var(--back-background-menu);
+  background: var(--background-all);
   border-radius: 50px;
   padding: 0 .5em;
   color: var(--font);
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 30px white inset !important;
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
 
@@ -156,7 +154,7 @@ button {
   letter-spacing: 0.05em;
   color: white;
   background: #ad5389;
-  background: linear-gradient(to right,var(--back-background-menu), var(--de-detail-purple), var(--de-detail-orange));
+  background: linear-gradient(to right, var(--primary), var(--primary-light), var(--secondary-dark));
   transition: 500ms;
   cursor: pointer;
 }
@@ -172,7 +170,7 @@ button span {
 }
 
 button:hover {
-  box-shadow: 0 0 5px var(--de-detail-orange), 0 0 50px var(--back-background-menu), 0 0 100px var(--sha-shadow-black);
+  box-shadow: 0 0 5px var(--de-detail-orange), 0 0 50px var(--back-background-menu), 0 0 100px var(--details-dark-shadow);
   transition: 500ms;
 }
 
