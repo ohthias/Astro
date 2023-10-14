@@ -1,5 +1,5 @@
 body {
-  background: var(--back-background-main);
+  background: linear-gradient(to bottom, var(--background-all) 80%, var(--background-smoke));
 }
 
 /* Header */
@@ -17,7 +17,6 @@ section.module.parallax {
   position: relative;
   overflow: hidden;
 
-  background: var(--de-detail-orange);
   background-size: cover;
   animation: fadeIn 800ms ease;
 }
@@ -28,16 +27,11 @@ section.module.parallax::after {
   height: 100%;
   position: absolute;
   z-index: 1;
-  background: var(--background-gradient-parallax);
 }
 
 section.module.parallax-2 {
   height: 150px !important;
   width: 100%;
-}
-
-section.module.parallax-2 {
-  background: var(--background-gradient-parallax-footer-page);
 }
 
 section.module.parallax-2::after {
@@ -68,8 +62,9 @@ section.module.parallax-2::after {
   display: flex;
   align-items: center;
   flex-direction: row;
-  background: var(--sha-shadow-black-menu);
+  background: var(--details-dark-shadow);
   backdrop-filter: blur(10px);
+  box-shadow: 0 0 0 var(--font-all), 0 0 50px var(--details-shadow);
 }
 
 .cotainer_playlist_image {
@@ -78,26 +73,28 @@ section.module.parallax-2::after {
 
 #imagePlay {
   border-radius: 10px;
-  max-width: var(--size-img-disco);
-  box-shadow: 0 0 10px var(--de-detail-orange);
+  max-width: var(--size-images);
+  box-shadow: var(--shadow-box-black);
 }
 
-#namePlaylist {
+#namePlaylist, #nameAlbum {
   margin: 10px 0;
   font-size: 3.5em;
   letter-spacing: 1px;
-  color: var(--de-detail-green);
+  color: var(--details-green);
+  cursor: default;
 }
 
-#creatorPlaylist {
+#creatorPlaylist , #creatorAlbum{
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 1.2em;
+  transition: 250ms;
   cursor: pointer;
 }
 
-#creatorPlaylist:hover {
-  color: var(--sha-shadow-white);
+#creatorPlaylist:hover, #creatorAlbum:hover {
+  color: var(--primary-light);
 }
 
 /* Options */
@@ -118,7 +115,7 @@ section.module.parallax-2::after {
   align-items: center;
   padding: 10px 8px;
   border-radius: 10px;
-  background: var(--sha-shadow-black);
+  background: var(--details-dark-shadow);
 }
 
 .container_options_buttons #random,
@@ -143,11 +140,14 @@ section.module.parallax-2::after {
 .container_options_buttons #playPause {
   font-size: 36px;
   border-radius: 50px;
-  background: var(--sha-shadow-black);
+  background: var(--details-dark-shadow);
 }
 
 .container_options_buttons #playPause i {
-  color: var(--de-detail-orange);
+  padding: 8px;
+  color: var(--primary);
+  background: var(--secondary-shadow);
+  border-radius: 50px;
 }
 
 .container_options #duracao-total {
@@ -174,7 +174,7 @@ main {
 .container_playlist_main {
   padding: 15px 20px;
   border-radius: 10px;
-  background: var(--sha-shadow-black-menu);
+  background: var(--details-darkest-shadow);
 }
 
 #music-list {
@@ -191,7 +191,7 @@ main {
   display: flex;
   align-items: center;
   width: 850px;
-  background: var(--sha-shadow-black);
+  background: var(--details-dark-shadow);
 }
 
 .infoMusica {
@@ -206,7 +206,7 @@ main {
 }
 
 #music-list li:hover {
-  background: var(--sha-shadow-black-menu);
+  background: var(--background-details-shadow);
 }
 
 #music-list img {
@@ -220,7 +220,7 @@ main {
   margin-bottom: 20px;
   font-size: 1.5em;
   letter-spacing: 1px;
-  color: var(--de-detail-green);
+  color: var(--primary-light);
 }
 
 .nameArtista_playlist {
@@ -249,8 +249,8 @@ main {
   left: 30%;
   transform: translate(-30%, -50%);
   font-size: 35px;
-  color: var(--de-detail-green);
-  background: var(--sha-shadow-black);
+  color: var(--secondary-shadow);
+  background: var(--details-dark-shadow);
   display: none;
 }
 
@@ -272,11 +272,11 @@ main {
 }
 
 #buttonSongPlay i {
-  color: var(--de-detail-green);
+  color: var(--secondary);
 }
 
-#buttonSongPlay i:hover {
-  color: var(--font);
+#buttonSongPlay:hover i {
+  color: var(--font-all);
 }
 
 /* footer */

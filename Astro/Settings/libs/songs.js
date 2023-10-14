@@ -436,7 +436,7 @@ const allSongs = {
     nameSong: "Crazy",
     artist: "Patrick PatriKios",
     src: "/Astro/Backend/Assets-Songs/Audio/Crazy.mp3",
-    imgSong: "/Assets/Images/",
+    imgSong: "/Astro/Assets/Images/Main-Capas/future.png",
     genero: "Pop",
     ritmo: "agitado",
     album: "Future",

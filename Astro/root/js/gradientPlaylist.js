@@ -1,6 +1,6 @@
 const imgSong = document.getElementById("imagePlay");
 const gradientDiv = document.getElementById("backParallax");
-const defaultColor = "rgb(5, 6, 30)";
+const defaultColor = "#0E0D0D";
 
 imgSong.addEventListener("load", analiseDaImagem);
 
