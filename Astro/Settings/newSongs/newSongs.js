@@ -69,9 +69,10 @@ const musicList = [];
 
 /**
  * Pega as informações coletadas nos inputs e botões e insere elas
- * no objeto 'newSong' que é utlizado para inserir na tela para a 
+ * no objeto 'newSong' que é utlizado para inserir na tela para a
  * criação da lista para cópia
-*/
+ */
+let image = "";
 const newSong = () => {
   let SongName = nameSong.value;
   let artistName = artist.value;
@@ -79,8 +80,8 @@ const newSong = () => {
   let imageSongName = imageSong.value;
   let generoMusic = genero.value;
   let albumMusic = album.value;
-  if(albumMusic == " ") {
-    return none
+  if (albumMusic == " ") {
+    return none;
   }
 
   const newMusic = {
@@ -90,7 +91,7 @@ const newSong = () => {
     imgSong: imageSongName,
     genero: generoMusic,
     ritmo: selectRitmo,
-    album: albumMusic
+    album: albumMusic,
   };
   musicList.push(newMusic);
 
@@ -100,7 +101,6 @@ const newSong = () => {
   imageSong.value = "";
   genero.value = "";
   album.value = "";
-
   updateMusicList();
 
   /**
@@ -116,21 +116,30 @@ const newSong = () => {
 const updateMusicList = () => {
   resultados.innerHTML = "";
   const ul = document.createElement("ul");
-  let i = 41;
+  let id = 0;
 
   for (const music of musicList) {
+    let i = Math.floor(Math.random() * (82 - 78 + 1)) + 78;
+    let j = Math.floor(Math.random() * (82 - 78 + 1)) + 78;
+
+    if (music.imgSong == "") {
+      image = `https://source.unsplash.com/featured/${i}x${j}`;
+    } else {
+      image = `/Astro/Assets/Images/${music.imgSong}`;
+    }
+
     const li = document.createElement("li");
-    li.innerHTML = `<br> aa00${[i]}: {<br>
+    li.innerHTML = `<br> aa00${[id]}: {<br>
             nameSong: "${music.nameSong}",<br>
             artist: "${music.artist}",<br>
-            src: "/Astro/Backend/Assets-Songs/Audio/${music.src}.mp3",<br>
-            imgSong: "/Assets/Images/${music.imgSong}",<br>
+            src: "/Astro/Settings/audio${music.src}.mp3",<br>
+            imgSong: "${image}",<br>
             genero: "${music.genero}", <br>
             ritmo: "${music.ritmo}",<br>
             album: "${music.album}",<br>
         }, <br>`;
     ul.appendChild(li);
-    i++;
+    id++;
   }
   resultados.appendChild(ul);
 
