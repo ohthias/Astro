@@ -42,7 +42,7 @@
       <ul class="nav-list">
         <section class="nav-categores">
           <li>
-            <a href="./home.css">
+            <a href="./home.html">
               <i class="bx bx-home"></i>
               <span class="links_name">Home</span>
             </a>
@@ -92,7 +92,7 @@
     <!-- Menu responsivo para telas menores que 426px -->
     <div class="menu-min-width">
       <div class="menu-categore">
-        <a href="#">
+        <a href="./home.html">
           <i class="bx bx-home"></i>
         </a>
         <h5>Home</h5>
@@ -220,64 +220,10 @@
           <h3>Top debuts da semana</h3>
           <hr />
         </div>
-        <div class="wrapper">
+        <div class='wrapper'>
           <i id="left" class="fa-solid fa-angle-left"></i>
-          <div class="carousel" id="carousel1">
-            <button id="lostInSpace">
-              <img
-                src="/Assets/Images/Astro_main-caps/7.png"
-                class="songButton"
-                draggable="false"
-              />
-            </button>
-
-            <button id="abstraction">
-              <img
-                src="/Assets/Images/Astro_main-caps/15.png"
-                class="songButton"
-                draggable="false"
-              />
-            </button>
-
-            <button id="Future">
-              <img
-                src="/Assets/Images/Astro_main-caps/9.png"
-                class="songButton"
-                draggable="false"
-              />
-            </button>
-
-            <button id="noPique">
-              <img
-                src="/Assets/Images/Astro_main-caps/10.png"
-                class="songButton"
-                draggable="false"
-              />
-            </button>
-
-            <button id="naCalma">
-              <img
-                src="/Assets/Images/Astro_main-caps/11.png"
-                class="songButton"
-                draggable="false"
-              />
-            </button>
-
-            <button id="naCalma">
-              <img
-                src="/Assets/Images/Astro_main-caps/12.png"
-                class="songButton"
-                draggable="false"
-              />
-            </button>
-
-            <button id="naCalma">
-              <img
-                src="/Assets/Images/Astro_main-caps/13.png"
-                class="songButton"
-                draggable="false"
-              />
-            </button>
+          <div class="carousel" id="carousel2">
+            <span id="albunsWrapper"></span>
           </div>
           <i id="right" class="fa-solid fa-angle-right"></i>
         </div>
@@ -365,8 +311,8 @@
       type="module"
       src="/Astro/Settings/libs/backgroundHome/Backgroundmain.js"
     ></script>
+    <script type="module" src="/Astro/Settings/libs/albuns/albunsRedirect.js"></script>
     <script src="/Astro/Settings/libs/artistsPage/artistRedirect.js"></script>
-    <script src="/Astro/Settings/libs/albuns/albunsRedirect.js"></script>
     <script src="/Astro/Settings/libs/mixes/mixesRedirect.js"></script>
 
     <!--Frontend srcipts-->
@@ -374,6 +320,5 @@
     <script src="../../root/js/menu.js"></script>
     <script src="./redirect.js"></script>
     <script src="./slider.js"></script>
-    <script src="./hours.js"></script>
   </body>
 </html>
