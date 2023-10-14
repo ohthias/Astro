@@ -26,6 +26,10 @@ function analiseDaImagem() {
       const g = pixels[i + 1];
       const b = pixels[i + 2];
 
+      if (r >= 245 && g >= 245 && b >= 245) {
+        continue;
+      }
+    
       const rgb = `rgb(${r},${g},${b})`;
       contaCor[rgb] = contaCor[rgb] ? contaCor[rgb] + 1 : 1;
     }
