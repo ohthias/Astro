@@ -116,7 +116,7 @@ const newSong = () => {
 const updateMusicList = () => {
   resultados.innerHTML = "";
   const ul = document.createElement("ul");
-  let id = 0;
+  let id = 7;
 
   for (const music of musicList) {
     let i = Math.floor(Math.random() * (82 - 78 + 1)) + 78;
