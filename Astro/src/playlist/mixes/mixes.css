@@ -1,0 +1,274 @@
+body {
+  background: linear-gradient(to bottom, var(--background-all) 80%, var(--background-smoke));
+}
+
+/* Header */
+
+.back-image {
+  margin: 0 auto;
+  display: block;
+}
+
+section.module.parallax {
+  display: flex;
+  flex-direction: column;
+  height: 80vh !important;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  background-size: cover;
+  animation: fadeIn 800ms ease;
+}
+
+section.module.parallax::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+
+.sidebar.open~.back-image .section-main {
+  position: relative;
+  left: 250px;
+  width: calc(100% - 250px);
+}
+
+/* Conainer name playlist */
+.container {
+  z-index: 11;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container_playlist {
+  padding: 15px 25px;
+  border-radius: 20px;
+  width: 680px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  background: var(--details-dark-shadow);
+  backdrop-filter: blur(10px);
+}
+
+.cotainer_playlist_image {
+  margin: 0 45px;
+}
+
+#imagePlay {
+  border-radius: 10px;
+  max-width: var(--size-images);
+  box-shadow: var(--shadow-box-black);
+}
+
+#namePlaylist {
+  margin: 10px 0;
+  font-size: 3.5em;
+  letter-spacing: 1px;
+  color: var(--details-green);
+}
+
+#creatorPlaylist {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+#creatorPlaylist:hover {
+  color: var(--primary-light);
+}
+
+/* Options */
+
+.container_options {
+  margin: 20px 0;
+}
+
+.container_options_display {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.container_options_buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 8px;
+  border-radius: 10px;
+  background: var(--details-dark-shadow);
+}
+
+.container_options_buttons #random,
+.container_options_buttons #playPause,
+.container_options_buttons #heartMusic {
+  margin: 8px 10px;
+  padding: 10px;
+  border: 0;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.container_options_buttons #playPause {
+  font-size: 36px;
+  border-radius: 50px;
+  background: var(--details-dark-shadow);
+}
+
+.container_options_buttons #playPause i {
+  padding: 8px;
+  color: var(--primary);
+  background: var(--secondary-shadow);
+  border-radius: 50px;
+}
+
+.container_options #duracao-total {
+  margin: 0 25px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Main playlist */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container_main {
+  display: flex;
+  flex-direction: column;
+}
+
+.random-mix-container {
+  padding: 15px 20px;
+  border-radius: 10px;
+  background: var(--details-darkest-shadow);
+}
+
+#music-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  list-style-type: none;
+}
+
+#music-list li {
+  margin: 10px auto;
+  padding: 15px;
+  border: 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  width: 850px;
+  background: var(--details-dark-shadow);
+}
+
+.infoMusica {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infoMusica_play {
+  width: 90vh;
+  margin-left: 25px;
+}
+
+#music-list li:hover {
+  background: var(--details-dark-shadow);
+}
+
+#music-list img {
+  margin: 0 15px 0 0;
+  border: 0;
+  border-radius: 10px;
+  max-width: 50px;
+}
+
+.musicnome_playlist {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  color: var(--primary-light);
+}
+
+.nameArtista_playlist {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.buttonPlayInRight {
+  position: relative;
+}
+
+#buttonPlayMusic {
+  padding: 10px;
+  border: 0;
+  font-size: 24px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.play-icon {
+  border-radius: 100px;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-30%, -50%);
+  font-size: 35px;
+  color: var(--secondary-shadow);
+  background: var(--details-dark-shadow);
+  display: none;
+}
+
+.album-container:hover {
+  position: relative;
+  cursor: pointer;
+}
+
+.album-container:hover .play-icon {
+  display: block;
+}
+
+#buttonSongPlay {
+  border: 0;
+  border-radius: 100px;
+  font-size: 22px;
+  background: transparent;
+  cursor: pointer;
+}
+
+#buttonSongPlay i {
+  color: var(--secondary);
+}
+
+#buttonSongPlay:hover i {
+  color: var(--font-all);
+}
+
+/* footer */
+
+footer {
+  height: 150px;
+}

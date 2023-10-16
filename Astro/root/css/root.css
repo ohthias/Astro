@@ -1,0 +1,91 @@
+/*
+ * Root
+ * UTA - Matheus 01/10
+*/
+
+@charset "UTF-8";
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+/* Icons & Images */
+@import url("https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css");
+@import url("https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css");
+@import url("https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css");
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Bebas Neue", sans-serif;
+        list-style: none;
+        color: var(--font-all);
+}
+
+:root {
+        /* Alls */
+        --background-all: #0E0D0D;
+        --background-smoke: #171616;
+        --font-all: #F3F3F3;
+
+        /* Colors */
+        --primary: #0F9890;
+        --primary-light: #6DA5C0;
+        --secondary: #072E33;
+        --secondary-dark: #294D61;
+        --details: #0F9890;
+        --details-green: #29F247;
+        --details-dark: #000000;
+        --background-details: #05161A;
+
+        /* Shadows */
+        --primary-shadow: #0F989082;
+        --primary-light-shadow: #6DA5C082;
+        --secondary-shadow: #072E3382;
+        --secondary-dark-shadow: #294D6182;
+        --details-shadow: #c5c5c582;
+        --details-green-shadow: #29F24776;
+        --details-dark-shadow: #00000082;
+        --details-darkest-shadow: #0000005f;
+        --background-details-shadow: #05161A82;
+
+        /* Atributes */
+        --marginY: 8px 0;
+        --marginX: 0 8px;
+        --marginXY: 8px;
+        --border: 10px;
+        --border-details: 20px;
+        --shadow-box-black: 4px 0 10px var(--details-dark-shadow);
+        --size-images: 250px;
+}
+
+/* ===== Scrollbar ===== */
+/* Firefox */
+* {
+        scrollbar-width: auto;
+        scrollbar-color: var(--background-details) rgba(255, 255, 255, 0);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+        width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+        background-color: var(--background-all);
+}
+
+*::-webkit-scrollbar-thumb {
+        background-color: var(--background-details);
+        border-radius: 10px;
+        box-shadow: 0 0 10px var(--primary-shadow), 0 0 100px var(--secondary);
+}
+
+@media screen and (max-width:426px) {
+        ::-webkit-scrollbar {
+                display: none;
+        }
+}
