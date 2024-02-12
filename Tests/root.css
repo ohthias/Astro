@@ -1,0 +1,75 @@
+/*  [root Style]
+    Folha de estilização principal
+    @author Matheus Gabriel Santos Silva
+
+    @version 1.0.0
+*/
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*
+    Bebas neue --- Title & Highlight
+    Monteserrat -- Body & Details
+*/
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.montserrat-regular {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.montserrat-medium {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.montserrat-highlight {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Symbols */
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css');
+
+/* Root */
+:root {
+    /* Default theme*/
+    /* Color */
+    --darkest: #0B1215;
+    --darkest-light: #05061E;
+    --detail-primary: #4B0072;
+    --detail-secondary: #FF3D20;
+    --detail-tertiary: #29F247;
+    --white: #F3F3F3;
+
+    /* Shadow colors 50% */
+    --darkest: #0B121576;
+    --darkest-light: #05061E76;
+    --detail-primary: #4B007276;
+    --detail-secondary: #FF3D2076;
+    --detail-tertiary: #29F24776;
+    --white: #F3F3F376;
+
+    /* Others colors */
+    --dark-black: #000000;
+    --dark-black-shadow: #00000076;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
