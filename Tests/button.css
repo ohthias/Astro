@@ -2,13 +2,121 @@
     Folha de estilização dos botões
     @author Matheus Gabriel Santos Silva
 
-    @version 1.0.0
+    @version 1.0.1
 */
 
 /* btn-rounded */
 
+.btn-rounded {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid var(--white);
+    border-radius: 2rem;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    text-align: center;
+    color: var(--white);
+    background: none;
+    transition: 250ms ease-in-out;
+    cursor: pointer;
+}
+
+.btn-rounded:focus,
+.btn-rounded:hover {
+    border-color: var(--detail-secondary);
+    background: var(--detail-secondary);
+    box-shadow: 0 0 10px var(--detail-secondary-shadow);
+}
+
 /* btn-glow */
+/* Button purple */
+
+.btn-glow-purple {
+    padding: 0.5rem 0;
+    padding-inline: 1.5rem;
+    border: 0;
+    border-radius: 2rem;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    text-align: center;
+    color: var(--white);
+    background: var(--detail-primary);
+    transition: 500ms ease-in;
+    cursor: pointer;
+}
+
+.btn-glow-purple:focus,
+.btn-glow-purple:hover{
+    box-shadow: 0 0 5px var(--detail-primary), 0 0 25px var(--detail-primary-shadow);
+    transition: 150ms;
+}
+
+/* Button red */
+
+.btn-glow-red {
+    padding: 0.5rem 0;
+    padding-inline: 1.5rem;
+    border: 0;
+    border-radius: 2rem;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    text-align: center;
+    color: var(--white);
+    background: var(--detail-secondary);
+    transition: 500ms ease-in;
+    cursor: pointer;
+}
+
+.btn-glow-red:focus,
+.btn-glow-red:hover {
+    box-shadow: 0 0 5px var(--detail-secondary), 0 0 25px var(--detail-secondary-shadow);
+    transition: 150ms;
+}
 
 /* btn-swipe */
 
+.btn-swipe {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid var(--white);
+    border-radius: 2rem;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    text-align: center;
+    color: var(--white);
+    background: none;
+    transition: 250ms ease-in;
+    cursor: pointer;
+}
+
+.btn-swipe:focus,
+.btn-swipe:hover{
+    transform: translateY(-10px);
+    transition: 250ms ease;
+}
+
 /* btn-underline */
+
+.btn-underline {
+    display: inline-block;
+    font-size: 1.5em;
+    line-height: 34px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2.5px;
+    color: var(--white);
+    background:
+        linear-gradient(to right, rgba(255, 255, 255, 0), rgba(100, 200, 200, 0)),
+        linear-gradient(to right, var(--detail-tertiary), var(--detail-tertiary));
+    background-size: 100% 0.1em, 0 0.1em;
+    background-position: 100% 70%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn-underline:focus,
+.btn-underline:hover {
+    color: var(--detail-tertiary);
+    background-size: 0 0.1em, 100% 0.1em;
+    transition: 0.3s;
+}

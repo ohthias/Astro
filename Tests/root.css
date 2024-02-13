@@ -40,6 +40,10 @@
     font-style: normal;
 }
 
+.not-letter-spacing {
+    letter-spacing: 0;
+}
+
 /* Symbols */
 @import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
 @import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css');
@@ -56,12 +60,12 @@
     --white: #F3F3F3;
 
     /* Shadow colors 50% */
-    --darkest: #0B121576;
-    --darkest-light: #05061E76;
-    --detail-primary: #4B007276;
-    --detail-secondary: #FF3D2076;
-    --detail-tertiary: #29F24776;
-    --white: #F3F3F376;
+    --darkest-shadow: #0B121576;
+    --darkest-light-shadow: #05061E76;
+    --detail-primary-shadow: #4B007276;
+    --detail-secondary-shadow: #FF3D2076;
+    --detail-tertiary-shadow: #29F24776;
+    --white-shadow: #F3F3F376;
 
     /* Others colors */
     --dark-black: #000000;
@@ -72,4 +76,36 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+::selection {
+    color: var(--white);
+    background: var(--dark-black-shadow);
+}
+
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: var(--detail-secondary) rgba(255, 255, 255, 0);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: var(--darkest-shadow);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--detail-secondary);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--primary-shadow), 0 0 100px var(--secondary);
+}
+
+@media screen and (max-width:426px) {
+    ::-webkit-scrollbar {
+            display: none;
+    }
 }
