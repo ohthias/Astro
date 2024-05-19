@@ -18,7 +18,7 @@ body {
 section.module.parallax {
     display: flex;
     flex-direction: column;
-    height: 80vh !important;
+    height: 75vh !important;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -57,45 +57,74 @@ section.module.parallax::after {
     width: calc(100% - 250px);
 }
 
-.containner_text {
+section.section-main .containner_text {
     margin-left: 50px;
     position: absolute;
-    top: 75%;
-    transform: translateY(-75%);
+    top: 50%;
+    left: 5%;
+    transform: translate(-5%, -50%);
 }
 
-.containner_text h1 {
-    font-size: 6.25rem;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: 0.2rem;
-    animation: fadeIn 1s ease;
-    cursor: default;
+section.section-main .containner_text p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15em;
+    letter-spacing: 1px;
 }
 
-.containner_text #othersSongs {
-    margin: var(--marginY);
-    padding: 10px;
-    padding-inline: 1em;
+section.section-main .containner_text h1#nameArtist {
+    font-size: 100px;
+    letter-spacing: 5px;
+    line-height: normal;
+    text-shadow: 0 0 10px var(--primary), 0 0 40px var(--primary-shadow);
+}
+
+section.section-main .containner_text .next_song {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+section.section-main .containner_text .next_song button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    --size: 50px;
+    width: var(--size);
+    height: var(--size);
     border: 0;
-    border-radius: 50px;
-    font-size: 1rem;
-    letter-spacing: 0.05rem;
-    background: var(--secondary-dark);
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    animation: fadeIn 1s ease;
-    transition: 250ms;
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--primary), 0 0 50px var(--primary-shadow);
     cursor: pointer;
 }
 
-.containner_text #othersSongs:is(:hover, :focus) {
-    color: var(--details);
-    background: var(--font-all);
+section.section-main .containner_text .next_song button i.bx{
+    font-size: 42px;
+    color: var(--primary);
+    text-shadow: 0 0 10px var(--primary), 0 0 50px var(--primary-shadow);
+    line-height: 0;
+}
+
+section.section-main .containner_text .next_song .next_song_info h6{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    letter-spacing: 1px;
+    color: var(--primary);
+}
+
+section.section-main .containner_text .next_song .next_song_info h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    letter-spacing: 1px;
 }
 
 /* Main */
 
 .home-section {
+    margin-top: 24px;
     position: relative;
     left: 78px;
     width: calc(100% - 78px);
@@ -114,21 +143,20 @@ section.module.parallax::after {
 }
 
 .name-opitions h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.25em;
+    font-size: 2em;
     font-weight: 700;
     line-height: 35px;
-    letter-spacing: 1px;
+    letter-spacing: 2.5px;
     text-transform: capitalize;
-    color: var(--details-green);
+    color: var(--terciary);
 }
 
 .name-opitions hr {
     max-width: 225px;
     height: 3px;
-    border: 1px solid var(--details-green);
+    border: 1px solid var(--terciary);
     border-radius: 0 10px 10px 0;
-    background: var(--details-green);
+    background: var(--terciary);
 }
 
 .wrapper {

@@ -27,30 +27,23 @@
 
 :root {
         /* Alls */
-        --background-all: #0E0D0D;
+        --background-all: #05061E;
         --background-smoke: #171616;
         --font-all: #F3F3F3;
 
         /* Colors */
-        --primary: #0F9890;
-        --primary-light: #6DA5C0;
-        --secondary: #072E33;
-        --secondary-dark: #294D61;
-        --details: #0F9890;
-        --details-green: #29F247;
-        --details-dark: #000000;
-        --background-details: #05161A;
+        --primary: #FF3D20;
+        --secondary: #4B0072;
+        --terciary: #29F247;
+
+        --details-dark: #171616;
 
         /* Shadows */
-        --primary-shadow: #0F989082;
-        --primary-light-shadow: #6DA5C082;
-        --secondary-shadow: #072E3382;
-        --secondary-dark-shadow: #294D6182;
-        --details-shadow: #c5c5c582;
-        --details-green-shadow: #29F24776;
-        --details-dark-shadow: #00000082;
-        --details-darkest-shadow: #0000005f;
-        --background-details-shadow: #05161A82;
+        --primary-shadow: #FF3D2082;
+        --secondary-shadow: #4B007282;
+        --terciary-shadow: #29F24776;
+        --dark-shadow: #17161676;
+        --light-shadow: #f3f3f376;
 
         /* Atributes */
         --marginY: 8px 0;
@@ -62,11 +55,11 @@
         --size-images: 250px;
 }
 
-/* ===== Scrollbar ===== */
+/* ===== Scrollbar CSS ===== */
 /* Firefox */
 * {
         scrollbar-width: auto;
-        scrollbar-color: var(--background-details) rgba(255, 255, 255, 0);
+        scrollbar-color: #4b0072 #05061e;
 }
 
 /* Chrome, Edge, and Safari */
@@ -75,13 +68,13 @@
 }
 
 *::-webkit-scrollbar-track {
-        background-color: var(--background-all);
+        background: #05061e;
 }
 
 *::-webkit-scrollbar-thumb {
-        background-color: var(--background-details);
-        border-radius: 10px;
-        box-shadow: 0 0 10px var(--primary-shadow), 0 0 100px var(--secondary);
+        background-color: #4b0072;
+        border-radius: 50px;
+        border: 0px none #ffffff;
 }
 
 @media screen and (max-width:426px) {

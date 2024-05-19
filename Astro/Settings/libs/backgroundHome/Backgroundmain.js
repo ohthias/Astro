@@ -2,6 +2,7 @@ import backlist from "./backgroundMainArtsit.js";
 
 const h1Element = document.getElementById("nameArtist");
 const backgroundDiv = document.getElementById("backParallax");
+const nextSong = document.getElementById("nextSong")
 
 // Verifica se já há um índice armazenado no localStorage
 let currentIndex = localStorage.getItem("currentIndex");
@@ -30,9 +31,11 @@ function updateIndexAndAdvance() {
 function changeHeaderAndBackground() {
   const newHeaderText = backlist[currentIndex].nameArtist;
   const newBackgroundImage = backlist[currentIndex].src;
+  const newNextSong = backlist[currentIndex].nextSong
 
   h1Element.innerText = newHeaderText;
   backgroundDiv.style.backgroundImage = `url('${newBackgroundImage}')`;
+  nextSong.innerText = newNextSong
 }
 
 // Chamando a função para atualizar o header e o background inicialmente

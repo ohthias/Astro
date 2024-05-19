@@ -3,8 +3,6 @@ import {
   startListening,
   stopListening,
 } from "/Astro/Settings/libs/levelSystem/base.js";
-import {createMusicPlayer} from './createdMusicPlayer.js';
-createMusicPlayer();
 
 const player = document.querySelector("#player");
 const musicName = document.querySelector("#musicName");
