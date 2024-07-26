@@ -20,7 +20,7 @@ main.module {
 
     background-size: cover;
     animation: fadeIn 300ms ease;
-    background: linear-gradient(to top, var(--secondary) 0%, var(--terciary) 35%);
+    background: linear-gradient(to bottom, var(--secondary), var(--terciary));
 }
 
 nav {
@@ -44,7 +44,7 @@ nav {
 
     background:
         linear-gradient(to right, rgba(255, 255, 255, 0), rgba(100, 200, 200, 0)),
-        linear-gradient(to right, var(--details), var(--details));
+        linear-gradient(to right, var(--white), var(--white));
     background-size: 100% 0.1em, 0 0.1em;
     background-position: 100% 70%, 0 100%;
     background-repeat: no-repeat;
@@ -58,7 +58,6 @@ nav {
 .details .detail-logo label:focus,
 .details .detail-menu .nav-menu:hover,
 .details .detail-menu .nav-menu:focus {
-    color: var(--primary-light);
     background-size: 0 0.1em, 100% 0.1em;
     transition: 0.3s;
 }
@@ -69,13 +68,12 @@ nav {
     letter-spacing: 1px;
     text-decoration: none;
 
-    color: var(--font-all);
     transition: 0.8s;
     cursor: pointer;
 
     background:
         linear-gradient(to right, rgba(255, 255, 255, 0), rgba(100, 200, 200, 0)),
-        linear-gradient(to right, var(--details), var(--details));
+        linear-gradient(to right, var(--white), var(--white));
     background-size: 100% 0.1em, 0 0.1em;
     background-position: 100% 70%, 0 100%;
     background-repeat: no-repeat;
@@ -87,7 +85,7 @@ nav {
 
 .details .detail-menu .nav-menu.entrarButton {
     padding: 10px 25px;
-    border: 2px solid var(--font-all);
+    border: 2px solid var(--white);
     border-radius: 50px;
     background: transparent;
     background-position: 0;
@@ -95,25 +93,33 @@ nav {
 }
 
 .details .detail-menu .nav-menu.entrarButton:hover {
-    background: var(--font-all);
-    color: var(--secondary-dark);
+    background: var(--white);
+    color: var(--secondary);
 }
 
 .containner {
     position: absolute;
     left: 20%;
-    top: 50%;
-    transform: translate(-20%, -50%);
+    top: 60%;
+    transform: translate(-20%, -60%);
     display: flex;
     justify-content: start;
     flex-direction: column;
     animation: fadeIn 300ms;
 }
 
-.conteinner_logo h1 {
-    font-size: 5em;
-    letter-spacing: 4px;
-    text-shadow: 0 2px 2px var(--details-dark-shadow);
+img.astrounaut {
+    width: 450px;
+    position: absolute;
+    left: 75%;
+    top: 50%;
+    transform: translate(-75%, -50%) rotate(-25deg);
+}
+
+img.img_logo {
+    position: absolute;
+    top: -225px;
+    left: -70px;
 }
 
 .containner_info {
@@ -126,12 +132,11 @@ nav {
     margin: 10px 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    text-shadow: 2px 2px 5px var(--details-dark-shadow);
+    text-shadow: 2px 2px 5px var(--shadow-shadow);
 }
 
 .wrapper {
     box-sizing: content-box;
-    color: var(--font-all);
     height: 70px;
     display: flex;
     border-radius: 8px;
@@ -149,7 +154,7 @@ nav {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 20px;
-    color: var(--details);
+    color: var(--secondary);
     animation: spin_words 15s infinite;
 }
 
@@ -207,19 +212,19 @@ nav {
 
 #entrar {
     background: transparent;
-    border: 2px solid var(--font-all);
+    border: 2px solid var(--white);
     transition: 300ms;
 }
 
 #entrar:hover {
     transform: translateY(-10px);
-    background: var(--font-all);
+    background: var(--white);
     color: var(--secondary);
     transition: 500ms;
 }
 
 #cadastrar {
-    background: var(--details);
+    background: var(--secondary);
     border: 0;
     color: var(--font-all);
     transition: 300ms;
