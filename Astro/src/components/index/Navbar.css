@@ -1,0 +1,82 @@
+.navgation_index {
+    background: #12121276;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    padding-inline: 1.5rem;
+}
+
+.navgation_index .navgation_index_button-logo {
+    border: 0;
+    padding-inline: 1rem;
+    font-size: 42px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #f3f3f3;
+    background: none;
+    transition: 500ms;
+
+    &:hover,
+    &:active {
+        color: #29f247;
+        cursor: pointer;
+    }
+}
+
+.navgation_index .navgation_index_container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+
+    a.navegation_link,
+    button.button_entrar {
+        padding-inline: 1rem;
+        text-decoration: none;
+        font-size: 18px;
+    }
+}
+
+a.navegation_link {
+    color: #f3f3f3;
+    padding: 0.5rem 0;
+    font-weight: 400;
+    background:
+        linear-gradient(to right, rgba(255, 255, 255, 0), rgba(100, 200, 200, 0)),
+        linear-gradient(to right, #29f247, #29f247);
+    background-size: 100% 0.1em, 0 0.1em;
+    background-position: 100% 70%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+
+    &:hover,
+    &:active {
+        font-weight: 700;
+        color: #29f247;
+        background-size: 0 0.1em, 100% 0.1em;
+        transition: 0.3s;
+    }
+}
+
+button.button_entrar {
+    width: 100px;
+    padding: 0.5rem 0;
+    color: #f3f3f3;
+    background: transparent;
+    border: 2px solid #f3f3f3;
+    border-radius: 50px;
+    transition: 500ms;
+
+    &:hover,
+    &:active {
+        color: #29f247;
+        background-color: #f3f3f3;
+        cursor: pointer;
+        box-shadow: 0 0 5px #29f24756, 0 0 25px #29f24776;
+    }
+}
